@@ -1558,3 +1558,79 @@ body.dark #stats-modal .text-gray-300 {
     }
 }
 
+
+/* =============================================
+   GLOBAL LEADERBOARD MODAL
+   ============================================= */
+
+body.dark #leaderboard-modal > div {
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+
+body.dark #leaderboard-modal .text-gray-800 {
+    color: #e2e8f0;
+}
+
+body.dark #leaderboard-modal .bg-gray-50 {
+    background-color: #0f172a;
+}
+
+body.dark #leaderboard-modal .border-gray-100 {
+    border-color: #334155;
+}
+
+body.dark #leaderboard-modal .text-gray-400 {
+    color: #64748b;
+}
+
+body.dark #leaderboard-modal .bg-gray-100 {
+    background-color: #0f172a;
+}
+
+body.dark #leaderboard-modal .text-gray-500 {
+    color: #94a3b8;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+body.dark #username-modal > div {
+    background-color: #1e293b;
+    color: #e2e8f0;
+}
+body.dark #username-modal .bg-green-50 {
+    background-color: #14532d;
+    border-color: #166534;
+    color: #bbf7d0;
+}
+body.dark #username-modal input {
+    background-color: #0f172a;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+body.dark #username-modal input::placeholder {
+    color: #64748b;
+}
+body.dark #username-modal label {
+    color: #94a3b8;
+}
+
+body.dark #leaderboard-modal .bg-yellow-50 {
+    background-color: #1c1917;
+    border-color: #713f12;
+}
+body.dark #leaderboard-modal .text-yellow-700 {
+    color: #fbbf24;
+}
+body.dark #leaderboard-modal .bg-yellow-100 {
+    background-color: #292524;
+}
+body.dark #leaderboard-modal .border-yellow-300 {
+    border-color: #92400e;
+}

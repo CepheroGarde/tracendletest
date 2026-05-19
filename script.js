@@ -1,3 +1,16 @@
+const SUPABASE_URL = 'https://arjlihlurgfjdrnrjefi.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyamxpaGx1cmdmamRybnJqZWZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxODY2OTMsImV4cCI6MjA5NDc2MjY5M30.SJNQr8lL726tEaba83y6OaNxHZdt2lsdsDZGrXoYC48';
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+function getOrCreateUserId() {
+  let userId = localStorage.getItem('tracendle_user_id');
+  if (!userId) {
+    userId = 'user_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+    localStorage.setItem('tracendle_user_id', userId);
+  }
+  return userId;
+}
+
 const GAME_CONFIG = {
   uma: {
     keys: ['sprint', 'mile', 'med', 'long', 'front', 'pace', 'late', 'end', 'turf', 'dirt'],
@@ -292,12 +305,107 @@ async function loadGameData() {
 }
 
 function init() {
-checkDevMode();
+  checkOrCreateUsername(); 
+  checkDevMode();
   loadPersistentData();
   switchGameType('uma');
   startClock();
-  loadTheme()
+  loadTheme();
 }
+
+function checkOrCreateUsername() {
+  const nickname = localStorage.getItem('tracendle_nickname');
+  const isFirstTime = !nickname || nickname.trim() === '' || nickname.startsWith('Anonymous');
+  
+  if (isFirstTime) {
+    showUsernameModal(false); 
+  }
+  getOrCreateUserId();
+}
+
+function showUsernameModal(isChange = false) {
+  const modal = document.getElementById('username-modal');
+  const title = document.getElementById('username-modal-title');
+  const input = document.getElementById('username-input');
+  const err = document.getElementById('username-error');
+  
+  if (!modal) return;
+  
+  title.textContent = isChange ? 'Change Username' : 'Welcome, Trainer!';
+  input.value = isChange ? (localStorage.getItem('tracendle_nickname') || '') : '';
+  err.classList.add('hidden');
+  
+  modal.classList.remove('hidden');
+  setTimeout(() => input.focus(), 100);
+  
+  modal._allowClose = isChange;
+  
+  modal.onclick = (e) => {
+    if (e.target === modal && modal._allowClose) {
+      closeUsernameModal();
+    }
+  };
+}
+
+function closeUsernameModal() {
+  const modal = document.getElementById('username-modal');
+  if (modal) modal.classList.add('hidden');
+}
+
+async function saveUsername() {
+  const input = document.getElementById('username-input');
+  if (!input) return;
+  
+  let val = input.value.trim();
+  if (!val) val = 'Anonymous';
+  
+  localStorage.setItem('tracendle_nickname', val);
+  
+  const lbUsername = document.getElementById('lb-my-username');
+  if (lbUsername) lbUsername.textContent = val;
+  
+  closeUsernameModal();
+
+  const userId = getOrCreateUserId();
+  const activeCategory = sessionState.mode || 'daily';
+
+  // Construct the payload object first so we can securely checksum it
+  const payloadData = { 
+    user_id: userId, 
+    username: val,
+    game_type: currentGameType,
+    category: activeCategory
+  };
+
+  try {
+    // ✅ FIX: Update the username on ALL existing rows owned by this user
+    const { data, error } = await supabaseClient
+      .from('leaderboard')
+      .update({ username: val })
+      .eq('user_id', userId);
+
+    if (error) {
+      console.error('Error updating leaderboard username:', error);
+    } else {
+      console.log('Leaderboard usernames successfully updated across all modes!');
+    }
+  } catch (err) {
+    console.error('Supabase update failed:', err);
+  }
+}
+
+function openChangeUsername() {
+  showUsernameModal(true);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const input = document.getElementById('username-input');
+  if (input) {
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') saveUsername();
+    });
+  }
+});
 
 function switchGameType(type) {
   currentGameType = type;
@@ -383,11 +491,15 @@ function loadPersistentData() {
 }
 
 function savePersistentData() {
-  const storageWrapper = {
+  const wrapper = {
     data: allPersistentData,
     checksum: generateChecksum(allPersistentData)
   };
-  localStorage.setItem('uma_wordle_v2_stats', JSON.stringify(storageWrapper));
+  localStorage.setItem('uma_wordle_v2_stats', JSON.stringify(wrapper));
+
+  if (currentGameType && sessionState.mode) {
+    syncScoresToLeaderboard(currentGameType);
+  }
 }
 
 function getTargetForDate(dateStr, dataList) {
@@ -766,7 +878,6 @@ function renderSuggestions(filterText = "") {
   const dataList = config.data();
   const guessedNames = sessionState.guesses.map(g => g.name);
   
-  // Turn knownStats into an array once, instead of reading it inside the loop
   const activeKnownStats = Object.entries(sessionState.knownStats);
   const MATCH_THRESHOLD = currentGameType === 'uma' ? 999 : 2;
 
@@ -782,13 +893,11 @@ function renderSuggestions(filterText = "") {
     return;
   }
 
-  // Create a document fragment to minimize DOM reflows
   const fragment = document.createDocumentFragment();
 
   matches.forEach(match => {
     let matchCount = 0;
     
-    // Fast loop using cached entries
     for (let i = 0; i < activeKnownStats.length; i++) {
       const [key, value] = activeKnownStats[i];
       if (match[key] === value) matchCount++;
@@ -1425,7 +1534,7 @@ function checkDevMode() {
     }
 }
 
-const CURRENT_VERSION = '1.2';
+const CURRENT_VERSION = '1.3';
 
 function openChangelog() {
     const modal = document.getElementById('changelog-modal');
@@ -1618,5 +1727,333 @@ function resetAllStats() {
   renderStatsContent();
 }
 
-loadGameData();
+async function submitGlobalScore(username, mode, scoreType, scoreValue) {
+  const userId = getOrCreateUserId();
+  
+  const { data, error } = await supabaseClient
+    .from('leaderboard')
+    .upsert({
+      user_id: userId,
+      username: username || 'Anonymous',
+      mode: mode,            
+      score_type: scoreType, 
+      score_value: scoreValue
+    }, { 
+      onConflict: 'user_id,mode,score_type' 
+    });
 
+  if (error) {
+    console.error('Error syncing score to global leaderboard:', error);
+  }
+}
+
+async function fetchGlobalLeaderboard(gameType, category, timeWindow) {
+  const isAllTime = timeWindow === 'alltime';
+  const scoreCol = isAllTime ? 'all_time_best' : 'score_value';
+
+  let cutoffISO = null;
+  if (!isAllTime) {
+    // All windows reset on a fixed calendar boundary in UTC+8
+    const utc8Now = new Date(Date.now() + 28800000);
+    if (timeWindow === 'daily') {
+      // Resets at midnight UTC+8 each day
+      utc8Now.setUTCHours(0, 0, 0, 0);
+    } else if (timeWindow === 'weekly') {
+      // Resets each Monday at midnight UTC+8
+      const daysSinceMonday = (utc8Now.getUTCDay() + 6) % 7;
+      utc8Now.setUTCDate(utc8Now.getUTCDate() - daysSinceMonday);
+      utc8Now.setUTCHours(0, 0, 0, 0);
+    } else if (timeWindow === 'monthly') {
+      // Resets on the 1st of each month at midnight UTC+8
+      utc8Now.setUTCDate(1);
+      utc8Now.setUTCHours(0, 0, 0, 0);
+    }
+    // Convert the UTC+8 boundary back to UTC for the DB query
+    cutoffISO = new Date(utc8Now.getTime() - 28800000).toISOString();
+  }
+
+  try {
+    let topQuery = supabaseClient
+      .from('leaderboard')
+      .select('username, ' + scoreCol + ', user_id')
+      .eq('game_type', gameType)
+      .eq('category', category)
+      .order(scoreCol, { ascending: false })
+      .limit(10);
+
+    if (cutoffISO) topQuery = topQuery.gte('updated_at', cutoffISO);
+
+    const { data, error } = await topQuery;
+    if (error) throw error;
+
+    // Normalise so the rest of the UI always reads entry.score_value
+    const top10 = (data || []).map(e => ({ ...e, score_value: e[scoreCol] != null ? e[scoreCol] : 0 }));
+
+    const userId = getOrCreateUserId();
+    let myRowQuery = supabaseClient
+      .from('leaderboard')
+      .select('username, ' + scoreCol)
+      .eq('game_type', gameType)
+      .eq('category', category)
+      .eq('user_id', userId)
+      .maybeSingle();
+
+    if (cutoffISO) myRowQuery = myRowQuery.gte('updated_at', cutoffISO);
+
+    const { data: myRaw } = await myRowQuery;
+    const myRow = myRaw ? { ...myRaw, score_value: myRaw[scoreCol] != null ? myRaw[scoreCol] : 0 } : null;
+
+    let playerRank = null;
+    let totalPlayers = null;
+    if (myRow) {
+      let aboveQuery = supabaseClient
+        .from('leaderboard')
+        .select('*', { count: 'exact', head: true })
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .gt(scoreCol, myRow.score_value);
+
+      let totalQuery = supabaseClient
+        .from('leaderboard')
+        .select('*', { count: 'exact', head: true })
+        .eq('game_type', gameType)
+        .eq('category', category);
+
+      if (cutoffISO) {
+        aboveQuery = aboveQuery.gte('updated_at', cutoffISO);
+        totalQuery = totalQuery.gte('updated_at', cutoffISO);
+      }
+
+      const { count: above } = await aboveQuery;
+      const { count: total } = await totalQuery;
+
+      playerRank = (above ?? 0) + 1;
+      totalPlayers = total ?? 1;
+    }
+
+    return { top10, myRow, playerRank, totalPlayers };
+  } catch (err) {
+    console.error('Error building dashboard slice:', err);
+    return { top10: [], myRow: null, playerRank: null, totalPlayers: null };
+  }
+}
+async function syncScoresToLeaderboard(gameType) {
+  const userId = getOrCreateUserId();
+  const username = localStorage.getItem('tracendle_nickname') || 'Anonymous';
+  const category = (sessionState.mode === 'easy' || sessionState.mode === 'unlimited' || sessionState.mode === 'daily') ? 'normal' : 'hard';
+  const modeKey = sessionState.mode === 'unlimited' ? 'unlimitedStreak' : sessionState.mode === 'hard' ? 'hardStreak' : sessionState.mode === 'easy' ? 'easyStreak' : 'dailyStreak';
+  const currentStreak = allPersistentData[gameType]?.[modeKey] || 0;
+  const now = new Date().toISOString();
+
+  try {
+    const { data: existing } = await supabaseClient
+      .from('leaderboard')
+      .select('id, score_value, all_time_best')
+      .eq('user_id', userId)
+      .eq('game_type', gameType)
+      .eq('category', category)
+      .maybeSingle();
+
+    if (existing) {
+      // Always update updated_at and current streak so time-window tabs (daily/weekly/monthly)
+      // reflect the player's *current* streak at the time of the window, not their all-time best.
+      // all_time_best is preserved separately so the "All Time" view still works.
+      const newAllTimeBest = Math.max(existing.all_time_best ?? existing.score_value ?? 0, currentStreak);
+      const calculatedChecksum = generateChecksum({ user_id: userId, username, game_type: gameType, category, score_value: currentStreak });
+
+      await supabaseClient
+        .from('leaderboard')
+        .update({
+          username: username,
+          score_value: currentStreak,        // current streak — resets when streak breaks
+          all_time_best: newAllTimeBest,      // never decreases
+          updated_at: now,
+          checksum: calculatedChecksum
+        })
+        .eq('id', existing.id);
+    } else {
+      // First time syncing — insert with both score_value and all_time_best set to current streak
+      const scorePayload = {
+        user_id: userId,
+        username: username,
+        game_type: gameType,
+        category: category,
+        score_value: currentStreak,
+        all_time_best: currentStreak
+      };
+      const calculatedChecksum = generateChecksum(scorePayload);
+
+      await supabaseClient
+        .from('leaderboard')
+        .insert([{
+          ...scorePayload,
+          updated_at: now,
+          checksum: calculatedChecksum
+        }]);
+    }
+  } catch (err) {
+    console.error("Failed syncing score to leaderboard:", err);
+  }
+}
+
+
+
+let currentLbTab = 'uma';
+let currentLbType = 'dailyStreak';
+
+function openLeaderboard() {
+  currentLbTab = currentGameType;
+  const modal = document.getElementById('leaderboard-modal');
+  if (modal) modal.classList.remove('hidden');
+
+  const lbUsername = document.getElementById('lb-current-username');
+  if (lbUsername) {
+    lbUsername.textContent = localStorage.getItem('tracendle_nickname') || 'Anonymous';
+  }
+
+  switchLeaderboardTab(currentLbTab);
+}
+
+function closeLeaderboard() {
+  const modal = document.getElementById('leaderboard-modal');
+  if (modal) modal.classList.add('hidden');
+}
+
+function switchLeaderboardTab(tab) {
+  currentLbTab = tab;
+  const tabUma = document.getElementById('lb-tab-uma');
+  const tabCourse = document.getElementById('lb-tab-course');
+  if (tab === 'uma') {
+    tabUma.className = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700';
+    tabCourse.className = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700';
+  } else {
+    tabCourse.className = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700';
+    tabUma.className = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700';
+  }
+  updateLeaderboardUI();
+}
+
+function switchLeaderboardType(type) {
+}
+
+let activeLbCategory = 'normal';
+let activeLbTimeWindow = 'daily';
+
+function changeLbCategory(cat) {
+    activeLbCategory = cat;
+    document.getElementById('lbl-cat-normal').className = cat === 'normal' ? 'flex-1 py-2 rounded-lg bg-white dark:bg-gray-700 shadow-sm text-gray-800 dark:text-white' : 'flex-1 py-2 rounded-lg text-gray-500';
+    document.getElementById('lbl-cat-hard').className = cat === 'hard' ? 'flex-1 py-2 rounded-lg bg-white dark:bg-gray-700 shadow-sm text-gray-800 dark:text-white' : 'flex-1 py-2 rounded-lg text-gray-500';
+    updateLeaderboardUI();
+}
+
+function changeLbTime(windowType) {
+    activeLbTimeWindow = windowType;
+    ['daily', 'weekly', 'monthly', 'alltime'].forEach(w => {
+        const btn = document.getElementById(`lbl-time-${w}`);
+        if (!btn) return;
+        if (w === windowType) {
+            btn.className = "px-3 py-1 rounded-full bg-green-600 text-white transition-all";
+        } else {
+            btn.className = "px-3 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 transition-all";
+        }
+    });
+    updateLeaderboardUI();
+}
+
+function getPercentileLabel(rank, total) {
+  if (!rank || !total || total < 2) return null;
+  const pct = ((rank - 1) / total) * 100; 
+  if (pct < 1)  return 'Top 1%';
+  if (pct < 5)  return 'Top 5%';
+  if (pct < 10) return 'Top 10%';
+  if (pct < 25) return 'Top 25%';
+  if (pct < 50) return 'Top 50%';
+  return 'Bottom 50%';
+}
+
+async function updateLeaderboardUI() {
+  const container = document.getElementById('leaderboard-entries');
+  if (!container) return;
+
+  container.innerHTML = '<div class="text-center py-6 text-gray-400 text-sm animate-pulse">Fetching high scores...</div>';
+
+  const { top10, myRow, playerRank, totalPlayers } = await fetchGlobalLeaderboard(currentLbTab, activeLbCategory, activeLbTimeWindow);
+
+  if (!top10 || top10.length === 0) {
+    container.innerHTML = '<div class="text-center py-8 text-gray-400 text-sm">No entries yet for this category!</div>';
+    return;
+  }
+
+  const userId = getOrCreateUserId();
+  const medals = ['🥇', '🥈', '🥉'];
+
+  const playerInTop10 = top10.some(e => e.user_id === userId);
+
+  let html = top10.map((entry, i) => {
+    const rankLabel = medals[i] || `#${i + 1}`;
+    const isMe = entry.user_id === userId;
+    const highlight = isMe
+      ? 'bg-green-50 dark:bg-green-900/30 border-green-300 dark:border-green-700'
+      : 'bg-gray-50 dark:bg-gray-800 border-gray-100 dark:border-gray-700';
+    return `
+      <div class="flex items-center gap-3 px-3 py-2 rounded-xl border ${highlight} transition-all">
+        <span class="text-md w-6 text-center">${rankLabel}</span>
+        <span class="flex-1 text-sm text-gray-800 dark:text-gray-200 truncate font-medium">${entry.username || 'Anonymous'}${isMe ? ' <span class="text-[10px] text-green-500 font-bold">(You)</span>' : ''}</span>
+        <span class="text-sm font-black text-yellow-600 dark:text-yellow-400">${entry.score_value} <span class="text-[10px] font-normal text-gray-400">streak</span></span>
+      </div>
+    `;
+  }).join('');
+
+  if (!playerInTop10 && myRow) {
+    const percentileLabel = getPercentileLabel(playerRank, totalPlayers);
+    const myUsername = myRow.username || localStorage.getItem('tracendle_nickname') || 'Anonymous';
+    const rankBadge = percentileLabel
+      ? `<span class="text-[10px] font-bold text-purple-500 bg-purple-100 dark:bg-purple-900/40 dark:text-purple-300 px-1.5 py-0.5 rounded-full mr-1">${percentileLabel}</span>`
+      : `<span class="text-[10px] font-bold text-gray-400 mr-1">#${playerRank ?? '?'}</span>`;
+
+    html += `
+      <div class="mt-1 border-t-2 border-dashed border-gray-200 dark:border-gray-600 pt-2">
+        <p class="text-[9px] text-gray-400 text-center mb-1 uppercase tracking-widest">Your Score</p>
+        <div class="flex items-center gap-3 px-3 py-2 rounded-xl border bg-green-50 dark:bg-green-900/30 border-green-300 dark:border-green-700 transition-all">
+          <span class="text-md w-6 text-center text-gray-500">#${playerRank ?? '?'}</span>
+          <span class="flex-1 text-sm text-gray-800 dark:text-gray-200 truncate font-medium flex items-center flex-wrap gap-1">${rankBadge}${myUsername}</span>
+          <span class="text-sm font-black text-yellow-600 dark:text-yellow-400">${myRow.score_value} <span class="text-[10px] font-normal text-gray-400">streak</span></span>
+        </div>
+      </div>
+    `;
+  } else if (!playerInTop10 && !myRow) {
+    const myUsername = localStorage.getItem('tracendle_nickname') || 'Anonymous';
+    const modeKey = activeLbCategory === 'hard' ? 'hardStreak' : 'dailyStreak';
+    const localStreak = allPersistentData[currentLbTab]?.[modeKey] || 0;
+
+    html += `
+      <div class="mt-1 border-t-2 border-dashed border-gray-200 dark:border-gray-600 pt-2">
+        <p class="text-[9px] text-gray-400 text-center mb-1 uppercase tracking-widest">Your Score</p>
+        <div class="flex items-center gap-3 px-3 py-2 rounded-xl border bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700 transition-all opacity-70">
+          <span class="text-md w-6 text-center text-gray-400">—</span>
+          <span class="flex-1 text-sm text-gray-500 dark:text-gray-400 truncate font-medium">${myUsername}</span>
+          <span class="text-sm font-black text-gray-400">${localStreak} <span class="text-[10px] font-normal text-gray-400">streak</span></span>
+        </div>
+        <p class="text-[9px] text-gray-400 text-center mt-1 italic">Not yet ranked in this window</p>
+      </div>
+    `;
+  }
+
+  container.innerHTML = html;
+}
+
+function applyLeaderboardDarkMode() {
+  const modal = document.getElementById('leaderboard-modal');
+  if (!modal) return;
+  const inner = modal.querySelector('div');
+  if (!inner) return;
+  if (document.body.classList.contains('dark')) {
+    inner.style.backgroundColor = '#1e293b';
+    inner.style.color = '#e2e8f0';
+  } else {
+    inner.style.backgroundColor = '';
+    inner.style.color = '';
+  }
+}
+
+loadGameData();
