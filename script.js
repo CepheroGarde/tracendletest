@@ -1902,6 +1902,9 @@ let currentLbTab = 'uma';
 let currentLbType = 'dailyStreak';
 
 function openLeaderboard() {
+  const modal = document.getElementById('leaderboard-modal');
+  if (modal) {
+    modal.classList.remove('hidden');
   currentLbTab = currentGameType;
   const modal = document.getElementById('leaderboard-modal');
   if (modal) modal.classList.remove('hidden');
