@@ -1855,24 +1855,23 @@ async function syncScoresToLeaderboard(gameType) {
       .maybeSingle();
 
     if (existing) {
-      // Always update updated_at and current streak so time-window tabs (daily/weekly/monthly)
-      // reflect the player's *current* streak at the time of the window, not their all-time best.
-      // all_time_best is preserved separately so the "All Time" view still works.
+      // score_value = highest streak this player has reached (never decreases),
+      // so Daily/Weekly/Monthly tabs rank by best streak in the window, not current.
+      const newBest = Math.max(existing.score_value ?? 0, currentStreak);
       const newAllTimeBest = Math.max(existing.all_time_best ?? existing.score_value ?? 0, currentStreak);
-      const calculatedChecksum = generateChecksum({ user_id: userId, username, game_type: gameType, category, score_value: currentStreak });
+      const calculatedChecksum = generateChecksum({ user_id: userId, username, game_type: gameType, category, score_value: newBest });
 
       await supabaseClient
         .from('leaderboard')
         .update({
           username: username,
-          score_value: currentStreak,        // current streak — resets when streak breaks
-          all_time_best: newAllTimeBest,      // never decreases
-          updated_at: now,
+          score_value: newBest,           // highest streak achieved — never decreases
+          all_time_best: newAllTimeBest,  // same but persists across all time windows
+          updated_at: now,                // refreshed every sync so time-window filters work
           checksum: calculatedChecksum
         })
         .eq('id', existing.id);
     } else {
-      // First time syncing — insert with both score_value and all_time_best set to current streak
       const scorePayload = {
         user_id: userId,
         username: username,
