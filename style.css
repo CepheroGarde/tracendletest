@@ -9,8 +9,11 @@ html.dark-pre body {
     color: #e2e8f0;
 }
 html.dark-pre #menu-screen {
-    background-color: #1e293b;
+    background-color: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
     color: #e2e8f0;
+    border: 1px solid rgba(255,255,255,0.08);
 }
 body {
     background-image: url('images/trace background.jpg');
@@ -21,13 +24,13 @@ body {
     background-color: #f8fafc;
     color: #1e293b;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.35s ease, color 0.35s ease, background-image 0.35s ease, background-position 0.35s ease;
     overflow-x: hidden; 
 }
 
 
 body.dark {
-    background-blend-mode: multiply;
+    background-image: none;
     background-color: #0f172a; 
 
 }
@@ -36,6 +39,15 @@ body.dark {
 body.dark #menu-screen {
     background-color: #1e293b;
     color: #e2e8f0;
+}
+
+.username-suffix {
+    color: #6b7280;
+    font-size: 0.85em;
+    vertical-align: middle;
+}
+body.dark .username-suffix {
+    color: #9ca3af;
 }
 
 body.dark .help-modal > div,
@@ -63,6 +75,30 @@ body.dark .result-modal {
     background-color: rgba(15, 23, 42, 0.9);
 }
 
+body:not(.dark) .help-modal > div,
+body:not(.dark) .result-modal > div > div,
+body:not(.dark) #archive-modal > div,
+body:not(.dark) #wallpaper-modal-inner,
+body:not(.dark) #username-modal > div,
+body:not(.dark) #leaderboard-modal > div,
+body:not(.dark) #stats-modal > div,
+body:not(.dark) #changelog-modal > div {
+    background-color: rgba(255, 255, 255, 0.96);
+    color: #111827;
+    border-color: rgba(148, 163, 184, 0.3);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+body:not(.dark) #help-modal,
+body:not(.dark) #result-modal,
+body:not(.dark) #archive-modal,
+body:not(.dark) #wallpaper-modal,
+body:not(.dark) #username-modal,
+body:not(.dark) #leaderboard-modal,
+body:not(.dark) #stats-modal,
+body:not(.dark) #changelog-modal {
+    background-color: rgba(0, 0, 0, 0.45);
+}
 
 body.dark .btn-primary {
     background-color: var(--uma-green);
@@ -207,8 +243,53 @@ body.dark .text-blue-800 {
     transform-origin: center;
 }
 
+/* removed horizontal flip for daily chibi */
+
 .animate-fade-in {
     animation: fade-in 0.35s ease both;
+}
+
+.modal-overlay,
+.help-modal,
+.result-modal,
+#archive-modal,
+#wallpaper-modal,
+#username-modal,
+#leaderboard-modal,
+#stats-modal,
+#changelog-modal {
+    transition: opacity 0.24s ease, visibility 0.24s ease, transform 0.24s ease;
+}
+
+.help-modal > div,
+.result-modal > div > div,
+#archive-modal > div,
+#wallpaper-modal-inner,
+#username-modal > div,
+#leaderboard-modal > div,
+#stats-modal > div,
+#changelog-modal > div,
+#menu-screen,
+#game-screen,
+#input-container,
+.picker-card,
+header button[aria-label],
+.btn-primary,
+.btn-secondary,
+.btn-easy,
+.btn-hard,
+.theme-toggle {
+    transition: background-color 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-easy:hover,
+.btn-hard:hover,
+header button[aria-label]:hover,
+.theme-toggle:hover,
+.picker-card:hover {
+    transform: translateY(-1px);
 }
 
 .correct-answer {
@@ -309,6 +390,74 @@ body.dark .text-blue-800 {
     }
 }
 
+/* Intro logo animation */
+.intro-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(248, 250, 252, 0.94);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+body.dark .intro-overlay {
+    background: rgba(15, 23, 42, 0.94);
+}
+.intro-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.intro-logo {
+    width: min(320px, 70vw);
+    max-width: 340px;
+    transform: scale(0.3);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.4s ease;
+    will-change: transform, opacity;
+}
+.intro-logo.popup {
+    transform: scale(1.2);
+    opacity: 1;
+}
+.intro-logo.move-to-header {
+    transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+}
+.intro-credit {
+    margin-top: 12px;
+    opacity: 0;
+    transform: translateY(6px) scale(0.96);
+    transition: opacity 0.35s ease, transform 0.45s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-direction: column;
+}
+.intro-credit.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.intro-credit-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid rgba(0,0,0,0.06);
+}
+.intro-credit.move-to-footer {
+    transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+}
+.header-logo {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+body.intro-complete .header-logo {
+    opacity: 1;
+}
+
 body.dark .bg-blue-50 {
     background-color: #1e3a8a;
 }
@@ -352,13 +501,21 @@ body.dark #stats-summary {
 }
 
 body:not(.dark) #menu-screen {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(18px) saturate(1.6);
+    -webkit-backdrop-filter: blur(18px) saturate(1.6);
     color: #1f2937;
+    border: 1px solid rgba(255,255,255,0.55);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
 }
 
 body.dark #menu-screen {
-    background-color: #0f172a;
+    background-color: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
     color: #e2e8f0;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.45);
 }
 
 body.dark .name-col {
@@ -460,7 +617,8 @@ body.dark .theme-toggle .moon-icon { display: block; }
 
 header button[aria-label="Open changelog"],
 header button[aria-label="Toggle theme"],
-header button[aria-label="Open help"] {
+header button[aria-label="Open help"],
+header button[aria-label="Change wallpaper"] {
     border-color: #6b7280;
     color: #374151;
     background-color: rgba(255, 255, 255, 0.85);
@@ -471,7 +629,8 @@ header button[aria-label="Open help"] {
 header button[aria-label="Open changelog"],
 header button[aria-label="Toggle theme"],
 header button[aria-label="Open help"],
-header button[aria-label="Open statistics"] {   
+header button[aria-label="Open statistics"],
+header button[aria-label="Change wallpaper"] {   
     border-color: #6b7280;
     color: #374151;
     background-color: rgba(255, 255, 255, 0.85);
@@ -481,7 +640,8 @@ header button[aria-label="Open statistics"] {
 header button[aria-label="Open changelog"]:hover,
 header button[aria-label="Toggle theme"]:hover,
 header button[aria-label="Open help"]:hover,
-header button[aria-label="Open statistics"]:hover {   
+header button[aria-label="Open statistics"]:hover,
+header button[aria-label="Change wallpaper"]:hover {   
     background-color: #e5e7eb;
     border-color: #4b5563;
     color: #111827;
@@ -490,7 +650,8 @@ header button[aria-label="Open statistics"]:hover {
 body.dark header button[aria-label="Open changelog"],
 body.dark header button[aria-label="Toggle theme"],
 body.dark header button[aria-label="Open help"],
-body.dark header button[aria-label="Open statistics"] {   
+body.dark header button[aria-label="Open statistics"],
+body.dark header button[aria-label="Change wallpaper"] {   
     border-color: #4b5563;
     color: #cbd5e1;
     background-color: rgba(30, 41, 59, 0.85);
@@ -500,7 +661,8 @@ body.dark header button[aria-label="Open statistics"] {
 body.dark header button[aria-label="Open changelog"]:hover,
 body.dark header button[aria-label="Toggle theme"]:hover,
 body.dark header button[aria-label="Open help"]:hover,
-body.dark header button[aria-label="Open statistics"]:hover {   
+body.dark header button[aria-label="Open statistics"]:hover,
+body.dark header button[aria-label="Change wallpaper"]:hover {   
     background-color: #334155;
     border-color: #64748b;
     color: #f1f5f9;
@@ -508,7 +670,8 @@ body.dark header button[aria-label="Open statistics"]:hover {
 
 header button[aria-label="Open changelog"]:hover,
 header button[aria-label="Toggle theme"]:hover,
-header button[aria-label="Open help"]:hover {
+header button[aria-label="Open help"]:hover,
+header button[aria-label="Change wallpaper"]:hover {
     background-color: #e5e7eb;
     border-color: #4b5563;
     color: #111827;
@@ -1441,7 +1604,7 @@ body.dark .stats-section-title {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 6px;
 }
 
@@ -1631,6 +1794,359 @@ body.dark #leaderboard-modal .text-yellow-700 {
 body.dark #leaderboard-modal .bg-yellow-100 {
     background-color: #292524;
 }
+
+/* Peeking Character - Right Corner */
+.peeking-character-img {
+    position: fixed;
+    bottom: 0;
+    right: -15px;
+    max-width: 160px;
+    width: 10vw;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
+}
+.peeking-character-img.peek-start {
+    animation: peek-in 0.8s ease-out forwards;
+}
+
+@keyframes peek-in {
+    0% {
+        right: -100%;
+        opacity: 0;
+    }
+    100% {
+        right: -15px;
+        opacity: 1;
+    }
+}
+
+/* Responsive sizing */
+@media (max-width: 1024px) {
+    .peeking-character-img {
+        max-width: 140px;
+        width: 14vw;
+        right: -12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .peeking-character-img {
+        max-width: 120px;
+        width: 18vw;
+        right: -10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .peeking-character-img {
+        max-width: 90px;
+        width: 22vw;
+        right: -8px;
+    }
+}
 body.dark #leaderboard-modal .border-yellow-300 {
     border-color: #92400e;
+}
+/* ============================================================
+   Icon buttons — shared dark-mode styles
+   ============================================================ */
+body.dark .icon-btn {
+    border-color: #64748b;
+    color: #94a3b8;
+    background-color: transparent;
+}
+body.dark .icon-btn:hover {
+    background-color: #334155;
+    border-color: #94a3b8;
+    color: #e2e8f0;
+}
+
+/* ============================================================
+   Wallpaper picker modal
+   ============================================================ */
+.wallpaper-modal-card {
+    background-color: #ffffff;
+}
+body.dark .wallpaper-modal-card {
+    background-color: #1e293b;
+}
+
+.wallpaper-modal-title {
+    color: #1e293b;
+}
+body.dark .wallpaper-modal-title {
+    color: #f1f5f9;
+}
+
+.wallpaper-modal-close {
+    color: #94a3b8;
+}
+.wallpaper-modal-close:hover {
+    color: #1e293b;
+}
+body.dark .wallpaper-modal-close:hover {
+    color: #f1f5f9;
+}
+
+.wallpaper-section-label {
+    color: #64748b;
+}
+body.dark .wallpaper-section-label {
+    color: #94a3b8;
+}
+
+/* Upload zone */
+.wallpaper-upload-zone {
+    border-color: #cbd5e1;
+    color: #64748b;
+    background-color: #f8fafc;
+}
+.wallpaper-upload-zone:hover {
+    border-color: #22c55e;
+    color: #16a34a;
+    background-color: #f0fdf4;
+}
+body.dark .wallpaper-upload-zone {
+    border-color: #334155;
+    color: #94a3b8;
+    background-color: #0f172a;
+}
+body.dark .wallpaper-upload-zone:hover {
+    border-color: #22c55e;
+    color: #4ade80;
+    background-color: #052e16;
+}
+.wallpaper-upload-hint {
+    color: #94a3b8;
+}
+body.dark .wallpaper-upload-hint {
+    color: #64748b;
+}
+
+/* URL input */
+.wallpaper-url-field {
+    border-color: #e2e8f0;
+    color: #1e293b;
+    background-color: #ffffff;
+}
+body.dark .wallpaper-url-field {
+    border-color: #334155;
+    color: #f1f5f9;
+    background-color: #0f172a;
+}
+body.dark .wallpaper-url-field::placeholder {
+    color: #475569;
+}
+
+/* Remove button */
+.wallpaper-remove-btn {
+    border-color: #e2e8f0;
+    color: #94a3b8;
+}
+.wallpaper-remove-btn:hover {
+    border-color: #fca5a5;
+    color: #ef4444;
+}
+body.dark .wallpaper-remove-btn {
+    border-color: #334155;
+    color: #64748b;
+}
+body.dark .wallpaper-remove-btn:hover {
+    border-color: #f87171;
+    color: #ef4444;
+}
+/* ============================================================
+   Overflow (⋯) dropdown menu
+   ============================================================ */
+.overflow-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 160px;
+    background: rgba(255,255,255,0.97);
+    border: 1.5px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.07);
+    padding: 6px;
+    z-index: 300;
+    animation: overflow-pop .15s ease;
+}
+
+@keyframes overflow-pop {
+    from { opacity: 0; transform: scale(.94) translateY(-4px); }
+    to   { opacity: 1; transform: scale(1)  translateY(0);     }
+}
+
+.overflow-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    padding: 9px 12px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background .15s;
+    white-space: nowrap;
+}
+.overflow-item:hover {
+    background: #f1f5f9;
+    color: #111827;
+}
+
+/* Dark mode */
+body.dark .overflow-dropdown {
+    background: rgba(30,41,59,0.97);
+    border-color: #334155;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+body.dark .overflow-item {
+    color: #cbd5e1;
+}
+body.dark .overflow-item:hover {
+    background: #1e293b;
+    color: #f1f5f9;
+}
+
+/* Keep the ⋯ button in the existing header button style */
+header button[aria-label="More options"] {
+    border-color: #6b7280;
+    color: #374151;
+    background-color: rgba(255,255,255,0.85);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+header button[aria-label="More options"]:hover {
+    background-color: #e5e7eb;
+    border-color: #4b5563;
+    color: #111827;
+}
+body.dark header button[aria-label="More options"] {
+    border-color: #4b5563;
+    color: #cbd5e1;
+    background-color: rgba(30,41,59,0.85);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+body.dark header button[aria-label="More options"]:hover {
+    background-color: #334155;
+    border-color: #64748b;
+    color: #f1f5f9;
+}
+/* ============================================================
+   Glassmorphism: header + menu-screen when wallpaper is active
+   ============================================================ */
+
+/* Header glass — spans full viewport width, content stays centered */
+header {
+    /* Override max-w-6xl so the glass panel bleeds edge-to-edge */
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px) saturate(1.5);
+    -webkit-backdrop-filter: blur(16px) saturate(1.5);
+    transition: background 0.3s ease;
+
+    /* Re-constrain the inner content to 6xl (1152px) */
+    padding-left: max(1rem, calc((100vw - 1152px) / 2 + 1rem));
+    padding-right: max(1rem, calc((100vw - 1152px) / 2 + 1rem));
+}
+body.dark header {
+    background: rgba(15, 23, 42, 0.68);
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+}
+
+/* Stats summary pill in header — keep readable */
+body:not(.dark) #stats-summary {
+    background: rgba(255, 255, 255, 0.70);
+    border-color: rgba(255,255,255,0.5);
+}
+body.dark #stats-summary {
+    background: rgba(51, 65, 85, 0.70) !important;
+}
+
+/* Tab switcher inside menu */
+body:not(.dark) #menu-screen .flex.bg-gray-100 {
+    background: rgba(243, 244, 246, 0.55) !important;
+}
+body.dark #menu-screen .flex.bg-gray-100 {
+    background: rgba(30, 41, 59, 0.55) !important;
+}
+
+/* Yesterday info / server time strip */
+body:not(.dark) #yesterday-info {
+    background: rgba(249, 250, 251, 0.60);
+    border-color: rgba(209, 213, 219, 0.50);
+}
+body.dark #yesterday-info {
+    background: rgba(30, 41, 59, 0.55);
+    border-color: rgba(75, 85, 99, 0.45);
+}
+
+/* Footer inside menu card */
+body:not(.dark) #menu-screen footer {
+    border-color: rgba(209, 213, 219, 0.45);
+}
+body.dark #menu-screen footer {
+    border-color: rgba(51, 65, 85, 0.55);
+}
+
+/* Mobile header stacking fix: keep header and its buttons above modal bars
+   so the thin status/header bars don't visually or interactively overlap. */
+@media (max-width: 768px) {
+    header {
+        z-index: 9999;
+    }
+}
+
+/* Improve spacing on small screens so the bottom border/line doesn't cut into buttons */
+@media (max-width: 768px) {
+    header {
+        /* give slightly more bottom padding so buttons sit above the border */
+        padding-bottom: calc(1rem + 4px);
+        /* reduce border thickness so it appears less intrusive */
+        border-bottom-width: 2px;
+    }
+
+    /* Ensure header buttons are painted above any nearby bars */
+    header button,
+    header .icon-btn,
+    header .theme-toggle {
+        position: relative;
+        z-index: 10001;
+        background-clip: padding-box;
+    }
+}
+
+
+
+
+
+/* Ensure modals and overlays render above the header (which is high on mobile) */
+#help-modal,
+#result-modal,
+#archive-modal,
+#wallpaper-modal,
+#username-modal,
+#leaderboard-modal,
+#stats-modal,
+#changelog-modal {
+    z-index: 10002 !important;
+}
+
+/* Backdrop overlays must cover header visually */
+.fixed.inset-0.bg-black {
+    z-index: 10001 !important;
 }
