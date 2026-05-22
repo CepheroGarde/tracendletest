@@ -1140,7 +1140,12 @@ function loadWallpaper() {
     }
   }
   const saved = localStorage.getItem(_WP_KEY);
-  if (saved !== null) applyWallpaper(saved);
+  // Default to trace background if nothing has been saved yet
+  if (saved === null) {
+    applyWallpaper('images/trace background.jpg');
+  } else {
+    applyWallpaper(saved);
+  }
 }
 
 function openWallpaperPicker() {
