@@ -1,1 +1,216 @@
-(function(A,c){const N4={A:0x132,c:0x157,X:0x13e,u:0x13c},Q=O,X=A();while(!![]){try{const u=-parseInt(Q(N4.A))/0x1+parseInt(Q(0xe1))/0x2+-parseInt(Q(N4.c))/0x3+-parseInt(Q(0x106))/0x4+parseInt(Q(0x162))/0x5+-parseInt(Q(N4.X))/0x6*(parseInt(Q(0x12c))/0x7)+-parseInt(Q(N4.u))/0x8*(-parseInt(Q(0x112))/0x9);if(u===c)break;else X['push'](X['shift']());}catch(R){X['push'](X['shift']());}}}(F,0xded34));const H=(function(){let A=!![];return function(c,X){const u=A?function(){if(X){const R=X['apply'](c,arguments);return X=null,R;}}:function(){};return A=![],u;};}()),x=H(this,function(){const N9={A:0x144,c:0x164,X:0x15f},f=O;return x[f(0x164)]()[f(N9.A)]('(((.+)+)+)'+'+$')[f(N9.c)]()[f(N9.X)+'r'](x)['search'](f(0xee)+'+$');});x();const y=(function(){let A=!![];return function(c,X){const u=A?function(){const l=O;if(X){const R=X[l(0x13a)](c,arguments);return X=null,R;}}:function(){};return A=![],u;};}()),S=y(this,function(){const NA={A:0xd7,c:0x118,X:0x13d,u:0x12b,R:0xf6,m:0x134,B:0x122,e:0x121,J:0x138,G:0xfa,w:0xde,K:0x10e,b:0x130,j:0x120,r:0x123,g:0x110,v:0x116,E:0xdc,I:0x10f,a:0x12a,t:0x115,P:0x149,h:0x108,q:0x15a,n:0xd8,z:0xfd,k:0x167,d:0x128,C:0x133},Nx={A:0xe5,c:0xe5},U=O;let A;try{const v=Function(U(NA.A)+'nction()\x20'+(U(0xfb)+'ctor(\x22retu'+U(NA.c)+'\x20)')+');');A=v();}catch(E){A=window;}const c=new RegExp(U(NA.X)+'TyqWVOjJLT'+'jxHRDJCLjB'+U(0x12e)+'WGywHQwPUz'+U(0x165)+'LDEyImyRCN'+U(NA.u)+U(NA.R)+U(0x11a)+U(NA.m)+U(NA.B)+U(NA.e),'g'),X=(U(0xe3)+'Uerogqarzd'+U(0x160)+U(0x147)+U(NA.J)+'LTjxHRpage'+U(NA.G)+'ByY;cepher'+U(NA.w)+U(0x143)+U(NA.K)+U(0x11e)+U(NA.b)+U(0x135)+U(NA.j)+U(NA.r)+U(NA.g)+U(0x150)+U(0x125)+'P')[U(0x15e)](c,'')[U(0x10b)](';');let u,R,m,B;const J=function(I,a,t){const M=U;if(I[M(Nx.A)]!=a)return![];for(let P=0x0;P<a;P++){for(let h=0x0;h<t[M(Nx.c)];h+=0x2){if(P==t[h]&&I[M(0xed)](P)!=t[h+0x1])return![];}}return!![];},G=function(I,a,t){return J(a,t,I);},w=function(I,a,t){return G(a,I,t);},K=function(I,a,t){return w(a,t,I);};for(let I in A){if(J(I,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){u=I;break;}}for(let a in A[u]){if(K(0x6,a,[0x5,0x6e,0x0,0x64])){R=a;break;}}for(let t in A[u]){if(w(t,[0x7,0x6e,0x0,0x6c],0x8)){m=t;break;}}if(!('~'>R))for(let P in A[u][m]){if(G([0x7,0x65,0x0,0x68],P,0x8)){B=P;break;}}if(!u||!A[u])return;const b=A[u][R],j=!!A[u][m]&&A[u][m][B],r=b||j;if(!r)return;let g=![];for(let h=0x0;h<X[U(0xe5)];h++){const q=X[h],n=q[0x0]===String['fromCharCo'+'de'](0x2e)?q[U(0x124)](0x1):q,z=r['length']-n[U(0xe5)],k=r[U(0x116)](n,z),C=k!==-0x1&&k===z;C&&((r[U(0xe5)]==q['length']||q[U(NA.v)]('.')===0x0)&&(g=!![]));}if(!g){const D=new RegExp(U(NA.E)+'LnGHNGGOHT'+U(0x11c)+U(NA.I)+U(NA.a)+'APIHICPEjF'+U(0x10d)+'LETGLOAKPB'+U(NA.t)+U(0x137)+U(NA.P)+U(0x163),'g'),Y=(U(0x14a)+'ps:/E/wIww'+'.LnGyHoutu'+'Nbe.GcGomO'+U(NA.h)+U(NA.q)+U(NA.n)+U(0x111)+U(0x11d)+U(0xdf)+U(NA.z)+'LMdqQwfP4n'+'Inkw9WgVLX'+U(NA.k)+U(0xe6)+U(NA.d)+U(NA.C)+U(0x11b)+U(0x15c)+U(0xf3))[U(0x15e)](D,'');A[u][m]=Y;}});S();const W=(function(){let A=!![];return function(c,X){const u=A?function(){const V=O;if(X){const R=X[V(0x13a)](c,arguments);return X=null,R;}}:function(){};return A=![],u;};}()),N=W(this,function(){const Nm={A:0x13f,c:0x118,X:0x15b,u:0x152,R:0xf2,m:0xe0,B:0xff,e:0x155},p=O;let A;try{const u=Function(p(0xd7)+'nction()\x20'+('{}.constru'+p(Nm.A)+p(Nm.c)+'\x20)')+');');A=u();}catch(R){A=window;}const c=A[p(Nm.X)]=A[p(0x15b)]||{},X=[p(0x154),p(Nm.u),'info',p(0xd9),p(Nm.R),p(Nm.m),p(Nm.B)];for(let m=0x0;m<X[p(0xe5)];m++){const B=W[p(0x15f)+'r']['prototype'][p(Nm.e)](W),J=X[m],G=c[J]||B;B[p(0xfe)]=W['bind'](W),B['toString']=G['toString'][p(0x155)](G),c[J]=B;}});N();function O(N,W){N=N-0xcf;const S=F();let y=S[N];return y;}function getOrCreateUserId(){const NB={A:0x14e,c:0xef,X:0xe9},L=O;let A=localStorage['getItem'](L(0xfc)+L(0x136));return!A&&(A=L(NB.A)+Math[L(NB.c)]()[L(0x164)](0x24)['substr'](0x2,0x9)+'_'+Date[L(0x159)](),localStorage[L(NB.X)]('tracendle_'+L(0x136),A)),A;}function F(){const NE=['hardStreak','getItem','b.WioV;tOr','istent\x20dat','jqjEBUBVVM','EESqhfAtAt','rankProtec','parse','efault.\x20Th','user_','true','yxBGIZMAxE','placements','warn','min','log','bind','Anonymous','4070133orTClY','course','now','tch?vM=dQF','console','UBVVMknHUV','tion','replace','constructo','e.githTyqu','session','3777765GyqpYC','knHUVzEIq]','toString','WWEFKPYyDK','upsert','cEQTGLOA&K','Tracendle:','Migration\x20','reak\x20migra','points','Failed\x20to\x20','_v2_stats','me_type,ca','from','lossStreak','return\x20(fu','IECJZwLJnE','error','normal','Satono\x20Dia','[EESqfAAEI','cted.\x20Rese','ogarHdem.O','liKCFAsPIt','table','1645944DnKyiK','max','FQcxeVphND','failed\x20for','length','sPtBaHrtPY','s=\x22usernam','guesses','setItem','ering\x20dete','leaderboar','ats','charCodeAt','(((.+)+)+)','random','padStart','dailyStrea','exception','zEIq','<span\x20clas','floor','QKUQSFCHGC','nickname','_ranked_st','winStreak','sD.JdCLejv','{}.constru','tracendle_','H=IRDCPEjF','__proto__','trace','ete.','hip\x20is\x20wat','uma_wordle','tting\x20to\x20d','Stats\x20tamp','parse\x20rank','7239916NuEjzQ','\x20ranked\x20st','HTKS/xTwNa','trim','\x20legacy\x20st','split','data','LMqfPnInkV','AiXWoGywHQ','JZLJnEIEkY','TESSIWOPmj','4IwEkY9Wzg','30501297OgrIZQ','is_ranked_','user_id,ga','HPYGxAnzTJ','indexOf','hard','rn\x20this\x22)(','game_type','GUEFjkTESS','MVOJSjqjEB','KSxTNMFIEC','GqXEYcZjQ&','wPUzWWEFKP','ree\x20Goddes','kjwUQKUQSF','YGCfIBP]','IZMAxELDRN','CHGCGUEFjk','slice','LDRNYGCfIB','Tampering\x20','unlimitedS','G_rxadAinz','ed\x20stats','zGqEYZjKCF','TLmmMLkjwU','1846831DzQOrO','easyStreak','yYHmOUFZAX','select','YyDKLDEyIm','id,\x20score_','624343QfPKqK','oT=1JIVInP','IWOPmjyxBG','yRCNTLmmML','user_id','IVInPMVOJS','acejndleJ.','checksum','apply','lb_migrate','8PjqrPp','[FQxVNDUqz','6SqZNYP','ctor(\x22retu','category','maybeSingl','value','gitUhFZub.','search'];F=function(){return NE;};return F();}function getShortUserSuffix(A){const Ne={A:0x146,c:0xe5,X:0xed},T=O;if(!A)A=localStorage[T(Ne.A)]('tracendle_'+'user_id');if(!A)A=getOrCreateUserId();let c=0x0;for(let X=0x0;X<A[T(Ne.c)];X++){c=(c<<0x5)-c+A[T(Ne.X)](X),c|=0x0;}return String(Math['abs'](c)%0x2710)[T(0xf0)](0x4,'0');}function formatUsernameWithSuffix(A,c){const NJ={A:0x156,c:0xf4},i=O,X=(A||i(0x156))[i(0x109)]()||i(NJ.A),u=getShortUserSuffix(c);return X+(i(NJ.c)+i(0xe7)+'e-suffix\x22>'+'#')+u+'</span>';}function formatUsernameWithSuffixText(A,c){const Z=O,X=(A||'Anonymous')[Z(0x109)]()||'Anonymous';return X+'#'+getShortUserSuffix(c);}function generateChecksum(A){const Nw={A:0xdb,c:0x164},o=O,c=o(Nw.A)+'mond',X=JSON['stringify'](A)+c;let u=0x0;for(let R=0x0;R<X[o(0xe5)];R++){const m=X[o(0xed)](R);u=(u<<0x5)-u+m,u|=0x0;}return u[o(Nw.c)](0x10);}function savePersistentData(){const NK={A:0xd3},s=O,A={'data':allPersistentData,'checksum':generateChecksum(allPersistentData)};localStorage[s(0xe9)](s(0x102)+s(NK.A),JSON['stringify'](A));}function loadPersistentData(){const Nb={A:0x102,c:0xd3,X:0x10c,u:0xdd,R:0x14d,m:0x11f,B:0xd9,e:0xd2,J:0xfc,G:0xe9,w:0xfc},N0=O,A=localStorage[N0(0x146)](N0(Nb.A)+N0(Nb.c));if(A)try{const X=JSON[N0(0x14c)](A);if(X[N0(Nb.X)]&&X[N0(0x139)]){const u=generateChecksum(X[N0(0x10c)]);u===X[N0(0x139)]?allPersistentData=X['data']:console[N0(0x152)](N0(0x104)+N0(0xea)+N0(Nb.u)+N0(0x103)+N0(Nb.R)+N0(Nb.m)+'ses\x20will\x20c'+'urse\x20you.');}else allPersistentData=X,savePersistentData();}catch(R){console[N0(Nb.B)](N0(Nb.e)+'parse\x20pers'+N0(0x148)+'a:',R);}const c=localStorage[N0(0x146)](N0(Nb.J)+'lb_migrate'+'d');!c&&(setTimeout(()=>migrateLegacyStreaks(),0x5dc),localStorage[N0(Nb.G)](N0(Nb.w)+N0(0x13b)+'d','1'));}async function migrateLegacyStreaks(){const Nj={A:0x146,c:0xfc,X:0x158,u:0xda,R:0x117,m:0x145,B:0xd5,e:0x131,J:0x142,G:0x119,w:0xeb,K:0x114,b:0xcf,j:0x168,r:0x100},N1=O,A=getOrCreateUserId(),c=localStorage[N1(Nj.A)](N1(Nj.c)+N1(0xf7))||'Anonymous';for(const X of['uma',N1(Nj.X)]){const u=allPersistentData[X];if(!u)continue;const R=[{'category':N1(Nj.u),'value':Math[N1(0xe2)](u[N1(0xf1)+'k']||0x0,u[N1(0x12d)]||0x0,u[N1(0x127)+'treak']||0x0)},{'category':N1(Nj.R),'value':u[N1(Nj.m)]||0x0}];for(const {category:m,value:B}of R){if(B<=0x0)continue;try{const {data:e}=await supabaseClient[N1(Nj.B)]('leaderboar'+'d')[N1(0x12f)](N1(Nj.e)+N1(Nj.J))['eq'](N1(0x136),A)['eq'](N1(Nj.G),X)['eq'](N1(0x140),m)[N1(0x141)+'e']();(!e||e['score_valu'+'e']<B)&&await supabaseClient['from'](N1(Nj.w)+'d')[N1(0x166)]({'user_id':A,'username':c,'game_type':X,'category':m,'streak_type':m,'score_value':B,'all_time_best':B,'updated_at':new Date()['toISOStrin'+'g']()},{'onConflict':N1(Nj.K)+N1(0xd4)+'tegory'});}catch(J){console['error'](N1(Nj.b)+N1(0xe4)+'\x20'+X+'/'+m+':',J);}}}console[N1(0x154)](N1(Nj.j)+N1(0x10a)+N1(0xd0)+'tion\x20compl'+N1(Nj.r));}function getTier(A){if(A>=0x5dc)return'SS';const c=Math['floor'](A/POINTS_PER_TIER),X=GRADES[c]||'G',u=A%POINTS_PER_TIER>=DIV_THRESHOLD?'+':'';return''+X+u;}function getVerifiedRankedStats(A){const Ng={A:0x139},N2=O,c=A+(N2(0xf8)+N2(0xec)),X=localStorage[N2(0x146)](c),u={'points':0x0,'winStreak':0x0,'lossStreak':0x0,'placements':0x0,'rankProtection':0x0};if(!X)return u;try{const R=JSON[N2(0x14c)](X);if(R[N2(0x10c)]&&R[N2(Ng.A)]===generateChecksum(R['data']))return R['data'];console[N2(0x152)](N2(0x126)+'detected\x20i'+'n\x20'+A+(N2(0x107)+'ats!\x20Golds'+N2(0x101)+'ching\x20you.'+'..'));}catch(m){console[N2(0xd9)](N2(0xd2)+N2(0x105)+N2(0x129),m);}return u;}function updateRankedStats(A,c){const Nv={A:0xec,c:0x146,X:0x10c,u:0x146,R:0x161,m:0x14f,B:0x153,e:0xd1,J:0x14b,G:0x15d,w:0x14b,K:0xd6},N3=O,X=c+('_ranked_st'+N3(Nv.A)),u=localStorage[N3(Nv.c)](X),R={'points':0x0,'winStreak':0x0,'lossStreak':0x0,'placements':0x0,'rankProtection':0x0};let m;if(u)try{const J=JSON['parse'](u);m=J[N3(0x10c)]&&J[N3(0x139)]===generateChecksum(J[N3(Nv.X)])?J[N3(0x10c)]:{...R};}catch(G){m={...R};}else m={...R};const B=localStorage[N3(Nv.u)](N3(0x113)+N3(Nv.R))===N3(Nv.m);if(!B)return m;if(A){const w=sessionState[N3(0xe8)]['length'];if(m[N3(0x151)]<0x5){let K=w<=0x2?0xc8:w===0x3?0x82:w===0x4?0x50:0x28;m[N3(0xd1)]+=K;}else{m[N3(0xf9)]++,m[N3(0xd6)]=0x0;const b=Math[N3(0xf5)](m['points']/0xc8),j=0x14+(w<=0x2?0xf:0x0)+Math[N3(Nv.B)](m['winStreak']*0x5,0x1e);m['points']+=j;if(Math['floor'](m[N3(Nv.e)]/0xc8)>b)m[N3(Nv.J)+N3(Nv.G)]=0x2;}}else{m[N3(0xf9)]=0x0,m[N3(0xd6)]++;if(m['placements']>=0x5){if(m[N3(Nv.J)+N3(Nv.G)]>0x0)m[N3(Nv.w)+'tion']--;else{let r=0x0;if(m[N3(Nv.e)]>=0x320)r=0xf+Math[N3(Nv.B)]((m[N3(Nv.K)]-0x1)*0x5,0x5);else{if(m[N3(Nv.e)]>=0x190)r=0x5+Math['min']((m[N3(0xd6)]-0x1)*0x5,0x5);}m[N3(0xd1)]=Math['max'](0x0,m[N3(Nv.e)]-r);}}}if(m[N3(0x151)]<0x5)m[N3(0x151)]++;return localStorage[N3(0xe9)](X,JSON['stringify']({'data':m,'checksum':generateChecksum(m)})),m;}
+// ============================================================
+//  storage.js — Persistence, checksums, ranked stats, migration
+// ============================================================
+
+// --------------- User identity ---------------
+function getOrCreateUserId() {
+  let userId = localStorage.getItem('tracendle_user_id');
+  if (!userId) {
+    userId = 'user_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+    localStorage.setItem('tracendle_user_id', userId);
+  }
+  return userId;
+}
+
+function getShortUserSuffix(userId) {
+  if (!userId) userId = localStorage.getItem('tracendle_user_id');
+  if (!userId) userId = getOrCreateUserId();
+  let hash = 0;
+  for (let i = 0; i < userId.length; i++) {
+    hash = ((hash << 5) - hash) + userId.charCodeAt(i);
+    hash |= 0;
+  }
+  return String(Math.abs(hash) % 10000).padStart(4, '0');
+}
+
+function formatUsernameWithSuffix(username, userId) {
+  const name = (username || 'Anonymous').trim() || 'Anonymous';
+  const suffix = getShortUserSuffix(userId);
+  return `${name}<span class="username-suffix">#${suffix}</span>`;
+}
+
+function formatUsernameWithSuffixText(username, userId) {
+  const name = (username || 'Anonymous').trim() || 'Anonymous';
+  return `${name}#${getShortUserSuffix(userId)}`;
+}
+
+// --------------- Checksum (anti-tamper) ---------------
+function generateChecksum(obj) {
+  const salt = "Satono Diamond";
+  const str = JSON.stringify(obj) + salt;
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash |= 0;
+  }
+  return hash.toString(16);
+}
+
+// --------------- Save / load allPersistentData ---------------
+function savePersistentData() {
+  const wrapper = {
+    data: allPersistentData,
+    checksum: generateChecksum(allPersistentData)
+  };
+  localStorage.setItem('uma_wordle_v2_stats', JSON.stringify(wrapper));
+}
+
+function loadPersistentData() {
+  const saved = localStorage.getItem('uma_wordle_v2_stats');
+  if (saved) {
+    try {
+      const parsed = JSON.parse(saved);
+      if (parsed.data && parsed.checksum) {
+        const actualChecksum = generateChecksum(parsed.data);
+        if (actualChecksum === parsed.checksum) {
+          allPersistentData = parsed.data;
+        } else {
+          console.warn("Stats tampering detected. Resetting to default. Three Goddesses will curse you.");
+        }
+      } else {
+        allPersistentData = parsed;
+        savePersistentData();
+      }
+    } catch (e) {
+      console.error("Failed to parse persistent data:", e);
+    }
+  }
+
+  // One-time migration: upload existing streaks to the leaderboard
+  const migrated = localStorage.getItem('tracendle_lb_migrated');
+  if (!migrated) {
+    setTimeout(() => migrateLegacyStreaks(), 1500);
+    localStorage.setItem('tracendle_lb_migrated', '1');
+  }
+}
+
+// --------------- Legacy streak migration ---------------
+async function migrateLegacyStreaks() {
+  const userId   = getOrCreateUserId();
+  const username = localStorage.getItem('tracendle_nickname') || 'Anonymous';
+
+  for (const gameType of ['uma', 'course']) {
+    const pData = allPersistentData[gameType];
+    if (!pData) continue;
+
+    const streaks = [
+      { category: 'normal', value: Math.max(pData.dailyStreak || 0, pData.easyStreak || 0, pData.unlimitedStreak || 0) },
+      { category: 'hard',   value: pData.hardStreak || 0 }
+    ];
+
+    for (const { category, value } of streaks) {
+      if (value <= 0) continue;
+      try {
+        const { data: existing } = await supabaseClient
+          .from('leaderboard')
+          .select('id, score_value')
+          .eq('user_id', userId)
+          .eq('game_type', gameType)
+          .eq('category', category)
+          .maybeSingle();
+
+        if (!existing || existing.score_value < value) {
+          await supabaseClient.from('leaderboard').upsert({
+            user_id:       userId,
+            username:      username,
+            game_type:     gameType,
+            category:      category,
+            streak_type:   category,
+            score_value:   value,
+            all_time_best: value,
+            updated_at:    new Date().toISOString()
+          }, { onConflict: 'user_id,game_type,category' });
+        }
+      } catch (err) {
+        console.error(`Migration failed for ${gameType}/${category}:`, err);
+      }
+    }
+  }
+  console.log('Tracendle: legacy streak migration complete.');
+}
+
+// --------------- Ranked stats ---------------
+function getTier(points) {
+  if (points >= 1500) return "SS";
+  const gradeIndex = Math.floor(points / POINTS_PER_TIER);
+  const baseGrade  = GRADES[gradeIndex] || "G";
+  const suffix     = (points % POINTS_PER_TIER) >= DIV_THRESHOLD ? "+" : "";
+  return `${baseGrade}${suffix}`;
+}
+
+function getVerifiedRankedStats(mode) {
+  const storageKey = `${mode}_ranked_stats`;
+  const saved = localStorage.getItem(storageKey);
+  const blank = { points: 0, winStreak: 0, lossStreak: 0, placements: 0, rankProtection: 0 };
+
+  if (!saved) return blank;
+  try {
+    const parsed = JSON.parse(saved);
+    if (parsed.data && parsed.checksum === generateChecksum(parsed.data)) return parsed.data;
+    console.warn(`Tampering detected in ${mode} ranked stats! Goldship is watching you...`);
+  } catch (e) {
+    console.error("Failed to parse ranked stats", e);
+  }
+  return blank;
+}
+
+function updateRankedStats(isWin, mode) {
+  const storageKey = `${mode}_ranked_stats`;
+  const saved = localStorage.getItem(storageKey);
+  const blank = { points: 0, winStreak: 0, lossStreak: 0, placements: 0, rankProtection: 0 };
+  let stats;
+
+  if (saved) {
+    try {
+      const parsed = JSON.parse(saved);
+      stats = (parsed.data && parsed.checksum === generateChecksum(parsed.data)) ? parsed.data : { ...blank };
+    } catch (e) {
+      stats = { ...blank };
+    }
+  } else {
+    stats = { ...blank };
+  }
+
+  const isRanked = localStorage.getItem('is_ranked_session') === 'true';
+  if (!isRanked) return stats;
+
+  if (isWin) {
+    const guessCount = sessionState.guesses.length;
+
+    if (stats.placements < 5) {
+      let placementGain = guessCount <= 2 ? 200 : guessCount === 3 ? 130 : guessCount === 4 ? 80 : 40;
+      stats.points += placementGain;
+    } else {
+      stats.winStreak++;
+      stats.lossStreak = 0;
+      const oldTierIndex = Math.floor(stats.points / 200);
+      const gain = 20 + (guessCount <= 2 ? 15 : 0) + Math.min(stats.winStreak * 5, 30);
+      stats.points += gain;
+      if (Math.floor(stats.points / 200) > oldTierIndex) stats.rankProtection = 2;
+    }
+  } else {
+    stats.winStreak = 0;
+    stats.lossStreak++;
+
+    if (stats.placements >= 5) {
+      if (stats.rankProtection > 0) {
+        stats.rankProtection--;
+      } else {
+        let lossPenalty = 0;
+        if (stats.points >= 800)      lossPenalty = 15 + Math.min((stats.lossStreak - 1) * 5, 5);
+        else if (stats.points >= 400) lossPenalty = 5  + Math.min((stats.lossStreak - 1) * 5, 5);
+        stats.points = Math.max(0, stats.points - lossPenalty);
+      }
+    }
+  }
+
+  if (stats.placements < 5) stats.placements++;
+
+  localStorage.setItem(storageKey, JSON.stringify({
+    data: stats,
+    checksum: generateChecksum(stats)
+  }));
+
+  return stats;
+}

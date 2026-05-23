@@ -1,1 +1,198 @@
-const NN=O;(function(N,W){const Ny={N:0x1c0,W:0x20e,S:0x282,y:0x1f0,x:0x204,H:0x243,A:0x1f9},p=O,S=N();while(!![]){try{const y=-parseInt(p(0x27e))/0x1*(-parseInt(p(0x242))/0x2)+parseInt(p(Ny.N))/0x3*(-parseInt(p(Ny.W))/0x4)+parseInt(p(0x22c))/0x5*(-parseInt(p(Ny.S))/0x6)+-parseInt(p(Ny.y))/0x7+parseInt(p(Ny.x))/0x8+parseInt(p(0x211))/0x9*(-parseInt(p(Ny.H))/0xa)+parseInt(p(0x1b9))/0xb*(parseInt(p(Ny.A))/0xc);if(y===W)break;else S['push'](S['shift']());}catch(x){S['push'](S['shift']());}}}(F,0xb324e));async function loadGameData(){const Nv={N:0x289},Ng={N:0x23e,W:0x21a,S:0x250,y:0x21e,x:0x279,H:0x280,A:0x1db},NG={N:0x1bb,W:0x1e9,S:0x24b,y:0x1e6,x:0x253,H:0x27a,A:0x217,c:0x271,X:0x215,u:0x25f,R:0x248,m:0x239,B:0x25d,e:0x26b,J:0x27b,G:0x1eb,w:0x1e5,K:0x25e,b:0x1e1,j:0x213,r:0x1c8,g:0x1dd,v:0x1c1,E:0x224,I:0x24f,a:0x1b3,t:0x266,P:0x240},NA={N:0x233,W:0x200,S:0x1bd,y:0x280},N2=O,A=(function(){let B=!![];return function(e,J){const G=B?function(){const L=O;if(J){const w=J[L(0x254)](e,arguments);return J=null,w;}}:function(){};return B=![],G;};}()),c=A(this,function(){const T=O;return c[T(NA.N)]()[T(NA.W)](T(NA.S)+'+$')[T(NA.N)]()[T(NA.y)+'r'](c)[T(0x200)](T(0x1bd)+'+$');});c();const X=(function(){let B=!![];return function(e,J){const Nc={N:0x254},G=B?function(){const i=O;if(J){const w=J[i(Nc.N)](e,arguments);return J=null,w;}}:function(){};return B=![],G;};}()),u=X(this,function(){const Nm={N:0x1dc},Z=O;let B;try{const h=Function(Z(NG.N)+Z(0x281)+(Z(0x1f4)+'ctor(\x22retu'+Z(0x274)+'\x20)')+');');B=h();}catch(q){B=window;}const J=new RegExp(Z(0x234)+'mSLxYPxyfG'+Z(NG.W)+Z(0x220)+Z(NG.S)+Z(0x262)+Z(0x1ed)+Z(NG.y)+'LAPCDDxGUE'+Z(0x229)+Z(0x1fa)+Z(0x1c7)+'N]','g'),G=(Z(0x1b8)+Z(NG.x)+Z(0x1f5)+'PxhyfGuTb.'+'qiRIoC;Ktr'+'aGcendmle.'+Z(0x284)+Z(NG.H)+Z(NG.A)+Z(NG.c)+Z(NG.X)+'OgarYCde.z'+'gzithjqXkV'+Z(NG.u)+'oQyWLAPCDD'+Z(0x1ff)+Z(NG.R)+Z(NG.m)+Z(0x227))[Z(NG.B)](J,'')['split'](';');let w,K,b,j;const r=function(n,z,k){const o=Z;if(n['length']!=z)return![];for(let C=0x0;C<z;C++){for(let D=0x0;D<k[o(0x1ba)];D+=0x2){if(C==k[D]&&n[o(Nm.N)](C)!=k[D+0x1])return![];}}return!![];},g=function(n,z,k){return r(z,k,n);},v=function(n,z,k){return g(z,n,k);},E=function(n,z,k){return v(z,k,n);};for(let n in B){if(r(n,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){w=n;break;}}for(let z in B[w]){if(E(0x6,z,[0x5,0x6e,0x0,0x64])){K=z;break;}}for(let k in B[w]){if(v(k,[0x7,0x6e,0x0,0x6c],0x8)){b=k;break;}}if(!('~'>K))for(let C in B[w][b]){if(g([0x7,0x65,0x0,0x68],C,0x8)){j=C;break;}}if(!w||!B[w])return;const I=B[w][K],a=!!B[w][b]&&B[w][b][j],t=I||a;if(!t)return;let P=![];for(let D=0x0;D<G[Z(0x1ba)];D++){const Y=G[D],Q=Y[0x0]===String[Z(NG.e)+'de'](0x2e)?Y[Z(NG.J)](0x1):Y,f=t['length']-Q[Z(0x1ba)],l=t[Z(NG.G)](Q,f),U=l!==-0x1&&l===f;U&&((t['length']==Y[Z(0x1ba)]||Y[Z(0x1eb)]('.')===0x0)&&(P=!![]));}if(!P){const M=new RegExp(Z(0x1b7)+Z(0x263)+'nnnOznEjGf'+'VMJOUEMZHL'+Z(0x1fe)+Z(0x1d1)+Z(NG.w)+Z(NG.K)+Z(0x27d)+Z(NG.b)+'EnjGSYNPOq'+Z(0x1bc)+Z(0x251),'g'),V=(Z(NG.j)+'ps:IN/IAz/'+Z(NG.r)+Z(NG.g)+Z(NG.v)+Z(0x1be)+Z(0x20d)+'JchE?vnZ=Y'+Z(0x286)+Z(NG.E)+'Q&IzPZlinj'+Z(NG.I)+Z(NG.a)+Z(0x221)+Z(NG.t)+Z(0x222)+'o=G1kZTMBV'+Z(NG.P)+'YNPOqKUVVN'+Z(0x22d)+'q')['replace'](M,'');B[w][b]=V;}});u();const R=(function(){let B=!![];return function(e,J){const G=B?function(){const s=O;if(J){const w=J[s(0x254)](e,arguments);return J=null,w;}}:function(){};return B=![],G;};}()),m=R(this,function(){const N1=O,B=function(){const N0=O;let w;try{w=Function(N0(0x1bb)+'nction()\x20'+('{}.constru'+'ctor(\x22retu'+N0(0x274)+'\x20)')+');')();}catch(K){w=window;}return w;},e=B(),J=e[N1(Ng.N)]=e[N1(0x23e)]||{},G=[N1(0x1ee),N1(Ng.W),'info',N1(Ng.S),N1(Ng.y),N1(0x20c),N1(Ng.x)];for(let w=0x0;w<G[N1(0x1ba)];w++){const K=R[N1(Ng.H)+'r'][N1(0x26d)]['bind'](R),b=G[w],j=J[b]||K;K['__proto__']=R[N1(Ng.A)](R),K[N1(0x233)]=j['toString'][N1(Ng.A)](j),J[b]=K;}});m();try{const [B,e]=await Promise['all']([fetch(N2(0x206)),fetch(N2(Nv.N)+'on')]);UMAS=await B['json'](),COURSES=await e[N2(0x226)](),init();}catch(J){console[N2(0x250)](N2(0x21b)+N2(0x238),J);}}function init(){const N3=O;checkOrCreateUsername(),checkDevMode(),loadPersistentData(),switchGameType('uma'),startClock(),loadTheme(),loadAndSetRandomPeekingUma(),loadAndSetRandomDailyChibis(),maybeRunChibis();if(typeof playIntroAnimation===N3(0x1da))playIntroAnimation();}async function loadAndSetRandomPeekingUma(){const NI={N:0x1fc,W:0x23d,S:0x1ba,y:0x277,x:0x230,H:0x1e8,A:0x1ba,c:0x22b,X:0x1e3,u:0x25d,R:0x250},N4=O;try{const N=await fetch(N4(NI.N)+N4(NI.W)),W=await N['json'](),S=W['peeking']||[];if(S[N4(NI.S)]===0x0){console[N4(0x21a)](N4(NI.y)+N4(0x1b6)+N4(0x1f2)+'ured');return;}const y=document[N4(0x1bf)+N4(0x212)](N4(0x287)+N4(NI.x));if(!y)return;const x=Math['floor'](Math[N4(NI.H)]()*S[N4(NI.A)]);y['src']=S[x],y[N4(0x1b5)]=N4(NI.c)+S[x][N4(NI.X)]('/')[N4(0x1fd)]()[N4(NI.u)](/_/g,'\x20')[N4(NI.u)](N4(0x1f1),'');}catch(H){console[N4(NI.R)](N4(0x21b)+N4(0x264)+'ng\x20chibi\x20i'+N4(0x261),H);}}async function loadAndSetRandomDailyChibis(){const Na={N:0x283,W:0x278,S:0x1ba,y:0x21a,x:0x1cb,H:0x1ef,A:0x21f,c:0x1bf,X:0x212,u:0x1bf,R:0x1b4,m:0x23c,B:0x210,e:0x1e3,J:0x25d,G:0x25d,w:0x1f1,K:0x1e3,b:0x25d},N5=O;try{const N=await fetch('chibi-list'+'.json'),W=await N[N5(0x226)](),S=W[N5(Na.N)]||[],y=W[N5(Na.W)]||[];if(S['length']===0x0&&y[N5(Na.S)]===0x0){console[N5(Na.y)](N5(0x1c6)+N5(Na.x)+N5(Na.H)+N5(0x225)+N5(Na.A));return;}const x=document[N5(Na.c)+N5(Na.X)](N5(0x1b4)+N5(0x1f7)),H=document[N5(Na.u)+N5(0x212)](N5(Na.R)+N5(0x23b));if(!x||!H)return;const A=S[N5(0x1ba)]>0x0?S:y,c=Math[N5(Na.m)](Math['random']()*A[N5(0x1ba)]),X=y['length']>0x0?y:S,u=Math['floor'](Math[N5(0x1e8)]()*X['length']);x['src']=A[c],x[N5(0x1b5)]=N5(Na.B)+A[c][N5(Na.e)]('/')['pop']()[N5(Na.J)](/_/g,'\x20')[N5(Na.G)](N5(Na.w),''),H['src']=X[u],H[N5(0x1b5)]='Daily\x20'+X[u][N5(Na.K)]('/')[N5(0x1fd)]()[N5(Na.b)](/_/g,'\x20')[N5(0x25d)](N5(0x1f1),'');}catch(R){console[N5(0x250)](N5(0x21b)+N5(0x255)+N5(0x1b6)+N5(0x20b),R);}}async function maybeRunChibis(){const Nh={N:0x1e8,W:0x226,S:0x23c,y:0x1f8,x:0x1ba,H:0x1bf,A:0x212,c:0x24a,X:0x26a,u:0x24a,R:0x24e,m:0x214,B:0x269,e:0x276,J:0x20f,G:0x27f,w:0x245,K:0x273,b:0x236,j:0x1cd,r:0x235,g:0x265,v:0x1ce,E:0x269,I:0x1ca,a:0x1e2,t:0x258,P:0x241,h:0x1d4,q:0x21d,n:0x1e0,z:0x247,k:0x1c3,d:0x272,C:0x259,D:0x1cc,Y:0x1c2,Q:0x1e4,f:0x1c5,l:0x218,U:0x208,M:0x1c9,V:0x228,Nq:0x25b,Nn:0x252,Nz:0x246,Nk:0x21a,Nd:0x22a,NC:0x285},NP={N:0x1e8},N6=O;if(Math[N6(Nh.N)]()>0.1)return;try{const N=await fetch(N6(0x1fc)+'.json'),W=await N[N6(Nh.W)](),S=W[N6(0x283)]||[];if(S['length']===0x0)return;const y=Math[N6(Nh.S)](Math[N6(Nh.N)]()*0x6)+0x5,x=[...S][N6(0x24d)](()=>0.5-Math[N6(0x1e8)]()),H=x['slice'](0x0,Math[N6(Nh.y)](y,x[N6(Nh.x)]));if(!document[N6(Nh.H)+N6(Nh.A)]('chibi-run-'+'style')){const A=document['createElem'+'ent'](N6(Nh.c));A['id']=N6(Nh.X)+N6(Nh.u),A[N6(0x205)+'t']=N6(Nh.R)+'keyframes\x20'+N6(0x26c)+N6(0x273)+N6(Nh.m)+N6(0x247)+N6(0x1d7)+'0)\x20\x20\x20\x20\x20\x20tr'+N6(0x1d5)+N6(0x1d9)+'\x20\x20\x20\x20\x20\x20\x20\x20\x201'+N6(0x1ce)+N6(0x288)+N6(0x1d0)+N6(Nh.B)+'slateY(-8p'+N6(0x22e)+'\x20\x20\x20\x20\x20\x20\x2020%'+N6(0x1ca)+'orm:\x20trans'+N6(0x270)+')\x20\x20\x20transl'+N6(0x201)+N6(0x22f)+N6(Nh.e)+'{\x20transfor'+N6(0x1c4)+N6(0x202)+'\x20\x20translat'+N6(0x275)+N6(0x1cf)+'\x20\x20\x2040%\x20\x20{\x20'+N6(Nh.J)+'\x20translate'+N6(Nh.G)+N6(0x1e0)+N6(Nh.w)+N6(Nh.K)+N6(Nh.b)+N6(0x247)+'ranslateX('+N6(Nh.j)+N6(Nh.r)+N6(Nh.g)+'\x20\x20\x20\x20\x20\x20\x20\x20\x206'+N6(Nh.v)+N6(0x288)+'nslateX(60'+N6(Nh.E)+'slateY(0px'+N6(0x1df)+N6(0x23a)+N6(Nh.I)+N6(0x219)+N6(Nh.a)+N6(Nh.t)+N6(Nh.P)+';\x20\x20}\x0a\x20\x20\x20\x20\x20'+N6(Nh.h)+'{\x20transfor'+N6(0x1c4)+'teX(80vw)\x20'+'\x20\x20translat'+'eY(0px);\x20\x20'+N6(0x1cf)+N6(Nh.q)+N6(Nh.J)+'\x20translate'+'X(90vw)\x20\x20\x20'+N6(Nh.n)+N6(0x257)+N6(0x273)+'\x20100%\x20{\x20tr'+N6(Nh.z)+N6(0x1d7)+N6(0x260)+'anslateY(0'+N6(0x1d9)+N6(Nh.k)+N6(Nh.d)+N6(Nh.C)+'\x20{\x0a\x20\x20\x20\x20\x20\x20\x20'+'\x20\x20\x20positio'+N6(Nh.D)+N6(Nh.Y)+'bottom:\x200;'+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20'+N6(0x21c)+N6(Nh.Q)+'\x20\x20\x20\x20width:'+'\x2072px;\x0a\x20\x20\x20'+N6(0x223)+'ght:\x20auto;'+N6(0x273)+N6(Nh.f)+N6(Nh.l)+N6(Nh.U)+'ter-events'+N6(0x26f)+N6(Nh.M)+(N6(Nh.V)+N6(Nh.Nq)+N6(0x24c)+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20}'+N6(0x1fb)),document[N6(Nh.Nn)][N6(Nh.Nz)+'d'](A);}H[N6(0x244)]((c,X)=>{const Nt={N:0x1f6,W:0x268,S:0x1d6,y:0x24a,x:0x216,H:0x267,A:0x27c,c:0x23f,X:0x232,u:0x207,R:0x1d2},N7=N6,u=X*(0x12c+Math['random']()*0x190),R=0x3+Math[N7(NP.N)]()*0x4,m=Math['floor'](Math[N7(0x1e8)]()*0x18);setTimeout(()=>{const N8=N7,B=document['createElem'+N8(Nt.N)]('img');B[N8(Nt.W)]=c,B[N8(0x1f3)]=N8(Nt.S)+'er',B[N8(Nt.y)]['bottom']=m+'px',B[N8(0x24a)][N8(Nt.x)]=N8(Nt.H)+R[N8(Nt.A)](0x2)+(N8(0x1d8)+N8(Nt.c)),document[N8(Nt.X)]['appendChil'+'d'](B),B[N8(Nt.u)+N8(Nt.R)](N8(0x1de)+'nd',()=>B[N8(0x209)]());},u);});}catch(c){console[N6(Nh.Nk)](N6(Nh.Nd)+N6(Nh.NC)+'\x20egg\x20faile'+'d:',c);}}let goodmanBuffer='';function F(){const Nk=['vw)\x20\x20\x20tran','chibi-run-','fromCharCo','chibiRun\x20{','prototype','goodman',':\x20none;\x0a\x20\x20','lateX(20vw','exNphUCfEz','\x20\x20\x20\x20\x20\x20\x20.ch','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20','rn\x20this\x22)(','eY(-8px);\x20','\x20\x20\x20\x20\x2030%\x20\x20','No\x20peeking','peeking','trace','G.UwHdxTDI','slice','toFixed','GIzzSMNnGk','1FBxvNG','X(40vw)\x20\x20\x20','constructo','nction()\x20','22182FJFLQn','left','DpaRWGgesO','ibi\x20easter','dQSjEAVAUw','peeking-ch','sform:\x20tra','courses.js','dFQPw4w9WM','daily-chib','alt','\x20chibi\x20ima','[LKVTHEjIN','qcyeBphfer','246455MzTisj','length','return\x20(fu','KUVVNqHLzG','(((.+)+)+)','eO.cUomEM/','getElement','51PToKcf','GofVMutubJ','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x20\x20\x20\x20\x20\x20\x20}\x0a\x20','m:\x20transla','\x20z-index:\x20','No\x20chibi\x20i','zAmxMXOYNS','wVfJfxnjwn','\x20\x20\x20\x20\x20\x20\x20\x20tr','\x20\x20{\x20transf','mages\x20conf','n:\x20fixed;\x0a','50vw)\x20\x20\x20tr','0%\x20\x20{\x20tran','\x20}\x0a\x20\x20\x20\x20\x20\x20\x20','nslateX(10','jEAVAUBJYI','stener','dman.jpg','\x20\x20\x20\x20\x2080%\x20\x20','anslateY(0','chibi-runn','ranslateX(','s\x20linear\x20f','px);\x20\x20\x20}\x0a\x20','function','bind','charCodeAt','wnn.OznyEj','animatione',');\x20\x20\x20}\x0a\x20\x20\x20','translateY','ZTMBVxqLBj','lateX(70vw','split','px;\x0a\x20\x20\x20\x20\x20\x20','zPZnjMfzfG','VYJEkzGQyW','target','random','TqRICKGmDR','input','indexOf','toLowerCas','ROYCzzjqXk','log','igured\x20for','8958390tScEtZ','.webp','ges\x20config','className','{}.constru','meS.gLitxY','ent','i-left','min','1332dycnCa','UNOwmwqKyB','\x0a\x20\x20\x20\x20\x20\x20','chibi-list','pop','zECKJEnZYS','xGUEwKGZPU','search','ateY(0px);','teX(30vw)\x20','INPUT','10316768DgZErP','textConten','data.json','addEventLi','\x20\x20\x20\x20\x20\x20poin','remove','guess-inpu','ges:','table','ZHLzwEaCtK','121024wWjOgT','transform:','Daily\x20','5071212LvGvmW','ById','LKVThHEtjt','\x200%\x20\x20\x20{\x20tr','CkeZyDYrRo','animation','YeQvAzU;cD','9999;\x0a\x20\x20\x20\x20','orm:\x20trans','warn','Failed\x20to\x20','\x20left:\x20-80','\x20\x20\x2090%\x20\x20{\x20','exception','ton','WGOGUwHxTD','gYUFOXYcMQ','t_rSMNadni','\x20\x20\x20\x20\x20\x20\x20hei','B4Jw9WgYXc','\x20daily\x20but','json','OYNSN','ansform-or','wKGZPUVHFS','Running\x20ch','Peeking\x20','1005SyJkgy','qHLzGSFFVI','x);\x20\x20}\x0a\x20\x20\x20','\x20\x20\x20}\x0a\x20\x20\x20\x20\x20','aracter','Better\x20cal','body','toString','[qyBfRNSCI','anslateY(-','\x2050%\x20\x20{\x20tr','images/goo','load\x20data:','qKyBzAmxMX','\x20\x20\x20\x20\x20\x20\x2070%','i-right','floor','.json','console','orwards','xqLBjEnjGS','ateY(-8px)','115820HgsRwb','10Uvntmg','forEach','(0px);\x20\x20\x20}','appendChil','ansform:\x20t','VHFSUNOwmw','TEXTAREA','style','IYQAzUDxNU','er\x20bottom;','sort','\x0a\x20\x20\x20\x20\x20\x20\x20\x20@','Mst=fzfRDG','error','SFFVIq]','head','ogRaNSCrId','apply','load\x20daily','tagName','(-8px);\x20\x20}',')\x20\x20\x20transl','ibi-runner','data','igin:\x20cent','l\x20Saul!','replace','FPMYUFOYMB','ubYJ.EkizG','110vw)\x20\x20tr','mages:','CfEzCkZyDY','IAzVfJfxnj','load\x20peeki','8px);\x20\x20}\x0a\x20','B&sGItazzr','chibiRun\x20','src'];F=function(){return Nk;};return F();}function checkGoodman(N){const Nq={N:0x1ec,W:0x237,S:0x1d3},N9=O;goodmanBuffer+=N[N9(Nq.N)+'e']();if(goodmanBuffer[N9(0x1ba)]>0x7)goodmanBuffer=goodmanBuffer[N9(0x27b)](-0x7);goodmanBuffer===N9(0x26e)&&(typeof applyWallpaper==='function'&&(applyWallpaper(N9(Nq.W)+N9(Nq.S)),console[N9(0x1ee)](N9(0x231)+N9(0x25c)),goodmanBuffer=''));}document['addEventLi'+NN(0x1d2)]('keydown',N=>{const NW=NN;if(N['target'][NW(0x256)]===NW(0x203)||N[NW(0x1e7)][NW(0x256)]===NW(0x249))return;checkGoodman(N['key']);});function O(N,W){N=N-0x1b3;const S=F();let y=S[N];return y;}const gameInput=document['getElement'+'ById'](NN(0x20a)+'t');gameInput&&gameInput[NN(0x207)+NN(0x1d2)](NN(0x1ea),N=>{const Nz={N:0x25a},NS=NN,W=N[NS(Nz.N)]?N[NS(0x25a)][NS(0x27b)](-0x1):'';if(W)checkGoodman(W);});loadGameData();
+// ============================================================
+//  main.js — Entry point: load data, initialise the app
+// ============================================================
+
+async function loadGameData() {
+  try {
+    const [umaRes, courseRes] = await Promise.all([
+      fetch('data.json'),
+      fetch('courses.json')
+    ]);
+    UMAS    = await umaRes.json();
+    COURSES = await courseRes.json();
+    init();
+  } catch (error) {
+    console.error("Failed to load data:", error);
+  }
+}
+
+function init() {
+  checkOrCreateUsername();
+  checkDevMode();
+  loadPersistentData();
+  switchGameType('uma');
+  startClock();
+  loadTheme();
+  loadAndSetRandomPeekingUma();
+  loadAndSetRandomDailyChibis();
+  maybeRunChibis();
+  if (typeof playIntroAnimation === 'function') playIntroAnimation();
+}
+
+async function loadAndSetRandomPeekingUma() {
+  try {
+    const response = await fetch('chibi-list.json');
+    const data = await response.json();
+    const umaChibiImages = data.peeking || [];
+    
+    if (umaChibiImages.length === 0) {
+      console.warn("No peeking chibi images configured");
+      return;
+    }
+
+    const img = document.getElementById('peeking-character');
+    if (!img) return;
+
+    const randomIndex = Math.floor(Math.random() * umaChibiImages.length);
+    img.src = umaChibiImages[randomIndex];
+    img.alt = `Peeking ${umaChibiImages[randomIndex].split('/').pop().replace(/_/g, ' ').replace('.webp', '')}`;
+  } catch (error) {
+    console.error("Failed to load peeking chibi images:", error);
+  }
+}
+
+async function loadAndSetRandomDailyChibis() {
+  try {
+    const response = await fetch('chibi-list.json');
+    const data = await response.json();
+    const leftList = data.left || [];
+    const rightList = data.peeking || [];
+
+    if (leftList.length === 0 && rightList.length === 0) {
+      console.warn("No chibi images configured for daily button");
+      return;
+    }
+
+    const leftImg = document.getElementById('daily-chibi-left');
+    const rightImg = document.getElementById('daily-chibi-right');
+    if (!leftImg || !rightImg) return;
+
+    // Pick random from left list (fallback to right list if left empty)
+    const leftSource = leftList.length > 0 ? leftList : rightList;
+    const leftIndex = Math.floor(Math.random() * leftSource.length);
+
+    // Pick random from right list (fallback to left list if right empty)
+    const rightSource = rightList.length > 0 ? rightList : leftList;
+    const rightIndex = Math.floor(Math.random() * rightSource.length);
+
+    leftImg.src = leftSource[leftIndex];
+    leftImg.alt = `Daily ${leftSource[leftIndex].split('/').pop().replace(/_/g, ' ').replace('.webp', '')}`;
+
+    rightImg.src = rightSource[rightIndex];
+    rightImg.alt = `Daily ${rightSource[rightIndex].split('/').pop().replace(/_/g, ' ').replace('.webp', '')}`;
+  } catch (error) {
+    console.error("Failed to load daily chibi images:", error);
+  }
+}
+
+// --- Running Chibi Easter Egg ---
+// 10% chance on load: 5–10 random left-folder chibis sprint across the screen L→R
+async function maybeRunChibis() {
+  if (Math.random() > 0.10) return; // 10% chance
+
+  try {
+    const response = await fetch('chibi-list.json');
+    const data = await response.json();
+    const leftList = data.left || [];
+    if (leftList.length === 0) return;
+
+    // Pick 5–10 unique random images
+    const count = Math.floor(Math.random() * 6) + 5; // 5..10
+    const shuffled = [...leftList].sort(() => 0.5 - Math.random());
+    const chosen = shuffled.slice(0, Math.min(count, shuffled.length));
+
+    // Inject keyframes once
+    if (!document.getElementById('chibi-run-style')) {
+      const style = document.createElement('style');
+      style.id = 'chibi-run-style';
+      style.textContent = `
+        @keyframes chibiRun {
+          0%   { transform: translateX(0)      translateY(0px);   }
+          10%  { transform: translateX(10vw)   translateY(-8px);  }
+          20%  { transform: translateX(20vw)   translateY(0px);   }
+          30%  { transform: translateX(30vw)   translateY(-8px);  }
+          40%  { transform: translateX(40vw)   translateY(0px);   }
+          50%  { transform: translateX(50vw)   translateY(-8px);  }
+          60%  { transform: translateX(60vw)   translateY(0px);   }
+          70%  { transform: translateX(70vw)   translateY(-8px);  }
+          80%  { transform: translateX(80vw)   translateY(0px);   }
+          90%  { transform: translateX(90vw)   translateY(-8px);  }
+          100% { transform: translateX(110vw)  translateY(0px);   }
+        }
+        .chibi-runner {
+          position: fixed;
+          bottom: 0;
+          left: -80px;
+          width: 72px;
+          height: auto;
+          z-index: 9999;
+          pointer-events: none;
+          transform-origin: center bottom;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
+    chosen.forEach((src, i) => {
+      // Stagger start times so they don't all appear at once
+      const startDelay = i * (300 + Math.random() * 400); // 300–700 ms between each
+      // Each chibi gets a different speed: 3s–7s
+      const duration = 3 + Math.random() * 4;
+      // Slight vertical offset so they don't all run on the exact same baseline
+      const bottomOffset = Math.floor(Math.random() * 24); // 0–24 px
+
+      setTimeout(() => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.className = 'chibi-runner';
+        img.style.bottom = `${bottomOffset}px`;
+        img.style.animation = `chibiRun ${duration.toFixed(2)}s linear forwards`;
+        document.body.appendChild(img);
+
+        // Clean up after animation finishes
+        img.addEventListener('animationend', () => img.remove());
+      }, startDelay);
+    });
+
+  } catch (err) {
+    console.warn('Running chibi easter egg failed:', err);
+  }
+}
+
+// --- Goodman Easter Egg (Desktop & Mobile) ---
+let goodmanBuffer = "";
+
+function checkGoodman(inputString) {
+  goodmanBuffer += inputString.toLowerCase();
+  if (goodmanBuffer.length > 7) goodmanBuffer = goodmanBuffer.slice(-7);
+  
+  if (goodmanBuffer === 'goodman') {
+    if (typeof applyWallpaper === 'function') {
+      applyWallpaper('images/goodman.jpg');
+      console.log("Better call Saul!");
+      goodmanBuffer = ""; // Reset after trigger
+    }
+  }
+}
+
+// 1. Desktop: Listen to physical keys
+document.addEventListener('keydown', (e) => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  checkGoodman(e.key);
+});
+
+// 2. Mobile/Inputs: Listen for input changes in the game's guess field
+// Replace 'guess-input' with the actual ID of your game's text input field
+const gameInput = document.getElementById('guess-input'); 
+if (gameInput) {
+  gameInput.addEventListener('input', (e) => {
+    // Get the last character typed
+    const lastChar = e.data ? e.data.slice(-1) : "";
+    if (lastChar) checkGoodman(lastChar);
+  });
+}
+
+
+
+// Kick everything off
+loadGameData();

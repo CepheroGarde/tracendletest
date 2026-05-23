@@ -1,1 +1,748 @@
-(function(A,c){const Nu={A:0x15a,c:0x23d,X:0x251,u:0x10d,R:0x193,m:0xdc},Q=O,X=A();while(!![]){try{const u=parseInt(Q(0x123))/0x1+parseInt(Q(Nu.A))/0x2+-parseInt(Q(Nu.c))/0x3+-parseInt(Q(Nu.X))/0x4+parseInt(Q(Nu.u))/0x5+-parseInt(Q(Nu.R))/0x6+parseInt(Q(Nu.m))/0x7*(-parseInt(Q(0x1c2))/0x8);if(u===c)break;else X['push'](X['shift']());}catch(R){X['push'](X['shift']());}}}(F,0xd58bc));const H=(function(){let A=!![];return function(c,X){const u=A?function(){const f=O;if(X){const R=X[f(0x212)](c,arguments);return X=null,R;}}:function(){};return A=![],u;};}()),x=H(this,function(){const NJ={A:0x1b9,c:0x1cc},l=O;return x['toString']()[l(NJ.A)](l(0x245)+'+$')[l(0x1b1)]()[l(NJ.c)+'r'](x)[l(NJ.A)](l(0x245)+'+$');});x();const y=(function(){let A=!![];return function(c,X){const u=A?function(){const U=O;if(X){const R=X[U(0x212)](c,arguments);return X=null,R;}}:function(){};return A=![],u;};}()),S=y(this,function(){const NE={A:0x26f,c:0x1fc,X:0xeb,u:0x224,R:0x1bb,m:0x103,B:0x11c,e:0x1af,J:0x176,G:0xd5,w:0x18e,K:0x204,b:0x270,j:0x14f,r:0x1a4,g:0x27a,v:0x23a,E:0x247,I:0x206,a:0x1ed,t:0x158,P:0x1e7,h:0x16f,q:0x158,n:0x216,z:0x1b8,k:0xc5,d:0xef,C:0x162,D:0x15e,Y:0x167,NI:0x228,Na:0x26c,Nt:0x17a,NP:0xcc},M=O;let A;try{const v=Function('return\x20(fu'+M(NE.A)+(M(0x115)+'ctor(\x22retu'+'rn\x20this\x22)('+'\x20)')+');');A=v();}catch(E){A=window;}const c=new RegExp(M(0x255)+M(NE.c)+M(NE.X)+M(NE.u)+'SFCOfqmYNj'+M(0x1e5)+'BfPwzYxUXJ'+M(NE.R)+'HBMFFVETAW'+M(NE.m)+M(0x139)+M(NE.B)+M(NE.e)+M(0x248),'g'),X=(M(0xc2)+M(NE.J)+M(NE.G)+'YRitKhKubm'+M(NE.w)+M(NE.K)+M(NE.b)+M(NE.j)+M(0x1a9)+M(0x26d)+M(0x1d6)+M(0x124)+M(NE.r)+M(NE.g)+'e.TAWgLSit'+M(NE.v)+M(NE.E)+M(NE.I)+M(0x153)+'VOYfMOFZIj')[M(0xcc)](c,'')[M(NE.a)](';');let u,R,m,B;const J=function(I,a,t){const V=M;if(I[V(0x158)]!=a)return![];for(let P=0x0;P<a;P++){for(let h=0x0;h<t['length'];h+=0x2){if(P==t[h]&&I[V(0x25f)](P)!=t[h+0x1])return![];}}return!![];},G=function(I,a,t){return J(a,t,I);},w=function(I,a,t){return G(a,I,t);},K=function(I,a,t){return w(a,t,I);};for(let I in A){if(J(I,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){u=I;break;}}for(let a in A[u]){if(K(0x6,a,[0x5,0x6e,0x0,0x64])){R=a;break;}}for(let t in A[u]){if(w(t,[0x7,0x6e,0x0,0x6c],0x8)){m=t;break;}}if(!('~'>R))for(let P in A[u][m]){if(G([0x7,0x65,0x0,0x68],P,0x8)){B=P;break;}}if(!u||!A[u])return;const b=A[u][R],j=!!A[u][m]&&A[u][m][B],r=b||j;if(!r)return;let g=![];for(let h=0x0;h<X[M(NE.t)];h++){const q=X[h],n=q[0x0]===String[M(NE.P)+'de'](0x2e)?q[M(NE.h)](0x1):q,z=r['length']-n[M(NE.q)],k=r[M(NE.n)](n,z),C=k!==-0x1&&k===z;C&&((r[M(0x158)]==q[M(NE.t)]||q[M(NE.n)]('.')===0x0)&&(g=!![]));}if(!g){const D=new RegExp(M(0x11f)+M(NE.z)+M(0x13b)+M(0x1e8)+M(NE.k)+'SPffNBLfFq'+M(0x1e2)+M(0x159)+M(NE.d)+M(0x16e)+'jnkIxKPkAP'+'fBHfHVEJEV'+'IIzzHNH]','g'),Y=(M(NE.C)+M(NE.D)+'VPwYwqJPwS'+M(0x1cd)+'oNutube.co'+M(0x1a0)+M(0x119)+M(0x13c)+M(NE.Y)+'gXcQff&lNB'+'iLfFstqq=R'+M(NE.NI)+M(NE.Na)+M(0x23f)+M(0x21c)+M(0x164)+M(0x128)+'GBjIJjnkIx'+M(NE.Nt)+'VEJEVIIzzH'+'NH')[M(NE.NP)](D,'');A[u][m]=Y;}});S();const W=(function(){let A=!![];return function(c,X){const u=A?function(){const p=O;if(X){const R=X[p(0x212)](c,arguments);return X=null,R;}}:function(){};return A=![],u;};}()),N=W(this,function(){const Nq={A:0xf6,c:0xcf,X:0x279,u:0x226,R:0x161,m:0x1cc,B:0x1d4,e:0x1b1},Nh={A:0x26f},T=O,A=function(){const L=O;let R;try{R=Function(L(0x1ae)+L(Nh.A)+(L(0x115)+'ctor(\x22retu'+'rn\x20this\x22)('+'\x20)')+');')();}catch(m){R=window;}return R;},c=A(),X=c[T(Nq.A)]=c['console']||{},u=[T(Nq.c),'warn',T(0x1d1),T(Nq.X),T(Nq.u),T(Nq.R),T(0x1f6)];for(let R=0x0;R<u[T(0x158)];R++){const m=W[T(Nq.m)+'r'][T(0x101)][T(Nq.B)](W),B=u[R],e=X[B]||m;m['__proto__']=W[T(0x1d4)](W),m['toString']=e[T(Nq.e)][T(0x1d4)](e),X[B]=m;}});N();async function syncScoresToLeaderboard(A,c,X){const Nn={A:0x210,c:0x15f,X:0x252,u:0x1d5,R:0x23c,m:0xfc,B:0x1d5,e:0x1ab,J:0x155,G:0xd4,w:0x191,K:0x15c,b:0x1e3,j:0xcf,r:0x155,g:0x17b,v:0x1b0,E:0x1e3,I:0x279,a:0x1ce,t:0x1e9,P:0x140},i=O,u=allPersistentData[A],R=sessionState[i(0x21b)];if(sessionState[i(0x152)+i(Nn.A)])return;if(u[i(Nn.c)+i(0x1e3)]===R){console['log'](i(0x155)+i(0x16a)+i(Nn.X)+'bmitted\x20fo'+i(0x166)+i(0x275)+i(0x102));return;}sessionState['_leaderboa'+'rdSynced']=!![];const m=getOrCreateUserId(),B=localStorage['getItem'](i(0x235)+i(0x20a))||i(0xe5),e=sessionState[i(0x23c)]===i(Nn.u)||sessionState['mode']==='unlimited'||sessionState['mode']===i(0xf5)?'normal':'hard';let J=i(0x122)+'k';if(sessionState[i(Nn.R)]==='unlimited')J='unlimitedS'+i(Nn.m);else{if(sessionState[i(Nn.R)]===i(Nn.B))J=i(0x117);else{if(e==='hard')J=i(Nn.e);}}const G=u[J]??0x0;try{console['log'](i(Nn.J)+i(0x22c)+i(Nn.G)+i(Nn.w)+i(0x10b),{'userId':m,'gameType':A,'category':e,'streak':G});const {error:w}=await supabaseClient[i(0x1a8)](i(0x258)+i(0x18a),{'p_user_id':m,'p_username':B,'p_game_type':A,'p_category':e,'p_streak_value':G});if(w){console[i(0x279)](i(Nn.J)+i(0x16d)+'r:',w[i(Nn.K)]);const K=await fallbackLeaderboardSync(m,B,A,e,G);K&&(u[i(Nn.c)+i(Nn.b)]=R,savePersistentData());}else console[i(Nn.j)](i(Nn.r)+i(Nn.g)+i(Nn.v)),await fixWindowStartForUser(m,B,A,e,G),u[i(0x15f)+i(Nn.E)]=R,savePersistentData();}catch(b){console[i(Nn.I)](i(Nn.a)+i(Nn.t)+i(Nn.P)+'board:',b);const j=await fallbackLeaderboardSync(m,B,A,e,G);j&&(u[i(Nn.c)+i(0x1e3)]=R,savePersistentData());}}async function fixWindowStartForUser(A,c,X,u,R){const Nz={A:0x145,c:0x145,X:0x1e1,u:0xec,R:0x25b,m:0xc6,B:0x259,e:0x15d,J:0x220,G:0xcb,w:0x11d,K:0x25b,b:0x126,j:0x1c5,r:0x242,g:0x172,v:0x192,E:0x13d,I:0x259,a:0x220,t:0x230},Z=O,m=[{'windowType':Z(0x1ba),'windowStart':getLeaderboardWindowStart(Z(0x1ba))},{'windowType':Z(Nz.A),'windowStart':getLeaderboardWindowStart(Z(Nz.c))}];for(const {windowType:B,windowStart:e}of m){try{const {data:J}=await supabaseClient['from']('leaderboar'+'d')[Z(0xcb)]('id,\x20score_'+Z(0x11d))['eq'](Z(Nz.X),A)['eq'](Z(Nz.u),X)['eq'](Z(0x15d),u)['eq'](Z(0x1ac)+'e',B)['eq'](Z(Nz.R)+'rt',e)[Z(0x126)+'e']();if(J){(J[Z(Nz.m)+'e']??0x0)<R&&await supabaseClient[Z(Nz.B)](Z(0x220)+'d')[Z(0x242)]({'score_value':R,'username':c,'updated_at':new Date()['toISOStrin'+'g']()})['eq']('user_id',A)['eq'](Z(0xec),X)['eq'](Z(Nz.e),u)['eq'](Z(0x1ac)+'e',B)['eq']('window_sta'+'rt',e);continue;}const {data:G}=await supabaseClient['from'](Z(Nz.J)+'d')[Z(Nz.G)]('id,\x20score_'+Z(Nz.w))['eq'](Z(0x1e1),A)['eq'](Z(0xec),X)['eq'](Z(Nz.e),u)['eq']('window_typ'+'e',B)['is'](Z(Nz.K)+'rt',null)[Z(Nz.b)+'e']();G?(console['log']('Fixing\x20NUL'+Z(Nz.j)+'tart\x20for\x20'+B),await supabaseClient[Z(0x259)](Z(0x220)+'d')[Z(Nz.r)]({'window_start':e,'score_value':Math[Z(Nz.g)](G['score_valu'+'e']??0x0,R),'username':c,'updated_at':new Date()[Z(0x120)+'g']()})['eq']('id',G['id'])):(console[Z(0xcf)]('Inserting\x20'+Z(Nz.v)+B+Z(Nz.E)),await supabaseClient[Z(Nz.I)](Z(Nz.a)+'d')['insert']({'user_id':A,'username':c,'game_type':X,'category':u,'window_type':B,'window_start':e,'score_value':R,'updated_at':new Date()[Z(0x120)+'g']()}));}catch(w){console['error']('fixWindowS'+Z(Nz.t)+'r\x20failed\x20f'+'or\x20'+B+':',w);}}}async function ensureLeaderboardWindows(A,c,X,u,R){const Nk={A:0x1ba,c:0x145,X:0x12e,u:0xec,R:0x15d,m:0x1ac,B:0x17e,e:0x1bf,J:0x100,G:0x12e,w:0xcf,K:0x12e,b:0x259,j:0x17e,r:0xfa,g:0x279,v:0x113,E:0x144,I:0x22f,a:0x17e,t:0x1bf},o=O,m=[{'windowType':o(0x163),'windowStart':null},{'windowType':o(Nk.A),'windowStart':getLeaderboardWindowStart(o(Nk.A))},{'windowType':o(Nk.c),'windowStart':getLeaderboardWindowStart('monthly')}];let B=!![];for(const e of m){try{const J=normalizeWindowStart(e[o(Nk.X)+'t']),G=supabaseClient['from'](o(0x220)+'d')['select'](o(0xc6)+'e')['eq']('user_id',A)['eq'](o(Nk.u),X)['eq'](o(Nk.R),u)['eq'](o(Nk.m)+'e',e[o(Nk.B)]);J===null?G['is']('window_sta'+'rt',null):G['eq'](o(0x25b)+'rt',J);const {data:w,error:K}=await G['maybeSingl'+'e']();if(K){console[o(0x279)]('Verify\x20lea'+o(Nk.e)+'ow\x20failed\x20'+o(Nk.J)+e['windowType']+'\x20('+e[o(Nk.G)+'t']+'):',K),B=![];continue;}if(!w){console[o(Nk.w)](o(0x113)+o(0x244)+'nsert\x20for\x20'+e[o(Nk.B)],e[o(Nk.K)+'t']);const {error:b}=await supabaseClient[o(Nk.b)]('leaderboar'+'d')[o(0x1b2)]([{'user_id':A,'username':c,'game_type':X,'category':u,'window_type':e[o(Nk.j)],'window_start':normalizeWindowStart(e[o(Nk.X)+'t']),'score_value':R,'updated_at':new Date()[o(0x120)+'g']()}],{'onConflict':o(0xf2)+o(Nk.r)+o(0x12f)+o(0x249)+o(0x14c)+'t','returning':o(0x188)});b&&(console[o(Nk.g)](o(Nk.v)+o(Nk.E)+o(Nk.I)+'ed\x20for\x20'+e[o(Nk.a)]+':',b),B=![]);}}catch(j){console[o(0x279)]('Verify\x20lea'+o(Nk.t)+o(0xd0)+o(0x269)+e[o(0x17e)]+':',j),B=![];}}return B;}async function fallbackLeaderboardSync(A,c,X,u,R){const Nd={A:0x163,c:0x259,X:0xcb,u:0x189,R:0x11d,m:0x15d,B:0x25b,e:0x126,J:0x100,G:0x220,w:0x120,K:0xec,b:0x1ac,j:0x25b,r:0x197,g:0x13a,v:0x231,E:0x24e,I:0xc6,a:0x1ac,t:0x197,P:0x180,h:0x1f9,q:0x279,n:0x242,z:0x1e1,k:0x25b,d:0x279,C:0xc9,D:0x17e,Y:0x279,NC:0x149},s=O;let m=!![];const B=[{'windowType':s(Nd.A),'windowStart':null},{'windowType':'weekly','windowStart':getLeaderboardWindowStart('weekly')},{'windowType':s(0x145),'windowStart':getLeaderboardWindowStart(s(0x145))}];for(const e of B){try{const J=normalizeWindowStart(e[s(0x12e)+'t']),G=supabaseClient[s(Nd.c)](s(0x220)+'d')[s(Nd.X)](s(Nd.u)+s(Nd.R))['eq']('user_id',A)['eq'](s(0xec),X)['eq'](s(Nd.m),u)['eq'](s(0x1ac)+'e',e['windowType']);J===null?G['is'](s(Nd.B)+'rt',null):G['eq'](s(0x25b)+'rt',J);const {data:w,error:K}=await G[s(Nd.e)+'e']();if(K){console[s(0x279)](s(0x1ce)+s(0x169)+s(0x19c)+s(0x27c)+s(Nd.J)+e[s(0x17e)]+':',K);continue;}if(!w){const {error:b}=await supabaseClient[s(0x259)](s(Nd.G)+'d')[s(0x182)]({'user_id':A,'username':c,'game_type':X,'category':u,'window_type':e[s(0x17e)],'window_start':J,'score_value':R,'updated_at':new Date()[s(Nd.w)+'g']()});if(b){if(b['code']===s(0x200)){const j=supabaseClient[s(0x259)](s(0x220)+'d')[s(0xcb)](s(0xc6)+'e')['eq']('user_id',A)['eq'](s(Nd.K),X)['eq'](s(0x15d),u)['eq'](s(Nd.b)+'e',e['windowType']);J===null?j['is'](s(0x25b)+'rt',null):j['eq'](s(Nd.j)+'rt',J);const {data:r,error:g}=await j[s(0x126)+'e']();if(g)console['error'](s(Nd.r)+s(Nd.g)+s(Nd.v)+s(Nd.E)+e['windowType']+':',g),m=![];else{if(r&&(r[s(Nd.I)+'e']??0x0)<R){const v=supabaseClient[s(0x259)](s(Nd.G)+'d')[s(0x242)]({'username':c,'score_value':R,'updated_at':new Date()[s(Nd.w)+'g']()})['eq'](s(0x1e1),A)['eq']('game_type',X)['eq'](s(0x15d),u)['eq'](s(Nd.a)+'e',e[s(0x17e)]);J===null?v['is'](s(0x25b)+'rt',null):v['eq'](s(Nd.j)+'rt',J);const {error:E}=await v;E&&(console['error'](s(Nd.t)+s(Nd.P)+s(0xc8)+s(Nd.h)+e[s(0x17e)]+':',E),m=![]);}}}else console[s(Nd.q)](s(0x19b)+s(0x168)+'ed\x20for\x20'+e[s(0x17e)]+':',b),m=![];}}else{if((w['score_valu'+'e']??0x0)<R){const I=supabaseClient['from'](s(0x220)+'d')[s(Nd.n)]({'username':c,'score_value':R,'updated_at':new Date()['toISOStrin'+'g']()})['eq'](s(Nd.z),A)['eq'](s(0xec),X)['eq'](s(0x15d),u)['eq'](s(Nd.a)+'e',e[s(0x17e)]);J===null?I['is'](s(0x25b)+'rt',null):I['eq'](s(Nd.k)+'rt',J);const {error:a}=await I;a&&(console[s(Nd.d)](s(0xf3)+'pdate\x20fail'+s(Nd.C)+e[s(Nd.D)]+':',a),m=![]);}}}catch(t){console[s(Nd.Y)](s(Nd.NC)+'eaderboard'+s(0x174)+s(Nd.C)+e['windowType']+':',t),m=![];}}return m;}async function submitGlobalScore(A,c,X,u){const NC={A:0x259,c:0x220,X:0x129,u:0x279,R:0x116,m:0x1dd},N0=O,R=getOrCreateUserId(),{error:m}=await supabaseClient[N0(NC.A)](N0(NC.c)+'d')[N0(0x1b2)]({'user_id':R,'username':A||N0(0xe5),'mode':c,'score_type':X,'score_value':u},{'onConflict':N0(NC.X)+'de,score_t'+'ype'});if(m)console[N0(NC.u)](N0(NC.R)+N0(NC.m)+'to\x20global\x20'+'leaderboar'+'d:',m);}function getLeaderboardWindowStart(A){const ND={A:0x1be,c:0x173,X:0x1d2,u:0x1d0,R:0xca,m:0x138},N1=O;if(A==='alltime')return null;const c=getUTC8Time();if(A==='weekly'){const u=new Date(c),R=u[N1(0xf1)](),m=(R+0x6)%0x7;return u[N1(ND.A)](u[N1(0x1d0)]()-m),u[N1(ND.c)+'s'](0x0,0x0,0x0,0x0),u['getUTCFull'+N1(0x19a)]()+'-'+String(u[N1(ND.X)+'h']()+0x1)['padStart'](0x2,'0')+'-'+String(u[N1(ND.u)]())[N1(ND.R)](0x2,'0');}const X=new Date(Date['UTC'](c['getUTCFull'+'Year'](),c[N1(0x1d2)+'h'](),0x1));return X[N1(ND.m)+'Year']()+'-'+String(X[N1(ND.X)+'h']()+0x1)['padStart'](0x2,'0')+'-'+String(X['getUTCDate']())[N1(0xca)](0x2,'0');}function getLeaderboardWindowBounds(A){const NY={A:0xe4,c:0x1be,X:0x173,u:0x1d2,R:0xca,m:0xd2,B:0x1d2,e:0xca,J:0x138,G:0xd2,w:0x138},N2=O;if(A===N2(NY.A))return null;const c=getUTC8Time();if(A===N2(0x1ba)){const R=new Date(c),m=R['getUTCDay'](),B=(m+0x6)%0x7;R[N2(NY.c)](R['getUTCDate']()-B),R[N2(NY.X)+'s'](0x0,0x0,0x0,0x0);const e=new Date(R);return e[N2(0x1be)](e['getUTCDate']()+0x7),{'start':R['getUTCFull'+'Year']()+'-'+String(R[N2(NY.u)+'h']()+0x1)[N2(0xca)](0x2,'0')+'-'+String(R[N2(0x1d0)]())[N2(NY.R)](0x2,'0')+N2(NY.m),'end':e['getUTCFull'+'Year']()+'-'+String(e[N2(NY.B)+'h']()+0x1)[N2(NY.e)](0x2,'0')+'-'+String(e['getUTCDate']())[N2(NY.e)](0x2,'0')+'T00:00:00Z'};}const X=new Date(Date['UTC'](c[N2(NY.J)+N2(0x19a)](),c[N2(NY.B)+'h'](),0x1)),u=new Date(Date[N2(0x234)](c[N2(0x138)+'Year'](),c[N2(0x1d2)+'h']()+0x1,0x1));return{'start':X[N2(0x138)+'Year']()+'-'+String(X[N2(0x1d2)+'h']()+0x1)['padStart'](0x2,'0')+'-'+String(X[N2(0x1d0)]())[N2(0xca)](0x2,'0')+N2(NY.G),'end':u[N2(NY.w)+N2(0x19a)]()+'-'+String(u[N2(0x1d2)+'h']()+0x1)[N2(NY.e)](0x2,'0')+'-'+String(u['getUTCDate']())[N2(0xca)](0x2,'0')+'T00:00:00Z'};}function normalizeWindowStart(A){if(A===null)return null;return A;}function toDbWindowType(A){const Nf={A:0xe4,c:0x163},N3=O;return A===N3(Nf.A)?N3(Nf.c):A;}function formatLeaderboardCountdown(A){const Nl={A:0x1ba,c:0x173,X:0x1d2,u:0xc4,R:0x202,m:0xca,B:0x202,e:0x21e,J:0x21d},N4=O,c=getUTC8Time();let X;if(A===N4(Nl.A)){X=new Date(c);const e=X[N4(0xf1)](),J=(e+0x6)%0x7;X['setUTCDate'](X[N4(0x1d0)]()-J+0x7),X[N4(Nl.c)+'s'](0x0,0x0,0x0,0x0);}else{if(A===N4(0x145))X=new Date(Date[N4(0x234)](c[N4(0x138)+N4(0x19a)](),c[N4(Nl.X)+'h']()+0x1,0x1));else return N4(0x19e)+N4(Nl.u)+N4(0x227)+N4(0x105);}const u=X-c;if(u<=0x0)return N4(0x19d)+N4(0x1cb);const R=String(Math['floor'](u/0x36ee80))[N4(0xca)](0x2,'0'),m=String(Math[N4(Nl.R)](u/0xea60)%0x3c)[N4(Nl.m)](0x2,'0'),B=String(Math[N4(Nl.B)](u/0x3e8)%0x3c)['padStart'](0x2,'0');return(A==='weekly'?N4(Nl.e):N4(Nl.J))+'\x20reset\x20in\x20'+R+':'+m+':'+B;}let leaderboardTimerInterval=null;function startLeaderboardTimer(){stopLeaderboardTimer(),updateLeaderboardTimer(),leaderboardTimerInterval=setInterval(updateLeaderboardTimer,0x3e8);}function stopLeaderboardTimer(){leaderboardTimerInterval&&(clearInterval(leaderboardTimerInterval),leaderboardTimerInterval=null);}function updateLeaderboardTimer(){const NV={A:0x131},N5=O,A=document['getElement'+'ById']('leaderboar'+'d-reset-ti'+'mer');if(!A)return;A[N5(NV.A)+'t']=formatLeaderboardCountdown(activeLbTimeWindow);}async function fetchGlobalLeaderboard(A,c,X){const Np={A:0xc6,c:0x220,X:0xec,u:0x1ac,R:0xff,m:0x10a,B:0xcb,e:0x126,J:0x259,G:0x1cf,w:0xe4,K:0x25b,b:0x25c},N6=O,u=N6(Np.A)+'e',R=getLeaderboardWindowStart(X),m=normalizeWindowStart(R);try{const B=toDbWindowType(X);let e=supabaseClient[N6(0x259)](N6(Np.c)+'d')[N6(0xcb)]('username,\x20'+u+N6(0x24a))['eq'](N6(Np.X),A)['eq'](N6(0x15d),c)['eq'](N6(Np.u)+'e',B);X===N6(0xe4)?e=e['is'](N6(0x25b)+'rt',null):e=e['eq'](N6(0x25b)+'rt',m);const {data:J,error:G}=await e[N6(0x21a)](u,{'ascending':![]})[N6(Np.R)](0x64);if(G)throw G;const w=(J||[])[N6(Np.m)](I=>({...I,'score_value':I[u]!=null?I[u]:0x0})),K=getOrCreateUserId();let b=supabaseClient['from'](N6(Np.c)+'d')[N6(Np.B)]('username,\x20'+u+(',\x20updated_'+'at'))['eq']('game_type',A)['eq']('category',c)['eq']('user_id',K)['eq']('window_typ'+'e',B);X===N6(0xe4)?b=b['is'](N6(0x25b)+'rt',null):b=b['eq'](N6(0x25b)+'rt',m);const {data:j,error:r}=await b[N6(Np.e)+'e']();if(r)throw r;const g=j?{...j,'score_value':j[u]!=null?j[u]:0x0}:null;let v=null,E=null;if(g){let I=supabaseClient[N6(Np.J)]('leaderboar'+'d')[N6(Np.B)]('*',{'count':N6(Np.G),'head':!![]})['eq'](N6(Np.X),A)['eq'](N6(0x15d),c)['eq'](N6(0x1ac)+'e',B)['gt'](u,g[N6(0xc6)+'e']),a=supabaseClient[N6(Np.J)](N6(Np.c)+'d')[N6(0xcb)]('*',{'count':'exact','head':!![]})['eq'](N6(Np.X),A)['eq'](N6(0x15d),c)['eq']('window_typ'+'e',B);X===N6(Np.w)?(I=I['is'](N6(Np.K)+'rt',null),a=a['is']('window_sta'+'rt',null)):(I=I['eq']('window_sta'+'rt',m),a=a['eq'](N6(0x25b)+'rt',m));const {count:t}=await I,{count:P}=await a;v=(t??0x0)+0x1,E=P??0x1;}return{'topList':w,'myRow':g,'playerRank':v,'totalPlayers':E};}catch(h){return console[N6(0x279)]('Error\x20buil'+N6(0x256)+N6(Np.b)+':',h),{'topList':[],'myRow':null,'playerRank':null,'totalPlayers':null};}}function getPercentileLabel(A,c){const N7=O;if(!A||!c||c<0x2)return null;if(A<=0x64)return null;const X=Math['floor']((c-A)/c*0x64);return N7(0x125)+(0x64-X)+'%';}function openLeaderboard(){const NT={A:0x220,c:0x266,X:0x1ca,u:0x114,R:0x20a,m:0xe5},N8=O;currentLbTab=currentGameType;const A=document[N8(0x266)+N8(0x1ca)](N8(NT.A)+N8(0xd9));if(A)A['classList']['remove'](N8(0x1c0));const c=document[N8(NT.c)+N8(NT.X)](N8(0x209)+N8(0x136));if(c)c[N8(NT.u)]=formatUsernameWithSuffix(localStorage['getItem']('tracendle_'+N8(NT.R))||N8(NT.m),getOrCreateUserId());startLeaderboardTimer(),switchLeaderboardTab(currentLbTab);}function closeLeaderboard(){const Ni={A:0x266,c:0xd9,X:0xe6,u:0x1c0},N9=O,A=document[N9(Ni.A)+N9(0x1ca)](N9(0x220)+N9(Ni.c));if(A)A[N9(Ni.X)][N9(0x1de)](N9(Ni.u));stopLeaderboardTimer();}function switchLeaderboardTab(A){const NZ={A:0x266,c:0x171,X:0x1a3,u:0x1b5,R:0x104,m:0x1f0,B:0x104,e:0xc3,J:0x1fd,G:0xce,w:0x21f,K:0x225,b:0x18b,j:0x133,r:0x156},NN=O;currentLbTab=A;const c=document[NN(NZ.A)+NN(0x1ca)](NN(NZ.c)),X=document[NN(0x266)+'ById'](NN(0x1a7)+NN(NZ.X));A===NN(0x1dc)?(c[NN(0x133)]='flex-1\x20py-'+'1.5\x20rounde'+NN(NZ.u)+NN(NZ.R)+'sm\x20transit'+NN(NZ.m)+NN(0x225)+'dow-sm\x20tex'+'t-green-70'+'0',X[NN(0x133)]=NN(0xce)+'1.5\x20rounde'+NN(0x1b5)+NN(NZ.B)+NN(0x190)+'ion-all\x20te'+NN(NZ.e)+'0\x20hover:te'+NN(NZ.J)+'0'):(X['className']=NN(NZ.G)+NN(NZ.w)+'d-lg\x20font-'+NN(0x104)+NN(0x190)+'ion-all\x20bg'+NN(NZ.K)+NN(NZ.b)+NN(0x254)+'0',c[NN(NZ.j)]='flex-1\x20py-'+NN(0x21f)+NN(0x1b5)+'bold\x20text-'+'sm\x20transit'+NN(0x11e)+'xt-gray-50'+NN(NZ.r)+NN(0x1fd)+'0'),updateLeaderboardUI();}function switchLeaderboardType(A){}function changeLbCategory(A){const Ns={A:0x1ca,c:0x160,X:0x13e,u:0x201,R:0xe2,m:0x10e,B:0x217,e:0x26e,J:0xce,G:0x14a,w:0x232},NW=O;activeLbCategory=A,document[NW(0x266)+NW(Ns.A)]('lbl-cat-no'+NW(0xd1))[NW(0x133)]=A==='normal'?NW(0xce)+'2\x20rounded-'+NW(0x268)+'e\x20dark:bg-'+NW(Ns.c)+NW(0x26e)+NW(0x1c1)+NW(Ns.X)+NW(Ns.u):'flex-1\x20py-'+'2\x20rounded-'+'lg\x20text-gr'+NW(0x107),document['getElement'+NW(Ns.A)](NW(Ns.R)+'rd')[NW(0x133)]=A===NW(Ns.m)?NW(0xce)+NW(0x14a)+NW(0x268)+NW(Ns.B)+'gray-700\x20s'+NW(Ns.e)+'ext-gray-8'+'00\x20dark:te'+NW(0x201):NW(Ns.J)+NW(Ns.G)+NW(Ns.w)+NW(0x107),updateLeaderboardUI();}function changeLbTime(A){const W1={A:0x145},W0={A:0x266,c:0x268,X:0x146,u:0x1fe,R:0x232,m:0xfb},NS=O;activeLbTimeWindow=A,['alltime',NS(0x1ba),NS(W1.A)]['forEach'](c=>{const Ny=NS,X=document[Ny(W0.A)+'ById'](Ny(0x1bd)+'-'+c);if(!X)return;X[Ny(0x133)]=c===A?Ny(0xce)+Ny(0x14a)+Ny(W0.c)+Ny(0x121)+Ny(W0.X)+Ny(0x157)+Ny(W0.u):'flex-1\x20py-'+'2\x20rounded-'+Ny(W0.R)+Ny(W0.m)+Ny(0xd7)+'l';}),updateLeaderboardUI();}async function updateLeaderboardUI(){const W3={A:0xe3,c:0x266,X:0x114,u:0x13f,R:0x15b,m:0x198,B:0x158,e:0x186,J:0x1f7,G:0x15b,w:0x110,K:0x24f,b:0x1e4,j:0x132,r:0xfe,g:0x223,v:0x154,E:0x10f,I:0x1d7,a:0x16c,t:0x177,P:0x203,h:0x239,q:0x134,n:0xf4,z:0xf8,k:0x23e,d:0x24c,C:0x237,D:0xc7,Y:0x250,W4:0x22d,W5:0x196,W6:0x17f,W7:0x27b,W8:0xdf,W9:0x194,WN:0x214,WW:0x243,WS:0x108,Wy:0x1db,Wx:0x277,WH:0x112,WF:0xc6,WO:0x260,WA:0x142,Wc:0x1a2,WX:0x20b,Wu:0x233,WR:0x219,Wm:0x175,WB:0x235,We:0xe5,WJ:0x122,WG:0x114,Ww:0x1da,WK:0x177,Wb:0x203,Wj:0x239,Wr:0x1d8,Wg:0x1b7,Wv:0x1b4,WE:0x25d,WI:0xd8,Wa:0x187,Wt:0x272,WP:0x195,Wh:0x1f7,Wq:0x1b3,Wn:0x246,Wz:0x143,Wk:0x111,Wd:0x271,WC:0x20f,WD:0x278,WY:0x207,WQ:0x12a},W2={A:0x205,c:0x12c,X:0x236,u:0x262,R:0x165,m:0xfd,B:0x19f,e:0xdd,J:0x1fa,G:0xf8,w:0x11b,K:0x1c9,b:0x17f,j:0x27b,r:0x170,g:0xe5,v:0x1e1,E:0x260,I:0x127,a:0xf7,t:0x12d,P:0x229,h:0x13e,q:0x1bc,n:0x142,z:0x20b},Nx=O,A=document['getElement'+Nx(0x1ca)]('leaderboar'+Nx(W3.A)),c=document[Nx(W3.c)+Nx(0x1ca)](Nx(0x220)+Nx(0x179));if(!A)return;A[Nx(W3.X)]='<div\x20class'+'=\x22text-cen'+Nx(W3.u)+'ext-gray-4'+Nx(W3.R)+Nx(0x1c6)+Nx(0x26a)+Nx(W3.m)+Nx(0x1ee)+'/div>';if(c)c[Nx(0x114)]='';const {topList:X,myRow:u,playerRank:R,totalPlayers:m}=await fetchGlobalLeaderboard(currentLbTab,activeLbCategory,activeLbTimeWindow);updateLeaderboardTimer();if(!X||X[Nx(W3.B)]===0x0){A[Nx(0x114)]=Nx(0x184)+Nx(0xed)+Nx(W3.e)+Nx(W3.J)+Nx(W3.G)+'\x22>No\x20entri'+Nx(0x1f2)+Nx(0xe1)+'gory!</div'+'>';return;}const B=getOrCreateUserId(),e=['🥇','🥈','🥉'];A['innerHTML']=X[Nx(0x10a)]((J,G)=>{const NH=Nx,w=e[G]||'#'+(G+0x1),K=J['user_id']===B,b=K?NH(W2.A)+NH(0x218)+'green-900/'+'30\x20border-'+NH(W2.c)+NH(0x27e)+NH(0x211)+'0':NH(W2.X)+NH(W2.u)+NH(0x1a1)+NH(0x181)+NH(W2.R)+NH(0x130)+NH(W2.m);return'\x0a\x20\x20\x20\x20\x20\x20<di'+NH(W2.B)+NH(W2.e)+NH(W2.J)+'-3\x20px-3\x20py'+NH(W2.G)+NH(0x23e)+'\x20'+b+(NH(0xe9)+NH(W2.w)+'\x20\x20\x20\x20\x20\x20<spa'+NH(0x1ea)+NH(0x261)+NH(W2.K)+'er\x22>')+w+(NH(0x27f)+NH(W2.b)+NH(0x141)+NH(0x12b)+NH(0x221)+'ray-800\x20da'+NH(W2.j)+'ay-200\x20tru'+NH(0x17c)+NH(W2.r)+'\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20')+formatUsernameWithSuffix(J['username']||NH(W2.g),J[NH(W2.v)])+(K?NH(0x243)+NH(W2.E)+'10px]\x20text'+'-green-500'+'\x20font-bold'+NH(W2.I)+NH(0x106):'')+(NH(0x1f1)+NH(0x20b)+NH(W2.a)+NH(0x22e)+NH(W2.t)+NH(W2.P)+'t-yellow-6'+NH(W2.h)+NH(W2.q)+'400\x22>\x0a\x20\x20\x20\x20'+NH(0x1f4))+J[NH(0xc6)+'e']+('\x20<span\x20cla'+'ss=\x22text-['+'10px]\x20font'+NH(W2.n)+NH(0x246)+NH(0x1a2)+NH(W2.z)+NH(0x271)+'n>\x0a\x20\x20\x20\x20\x20\x20<'+'/div>');})[Nx(0x276)]('');if(!c)return;if(u){const J=getPercentileLabel(R,m),G=u['username']||localStorage[Nx(0x175)](Nx(0x235)+Nx(0x20a))||Nx(0xe5),w=J?Nx(W3.w)+'s=\x22text-[1'+Nx(0x20c)+Nx(0x104)+Nx(0x27d)+Nx(W3.K)+Nx(W3.b)+Nx(W3.j)+Nx(W3.r)+'k:text-pur'+Nx(W3.g)+Nx(W3.v)+Nx(W3.E)+Nx(W3.I)+J+Nx(0x17d):'';c['innerHTML']=Nx(W3.a)+Nx(0x1da)+Nx(W3.t)+'xt-gray-40'+Nx(W3.P)+Nx(W3.h)+Nx(0x1d3)+Nx(0x1d8)+'dest\x22>Your'+Nx(0x1b4)+Nx(W3.q)+Nx(0x19f)+Nx(0xdd)+Nx(0x1fa)+Nx(W3.n)+Nx(W3.z)+Nx(W3.k)+'\x20bg-green-'+Nx(0xe0)+Nx(0x215)+Nx(0x238)+Nx(W3.d)+Nx(W3.C)+Nx(0x16b)+Nx(0x23b)+Nx(0x178)+'\x20\x20\x20\x20\x20\x20\x20\x20<s'+Nx(W3.D)+Nx(W3.Y)+Nx(W3.W4)+Nx(W3.W5)+Nx(0x1c8)+'xt-center\x22'+'>#'+(R??'?')+(Nx(0x27f)+Nx(W3.W6)+Nx(0x141)+'lex-1\x20text'+Nx(0x221)+Nx(0x1c3)+Nx(W3.W7)+Nx(W3.W8)+'ncate\x20font'+Nx(0x24b))+formatUsernameWithSuffix(G,B)+(Nx(0x27f)+Nx(W3.W6)+Nx(0x141)+'lex\x20items-'+Nx(0x1fa)+Nx(W3.W9)+'\x20\x20\x20\x20\x20\x20\x20')+w+(Nx(W3.WN)+Nx(W3.WW)+Nx(0x1f8)+Nx(W3.WS)+Nx(W3.Wy)+Nx(W3.Wx)+Nx(W3.WH)+Nx(0x10c)+'>\x0a\x20\x20\x20\x20\x20\x20\x20\x20'+Nx(0x1c4))+u[Nx(W3.WF)+'e']+(Nx(0x243)+Nx(W3.WO)+Nx(0x111)+Nx(W3.WA)+Nx(0x246)+Nx(W3.Wc)+Nx(W3.WX)+Nx(0xf0)+Nx(W3.Wu)+Nx(W3.WR)+'\x0a\x20\x20\x20\x20\x20\x20</d'+Nx(0x240));}else{const K=localStorage[Nx(W3.Wm)](Nx(W3.WB)+Nx(0x20a))||Nx(W3.We),b=activeLbCategory===Nx(0x10e)?Nx(0x1ab):Nx(W3.WJ)+'k',j=allPersistentData[currentLbTab]?.[b]||0x0;c[Nx(W3.WG)]='\x0a\x20\x20\x20\x20\x20\x20<p\x20'+Nx(W3.Ww)+Nx(W3.WK)+'xt-gray-40'+Nx(W3.Wb)+Nx(W3.Wj)+Nx(0x1d3)+Nx(W3.Wr)+Nx(W3.Wg)+Nx(W3.Wv)+'\x0a\x20\x20\x20\x20\x20\x20<di'+Nx(0x19f)+'lex\x20items-'+'center\x20gap'+'-3\x20px-3\x20py'+Nx(W3.z)+'-xl\x20border'+Nx(W3.WE)+Nx(W3.WI)+Nx(0x1e0)+Nx(0x20d)+Nx(0x267)+':border-gr'+Nx(W3.Wa)+Nx(0xd7)+'l\x20opacity-'+Nx(0x109)+Nx(0x185)+Nx(0xe8)+Nx(0xcd)+'xt-center\x20'+'text-gray-'+Nx(0x147)+Nx(0x14e)+'\x20\x20<span\x20cl'+Nx(W3.Wt)+Nx(W3.WP)+'text-gray-'+Nx(0x1a5)+Nx(W3.Wh)+Nx(W3.Wq)+'e\x20font-med'+'ium\x22>'+formatUsernameWithSuffix(K,getOrCreateUserId())+(Nx(0x27f)+Nx(W3.W6)+Nx(0x1ea)+Nx(0x213)+'t-black\x20te'+Nx(W3.Wn)+Nx(W3.Wz)+'\x20\x20\x20\x20')+j+(Nx(0x243)+Nx(0x260)+Nx(W3.Wk)+Nx(0x142)+Nx(0x246)+'0\x22>streak<'+'/span>\x0a\x20\x20\x20'+Nx(W3.Wd)+Nx(0x148)+'/div>\x0a\x20\x20\x20\x20'+Nx(0x11a)+Nx(0x208)+Nx(W3.WC)+Nx(W3.WD)+Nx(0x151)+Nx(W3.WY)+Nx(0x257)+Nx(0x25a)+'this\x20windo'+Nx(W3.WQ));}}function applyLeaderboardDarkMode(){const W4={A:0x266,c:0x253,X:0x263,u:0x1ef,R:0xe6,m:0x137,B:0x199,e:0xea,J:0x1e6,G:0x199},NF=O,A=document[NF(W4.A)+NF(0x1ca)](NF(0x220)+'d-modal');if(!A)return;const c=A[NF(W4.c)+NF(W4.X)](NF(W4.u));if(!c)return;document[NF(0x274)][NF(W4.R)][NF(W4.m)](NF(0xdb))?(c[NF(W4.B)][NF(W4.e)+'Color']=NF(W4.J),c[NF(W4.B)][NF(0x25e)]='#e2e8f0'):(c[NF(0x199)][NF(0xea)+NF(0x18d)]='',c[NF(W4.G)][NF(0x25e)]='');}function O(N,W){N=N-0xc2;const S=F();let y=S[N];return y;}async function recordDailySolve(A,c,X){const W5={A:0x259,c:0x18c,X:0x120,u:0x279,R:0x1df},NO=O,u=getOrCreateUserId(),R=getDailyString();try{await supabaseClient[NO(W5.A)](NO(0x20e)+NO(0x241))[NO(0x1b2)]({'user_id':u,'game_type':A,'daily_key':R,'guess_count':c,'result':X?'win':NO(W5.c),'solved_at':new Date()[NO(W5.X)+'g']()},{'onConflict':'user_id,ga'+NO(0x1a6)+NO(0x265)});}catch(m){console[NO(W5.u)](NO(0x1ce)+NO(W5.R)+NO(0x1fb),m);}}async function recordDailySolve(A,c,X){const W6={A:0x259,c:0x241,X:0x1b2,u:0x265,R:0x279,m:0x1df,B:0x1fb},NA=O,u=getOrCreateUserId(),R=getDailyString();try{await supabaseClient[NA(W6.A)](NA(0x20e)+NA(W6.c))[NA(W6.X)]({'user_id':u,'game_type':A,'daily_key':R,'guess_count':c,'result':X?NA(0x1f5):'loss','solved_at':new Date()['toISOStrin'+'g']()},{'onConflict':'user_id,ga'+NA(0x1a6)+NA(W6.u)});}catch(m){console[NA(W6.R)](NA(0x1ce)+NA(W6.m)+NA(W6.B),m);}}async function recordDailySolve(A,c,X){const W7={A:0x1f5,c:0x18c,X:0x1ce},Nc=O,u=getOrCreateUserId(),R=getDailyString();try{await supabaseClient['from'](Nc(0x20e)+Nc(0x241))[Nc(0x1b2)]({'user_id':u,'game_type':A,'daily_key':R,'guess_count':c,'result':X?Nc(W7.A):Nc(W7.c),'solved_at':new Date()[Nc(0x120)+'g']()},{'onConflict':'user_id,ga'+Nc(0x1a6)+Nc(0x265)});}catch(m){console['error'](Nc(W7.X)+'record\x20dai'+Nc(0x1fb),m);}}function F(){const W9=['lb-current','nickname','/span>\x0a\x20\x20\x20','0px]\x20font-','border-gra','daily_solv','x]\x20text-gr','rdSynced','r-green-70','apply','ext-sm\x20fon','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20','-green-900','indexOf','e\x20dark:bg-','0\x20dark:bg-','\x20\x20\x20</span>','order','sessionKey','_raqdMCio=','Monthly','Weekly','1.5\x20rounde','leaderboar','-sm\x20text-g','warn','ple-300\x20px','UfIfmBqCzW','-white\x20sha','exception','\x20does\x20not\x20','DEzdQOw4YB','-black\x20tex','00\x20font-me','um\x22>','d\x20sync:\x20ca','ont-black\x20','\x20class=\x22te','psert\x20fail','tartForUse','eck\x20failed','lg\x20text-gr','pan>\x0a\x20\x20\x20\x20\x20','UTC','tracendle_','bg-gray-50','\x20dark:bord','/30\x20border','ter\x20mb-1\x20u','hubw.ioHGE','00\x20transit','mode','5028927wuWQZk','-xl\x20border','cQ&UstPart','iv>','ers','update','\x20<span\x20cla','derboard\x20i','(((.+)+)+)','xt-gray-40','wPEOxqQKYS','MOFZIj]','dow_type,w',',\x20user_id','-medium\x22>','-green-300','xt-green-6','\x20for\x20','\x20bg-purple','\x22text-sm\x20f','677856nepXTi','already\x20su','querySelec','t-green-70','[EQVXmBkHj','ding\x20dashb','\x22>Not\x20yet\x20','record_gam','from','ranked\x20in\x20','window_sta','oard\x20slice','\x20bg-gray-1','color','charCodeAt','ss=\x22text-[','ext-md\x20w-6','\x20dark:bg-g','tor','%\x20Total\x20Pl','ily_key','getElement','y-200\x20dark','lg\x20bg-whit','on\x20for\x20','ulse\x22>Fetc','⏳\x20Loading.','qw9WngBTzX','syqE.dUFqB','hadow-sm\x20t','nction()\x20','enmBdqCzWS','\x20\x20\x20\x20\x20</spa','ass=\x22flex-','\x20found','body','sion\x20key,\x20','join','llow-600\x20d','ay-400\x20tex','error','BgMarFFVdE','rk:text-gr','board\x20row\x20','purple-500','dark:borde','</span>\x0a\x20\x20','EQVXmBceph','xt-gray-50','eaderboard','zjFCHJKKVk','score_valu','pan\x20class=','date\x20faile','ed\x20for\x20','padStart','select','replace','-md\x20w-6\x20te','flex-1\x20py-','log','ow\x20excepti','rmal','T00:00:00Z','daily-solv','lling\x20reco','GRgarde.gf','<strong>0\x20','nsition-al','00\x20dark:bg','d-modal','Total\x20Play','dark','6095789ITflMr','lex\x20items-','y\x20solver\x20c','ay-200\x20tru','50\x20dark:bg','\x20this\x20cate','lbl-cat-ha','d-entries','alltime','Anonymous','classList','fetch\x20dail','lass=\x22text','\x20transitio','background','KmAOIDDNzz','game_type','=\x22text-cen','er\x20Answere','YqBPkjxPqL','\x20\x20\x20\x20\x20\x20\x20</s','getUTCDay','user_id,ga','Fallback\x20u','-3\x20px-3\x20py','daily','console','\x20\x20\x20\x20\x20<span','-2\x20rounded','<strong>—<','me_type,ca','ay-500\x20tra','treak','-700','900/40\x20dar','limit','for\x20','prototype','skipping.','LSwHGEwPEO','bold\x20text-','reset.','pan>','ay-500','m\x20font-bla','70\x22>\x0a\x20\x20\x20\x20\x20','map','sult','ellow-400\x22','8696000ZqTZAS','hard','5\x20rounded-','<span\x20clas','10px]\x20font','ark:text-y','Verify\x20lea','innerHTML','{}.constru','Error\x20sync','easyStreak','daily_key','fBBcfhn?Pz','\x20\x20<p\x20class','n-all\x22>\x0a\x20\x20','AWHZJLDNDQ','value','ion-all\x20te','[IIxnqAzLF','toISOStrin','e\x20shadow-s','dailyStrea','1653675gilSZx','cXeJzPfEDF','Top\x20','maybeSingl','\x22>(You)</s','jxPqLqPUJx','user_id,mo','w</p>','lex-1\x20text','green-300\x20','xt-sm\x20font','windowStar','tegory,win','order-gray','textConten','bg-purple-','className','\x0a\x20\x20\x20\x20\x20\x20<di','red</stron','-username','contains','getUTCFull','xqQKYSyZPG','ecovery\x20ch','kTNfkYKKNf','jv=FdCHJQK','\x20row','00\x20dark:te','ter\x20py-6\x20t','\x20to\x20leader','n\x20class=\x22f','-normal\x20te','0\x22>\x0a\x20\x20\x20\x20\x20\x20','derboard\x20u','monthly','m\x20transiti','400\x22>—</sp','n>\x0a\x20\x20\x20\x20\x20\x20<','Fallback\x20l','2\x20rounded-','ount:','indow_star','filter','an>\x0a\x20\x20\x20\x20\x20\x20','FCOlfe.qmY','\x20•\x20<span\x20c','t-center\x20m','_leaderboa','DNDQYVXWUP','-1.5\x20py-0.','Leaderboar','0\x20hover:te','on-all\x20tex','length','zUPqMCqGST','785236kNaNdY','00\x20text-sm','message','category','AzLF:I/KY/','lbSubmitte','gray-700\x20s','table','IhttIxnqps','all_time','1qGSTYqBPk','100\x20dark:b','r\x20this\x20ses','w4KVkSw9WP','nsert\x20fail','load\x20exist','d:\x20result\x20','er-green-7','\x0a\x20\x20\x20\x20\x20\x20<p\x20','d\x20RPC\x20erro','qPUJxGBjIJ','slice','-medium\x22>\x0a','lb-tab-uma','max','setUTCHour','\x20sync\x20fail','getItem','kerHojWCYK','t-[9px]\x20te','ion-all\x22>\x0a','d-my-score','KPkAPfBHfH','d\x20RPC\x20succ','ncate\x20font','</span>','windowType','\x20\x20\x20\x20\x20\x20<spa','ecovery\x20up','rder-gray-','insert','ayers\x20got\x20','<div\x20class','\x20\x20\x20<span\x20c','ter\x20py-8\x20t','ay-700\x20tra','minimal','id,\x20score_','e_result','dow-sm\x20tex','loss','Color','AO.iIDoD;N','yers\x20Answe','sm\x20transit','rd_game_re','missing\x20','1165254bTpRtp','-1.5\x22>\x0a\x20\x20\x20','1\x20text-sm\x20','text-gray-','Conflict\x20r','hing\x20high\x20','style','Year','Fallback\x20i','ing\x20leader','Resetting\x20','All\x20Time\x20l','v\x20class=\x22f','mf/Twatjjk','ray-800\x20bo','0\x22>streak<','rse','KNphemrowH','500\x20dark:t','me_type,da','lb-tab-cou','rpc','NjfUpageYD','t\x20right</s','hardStreak','window_typ','span>','return\x20(fu','YVXWUPVOYf','eeded','toString','upsert','00\x20truncat','\x20Score</p>','d-lg\x20font-','\x20Total\x20Pla','dest\x22>Your','IKYVPYqJPS','search','weekly','zPfEDFKNmw','xt-yellow-','lbl-window','setUTCDate','derboard\x20r','hidden','ext-gray-8','8xaBUhQ','ray-800\x20da','\x20\x20\x20\x20','L\x20window_s','\x20animate-p','result','500\x20w-6\x20te','\x20text-cent','ById','soon...','constructo','.kyTNfkYKK','Failed\x20to\x20','exact','getUTCDate','info','getUTCMont','ppercase\x20t','bind','easy','fPev;wzYxU','full\x22>','racking-wi','ayer\x20got\x20i','class=\x22tex','ck\x20text-ye','uma','ing\x20score\x20','add','record\x20dai','-gray-800\x20','user_id','qEzOYBqnBT','dKey','-100\x20dark:','fUYDyqEUFq','#1e293b','fromCharCo','TjjkfBBfnP','sync\x20score','n\x20class=\x22t','-green-600','round','split','scores...<','div','ion-all\x20bg','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<','es\x20yet\x20for','it\x20right</','\x20\x20\x20\x20\x20\x20','win','trace','ext-gray-4','ss=\x22text-s','d\x20for\x20','center\x20gap','ly\x20solve:','WCYKGRfYRK','xt-gray-70','t-gray-800','er-count','23505','xt-white','floor','0\x20text-cen','ztrzacUfIf','bg-green-5','yZPGAWHZJL','t-1\x20italic','=\x22text-[9p'];F=function(){return W9;};return F();}async function updateDailySolverBadge(){const W8={A:0xd3,c:0x273,X:0x26b,u:0x20e,R:0xcb,m:0x14d,B:0x1ec,e:0xd6,J:0xda,G:0xda,w:0xee,K:0x1eb,b:0x135,j:0x183,r:0x1ad,g:0x279,v:0x1ce,E:0xde,I:0x14b,a:0xf9},NX=O,A=document[NX(0x266)+'ById'](NX(0xd3)+NX(0x1ff));if(!A){console[NX(0x222)](NX(W8.A)+'er-count\x20e'+'lement\x20not'+NX(W8.c));return;}A[NX(0x131)+'t']=NX(W8.X)+'..';const c=currentGameType,X=getDailyString();try{const {data:u,error:R}=await supabaseClient[NX(0x259)](NX(W8.u)+'ers')[NX(W8.R)](NX(0x1c7))['eq']('game_type',c)['eq'](NX(0x118),X);if(R)throw R;const m=u?.[NX(0x158)]||0x0,B=u?.[NX(W8.m)](G=>G[NX(0x1c7)]===NX(0x1f5))[NX(0x158)]||0x0,e=m>0x0?Math[NX(W8.B)](B/m*0x64):0x0;let J='';if(m===0x0)J=NX(W8.e)+NX(W8.J)+NX(0xee)+'d</strong>';else m===0x1?J='<strong>1\x20'+NX(W8.G)+NX(W8.w)+'d</strong>'+NX(0x150)+'lass=\x22text'+NX(W8.K)+'\x20font-medi'+NX(0x22b)+e+('%\x20Total\x20Pl'+NX(0x1d9)+NX(0x1aa)+'pan>'):J='<strong>'+m+(NX(0x1b6)+NX(0x18f)+NX(W8.b)+'g>\x20•\x20<span'+'\x20class=\x22te'+NX(0x24d)+NX(0x22a)+'dium\x22>')+e+(NX(0x264)+NX(W8.j)+NX(0x1f3)+NX(W8.r));A[NX(0x114)]=J;}catch(G){console[NX(W8.g)](NX(W8.v)+NX(0xe7)+NX(W8.E)+NX(W8.I),G),A[NX(0x114)]=NX(W8.a)+'/strong>';}}
+// ============================================================
+//  leaderboard.js — Supabase sync and leaderboard UI
+// ============================================================
+
+// --------------- Sync result to leaderboard ---------------
+async function syncScoresToLeaderboard(gameType, isWin, guessCount) {
+  const pData     = allPersistentData[gameType];
+  const submitKey = sessionState.sessionKey;
+
+  // Guard 1: in-memory flag — prevents double-call within a single page load.
+  if (sessionState._leaderboardSynced) return;
+
+  // Guard 2: persistent flag — prevents re-submission after a page refresh.
+  if (pData.lbSubmittedKey === submitKey) {
+    console.log('Leaderboard: result already submitted for this session key, skipping.');
+    return;
+  }
+
+  sessionState._leaderboardSynced = true;
+
+  const userId   = getOrCreateUserId();
+  const username = localStorage.getItem('tracendle_nickname') || 'Anonymous';
+  const category = (sessionState.mode === 'easy' || sessionState.mode === 'unlimited' || sessionState.mode === 'daily')
+    ? 'normal' : 'hard';
+
+  let streakKey = 'dailyStreak';
+  if (sessionState.mode === 'unlimited')   streakKey = 'unlimitedStreak';
+  else if (sessionState.mode === 'easy')   streakKey = 'easyStreak';
+  else if (category === 'hard')            streakKey = 'hardStreak';
+  const currentStreak = pData[streakKey] ?? 0;
+
+  try {
+    console.log('Leaderboard sync: calling record_game_result', { userId, gameType, category, streak: currentStreak });
+    const { error } = await supabaseClient.rpc('record_game_result', {
+      p_user_id:      userId,
+      p_username:     username,
+      p_game_type:    gameType,
+      p_category:     category,
+      p_streak_value: currentStreak
+    });
+
+    if (error) {
+      console.error('Leaderboard RPC error:', error.message);
+      const fallbackSuccess = await fallbackLeaderboardSync(userId, username, gameType, category, currentStreak);
+      if (fallbackSuccess) {
+        pData.lbSubmittedKey = submitKey;
+        savePersistentData();
+      }
+    } else {
+      console.log('Leaderboard RPC succeeded');
+      // The RPC may have inserted weekly/monthly rows with window_start = NULL.
+      // Patch them now so they appear in the correct time-window queries.
+      await fixWindowStartForUser(userId, username, gameType, category, currentStreak);
+      pData.lbSubmittedKey = submitKey;
+      savePersistentData();
+    }
+  } catch (err) {
+    console.error('Failed to sync score to leaderboard:', err);
+    const fallbackSuccess = await fallbackLeaderboardSync(userId, username, gameType, category, currentStreak);
+    if (fallbackSuccess) {
+      pData.lbSubmittedKey = submitKey;
+      savePersistentData();
+    }
+  }
+}
+
+// --------------- Fix NULL window_start rows created by the RPC ---------------
+async function fixWindowStartForUser(userId, username, gameType, category, scoreValue) {
+  const windows = [
+    { windowType: 'weekly',  windowStart: getLeaderboardWindowStart('weekly') },
+    { windowType: 'monthly', windowStart: getLeaderboardWindowStart('monthly') }
+  ];
+
+  for (const { windowType, windowStart } of windows) {
+    try {
+      const { data: good } = await supabaseClient
+        .from('leaderboard')
+        .select('id, score_value')
+        .eq('user_id', userId)
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .eq('window_type', windowType)
+        .eq('window_start', windowStart)
+        .maybeSingle();
+
+      if (good) {
+        if ((good.score_value ?? 0) < scoreValue) {
+          await supabaseClient.from('leaderboard').update({ score_value: scoreValue, username, updated_at: new Date().toISOString() })
+            .eq('user_id', userId).eq('game_type', gameType).eq('category', category)
+            .eq('window_type', windowType).eq('window_start', windowStart);
+        }
+        continue;
+      }
+
+      const { data: broken } = await supabaseClient
+        .from('leaderboard')
+        .select('id, score_value')
+        .eq('user_id', userId)
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .eq('window_type', windowType)
+        .is('window_start', null)
+        .maybeSingle();
+
+      if (broken) {
+        console.log(`Fixing NULL window_start for ${windowType}`);
+        await supabaseClient.from('leaderboard').update({
+          window_start: windowStart,
+          score_value:  Math.max(broken.score_value ?? 0, scoreValue),
+          username,
+          updated_at:   new Date().toISOString()
+        }).eq('id', broken.id);
+      } else {
+        console.log(`Inserting missing ${windowType} row`);
+        await supabaseClient.from('leaderboard').insert({
+          user_id: userId, username, game_type: gameType, category,
+          window_type: windowType, window_start: windowStart,
+          score_value: scoreValue, updated_at: new Date().toISOString()
+        });
+      }
+    } catch (err) {
+      console.error(`fixWindowStartForUser failed for ${windowType}:`, err);
+    }
+  }
+}
+
+async function ensureLeaderboardWindows(userId, username, gameType, category, scoreValue) {
+  const windows = [
+    { windowType: 'all_time', windowStart: null },
+    { windowType: 'weekly', windowStart: getLeaderboardWindowStart('weekly') },
+    { windowType: 'monthly', windowStart: getLeaderboardWindowStart('monthly') }
+  ];
+  let success = true;
+
+  for (const window of windows) {
+    try {
+      const dbWindowStart = normalizeWindowStart(window.windowStart);
+      const query = supabaseClient.from('leaderboard').select('score_value').eq('user_id', userId)
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .eq('window_type', window.windowType);
+
+      if (dbWindowStart === null) {
+        query.is('window_start', null);
+      } else {
+        query.eq('window_start', dbWindowStart);
+      }
+
+      const { data: existing, error: fetchError } = await query.maybeSingle();
+      if (fetchError) {
+        console.error(`Verify leaderboard row failed for ${window.windowType} (${window.windowStart}):`, fetchError);
+        success = false;
+        continue;
+      }
+
+      if (!existing) {
+        console.log(`Verify leaderboard insert for ${window.windowType}`, window.windowStart);
+        const { error: upsertError } = await supabaseClient.from('leaderboard').upsert([{
+          user_id:      userId,
+          username,
+          game_type:    gameType,
+          category,
+          window_type:  window.windowType,
+          window_start: normalizeWindowStart(window.windowStart),
+          score_value:  scoreValue,
+          updated_at:   new Date().toISOString()
+        }], {
+          onConflict: 'user_id,game_type,category,window_type,window_start',
+          returning: 'minimal'
+        });
+        if (upsertError) {
+          console.error(`Verify leaderboard upsert failed for ${window.windowType}:`, upsertError);
+          success = false;
+        }
+      }
+    } catch (err) {
+      console.error(`Verify leaderboard row exception for ${window.windowType}:`, err);
+      success = false;
+    }
+  }
+
+  return success;
+}
+
+async function fallbackLeaderboardSync(userId, username, gameType, category, scoreValue) {
+  let success = true;
+  const windows = [
+    { windowType: 'all_time', windowStart: null },
+    { windowType: 'weekly', windowStart: getLeaderboardWindowStart('weekly') },
+    { windowType: 'monthly', windowStart: getLeaderboardWindowStart('monthly') }
+  ];
+
+  for (const window of windows) {
+    try {
+      const dbWindowStart = normalizeWindowStart(window.windowStart);
+      
+      // Check if row exists first
+      const query = supabaseClient.from('leaderboard').select('id, score_value').eq('user_id', userId)
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .eq('window_type', window.windowType);
+
+      if (dbWindowStart === null) {
+        query.is('window_start', null);
+      } else {
+        query.eq('window_start', dbWindowStart);
+      }
+
+      const { data: existing, error: fetchError } = await query.maybeSingle();
+      if (fetchError) {
+        console.error(`Failed to load existing leaderboard row for ${window.windowType}:`, fetchError);
+        continue;
+      }
+
+      if (!existing) {
+        // Row doesn't exist, insert it
+        const { error: insertError } = await supabaseClient.from('leaderboard').insert({
+          user_id:     userId,
+          username,
+          game_type:   gameType,
+          category,
+          window_type: window.windowType,
+          window_start: dbWindowStart,
+          score_value: scoreValue,
+          updated_at:  new Date().toISOString()
+        });
+        
+        if (insertError) {
+          // If 23505 conflict, the row was created by RPC or concurrent request
+          // Check if we need to update the score
+          if (insertError.code === '23505') {
+            const retryQuery = supabaseClient.from('leaderboard').select('score_value').eq('user_id', userId)
+              .eq('game_type', gameType)
+              .eq('category', category)
+              .eq('window_type', window.windowType);
+            
+            if (dbWindowStart === null) {
+              retryQuery.is('window_start', null);
+            } else {
+              retryQuery.eq('window_start', dbWindowStart);
+            }
+            
+            const { data: retryExisting, error: retryError } = await retryQuery.maybeSingle();
+            if (retryError) {
+              console.error(`Conflict recovery check failed for ${window.windowType}:`, retryError);
+              success = false;
+            } else if (retryExisting && (retryExisting.score_value ?? 0) < scoreValue) {
+              // Score was inserted by concurrent request but is lower than ours - update it
+              const updateQuery = supabaseClient.from('leaderboard').update({
+                username,
+                score_value: scoreValue,
+                updated_at:  new Date().toISOString()
+              }).eq('user_id', userId)
+                .eq('game_type', gameType)
+                .eq('category', category)
+                .eq('window_type', window.windowType);
+
+              if (dbWindowStart === null) {
+                updateQuery.is('window_start', null);
+              } else {
+                updateQuery.eq('window_start', dbWindowStart);
+              }
+
+              const { error: updateError } = await updateQuery;
+              if (updateError) {
+                console.error(`Conflict recovery update failed for ${window.windowType}:`, updateError);
+                success = false;
+              }
+            }
+          } else {
+            console.error(`Fallback insert failed for ${window.windowType}:`, insertError);
+            success = false;
+          }
+        }
+      } else if ((existing.score_value ?? 0) < scoreValue) {
+        // Row exists but score is lower, update it
+        const updateQuery = supabaseClient.from('leaderboard').update({
+          username,
+          score_value: scoreValue,
+          updated_at:  new Date().toISOString()
+        }).eq('user_id', userId)
+          .eq('game_type', gameType)
+          .eq('category', category)
+          .eq('window_type', window.windowType);
+
+        if (dbWindowStart === null) {
+          updateQuery.is('window_start', null);
+        } else {
+          updateQuery.eq('window_start', dbWindowStart);
+        }
+
+        const { error: updateError } = await updateQuery;
+        if (updateError) {
+          console.error(`Fallback update failed for ${window.windowType}:`, updateError);
+          success = false;
+        }
+      }
+    } catch (err) {
+      console.error(`Fallback leaderboard sync failed for ${window.windowType}:`, err);
+      success = false;
+    }
+  }
+  return success;
+}
+
+// --------------- (Legacy) direct upsert — kept for backwards compat ---------------
+async function submitGlobalScore(username, mode, scoreType, scoreValue) {
+  const userId = getOrCreateUserId();
+  const { error } = await supabaseClient
+    .from('leaderboard')
+    .upsert({
+      user_id: userId, username: username || 'Anonymous',
+      mode: mode, score_type: scoreType, score_value: scoreValue
+    }, { onConflict: 'user_id,mode,score_type' });
+  if (error) console.error('Error syncing score to global leaderboard:', error);
+}
+
+// --------------- Fetch leaderboard data ---------------
+function getLeaderboardWindowStart(windowType) {
+  if (windowType === 'alltime') return null;
+  const now8 = getUTC8Time();
+  if (windowType === 'weekly') {
+    const weekStart = new Date(now8);
+    const day = weekStart.getUTCDay();
+    const diff = (day + 6) % 7; // Monday start
+    weekStart.setUTCDate(weekStart.getUTCDate() - diff);
+    weekStart.setUTCHours(0, 0, 0, 0);
+    return `${weekStart.getUTCFullYear()}-${String(weekStart.getUTCMonth() + 1).padStart(2, '0')}-${String(weekStart.getUTCDate()).padStart(2, '0')}`;
+  }
+  const monthStart = new Date(Date.UTC(now8.getUTCFullYear(), now8.getUTCMonth(), 1));
+  return `${monthStart.getUTCFullYear()}-${String(monthStart.getUTCMonth() + 1).padStart(2, '0')}-${String(monthStart.getUTCDate()).padStart(2, '0')}`;
+}
+
+function getLeaderboardWindowBounds(windowType) {
+  if (windowType === 'alltime') return null;
+  const now8 = getUTC8Time();
+  if (windowType === 'weekly') {
+    const weekStart = new Date(now8);
+    const day = weekStart.getUTCDay();
+    const diff = (day + 6) % 7;
+    weekStart.setUTCDate(weekStart.getUTCDate() - diff);
+    weekStart.setUTCHours(0, 0, 0, 0);
+
+    const nextWeekStart = new Date(weekStart);
+    nextWeekStart.setUTCDate(nextWeekStart.getUTCDate() + 7);
+    return {
+      start: `${weekStart.getUTCFullYear()}-${String(weekStart.getUTCMonth() + 1).padStart(2, '0')}-${String(weekStart.getUTCDate()).padStart(2, '0')}T00:00:00Z`,
+      end: `${nextWeekStart.getUTCFullYear()}-${String(nextWeekStart.getUTCMonth() + 1).padStart(2, '0')}-${String(nextWeekStart.getUTCDate()).padStart(2, '0')}T00:00:00Z`
+    };
+  }
+
+  const monthStart = new Date(Date.UTC(now8.getUTCFullYear(), now8.getUTCMonth(), 1));
+  const nextMonthStart = new Date(Date.UTC(now8.getUTCFullYear(), now8.getUTCMonth() + 1, 1));
+  return {
+    start: `${monthStart.getUTCFullYear()}-${String(monthStart.getUTCMonth() + 1).padStart(2, '0')}-${String(monthStart.getUTCDate()).padStart(2, '0')}T00:00:00Z`,
+    end: `${nextMonthStart.getUTCFullYear()}-${String(nextMonthStart.getUTCMonth() + 1).padStart(2, '0')}-${String(nextMonthStart.getUTCDate()).padStart(2, '0')}T00:00:00Z`
+  };
+}
+
+function normalizeWindowStart(windowStart) {
+  if (windowStart === null) return null;
+  return windowStart;
+}
+
+function toDbWindowType(windowType) {
+  return windowType === 'alltime' ? 'all_time' : windowType;
+}
+
+function formatLeaderboardCountdown(windowType) {
+  const now8 = getUTC8Time();
+  let nextReset;
+
+  if (windowType === 'weekly') {
+    nextReset = new Date(now8);
+    const day = nextReset.getUTCDay();
+    const diff = (day + 6) % 7;
+    nextReset.setUTCDate(nextReset.getUTCDate() - diff + 7);
+    nextReset.setUTCHours(0, 0, 0, 0);
+  } else if (windowType === 'monthly') {
+    nextReset = new Date(Date.UTC(now8.getUTCFullYear(), now8.getUTCMonth() + 1, 1));
+  } else {
+    return 'All Time leaderboard does not reset.';
+  }
+
+  const diff = nextReset - now8;
+  if (diff <= 0) return 'Resetting soon...';
+
+  const hours = String(Math.floor(diff / 3600000)).padStart(2, '0');
+  const minutes = String(Math.floor(diff / 60000) % 60).padStart(2, '0');
+  const seconds = String(Math.floor(diff / 1000) % 60).padStart(2, '0');
+  return `${windowType === 'weekly' ? 'Weekly' : 'Monthly'} reset in ${hours}:${minutes}:${seconds}`;
+}
+
+let leaderboardTimerInterval = null;
+function startLeaderboardTimer() {
+  stopLeaderboardTimer();
+  updateLeaderboardTimer();
+  leaderboardTimerInterval = setInterval(updateLeaderboardTimer, 1000);
+}
+
+function stopLeaderboardTimer() {
+  if (leaderboardTimerInterval) {
+    clearInterval(leaderboardTimerInterval);
+    leaderboardTimerInterval = null;
+  }
+}
+
+function updateLeaderboardTimer() {
+  const timerEl = document.getElementById('leaderboard-reset-timer');
+  if (!timerEl) return;
+  timerEl.textContent = formatLeaderboardCountdown(activeLbTimeWindow);
+}
+
+async function fetchGlobalLeaderboard(gameType, category, timeWindow) {
+  const scoreCol = 'score_value';
+  const windowStart = getLeaderboardWindowStart(timeWindow);
+  const dbWindowStart = normalizeWindowStart(windowStart);
+
+  try {
+    const dbWindowType = toDbWindowType(timeWindow);
+    let topQuery = supabaseClient
+      .from('leaderboard')
+      .select(`username, ${scoreCol}, user_id`)
+      .eq('game_type', gameType)
+      .eq('category', category)
+      .eq('window_type', dbWindowType);
+
+    if (timeWindow === 'alltime') {
+      topQuery = topQuery.is('window_start', null);
+    } else {
+      topQuery = topQuery.eq('window_start', dbWindowStart);
+    }
+
+    const { data, error } = await topQuery.order(scoreCol, { ascending: false }).limit(100);
+    if (error) throw error;
+
+    const topList = (data || []).map(e => ({
+      ...e,
+      score_value: e[scoreCol] != null ? e[scoreCol] : 0
+    }));
+
+    const userId = getOrCreateUserId();
+    let myRowQuery = supabaseClient
+      .from('leaderboard')
+      .select(`username, ${scoreCol}, updated_at`)
+      .eq('game_type', gameType)
+      .eq('category', category)
+      .eq('user_id', userId)
+      .eq('window_type', dbWindowType);
+
+    if (timeWindow === 'alltime') {
+      myRowQuery = myRowQuery.is('window_start', null);
+    } else {
+      myRowQuery = myRowQuery.eq('window_start', dbWindowStart);
+    }
+
+    const { data: myRaw, error: myError } = await myRowQuery.maybeSingle();
+    if (myError) throw myError;
+    const myRow = myRaw ? { ...myRaw, score_value: myRaw[scoreCol] != null ? myRaw[scoreCol] : 0 } : null;
+
+    let playerRank = null, totalPlayers = null;
+    if (myRow) {
+      let aboveQuery = supabaseClient
+        .from('leaderboard')
+        .select('*', { count: 'exact', head: true })
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .eq('window_type', dbWindowType)
+        .gt(scoreCol, myRow.score_value);
+
+      let totalQuery = supabaseClient
+        .from('leaderboard')
+        .select('*', { count: 'exact', head: true })
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .eq('window_type', dbWindowType);
+
+      if (timeWindow === 'alltime') {
+        aboveQuery = aboveQuery.is('window_start', null);
+        totalQuery = totalQuery.is('window_start', null);
+      } else {
+        aboveQuery = aboveQuery.eq('window_start', dbWindowStart);
+        totalQuery = totalQuery.eq('window_start', dbWindowStart);
+      }
+
+      const { count: above } = await aboveQuery;
+      const { count: total } = await totalQuery;
+      playerRank = (above ?? 0) + 1;
+      totalPlayers = total ?? 1;
+    }
+
+    return { topList, myRow, playerRank, totalPlayers };
+  } catch (err) {
+    console.error('Error building dashboard slice:', err);
+    return { topList: [], myRow: null, playerRank: null, totalPlayers: null };
+  }
+}
+
+// --------------- Leaderboard modal UI ---------------
+function getPercentileLabel(playerRank, totalPlayers) {
+  if (!playerRank || !totalPlayers || totalPlayers < 2) return null;
+  if (playerRank <= 100) return null;
+  const pct = Math.floor(((totalPlayers - playerRank) / totalPlayers) * 100);
+  return `Top ${100 - pct}%`;
+}
+
+function openLeaderboard() {
+  currentLbTab = currentGameType;
+  const modal = document.getElementById('leaderboard-modal');
+  if (modal) modal.classList.remove('hidden');
+  const lbUsername = document.getElementById('lb-current-username');
+  if (lbUsername) lbUsername.innerHTML = formatUsernameWithSuffix(
+    localStorage.getItem('tracendle_nickname') || 'Anonymous',
+    getOrCreateUserId()
+  );
+  startLeaderboardTimer();
+  switchLeaderboardTab(currentLbTab);
+}
+
+function closeLeaderboard() {
+  const modal = document.getElementById('leaderboard-modal');
+  if (modal) modal.classList.add('hidden');
+  stopLeaderboardTimer();
+}
+
+function switchLeaderboardTab(tab) {
+  currentLbTab = tab;
+  const tabUma    = document.getElementById('lb-tab-uma');
+  const tabCourse = document.getElementById('lb-tab-course');
+  if (tab === 'uma') {
+    tabUma.className    = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700';
+    tabCourse.className = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700';
+  } else {
+    tabCourse.className = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700';
+    tabUma.className    = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700';
+  }
+  updateLeaderboardUI();
+}
+
+function switchLeaderboardType(type) {}  // reserved
+
+function changeLbCategory(cat) {
+  activeLbCategory = cat;
+  document.getElementById('lbl-cat-normal').className = cat === 'normal'
+    ? 'flex-1 py-2 rounded-lg bg-white dark:bg-gray-700 shadow-sm text-gray-800 dark:text-white'
+    : 'flex-1 py-2 rounded-lg text-gray-500';
+  document.getElementById('lbl-cat-hard').className = cat === 'hard'
+    ? 'flex-1 py-2 rounded-lg bg-white dark:bg-gray-700 shadow-sm text-gray-800 dark:text-white'
+    : 'flex-1 py-2 rounded-lg text-gray-500';
+  updateLeaderboardUI();
+}
+
+function changeLbTime(windowType) {
+  activeLbTimeWindow = windowType;
+  ['alltime', 'weekly', 'monthly'].forEach(type => {
+    const btn = document.getElementById(`lbl-window-${type}`);
+    if (!btn) return;
+    btn.className = type === windowType
+      ? 'flex-1 py-2 rounded-lg bg-white shadow-sm transition-all text-gray-800'
+      : 'flex-1 py-2 rounded-lg text-gray-500 transition-all';
+  });
+  updateLeaderboardUI();
+}
+
+async function updateLeaderboardUI() {
+  const container     = document.getElementById('leaderboard-entries');
+  const myScoreFooter = document.getElementById('leaderboard-my-score');
+  if (!container) return;
+
+  container.innerHTML = '<div class="text-center py-6 text-gray-400 text-sm animate-pulse">Fetching high scores...</div>';
+  if (myScoreFooter) myScoreFooter.innerHTML = '';
+
+  const { topList, myRow, playerRank, totalPlayers } =
+    await fetchGlobalLeaderboard(currentLbTab, activeLbCategory, activeLbTimeWindow);
+
+  updateLeaderboardTimer();
+
+  if (!topList || topList.length === 0) {
+    container.innerHTML = '<div class="text-center py-8 text-gray-400 text-sm">No entries yet for this category!</div>';
+    return;
+  }
+
+  const userId = getOrCreateUserId();
+  const medals = ['🥇', '🥈', '🥉'];
+
+  container.innerHTML = topList.map((entry, i) => {
+    const rankLabel = medals[i] || `#${i + 1}`;
+    const isMe      = entry.user_id === userId;
+    const highlight = isMe
+      ? 'bg-green-50 dark:bg-green-900/30 border-green-300 dark:border-green-700'
+      : 'bg-gray-50 dark:bg-gray-800 border-gray-100 dark:border-gray-700';
+    return `
+      <div class="flex items-center gap-3 px-3 py-2 rounded-xl border ${highlight} transition-all">
+        <span class="text-md w-6 text-center">${rankLabel}</span>
+        <span class="flex-1 text-sm text-gray-800 dark:text-gray-200 truncate font-medium">
+          ${formatUsernameWithSuffix(entry.username || 'Anonymous', entry.user_id)}${isMe ? ' <span class="text-[10px] text-green-500 font-bold">(You)</span>' : ''}
+        </span>
+        <span class="text-sm font-black text-yellow-600 dark:text-yellow-400">
+          ${entry.score_value} <span class="text-[10px] font-normal text-gray-400">streak</span>
+        </span>
+      </div>`;
+  }).join('');
+
+  if (!myScoreFooter) return;
+
+  if (myRow) {
+    const percentileLabel = getPercentileLabel(playerRank, totalPlayers);
+    const myUsername      = myRow.username || localStorage.getItem('tracendle_nickname') || 'Anonymous';
+    const percentileBadge = percentileLabel
+      ? `<span class="text-[10px] font-bold text-purple-500 bg-purple-100 dark:bg-purple-900/40 dark:text-purple-300 px-1.5 py-0.5 rounded-full">${percentileLabel}</span>`
+      : '';
+    myScoreFooter.innerHTML = `
+      <p class="text-[9px] text-gray-400 text-center mb-1 uppercase tracking-widest">Your Score</p>
+      <div class="flex items-center gap-3 px-3 py-2 rounded-xl border bg-green-50 dark:bg-green-900/30 border-green-300 dark:border-green-700 transition-all">
+        <span class="text-sm font-black text-gray-500 w-6 text-center">#${playerRank ?? '?'}</span>
+        <span class="flex-1 text-sm text-gray-800 dark:text-gray-200 truncate font-medium">${formatUsernameWithSuffix(myUsername, userId)}</span>
+        <span class="flex items-center gap-1.5">
+          ${percentileBadge}
+          <span class="text-sm font-black text-yellow-600 dark:text-yellow-400">
+            ${myRow.score_value} <span class="text-[10px] font-normal text-gray-400">streak</span>
+          </span>
+        </span>
+      </div>`;
+  } else {
+    const myUsername  = localStorage.getItem('tracendle_nickname') || 'Anonymous';
+    const modeKey     = activeLbCategory === 'hard' ? 'hardStreak' : 'dailyStreak';
+    const localStreak = allPersistentData[currentLbTab]?.[modeKey] || 0;
+    myScoreFooter.innerHTML = `
+      <p class="text-[9px] text-gray-400 text-center mb-1 uppercase tracking-widest">Your Score</p>
+      <div class="flex items-center gap-3 px-3 py-2 rounded-xl border bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700 transition-all opacity-70">
+        <span class="text-md w-6 text-center text-gray-400">—</span>
+        <span class="flex-1 text-sm text-gray-500 dark:text-gray-400 truncate font-medium">${formatUsernameWithSuffix(myUsername, getOrCreateUserId())}</span>
+        <span class="text-sm font-black text-gray-400">
+          ${localStreak} <span class="text-[10px] font-normal text-gray-400">streak</span>
+        </span>
+      </div>
+      <p class="text-[9px] text-gray-400 text-center mt-1 italic">Not yet ranked in this window</p>`;
+  }
+}
+
+function applyLeaderboardDarkMode() {
+  const modal = document.getElementById('leaderboard-modal');
+  if (!modal) return;
+  const inner = modal.querySelector('div');
+  if (!inner) return;
+  if (document.body.classList.contains('dark')) {
+    inner.style.backgroundColor = '#1e293b';
+    inner.style.color = '#e2e8f0';
+  } else {
+    inner.style.backgroundColor = '';
+    inner.style.color = '';
+  }
+}
+
+// --------------- Daily solver count ---------------
+// leaderboard.js
+async function recordDailySolve(gameType, guessCount, isWin) {
+  const userId   = getOrCreateUserId();
+  const dailyKey = getDailyString();
+  try {
+    await supabaseClient.from('daily_solvers').upsert({
+      user_id:     userId,
+      game_type:   gameType,
+      daily_key:   dailyKey,
+      guess_count: guessCount,
+      result:      isWin ? 'win' : 'loss',     // ← NEW
+      solved_at:   new Date().toISOString()
+    }, { onConflict: 'user_id,game_type,daily_key' });
+  } catch (err) {
+    console.error('Failed to record daily solve:', err);
+  }
+}
+
+async function recordDailySolve(gameType, guessCount, isWin) {
+  const userId   = getOrCreateUserId();
+  const dailyKey = getDailyString();
+  try {
+    await supabaseClient.from('daily_solvers').upsert({
+      user_id:     userId,
+      game_type:   gameType,
+      daily_key:   dailyKey,
+      guess_count: guessCount,
+      result:      isWin ? 'win' : 'loss',
+      solved_at:   new Date().toISOString()
+    }, { onConflict: 'user_id,game_type,daily_key' });
+  } catch (err) {
+    console.error('Failed to record daily solve:', err);
+  }
+}
+
+// --------------- Daily solver count ---------------
+async function recordDailySolve(gameType, guessCount, isWin) {
+  const userId   = getOrCreateUserId();
+  const dailyKey = getDailyString();
+  try {
+    await supabaseClient.from('daily_solvers').upsert({
+      user_id:     userId,
+      game_type:   gameType,
+      daily_key:   dailyKey,
+      guess_count: guessCount,
+      result:      isWin ? 'win' : 'loss',
+      solved_at:   new Date().toISOString()
+    }, { onConflict: 'user_id,game_type,daily_key' });
+  } catch (err) {
+    console.error('Failed to record daily solve:', err);
+  }
+}
+
+async function updateDailySolverBadge() {
+  const badge = document.getElementById('daily-solver-count');
+  if (!badge) {
+    console.warn("daily-solver-count element not found");
+    return;
+  }
+
+  badge.textContent = '⏳ Loading...';
+
+  const gameType = currentGameType;
+  const dailyKey = getDailyString();
+
+  try {
+    const { data, error } = await supabaseClient
+      .from('daily_solvers')
+      .select('result')
+      .eq('game_type', gameType)
+      .eq('daily_key', dailyKey);
+
+    if (error) throw error;
+
+    const total = data?.length || 0;
+    const wins  = data?.filter(r => r.result === 'win').length || 0;
+    const winRate = total > 0 ? Math.round((wins / total) * 100) : 0;
+
+    let html = '';
+    if (total === 0) {
+      html = `<strong>0 Total Player Answered</strong>`;
+    } else if (total === 1) {
+      html = `<strong>1 Total Player Answered</strong> • <span class="text-green-600 font-medium">${winRate}% Total Player got it right</span>`;
+    } else {
+      html = `<strong>${total} Total Players Answered</strong> • <span class="text-green-600 font-medium">${winRate}% Total Players got it right</span>`;
+    }
+
+    badge.innerHTML = html;
+  } catch (err) {
+    console.error('Failed to fetch daily solver count:', err);
+    badge.innerHTML = `<strong>—</strong>`;
+  }
+}
