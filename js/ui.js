@@ -748,13 +748,18 @@ function showModal(title, msg, isNewGameOver = true) {
   if (currentGameType === 'heardle') {
     const isWin = sessionState.guesses.some(g => !g.skipped && g.name === sessionState.target.name);
     if (typeof renderHeardleResultContent === 'function') renderHeardleResultContent(isWin);
-  } else if (typeof resetHeardleResultPanel === 'function') {
-    resetHeardleResultPanel();
+  } else {
+    if (typeof resetHeardleResultPanel === 'function') resetHeardleResultPanel();
   }
 
   // Target stats grid (Umamusume / G1 Race only)
   const targetGrid = document.getElementById('target-stats-grid');
-  if (targetGrid && currentGameType !== 'heardle') {
+  if (targetGrid) {
+    if (currentGameType === 'heardle') {
+      targetGrid.innerHTML = '';
+      targetGrid.classList.add('hidden');
+    } else {
+      targetGrid.classList.remove('hidden');
     targetGrid.innerHTML = '';
     config.sections.forEach(section => {
       const sectionDiv = document.createElement('div');
@@ -781,6 +786,7 @@ function showModal(title, msg, isNewGameOver = true) {
       sectionDiv.appendChild(statsDiv);
       targetGrid.appendChild(sectionDiv);
     });
+    }
   }
 
   // Ranked profile
