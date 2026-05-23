@@ -101,10 +101,11 @@
 
     <div class="w-full max-w-6xl mx-auto px-4 flex flex-col items-center">
 
-    <div id="menu-screen" class="w-full max-w-md bg-white rounded-xl shadow-2xl p-8 flex flex-col gap-4">
+    <div id="menu-screen" class="w-full max-w-lg bg-white rounded-xl shadow-2xl p-8 flex flex-col gap-4">
         <div class="flex bg-gray-100 p-1 rounded-xl mb-2">
-            <button id="tab-uma" onclick="switchGameType('uma')" class="flex-1 py-2 rounded-lg font-bold transition-all bg-white shadow-sm text-green-700">Umamusume</button>
-            <button id="tab-course" onclick="switchGameType('course')" class="flex-1 py-2 rounded-lg font-bold transition-all text-gray-500 hover:text-gray-700">G1 Race</button>
+            <button id="tab-uma" onclick="switchGameType('uma')" class="flex-1 py-2 rounded-lg font-bold transition-all bg-white shadow-sm text-green-700 text-sm">Umamusume</button>
+            <button id="tab-course" onclick="switchGameType('course')" class="flex-1 py-2 rounded-lg font-bold transition-all text-gray-500 hover:text-gray-700 text-sm">G1 Race</button>
+            <button id="tab-heardle" onclick="switchGameType('heardle')" class="flex-1 py-2 rounded-lg font-bold transition-all text-gray-500 hover:text-gray-700 text-sm">Heardle</button>
         </div>
         
         <div class="text-center mb-4">
@@ -202,8 +203,53 @@
         </div>
         
         <div id="guess-dots-container" class="flex items-center gap-2 mb-2">
-            <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest">Guesses</span>
+            <span id="guesses-label" class="guess-dots-label">Guesses</span>
             <div id="remaining-guesses" class="flex items-center gap-1.5"></div>
+        </div>
+
+        <div id="heardle-panel" class="hidden heardle-panel w-full max-w-md mb-4">
+            <div id="heardle-player-card" class="heardle-player-card">
+                <div class="heardle-player-top">
+                    <span class="heardle-player-badge">Voice Clip</span>
+                    <span id="heardle-time-display" class="heardle-time-display">0.0 / 0.5s</span>
+                </div>
+                <div class="heardle-player-stage">
+                    <div id="heardle-wave" class="heardle-wave" aria-hidden="true"></div>
+                    <button type="button" id="heardle-play-btn" onclick="playHeardleClip()" class="heardle-play-btn" aria-label="Play voice clip">
+                        <svg class="heardle-play-icon heardle-play-icon--play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                        <svg class="heardle-play-icon heardle-play-icon--pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z"/></svg>
+                    </button>
+                </div>
+                <div class="heardle-timeline">
+                    <div class="heardle-progress-wrap">
+                        <div id="heardle-progress-unlock" class="heardle-progress-unlock"></div>
+                        <div id="heardle-progress-bar" class="heardle-progress-bar"></div>
+                        <div class="heardle-segment-markers" aria-hidden="true">
+                            <span class="heardle-segment-mark" style="left: 25%"></span>
+                            <span class="heardle-segment-mark" style="left: 50%"></span>
+                            <span class="heardle-segment-mark" style="left: 75%"></span>
+                            <span class="heardle-segment-mark" style="left: 87.5%"></span>
+                            <span class="heardle-segment-mark" style="left: 100%"></span>
+                        </div>
+                    </div>
+                    <div class="heardle-unlock-steps" id="heardle-unlock-steps">
+                        <span class="heardle-step" data-tier="0">0.5s</span>
+                        <span class="heardle-step" data-tier="1">1.0s</span>
+                        <span class="heardle-step" data-tier="2">1.5s</span>
+                        <span class="heardle-step" data-tier="3">1.8s</span>
+                        <span class="heardle-step" data-tier="4">2.0s</span>
+                    </div>
+                </div>
+                <div class="heardle-volume-row">
+                    <label for="heardle-volume" class="heardle-volume-label" aria-hidden="true">
+                        <svg id="heardle-volume-icon" class="heardle-volume-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                    </label>
+                    <input type="range" id="heardle-volume" class="heardle-volume-slider" min="0" max="100" value="100" aria-label="Volume" aria-valuemin="0" aria-valuemax="100">
+                </div>
+                <p id="heardle-unlock-hint" class="heardle-unlock-hint">Tap play to hear the voice line</p>
+                <button type="button" id="heardle-skip-btn" onclick="skipHeardleGuess()" class="heardle-skip-btn">Skip</button>
+            </div>
+            <div id="heardle-guess-history" class="heardle-guess-history"></div>
         </div>
         
         <div class="table-wrapper w-full">
@@ -216,7 +262,7 @@
         <div id="input-container" class="hidden w-full mt-3">
             <div class="picker-search-bar">
                 <input type="text" id="uma-input"
-                    class="w-full p-3 rounded-lg border-2 border-green-700"
+                    class="w-full p-3 rounded-lg border-2 border-green-700 bg-white text-slate-800"
                     placeholder="Search...">
             </div>
             <div id="picker-panel">
@@ -254,7 +300,7 @@
 
                 <div id="loss-streak-banner" class="hidden"></div>
 
-                <div class="flex justify-center mb-3">
+                <div id="share-card-wrap" class="flex justify-center mb-3">
                     <div id="share-card" class="bg-[#111827] p-3 rounded-xl shadow-2xl inline-block text-center border border-gray-800">
                         <h4 id="share-title-text" class="text-green-500 font-black text-[10px] tracking-[0.2em] mb-0.5">UMAWORDLE</h4>
                         <div id="share-info-text" class="text-[9px] text-gray-500 mb-2 uppercase font-bold tracking-widest"></div>
@@ -272,7 +318,21 @@
                             <h3 id="target-name" class="text-lg font-black text-green-700 leading-tight"></h3>
                         </div>
                     </div>
-                    <div id="target-stats-grid">
+                    <div id="target-stats-grid"></div>
+                    <div id="heardle-result-panel" class="heardle-result-panel hidden">
+                        <button type="button" id="heardle-result-play-btn" class="heardle-result-play-btn" aria-label="Play answer voice line">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                            <span>Play answer voice line</span>
+                        </button>
+                        <div class="heardle-result-section">
+                            <span class="heardle-result-label">Clip unlocks</span>
+                            <div id="heardle-result-steps" class="heardle-result-steps"></div>
+                        </div>
+                        <div class="heardle-result-section">
+                            <span class="heardle-result-label">Your guesses</span>
+                            <div id="heardle-result-guesses" class="heardle-result-guesses"></div>
+                        </div>
+                        <p id="heardle-result-summary" class="heardle-result-summary"></p>
                     </div>
                 </div>
                 
@@ -383,6 +443,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/config.js"></script>
     <script src="js/storage.js"></script>
+    <script src="js/heardle.js"></script>
     <script src="js/game.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/leaderboard.js"></script>
@@ -449,6 +510,7 @@
       <div class="flex bg-gray-100 p-1 rounded-xl">
         <button id="lb-tab-uma" onclick="switchLeaderboardTab('uma')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700">Umamusume</button>
         <button id="lb-tab-course" onclick="switchLeaderboardTab('course')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">G1 Race</button>
+        <button id="lb-tab-heardle" onclick="switchLeaderboardTab('heardle')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">Heardle</button>
       </div>
 
    
@@ -493,6 +555,7 @@
       <div class="flex bg-gray-100 p-1 rounded-xl">
         <button id="stats-tab-uma" onclick="switchStatsTab('uma')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700">Umamusume</button>
         <button id="stats-tab-course" onclick="switchStatsTab('course')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">G1 Race</button>
+        <button id="stats-tab-heardle" onclick="switchStatsTab('heardle')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">Heardle</button>
       </div>
 
       <div id="stats-content" class="flex flex-col gap-3"></div>
@@ -536,7 +599,8 @@
                 <ul class="list-disc list-inside text-sm space-y-2 ml-1">
                     <strong>Changelog: </strong>
 
-                    <br><strong>V1.3 (5/22/2026)</strong>
+                    <br><strong>V1.3 (5/25/2026)</strong>
+                    <li><strong>Heardle Mode:</strong> New game type — guess the Umamusume from a 2-second voice line with progressive audio unlocks!</li>
                     <li><strong>Global Trainer Leaderboard:</strong> Track top trainers worldwide with All Time, Weekly, and Monthly leaderboards.</li>
                     <li><strong>Custom Wallpaper:</strong> Personalize your game with a custom background image for a more immersive experience.</li>
                     <li><strong>Archive Play:</strong> Replay previous rounds from the archive so you can revisit your favorite challenges.</li>
