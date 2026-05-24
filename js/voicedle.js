@@ -227,11 +227,11 @@ function playVoicedleClipForDuration(seconds) {
   const startTime = performance.now();
 
   function tickProgress() {
-    if (!voicedleAudio) return;
-    const elapsed = (performance.now() - startTime) / 1000;
-    const ratio = Math.min(1, elapsed / duration);
-    setVoicedleProgressBar(ratio, Math.min(elapsed, duration));
-    if (elapsed < duration) voicedleProgressRaf = requestAnimationFrame(tickProgress);
+  if (!voicedleAudio) return;
+  const elapsed = (performance.now() - startTime) / 1000;
+  const ratio = elapsed / duration;
+  setVoicedleProgressBar(Math.min(1, ratio), Math.min(elapsed, duration));
+  if (ratio < 1) voicedleProgressRaf = requestAnimationFrame(tickProgress);
   }
 
   voicedleAudio.play().catch(() => setVoicedlePlayingState(false));

@@ -1497,7 +1497,6 @@ function openAbout() {
               Tester:
               <p> <a href="https://x.com/NielZGM" target="_blank" rel="noopener noreferrer">@NielZGM</a> </p>
               <p> YukkiClyde </p>
-              <p> Sienna </p>
               <p> <a href="https://www.tiktok.com/@lesterhervieux" target="_blank" rel="noopener noreferrer">@Lester Herviéux</a> </p>
             </p>
           </div>
