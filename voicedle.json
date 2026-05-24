@@ -278,5 +278,10 @@
     "name": "Taiki Shuttle",
     "image": "images/uma/Taiki_Shuttle.webp",
     "voice": "audio/voices/taikishuttle_voice.mp3"
+  },
+  {
+    "name": "Sakura Bakushin O",
+    "image": "images/uma/Sakura_Bakushin_O.webp",
+    "voice": "audio/voices/sakurabakushino_voice.mp3"
   }
 ]
