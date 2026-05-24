@@ -4,14 +4,14 @@
 
 async function loadGameData() {
   try {
-    const [umaRes, courseRes, heardleRes] = await Promise.all([
+    const [umaRes, courseRes, voicedleRes] = await Promise.all([
       fetch('data.json'),
       fetch('courses.json'),
-      fetch('heardle.json')
+      fetch('voicedle.json')
     ]);
     UMAS    = await umaRes.json();
     COURSES = await courseRes.json();
-    HEARDLE = await heardleRes.json();
+    VOICEDLE = await voicedleRes.json();
     init();
   } catch (error) {
     console.error("Failed to load data:", error);
@@ -88,7 +88,7 @@ async function loadAndSetRandomDailyChibis() {
 }
 
 // --- Running Chibi Easter Egg ---
-// 10% chance on load: 5–10 random left-folder chibis sprint across the screen L→R
+// 10% chance on load: 5—10 random left-folder chibis sprint across the screen L—R
 async function maybeRunChibis() {
   if (Math.random() > 0.10) return; // 10% chance
 
@@ -98,7 +98,7 @@ async function maybeRunChibis() {
     const leftList = data.left || [];
     if (leftList.length === 0) return;
 
-    // Pick 5–10 unique random images
+    // Pick 5—10 unique random images
     const count = Math.floor(Math.random() * 6) + 5; // 5..10
     const shuffled = [...leftList].sort(() => 0.5 - Math.random());
     const chosen = shuffled.slice(0, Math.min(count, shuffled.length));
@@ -137,11 +137,11 @@ async function maybeRunChibis() {
 
     chosen.forEach((src, i) => {
       // Stagger start times so they don't all appear at once
-      const startDelay = i * (300 + Math.random() * 400); // 300–700 ms between each
-      // Each chibi gets a different speed: 3s–7s
+      const startDelay = i * (300 + Math.random() * 400); // 300—700 ms between each
+      // Each chibi gets a different speed: 3s—7s
       const duration = 3 + Math.random() * 4;
       // Slight vertical offset so they don't all run on the exact same baseline
-      const bottomOffset = Math.floor(Math.random() * 24); // 0–24 px
+      const bottomOffset = Math.floor(Math.random() * 24); // 0—24 px
 
       setTimeout(() => {
         const img = document.createElement('img');

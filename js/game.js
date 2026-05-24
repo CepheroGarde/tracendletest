@@ -71,7 +71,7 @@ function startArchiveGame(dateString) {
   sessionState.knownStats = {};
   sessionState.sessionKey = `archive:${archiveDate}`;
   sessionState._leaderboardSynced = false;
-  sessionState.maxGuesses = currentGameType === 'heardle' ? getHeardleMaxGuesses() : 5;
+  sessionState.maxGuesses = currentGameType === 'voicedle' ? getVoicedleMaxGuesses() : 5;
 
   sessionState.target = getTargetForDate(archiveDate, dataList, currentGameType);
 
@@ -108,8 +108,8 @@ function startGame(mode) {
     savePersistentData();
   }
 
-  if (currentGameType === 'heardle') {
-    sessionState.maxGuesses = getHeardleMaxGuesses();
+  if (currentGameType === 'voicedle') {
+    sessionState.maxGuesses = getVoicedleMaxGuesses();
   } else {
     sessionState.maxGuesses = mode === 'daily' ? 5 : mode === 'hard' ? 2 : mode === 'easy' ? Infinity : 5;
   }
@@ -147,7 +147,7 @@ function startGame(mode) {
   }
 
   // ---- Hard-mode: generate clues if needed (Umamusume / G1 only) ----
-  if (currentGameType !== 'heardle' && mode === 'hard' && sessionState.clues.length === 0) {
+  if (currentGameType !== 'voicedle' && mode === 'hard' && sessionState.clues.length === 0) {
     const pData      = allPersistentData[currentGameType];
     const otherItems = dataList.filter(item => item.name !== sessionState.target.name);
     sessionState.clues = otherItems.sort(() => 0.5 - Math.random()).slice(0, 3);
@@ -162,8 +162,8 @@ function startGame(mode) {
   // ---- Replay saved guesses ----
   const modesWithHistory = ['daily', 'ranked', 'easy', 'unlimited', 'hard'];
   if (modesWithHistory.includes(mode) && sessionState.guesses.length > 0) {
-    if (currentGameType === 'heardle') {
-      replayHeardleGuesses();
+    if (currentGameType === 'voicedle') {
+      replayVoicedleGuesses();
     } else {
       sessionState.guesses.forEach(g => { updateKnownStats(g); addGuessRow(g, false); });
     }
@@ -178,7 +178,7 @@ function startGame(mode) {
     }
   }
 
-  if (mode === 'hard' && currentGameType !== 'heardle') {
+  if (mode === 'hard' && currentGameType !== 'voicedle') {
     sessionState.clues.forEach(c => addGuessRow(c, true));
     setTimeout(() => {
       const inp = document.getElementById('uma-input');
@@ -187,8 +187,8 @@ function startGame(mode) {
     }, 200);
   }
 
-  if (currentGameType === 'heardle' && !sessionState.isGameOver) {
-    setTimeout(() => playHeardleClip(), 300);
+  if (currentGameType === 'voicedle' && !sessionState.isGameOver) {
+    setTimeout(() => playVoicedleClip(), 300);
   }
 }
 
@@ -274,8 +274,8 @@ function submitGuess(guessItem) {
   if (sessionState.isGameOver) return;
   if (sessionState.guesses.some(g => g.name === guessItem.name)) return;
 
-  if (currentGameType === 'heardle') {
-    submitHeardleGuess(guessItem);
+  if (currentGameType === 'voicedle') {
+    submitVoicedleGuess(guessItem);
     return;
   }
 
@@ -320,9 +320,9 @@ function submitGuess(guessItem) {
 // --------------- Win ---------------
 function handleWin(animDuration = 0) {
   sessionState.isGameOver = true;
-  if (currentGameType === 'heardle') {
-    stopHeardleAudio();
-    updateHeardlePlayButton();
+  if (currentGameType === 'voicedle') {
+    stopVoicedleAudio();
+    updateVoicedlePlayButton();
   }
   const pData = allPersistentData[currentGameType];
   const mode  = sessionState.mode;
@@ -343,7 +343,7 @@ function handleWin(animDuration = 0) {
     pData.dailyStatus = 'won';
     pData.dailyStreak++;
     pData.bestDailyStreak = Math.max(pData.bestDailyStreak || 0, pData.dailyStreak);
-    recordDailySolve(currentGameType, sessionState.guesses.length, true); // ← isWin = true
+    recordDailySolve(currentGameType, sessionState.guesses.length, true); //  isWin = true
   } else if (mode === 'easy') {
     pData.easyPlayed    = (pData.easyPlayed  || 0) + 1;
     pData.easyWins      = (pData.easyWins    || 0) + 1;
@@ -384,9 +384,9 @@ function handleWin(animDuration = 0) {
 // --------------- Loss ---------------
 function handleLoss(animDuration = 0) {
   sessionState.isGameOver = true;
-  if (currentGameType === 'heardle') {
-    stopHeardleAudio();
-    updateHeardlePlayButton();
+  if (currentGameType === 'voicedle') {
+    stopVoicedleAudio();
+    updateVoicedlePlayButton();
   }
   const pData = allPersistentData[currentGameType];
   const mode  = sessionState.mode;

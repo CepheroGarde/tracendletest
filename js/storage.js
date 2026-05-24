@@ -47,6 +47,24 @@ function generateChecksum(obj) {
   return hash.toString(16);
 }
 
+// --------------- Heardle ? Voicedle migration ---------------
+function migrateHeardleToVoicedle() {
+  const legacy = allPersistentData.heardle || allPersistentData.VOICEDLE;
+  if (legacy && !allPersistentData.voicedle) {
+    allPersistentData.voicedle = legacy;
+  }
+  if (allPersistentData.heardle || allPersistentData.VOICEDLE) {
+    delete allPersistentData.heardle;
+    delete allPersistentData.VOICEDLE;
+    savePersistentData();
+  }
+  const oldVol = localStorage.getItem('heardle_volume');
+  if (oldVol !== null && localStorage.getItem('voicedle_volume') === null) {
+    localStorage.setItem('voicedle_volume', oldVol);
+    localStorage.removeItem('heardle_volume');
+  }
+}
+
 // --------------- Save / load allPersistentData ---------------
 function savePersistentData() {
   const wrapper = {
@@ -77,8 +95,10 @@ function loadPersistentData() {
     }
   }
 
-  if (!allPersistentData.heardle) {
-    allPersistentData.heardle = {
+  migrateHeardleToVoicedle();
+
+  if (!allPersistentData.voicedle) {
+    allPersistentData.voicedle = {
       dailyStreak: 0, easyStreak: 0, unlimitedStreak: 0, hardStreak: 0,
       lastPlayedDate: null,
       dailyGuesses: [], dailyStatus: 'playing',
@@ -88,7 +108,7 @@ function loadPersistentData() {
     savePersistentData();
   }
 
-  ['uma', 'course', 'heardle'].forEach(type => {
+  ['uma', 'course', 'voicedle'].forEach(type => {
     if (allPersistentData[type] && allPersistentData[type].easySession === undefined) {
       allPersistentData[type].easySession = null;
     }
@@ -173,7 +193,7 @@ async function migrateLegacyStreaks() {
   const username = localStorage.getItem('tracendle_nickname') || 'Anonymous';
   let anyFailed = false;
 
-  for (const gameType of ['uma', 'course', 'heardle']) {
+  for (const gameType of ['uma', 'course', 'voicedle']) {
     const pData = allPersistentData[gameType];
     if (!pData) continue;
 

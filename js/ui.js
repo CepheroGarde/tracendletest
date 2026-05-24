@@ -139,7 +139,7 @@ async function saveUsername() {
   let val = input.value.trim();
   if (!val) val = 'Anonymous';
   localStorage.setItem('tracendle_nickname', val);
-  const lbUsername = document.getElementById('lb-my-username');
+  const lbUsername = document.getElementById('lb-current-username');
   if (lbUsername) lbUsername.innerHTML = formatUsernameWithSuffix(val, getOrCreateUserId());
   closeUsernameModal();
 
@@ -157,6 +157,11 @@ async function saveUsername() {
 
   if (typeof scheduleLegacyLeaderboardMigration === 'function') {
     scheduleLegacyLeaderboardMigration();
+  }
+
+  const lbModal = document.getElementById('leaderboard-modal');
+  if (lbModal && !lbModal.classList.contains('hidden') && typeof updateLeaderboardUI === 'function') {
+    updateLeaderboardUI();
   }
 }
 
@@ -263,12 +268,15 @@ function updateMenuModeHints(type) {
   const hardDesc = document.getElementById('hard-mode-desc');
   const dailyLabel = document.querySelector('#daily-btn .font-black');
   if (!hardDesc) return;
-  if (type === 'heardle') {
+  if (type === 'uma') {
+    if (dailyLabel) dailyLabel.innerText = 'Daily Umamusume';
+  }
+  if (type === 'course') {
+    if (dailyLabel) dailyLabel.innerText = 'Daily G1 Race';
+  }
+  if (type === 'voicedle') {
     hardDesc.innerText = 'Hard: Only 2 guesses — hear up to 1.0s of the voice line!';
-    if (dailyLabel) dailyLabel.innerText = 'Daily Heardle';
-  } else {
-    hardDesc.innerText = 'Hard: No names + 3 clues + Only 2 Attempts!';
-    if (dailyLabel) dailyLabel.innerText = 'Daily Wordle';
+    if (dailyLabel) dailyLabel.innerText = 'Daily Voicedle';
   }
 }
 
@@ -279,11 +287,11 @@ function switchGameType(type) {
 
   const tabUma     = document.getElementById('tab-uma');
   const tabCourse  = document.getElementById('tab-course');
-  const tabHeardle = document.getElementById('tab-heardle');
+  const tabVoicedle = document.getElementById('tab-voicedle');
   _setTabActive(tabUma, type === 'uma');
   _setTabActive(tabCourse, type === 'course');
-  _setTabActive(tabHeardle, type === 'heardle');
-  const activeTab = type === 'uma' ? tabUma : type === 'course' ? tabCourse : tabHeardle;
+  _setTabActive(tabVoicedle, type === 'voicedle');
+  const activeTab = type === 'uma' ? tabUma : type === 'course' ? tabCourse : tabVoicedle;
   if (activeTab) animateSelection(activeTab);
   updateMenuModeHints(type);
 
@@ -311,7 +319,7 @@ function switchGameType(type) {
   displayYesterdayAnswer();
 
   // Rebuild column headers (Wordle modes only)
-  if (type !== 'heardle') {
+  if (type !== 'voicedle') {
     const headRow = document.createElement('tr');
     headRow.className = "text-[10px] md:text-xs font-bold uppercase";
     const nameTh = document.createElement('th');
@@ -337,7 +345,7 @@ function switchGameType(type) {
     document.getElementById('guess-head').innerHTML = '';
   }
   document.getElementById('uma-input').placeholder = config.placeholder;
-  hideHeardlePanel();
+  hideVoicedlePanel();
   if (typeof updateDailySolverBadge === 'function') {
     updateDailySolverBadge();
   } else {
@@ -366,16 +374,16 @@ function renderGameLayout() {
   if (sessionState.mode === 'archive' && sessionState.archiveDate) {
     modeDisplay = `${currentGameType} / <span style="color:#7c3aed; font-weight:900;">ARCHIVE 📅 ${sessionState.archiveDate}</span>`;
   }
-  document.getElementById('mode-indicator').innerHTML = modeDisplay;   // ← Changed to innerHTML
+  document.getElementById('mode-indicator').innerHTML = modeDisplay;   //  Changed to innerHTML
   
   document.getElementById('guess-grid').innerHTML = '';
   document.getElementById('uma-input').value = '';
   document.getElementById('input-container').classList.remove('hidden');
 
-  if (currentGameType === 'heardle') {
-    renderHeardleLayout();
+  if (currentGameType === 'voicedle') {
+    renderVoicedleLayout();
   } else {
-    hideHeardlePanel();
+    hideVoicedlePanel();
     const nameCols = document.querySelectorAll('.name-col');
     nameCols.forEach(col => {
       if (sessionState.mode === 'hard') col.classList.add('hidden');
@@ -393,8 +401,8 @@ function updateGuessCountUI() {
   if (!el) return;
 
   let maxAttempts;
-  if (currentGameType === 'heardle') {
-    maxAttempts = sessionState.mode === 'easy' ? null : getHeardleMaxGuesses();
+  if (currentGameType === 'voicedle') {
+    maxAttempts = sessionState.mode === 'easy' ? null : getVoicedleMaxGuesses();
   } else {
     maxAttempts = sessionState.mode === 'daily' ? 5
       : sessionState.mode === 'hard'  ? 2
@@ -404,7 +412,7 @@ function updateGuessCountUI() {
   }
 
   if (maxAttempts === null) {
-    // Unlimited / easy mode — show a small ∞ badge
+    // Unlimited / easy mode — show a small — badge
     el.innerHTML = `<span style="
       display:inline-flex; align-items:center; justify-content:center;
       font-size:18px; line-height:1; color:#16a34a; font-weight:900;
@@ -454,8 +462,8 @@ function updateGuessCountUI() {
 function showMenu() {
   localStorage.setItem('is_ranked_session', 'false');
   if (typeof persistActiveSession === 'function') persistActiveSession();
-  stopHeardleAudio();
-  hideHeardlePanel();
+  stopVoicedleAudio();
+  hideVoicedlePanel();
   setPeekingChibiInGame(false);
   document.getElementById('menu-screen').classList.remove('hidden');
   document.getElementById('game-screen').classList.add('hidden');
@@ -468,7 +476,7 @@ function checkDailyStatus() {
   const statusDiv = document.getElementById('daily-status');
   const pData     = allPersistentData[currentGameType];
   if (pData.lastPlayedDate === today && pData.dailyStatus !== 'playing') {
-    const label = currentGameType === 'heardle' ? 'Heardle' : currentGameType.toUpperCase();
+    const label = currentGameType === 'voicedle' ? 'Voicedle' : currentGameType.toUpperCase();
     statusDiv.innerText = `Daily ${label} completed for today!`;
     statusDiv.classList.add('text-green-600');
   } else {
@@ -512,7 +520,7 @@ function updateScoreUI() {
 function updateStatsUI() {
   const pData  = allPersistentData[currentGameType];
   const streak = pData.dailyStreak || 0;
-  const fire   = streak >= 3 ? '🔥' : streak >= 1 ? '⚡' : '〰️';
+  const fire   = streak >= 3 ? '🔥' : streak >= 1 ? '⚡' : '💫';
   const color  = streak >= 3 ? '#ea580c' : streak >= 1 ? '#16a34a' : '#9ca3af';
 
   document.getElementById('stats-summary').innerHTML = `
@@ -564,7 +572,7 @@ function renderSuggestions(filterText = "") {
   const dataList      = config.data();
   const guessedNames  = sessionState.guesses.map(g => g.name);
   const activeKnownStats = Object.entries(sessionState.knownStats);
-  const MATCH_THRESHOLD  = (currentGameType === 'uma' || currentGameType === 'heardle') ? 999 : 2;
+  const MATCH_THRESHOLD  = (currentGameType === 'uma' || currentGameType === 'voicedle') ? 999 : 2;
 
   let matches = dataList.filter(u =>
     !guessedNames.includes(u.name) &&
@@ -583,7 +591,7 @@ function renderSuggestions(filterText = "") {
     for (const [key, value] of activeKnownStats) {
       if (match[key] === value) matchCount++;
     }
-    const displayBadge = (currentGameType === 'uma' || currentGameType === 'heardle') && matchCount >= MATCH_THRESHOLD;
+    const displayBadge = (currentGameType === 'uma' || currentGameType === 'voicedle') && matchCount >= MATCH_THRESHOLD;
     const card = document.createElement('div');
     card.className    = 'picker-card' + (displayBadge ? ' potential-match' : '');
     card.dataset.name = match.name;
@@ -745,17 +753,17 @@ function showModal(title, msg, isNewGameOver = true) {
   if (targetLabel)    targetLabel.innerText    = config.resultTitle;
   if (shareTitleText) shareTitleText.innerText = config.shareTitle;
 
-  if (currentGameType === 'heardle') {
+  if (currentGameType === 'voicedle') {
     const isWin = sessionState.guesses.some(g => !g.skipped && g.name === sessionState.target.name);
-    if (typeof renderHeardleResultContent === 'function') renderHeardleResultContent(isWin);
+    if (typeof renderVoicedleResultContent === 'function') renderVoicedleResultContent(isWin);
   } else {
-    if (typeof resetHeardleResultPanel === 'function') resetHeardleResultPanel();
+    if (typeof resetVoicedleResultPanel === 'function') resetVoicedleResultPanel();
   }
 
   // Target stats grid (Umamusume / G1 Race only)
   const targetGrid = document.getElementById('target-stats-grid');
   if (targetGrid) {
-    if (currentGameType === 'heardle') {
+    if (currentGameType === 'voicedle') {
       targetGrid.innerHTML = '';
       targetGrid.classList.add('hidden');
     } else {
@@ -841,9 +849,9 @@ function showModal(title, msg, isNewGameOver = true) {
   if (actionBtn) actionBtn.textContent = 'Continue';
 
   const shareCardWrap = document.getElementById('share-card-wrap');
-  if (shareCardWrap) shareCardWrap.classList.toggle('hidden', currentGameType === 'heardle');
+  if (shareCardWrap) shareCardWrap.classList.toggle('hidden', currentGameType === 'voicedle');
 
-  if (currentGameType !== 'heardle') {
+  if (currentGameType !== 'voicedle') {
     renderShareEmojis();
   }
 
@@ -853,8 +861,8 @@ function showModal(title, msg, isNewGameOver = true) {
 function closeModal() {
   const modal = document.getElementById('result-modal');
   modal.classList.add('hidden');
-  stopHeardleAudio();
-  if (typeof resetHeardleResultPanel === 'function') resetHeardleResultPanel();
+  stopVoicedleAudio();
+  if (typeof resetVoicedleResultPanel === 'function') resetVoicedleResultPanel();
 
   if (sessionState.pendingStreakReset) {
     const pData   = allPersistentData[currentGameType];
@@ -885,8 +893,8 @@ function closeModal() {
 function renderShareEmojis() {
   const preview = document.getElementById('share-block-preview');
   preview.innerHTML = '';
-  if (currentGameType === 'heardle') {
-    renderHeardleShareEmojis(preview);
+  if (currentGameType === 'voicedle') {
+    renderVoicedleShareEmojis(preview);
     return;
   }
   const config = GAME_CONFIG[currentGameType];
@@ -911,7 +919,7 @@ function renderShareEmojis() {
 }
 
 function renderShareEmojisText() {
-  if (currentGameType === 'heardle') return renderHeardleShareEmojisText();
+  if (currentGameType === 'voicedle') return renderVoicedleShareEmojisText();
   let result = '';
   const config = GAME_CONFIG[currentGameType];
   sessionState.guesses.forEach(guess => {
@@ -968,7 +976,7 @@ function toggleHelp(show) {
   const modal       = document.getElementById('help-modal');
   const helpContent = document.getElementById('help-content');
   if (show) {
-    if (currentGameType === 'heardle') {
+    if (currentGameType === 'voicedle') {
       helpContent.innerHTML = `
         <p>Identify the hidden Umamusume from a short voice line clip (max 2 seconds).</p>
         <div>
@@ -984,7 +992,7 @@ function toggleHelp(show) {
         <div>
           <h3 class="font-bold text-gray-800 dark:text-gray-200 border-b pb-1 mb-2">Game Modes</h3>
           <ul class="list-disc list-inside text-sm space-y-2 ml-1">
-            <li><strong>Daily Heardle:</strong> One voice puzzle per day!</li>
+            <li><strong>Daily Voicedle:</strong> One voice puzzle per day!</li>
             <li><strong>Easy Mode:</strong> Unlimited guesses with the full clip every time!</li>
             <li><strong>Normal Mode:</strong> 5 guesses with progressive audio unlocks.</li>
             <li><strong>Skip:</strong> Pass your turn to unlock the next clip length without guessing a name.</li>
@@ -1096,21 +1104,21 @@ function closeStats() {
 function renderStatsModal() { switchStatsTab(currentStatsTab); }
 
 function switchStatsTab(type) {
-  if (type !== 'uma' && type !== 'course' && type !== 'heardle') return;
+  if (type !== 'uma' && type !== 'course' && type !== 'voicedle') return;
   currentStatsTab = type;
   const tabUma     = document.getElementById('stats-tab-uma')    || document.getElementById('tab-btn-uma');
   const tabCourse  = document.getElementById('stats-tab-course') || document.getElementById('tab-btn-course');
-  const tabHeardle = document.getElementById('stats-tab-heardle');
+  const tabVoicedle = document.getElementById('stats-tab-voicedle');
   const resetBtn   = document.getElementById('reset-tab-btn');
   const activeCls  = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-green-600 text-white shadow-sm';
   const idleCls    = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700 dark:text-gray-400';
 
   if (tabUma) tabUma.className = type === 'uma' ? activeCls : idleCls;
   if (tabCourse) tabCourse.className = type === 'course' ? activeCls : idleCls;
-  if (tabHeardle) tabHeardle.className = type === 'heardle' ? activeCls : idleCls;
+  if (tabVoicedle) tabVoicedle.className = type === 'voicedle' ? activeCls : idleCls;
 
   if (resetBtn) {
-    const labels = { uma: 'Umamusume', course: 'G1 Race', heardle: 'Heardle' };
+    const labels = { uma: 'Umamusume', course: 'G1 Race', voicedle: 'Voicedle' };
     resetBtn.textContent = `Reset ${labels[type]} Stats`;
   }
   renderStatsContent();
@@ -1177,10 +1185,10 @@ function resetStatsTab() {
 }
 
 function resetAllStats() {
-  if (!confirm('Reset ALL statistics for Umamusume, G1 Race, and Heardle? This cannot be undone.')) return;
+  if (!confirm('Reset ALL statistics for Umamusume, G1 Race, and Voicedle? This cannot be undone.')) return;
   allPersistentData.uma      = _blankStats();
   allPersistentData.course   = _blankStats();
-  allPersistentData.heardle  = _blankStats();
+  allPersistentData.voicedle  = _blankStats();
   savePersistentData();
   updateStatsUI();
   renderStatsContent();
@@ -1380,7 +1388,7 @@ function removeWallpaper() {
 
 // Load saved wallpaper on startup
 window.addEventListener('DOMContentLoaded', loadWallpaper);
-// --------------- Overflow menu (⋯) ---------------
+// --------------- Overflow menu () ---------------
 function toggleOverflowMenu() {
   const dropdown = document.getElementById('overflow-menu-dropdown');
   if (!dropdown) return;
@@ -1406,4 +1414,110 @@ function _overflowOutsideHandler(e) {
   if (wrap && !wrap.contains(e.target)) {
     closeOverflowMenu();
   }
+}
+
+// --------------- About modal ---------------
+function openAbout() {
+  closeOverflowMenu();
+
+  let modal = document.getElementById('about-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'about-modal';
+    modal.innerHTML = `
+      <div id="about-modal-inner">
+
+        <!-- Header (matches changelog: emoji + title + close) -->
+        <div class="about-header">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <h2 class="about-title">About Tracendle</h2>
+          </div>
+          <button onclick="closeAbout()" class="about-close-btn">&times;</button>
+        </div>
+
+        <!-- Scrollable body -->
+        <div class="about-body">
+
+          <!-- Intro card (matches green highlight card in changelog) -->
+          <div class="about-intro-card">
+            <p class="about-intro-card-title">The Pretty Wordle</p>
+            <p style="font-size:13px;line-height:1.6;margin:0;">
+              A fan-made daily puzzle experience for <strong>Umamusume: Pretty Derby</strong>.
+              Whether you're a casual fan or a hardcore Trainer, I hope this adds a little
+              extra joy to your daily routine!
+            </p>
+          </div>
+
+          <!-- Developer -->
+          <div class="about-section-label">Developer</div>
+          <div class="about-card">
+            <div style="font-size:15px;font-weight:800;">Cephero Garde</div>
+            <div class="about-muted" style="margin-top:3px;">Passionate fan &amp; indie developer</div>
+          </div>
+
+          <!-- Data Sources -->
+          <div class="about-section-label">Data Sources &amp; Acknowledgments</div>
+          <p class="about-muted" style="margin:0 0 10px;">
+            This project relies on data from these incredible community resources:
+          </p>
+          <a href="https://uma.guide" target="_blank" rel="noopener" class="about-source-link">
+            <div>
+              <div style="font-size:13px;font-weight:700;">uma.guide</div>
+              <div class="about-muted" style="font-size:11px;margin:0;">Comprehensive Uma guide</div>
+            </div>
+            <span class="about-link-arrow">↗</span>
+          </a>
+          <a href="https://gametora.com/umamusume" target="_blank" rel="noopener" class="about-source-link">
+            <div>
+              <div style="font-size:13px;font-weight:700;">Gametora</div>
+              <div class="about-muted" style="font-size:11px;margin:0;">Game data &amp; mechanics</div>
+            </div>
+            <span class="about-link-arrow">↗</span>
+          </a>
+          <a href="https://umapyoi.net" target="_blank" rel="noopener" class="about-source-link">
+            <div>
+              <div style="font-size:13px;font-weight:700;">Umapyoi</div>
+              <div class="about-muted" style="font-size:11px;margin:0;">Character database</div>
+            </div>
+            <span class="about-link-arrow">↗</span>
+          </a>
+
+          <!-- Contact -->
+          <div class="about-section-label" style="margin-top:18px;">Contact &amp; Feedback</div>
+          <div class="about-card">
+            <p class="about-muted" style="margin:0;">
+              Found a bug or have a feature idea? Feel free to reach out — your feedback makes Tracendle better for everyone!
+            </p>
+          </div>
+
+          <!-- Legal -->
+          <div class="about-card about-legal-card">
+            <div class="about-section-label" style="color:#94a3b8;margin-bottom:6px;">Legal Disclaimer</div>
+            <p class="about-muted" style="font-size:12px;margin:0;">
+              Tracendle is a <strong>non-commercial, fan-made project</strong>. All characters, images,
+              sound assets, and related intellectual property belong to <strong>Cygames, Inc.</strong>
+              I do not claim ownership of any game assets. Please support the official game and media!
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Footer button (matches changelog's "Let's Play!" button) -->
+        <div class="about-footer">
+          <button onclick="closeAbout()" class="about-close-btn-main">
+            Got it!
+          </button>
+        </div>
+
+      </div>
+    `;
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeAbout(); });
+    document.body.appendChild(modal);
+  }
+  modal.style.display = 'flex';
+}
+
+function closeAbout() {
+  const modal = document.getElementById('about-modal');
+  if (modal) modal.style.display = 'none';
 }

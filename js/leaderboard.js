@@ -527,12 +527,12 @@ function switchLeaderboardTab(tab) {
   currentLbTab = tab;
   const tabUma     = document.getElementById('lb-tab-uma');
   const tabCourse  = document.getElementById('lb-tab-course');
-  const tabHeardle = document.getElementById('lb-tab-heardle');
+  const tabVoicedle = document.getElementById('lb-tab-voicedle');
   const activeCls  = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700';
   const idleCls    = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700';
   if (tabUma) tabUma.className = tab === 'uma' ? activeCls : idleCls;
   if (tabCourse) tabCourse.className = tab === 'course' ? activeCls : idleCls;
-  if (tabHeardle) tabHeardle.className = tab === 'heardle' ? activeCls : idleCls;
+  if (tabVoicedle) tabVoicedle.className = tab === 'voicedle' ? activeCls : idleCls;
   updateLeaderboardUI();
 }
 
@@ -662,7 +662,7 @@ async function recordDailySolve(gameType, guessCount, isWin) {
       game_type:   gameType,
       daily_key:   dailyKey,
       guess_count: guessCount,
-      result:      isWin ? 'win' : 'loss',     // ← NEW
+      result:      isWin ? 'win' : 'loss',     //  NEW
       solved_at:   new Date().toISOString()
     }, { onConflict: 'user_id,game_type,daily_key' });
   } catch (err) {
@@ -734,9 +734,9 @@ async function updateDailySolverBadge() {
     if (total === 0) {
       html = `<strong>0 Total Player Answered</strong>`;
     } else if (total === 1) {
-      html = `<strong>1 Total Player Answered</strong> • <span class="text-green-600 font-medium">${winRate}% Total Player got it right</span>`;
+      html = `<strong>1 Total Player Answered</strong>  <span class="text-green-600 font-medium">${winRate}% Total Player got it right</span>`;
     } else {
-      html = `<strong>${total} Total Players Answered</strong> • <span class="text-green-600 font-medium">${winRate}% Total Players got it right</span>`;
+      html = `<strong>${total} Total Players Answered</strong>  <span class="text-green-600 font-medium">${winRate}% Total Players got it right</span>`;
     }
 
     badge.innerHTML = html;

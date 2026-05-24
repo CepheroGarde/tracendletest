@@ -9,7 +9,7 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 // --------------- Data lists (populated by loadGameData) ---------------
 let UMAS = [];
 let COURSES = [];
-let HEARDLE = [];
+let VOICEDLE = [];
 
 // --------------- Rank map ---------------
 const RANK_MAP = {
@@ -50,15 +50,15 @@ const GAME_CONFIG = {
       { title: "Course Info", keys: ['length', 'surface', 'turn', 'location', 'schedule'], color: 'green' }
     ]
   },
-  heardle: {
+  voicedle: {
     keys: [],
     headers: [],
-    data: () => HEARDLE,
+    data: () => VOICEDLE,
     placeholder: "Guess the Umamusume from the voice line...",
     resultTitle: "Winning Umamusume",
-    storageKey: 'heardle_stats',
+    storageKey: 'voicedle_stats',
     helpDesc: "Guess the Umamusume from their voice line! Each wrong guess unlocks more audio.",
-    shareTitle: "TRACENDLE HEARDLE",
+    shareTitle: "TRACENDLE VOICEDLE",
     sections: []
   }
 };
@@ -82,7 +82,7 @@ let allPersistentData = {
     rankedGuesses: [], rankedStatus: 'playing', rankedTargetName: null,
     unlimitedSession: null, hardSession: null, lbSubmittedKey: null
   },
-  heardle: {
+  voicedle: {
     dailyStreak: 0, easyStreak: 0, unlimitedStreak: 0, hardStreak: 0,
     lastPlayedDate: null,
     dailyGuesses: [], dailyStatus: 'playing',

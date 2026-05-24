@@ -75,7 +75,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="moon-icon hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
     </button>
 
-    <!-- ⋯ Overflow menu (Changelog + Help) -->
+    <!--  Overflow menu (Changelog + Help) -->
     <div class="relative" id="overflow-menu-wrap">
         <button onclick="toggleOverflowMenu()" id="overflow-menu-btn" aria-label="More options" class="icon-btn w-9 h-9 rounded-full border-2 border-gray-400 text-gray-500 flex items-center justify-center hover:bg-gray-100 transition-colors" title="More">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg>
@@ -89,6 +89,10 @@
             <button onclick="toggleHelp(true); closeOverflowMenu();" class="overflow-item">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
                 <span>How to Play</span>
+            </button>
+            <button onclick="openAbout();" class="overflow-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                <span>About</span>
             </button>
         </div>
     </div>
@@ -105,7 +109,7 @@
         <div class="flex bg-gray-100 p-1 rounded-xl mb-2">
             <button id="tab-uma" onclick="switchGameType('uma')" class="flex-1 py-2 rounded-lg font-bold transition-all bg-white shadow-sm text-green-700 text-sm">Umamusume</button>
             <button id="tab-course" onclick="switchGameType('course')" class="flex-1 py-2 rounded-lg font-bold transition-all text-gray-500 hover:text-gray-700 text-sm">G1 Race</button>
-            <button id="tab-heardle" onclick="switchGameType('heardle')" class="flex-1 py-2 rounded-lg font-bold transition-all text-gray-500 hover:text-gray-700 text-sm">Heardle</button>
+            <button id="tab-voicedle" onclick="switchGameType('voicedle')" class="flex-1 py-2 rounded-lg font-bold transition-all text-gray-500 hover:text-gray-700 text-sm">Voicedle</button>
         </div>
         
         <div class="text-center mb-4">
@@ -148,7 +152,7 @@
             Ranked Mode
         </button>
         <p class="hidden text-[9px] text-purple-500 font-medium italic text-center px-2">
-            ⚠️ This game mode is still developing and it might not be working correctly.
+             This game mode is still developing and it might not be working correctly.
         </p>
     </div>
 </div>
@@ -207,49 +211,49 @@
             <div id="remaining-guesses" class="flex items-center gap-1.5"></div>
         </div>
 
-        <div id="heardle-panel" class="hidden heardle-panel w-full max-w-md mb-4">
-            <div id="heardle-player-card" class="heardle-player-card">
-                <div class="heardle-player-top">
-                    <span class="heardle-player-badge">Voice Clip</span>
-                    <span id="heardle-time-display" class="heardle-time-display">0.0 / 0.5s</span>
+        <div id="voicedle-panel" class="hidden voicedle-panel w-full max-w-md mb-4">
+            <div id="voicedle-player-card" class="voicedle-player-card">
+                <div class="voicedle-player-top">
+                    <span class="voicedle-player-badge">Voice Clip</span>
+                    <span id="voicedle-time-display" class="voicedle-time-display">0.0 / 0.5s</span>
                 </div>
-                <div class="heardle-player-stage">
-                    <div id="heardle-wave" class="heardle-wave" aria-hidden="true"></div>
-                    <button type="button" id="heardle-play-btn" onclick="playHeardleClip()" class="heardle-play-btn" aria-label="Play voice clip">
-                        <svg class="heardle-play-icon heardle-play-icon--play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-                        <svg class="heardle-play-icon heardle-play-icon--pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z"/></svg>
+                <div class="voicedle-player-stage">
+                    <div id="voicedle-wave" class="voicedle-wave" aria-hidden="true"></div>
+                    <button type="button" id="voicedle-play-btn" onclick="playVoicedleClip()" class="voicedle-play-btn" aria-label="Play voice clip">
+                        <svg class="voicedle-play-icon voicedle-play-icon--play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                        <svg class="voicedle-play-icon voicedle-play-icon--pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z"/></svg>
                     </button>
                 </div>
-                <div class="heardle-timeline">
-                    <div class="heardle-progress-wrap">
-                        <div id="heardle-progress-unlock" class="heardle-progress-unlock"></div>
-                        <div id="heardle-progress-bar" class="heardle-progress-bar"></div>
-                        <div class="heardle-segment-markers" aria-hidden="true">
-                            <span class="heardle-segment-mark" style="left: 25%"></span>
-                            <span class="heardle-segment-mark" style="left: 50%"></span>
-                            <span class="heardle-segment-mark" style="left: 75%"></span>
-                            <span class="heardle-segment-mark" style="left: 87.5%"></span>
-                            <span class="heardle-segment-mark" style="left: 100%"></span>
+                <div class="voicedle-timeline">
+                    <div class="voicedle-progress-wrap">
+                        <div id="voicedle-progress-unlock" class="voicedle-progress-unlock"></div>
+                        <div id="voicedle-progress-bar" class="voicedle-progress-bar"></div>
+                        <div class="voicedle-segment-markers" aria-hidden="true">
+                            <span class="voicedle-segment-mark" style="left: 25%"></span>
+                            <span class="voicedle-segment-mark" style="left: 50%"></span>
+                            <span class="voicedle-segment-mark" style="left: 75%"></span>
+                            <span class="voicedle-segment-mark" style="left: 87.5%"></span>
+                            <span class="voicedle-segment-mark" style="left: 100%"></span>
                         </div>
                     </div>
-                    <div class="heardle-unlock-steps" id="heardle-unlock-steps">
-                        <span class="heardle-step" data-tier="0">0.5s</span>
-                        <span class="heardle-step" data-tier="1">1.0s</span>
-                        <span class="heardle-step" data-tier="2">1.5s</span>
-                        <span class="heardle-step" data-tier="3">1.8s</span>
-                        <span class="heardle-step" data-tier="4">2.0s</span>
+                    <div class="voicedle-unlock-steps" id="voicedle-unlock-steps">
+                        <span class="voicedle-step" data-tier="0">0.5s</span>
+                        <span class="voicedle-step" data-tier="1">1.0s</span>
+                        <span class="voicedle-step" data-tier="2">1.5s</span>
+                        <span class="voicedle-step" data-tier="3">1.8s</span>
+                        <span class="voicedle-step" data-tier="4">2.0s</span>
                     </div>
                 </div>
-                <div class="heardle-volume-row">
-                    <label for="heardle-volume" class="heardle-volume-label" aria-hidden="true">
-                        <svg id="heardle-volume-icon" class="heardle-volume-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                <div class="voicedle-volume-row">
+                    <label for="voicedle-volume" class="voicedle-volume-label" aria-hidden="true">
+                        <svg id="voicedle-volume-icon" class="voicedle-volume-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
                     </label>
-                    <input type="range" id="heardle-volume" class="heardle-volume-slider" min="0" max="100" value="100" aria-label="Volume" aria-valuemin="0" aria-valuemax="100">
+                    <input type="range" id="voicedle-volume" class="voicedle-volume-slider" min="0" max="100" value="100" aria-label="Volume" aria-valuemin="0" aria-valuemax="100">
                 </div>
-                <p id="heardle-unlock-hint" class="heardle-unlock-hint">Tap play to hear the voice line</p>
-                <button type="button" id="heardle-skip-btn" onclick="skipHeardleGuess()" class="heardle-skip-btn">Skip</button>
+                <p id="voicedle-unlock-hint" class="voicedle-unlock-hint">Tap play to hear the voice line</p>
+                <button type="button" id="voicedle-skip-btn" onclick="skipVoicedleGuess()" class="voicedle-skip-btn">Skip</button>
             </div>
-            <div id="heardle-guess-history" class="heardle-guess-history"></div>
+            <div id="voicedle-guess-history" class="voicedle-guess-history"></div>
         </div>
         
         <div class="table-wrapper w-full">
@@ -319,20 +323,20 @@
                         </div>
                     </div>
                     <div id="target-stats-grid"></div>
-                    <div id="heardle-result-panel" class="heardle-result-panel hidden">
-                        <button type="button" id="heardle-result-play-btn" class="heardle-result-play-btn" aria-label="Play answer voice line">
+                    <div id="voicedle-result-panel" class="voicedle-result-panel hidden">
+                        <button type="button" id="voicedle-result-play-btn" class="voicedle-result-play-btn" aria-label="Play answer voice line">
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             <span>Play answer voice line</span>
                         </button>
-                        <div class="heardle-result-section">
-                            <span class="heardle-result-label">Clip unlocks</span>
-                            <div id="heardle-result-steps" class="heardle-result-steps"></div>
+                        <div class="voicedle-result-section">
+                            <span class="voicedle-result-label">Clip unlocks</span>
+                            <div id="voicedle-result-steps" class="voicedle-result-steps"></div>
                         </div>
-                        <div class="heardle-result-section">
-                            <span class="heardle-result-label">Your guesses</span>
-                            <div id="heardle-result-guesses" class="heardle-result-guesses"></div>
+                        <div class="voicedle-result-section">
+                            <span class="voicedle-result-label">Your guesses</span>
+                            <div id="voicedle-result-guesses" class="voicedle-result-guesses"></div>
                         </div>
-                        <p id="heardle-result-summary" class="heardle-result-summary"></p>
+                        <p id="voicedle-result-summary" class="voicedle-result-summary"></p>
                     </div>
                 </div>
                 
@@ -443,7 +447,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/config.js"></script>
     <script src="js/storage.js"></script>
-    <script src="js/heardle.js"></script>
+    <script src="js/voicedle.js"></script>
     <script src="js/game.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/leaderboard.js"></script>
@@ -510,7 +514,7 @@
       <div class="flex bg-gray-100 p-1 rounded-xl">
         <button id="lb-tab-uma" onclick="switchLeaderboardTab('uma')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700">Umamusume</button>
         <button id="lb-tab-course" onclick="switchLeaderboardTab('course')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">G1 Race</button>
-        <button id="lb-tab-heardle" onclick="switchLeaderboardTab('heardle')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">Heardle</button>
+        <button id="lb-tab-voicedle" onclick="switchLeaderboardTab('voicedle')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">Voicedle</button>
       </div>
 
    
@@ -555,7 +559,7 @@
       <div class="flex bg-gray-100 p-1 rounded-xl">
         <button id="stats-tab-uma" onclick="switchStatsTab('uma')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700">Umamusume</button>
         <button id="stats-tab-course" onclick="switchStatsTab('course')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">G1 Race</button>
-        <button id="stats-tab-heardle" onclick="switchStatsTab('heardle')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">Heardle</button>
+        <button id="stats-tab-voicedle" onclick="switchStatsTab('voicedle')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">Voicedle</button>
       </div>
 
       <div id="stats-content" class="flex flex-col gap-3"></div>
@@ -600,7 +604,7 @@
                     <strong>Changelog: </strong>
 
                     <br><strong>V1.3 (5/25/2026)</strong>
-                    <li><strong>Heardle Mode:</strong> New game type — guess the Umamusume from a 2-second voice line with progressive audio unlocks!</li>
+                    <li><strong>Voicedle Mode:</strong> New game type — guess the Umamusume from a 2-second voice line with progressive audio unlocks!</li>
                     <li><strong>Global Trainer Leaderboard:</strong> Track top trainers worldwide with All Time, Weekly, and Monthly leaderboards.</li>
                     <li><strong>Custom Wallpaper:</strong> Personalize your game with a custom background image for a more immersive experience.</li>
                     <li><strong>Archive Play:</strong> Replay previous rounds from the archive so you can revisit your favorite challenges.</li>
