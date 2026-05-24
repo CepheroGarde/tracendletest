@@ -1430,7 +1430,7 @@ function openAbout() {
         <!-- Header (matches changelog: emoji + title + close) -->
         <div class="about-header">
           <div style="display:flex;align-items:center;gap:12px;">
-            <h2 class="about-title">About Tracendle</h2>
+            <h2 class="about-title">About Tracendle: Pretty Wordle</h2>
           </div>
           <button onclick="closeAbout()" class="about-close-btn">&times;</button>
         </div>
@@ -1449,10 +1449,10 @@ function openAbout() {
           </div>
 
           <!-- Developer -->
-          <div class="about-section-label">Developer</div>
+          <div class="about-section-label">Creator</div>
           <div class="about-card">
             <div style="font-size:15px;font-weight:800;">Cephero Garde</div>
-            <div class="about-muted" style="margin-top:3px;">Passionate fan &amp; indie developer</div>
+            <div class="about-muted" style="margin-top:3px;">indie developer</div>
           </div>
 
           <!-- Data Sources -->
@@ -1487,6 +1487,18 @@ function openAbout() {
           <div class="about-card">
             <p class="about-muted" style="margin:0;">
               Found a bug or have a feature idea? Feel free to reach out — your feedback makes Tracendle better for everyone!
+            </p>
+          </div>
+
+          <!-- Tester -->
+          <div class="about-section-label" style="margin-top:18px;">THANKS TO THESE TRAINER </div>
+          <div class="about-card">
+            <p class="about-muted" style="margin:0;">
+              Tester:
+              <p> <a href="https://x.com/NielZGM" target="_blank" rel="noopener noreferrer">@NielZGM</a> </p>
+              <p> YukkiClyde </p>
+              <p> Sienna </p>
+              <p> <a href="https://www.tiktok.com/@lesterhervieux" target="_blank" rel="noopener noreferrer">@Lester Herviéux</a> </p>
             </p>
           </div>
 

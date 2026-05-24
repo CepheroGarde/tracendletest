@@ -185,12 +185,28 @@ document.addEventListener('keydown', (e) => {
 
 // 2. Mobile/Inputs: Listen for input changes in the game's guess field
 // Replace 'guess-input' with the actual ID of your game's text input field
-const gameInput = document.getElementById('guess-input'); 
+const gameInput = document.getElementById('guess-input');
+
 if (gameInput) {
   gameInput.addEventListener('input', (e) => {
-    // Get the last character typed
-    const lastChar = e.data ? e.data.slice(-1) : "";
-    if (lastChar) checkGoodman(lastChar);
+    // Get the full current value of the input field
+    const currentVal = gameInput.value;
+    
+    // Check if the input is long enough to contain our code
+    if (currentVal.length >= 7) {
+      // Get the last 7 characters of the current input
+      const lastSeven = currentVal.slice(-7);
+      
+      // Manually trigger the logic if the buffer matches
+      if (lastSeven.toLowerCase() === 'goodman') {
+        if (typeof applyWallpaper === 'function') {
+          applyWallpaper('images/goodman.jpg');
+          console.log("Better call Saul!");
+          // Optional: Clear the input after the trigger
+          // gameInput.value = ""; 
+        }
+      }
+    }
   });
 }
 
