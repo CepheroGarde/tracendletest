@@ -164,51 +164,93 @@ async function maybeRunChibis() {
 // --- Goodman Easter Egg (Desktop & Mobile) ---
 let goodmanBuffer = "";
 
-function checkGoodman(inputString) {
-  goodmanBuffer += inputString.toLowerCase();
-  if (goodmanBuffer.length > 7) goodmanBuffer = goodmanBuffer.slice(-7);
-  
-  if (goodmanBuffer === 'goodman') {
-    if (typeof applyWallpaper === 'function') {
-      applyWallpaper('images/goodman.jpg');
-      console.log("Better call Saul!");
-      goodmanBuffer = ""; // Reset after trigger
-    }
+function triggerGoodman() {
+  if (typeof applyWallpaper === 'function') {
+    applyWallpaper('images/goodman.jpg');
+    console.log("Better call Saul!");
+    goodmanBuffer = "";
   }
 }
 
-// 1. Desktop: Listen to physical keys
+function checkGoodman(inputString) {
+  goodmanBuffer += inputString.toLowerCase();
+  if (goodmanBuffer.length > 7) goodmanBuffer = goodmanBuffer.slice(-7);
+  if (goodmanBuffer === 'goodman') triggerGoodman();
+}
+
+// 1. Desktop: Listen to physical keys (outside input fields)
 document.addEventListener('keydown', (e) => {
   if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
   checkGoodman(e.key);
 });
 
-// 2. Mobile/Inputs: Listen for input changes in the game's guess field
-// Replace 'guess-input' with the actual ID of your game's text input field
-const gameInput = document.getElementById('guess-input');
+// 2. Any text input/textarea: watch for "goodman" typed anywhere
+document.addEventListener('input', (e) => {
+  const el = e.target;
+  if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') return;
+  const val = el.value || '';
+  if (val.length >= 7 && val.slice(-7).toLowerCase() === 'goodman') {
+    triggerGoodman();
+  }
+});
 
-if (gameInput) {
-  gameInput.addEventListener('input', (e) => {
-    // Get the full current value of the input field
-    const currentVal = gameInput.value;
-    
-    // Check if the input is long enough to contain our code
-    if (currentVal.length >= 7) {
-      // Get the last 7 characters of the current input
-      const lastSeven = currentVal.slice(-7);
-      
-      // Manually trigger the logic if the buffer matches
-      if (lastSeven.toLowerCase() === 'goodman') {
-        if (typeof applyWallpaper === 'function') {
-          applyWallpaper('images/goodman.jpg');
-          console.log("Better call Saul!");
-          // Optional: Clear the input after the trigger
-          // gameInput.value = ""; 
-        }
+// 3. Mobile tap sequence: tap the logo/title 7 times within 3 seconds
+//    Works on any element with id="logo", id="game-title", or class "app-title" / "site-logo"
+(function initGoodmanTapEgg() {
+  let tapCount = 0;
+  let tapTimer  = null;
+  const TAP_TARGET = 7;
+  const TAP_WINDOW = 3000; // ms
+
+  function onTap() {
+    tapCount++;
+    clearTimeout(tapTimer);
+
+    if (tapCount >= TAP_TARGET) {
+      tapCount = 0;
+      triggerGoodman();
+      return;
+    }
+
+    // Reset counter if the player stops tapping for 3 s
+    tapTimer = setTimeout(() => { tapCount = 0; }, TAP_WINDOW);
+  }
+
+  // Attach once the DOM is ready; try several likely selectors for the logo/header
+  function attachTapListeners() {
+    const selectors = [
+      '#logo', '#game-title', '#app-title', '#header-logo',
+      '.app-title', '.site-logo', '.game-logo', '.logo',
+      'header h1', 'header h2', '.header h1'
+    ];
+    let attached = false;
+    for (const sel of selectors) {
+      const el = document.querySelector(sel);
+      if (el) {
+        el.addEventListener('click',      onTap, { passive: true });
+        el.addEventListener('touchstart', onTap, { passive: true });
+        attached = true;
+        // Don't break — attach to all matches so any logo area works
       }
     }
-  });
-}
+    if (!attached) {
+      // Fallback: attach to <header> itself so mobile players always have a target
+      const header = document.querySelector('header');
+      if (header) {
+        header.addEventListener('click',      onTap, { passive: true });
+        header.addEventListener('touchstart', onTap, { passive: true });
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attachTapListeners);
+  } else {
+    attachTapListeners();
+  }
+}());
+
+
 
 
 
