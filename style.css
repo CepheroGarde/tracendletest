@@ -1453,6 +1453,15 @@ body.dark #game-toolbar {
         max-height: clamp(24px, 6vw, 36px);
     }
 
+    #guess-grid .difficulty-stars {
+        gap: 3px;
+    }
+
+    #guess-grid .difficulty-star {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
     .name-col {
         min-width: unset;
         font-size: clamp(8px, 2.2vw, 11px);
@@ -1489,10 +1498,17 @@ body.dark #game-toolbar {
         max-height: clamp(20px, 5.5vw, 30px);
     }
 
+    #guess-grid .difficulty-stars {
+        gap: 2px;
+    }
+
+    #guess-grid .difficulty-star {
+        width: 12px !important;
+        height: 12px !important;
+    }
+
     #guess-grid .difficulty-stars,
     #guess-grid .difficulty-star {
-        width: auto !important;
-        height: auto !important;
         max-width: none !important;
         max-height: none !important;
         display: inline-flex !important;
