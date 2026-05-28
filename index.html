@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TracenDle: Pretty Wordle</title>
+    <title>IDVLE: Identity V Wordle</title>
     <link rel="icon" type="image/jpeg" href="images/small logo.png">
     <link href="./output.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <meta name="title" content="TracenDle: Pretty Wordle">
-    <meta name="description" content="Test your knowledge of Umamusume aptitudes and G1 Race courses in this daily puzzle game!">
+    <meta name="title" content="IDVLE: Identity V Wordle">
+    <meta name="description" content="Guess the Identity V survivor using roles, gender, difficulty, and release year in this IDVLE Wordle game.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tracendle.pages.dev/"> <meta property="og:title" content="TracenDle: Pretty Wordle">
-    <meta property="og:description" content="Test your knowledge of Umamusume aptitudes and G1 Race courses in this daily puzzle game!">
-    <meta property="og:image" content="https://tracendle.pages.dev/images/umawordle logo.png"> <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tracendle.pages.dev/">
-    <meta property="twitter:title" content="TracenDle: Pretty Wordle">
-    <meta property="twitter:description" content="Can you guess the Umamusume based on their aptitudes? Play TracenDle now!">
-    <meta property="twitter:image" content="https://tracendle.pages.dev/images/umawordle logo.png">
+    <meta property="og:url" content="https://idvle.example/"> <meta property="og:title" content="IDVLE: Identity V Wordle">
+    <meta property="og:description" content="Guess Identity V survivors from their attributes in this daily IDVLE puzzle game!">
+    <meta property="og:image" content="https://idvle.example/images/placeholder.png"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://idvle.example/">
+    <meta property="twitter:title" content="IDVLE: Identity V Wordle">
+    <meta property="twitter:description" content="Can you guess the Identity V survivor from their roles, gender, difficulty and release year?">
+    <meta property="twitter:image" content="https://idvle.example/images/placeholder.png">
     <meta name="theme-color" content="#15803d">
+    
     
     <script>
 
@@ -111,14 +112,13 @@
     <div class="w-full max-w-6xl mx-auto px-4 flex flex-col items-center">
 
     <div id="menu-screen" class="w-full max-w-lg bg-white rounded-xl shadow-2xl p-8 flex flex-col gap-4">
-        <div class="flex bg-gray-100 p-1 rounded-xl mb-2">
-            <button id="tab-uma" onclick="switchGameType('uma')" class="flex-1 py-2 rounded-lg font-bold transition-all bg-white shadow-sm text-green-700 text-sm">Umamusume</button>
-            <button id="tab-course" onclick="switchGameType('course')" class="flex-1 py-2 rounded-lg font-bold transition-all text-gray-500 hover:text-gray-700 text-sm">G1 Race</button>
-            <button id="tab-voicedle" onclick="switchGameType('voicedle')" class="flex-1 py-2 rounded-lg font-bold transition-all text-gray-500 hover:text-gray-700 text-sm">Voicedle</button>
+        <div class="flex bg-gray-100 p-1 rounded-xl mb-2" style="overflow:visible;">
+            <button id="tab-uma" onclick="switchGameType('uma')" class="flex-1 py-2 rounded-lg font-bold transition-all bg-white shadow-sm text-green-700 text-sm">Survivor</button>
+            <button id="tab-course" onclick="switchGameType('course')" class="flex-1 py-2 rounded-lg font-bold transition-all text-gray-500 hover:text-gray-700 text-sm">Hunter</button>
         </div>
         
         <div class="text-center mb-4">
-            <p id="menu-description" class="text-gray-600">Guess the Umamusume based on their base Aptitudes!</p>
+            <p id="menu-description" class="text-gray-600">Guess the Survivor from their roles, gender, difficulty and release year!</p>
         </div>
         <div id="yesterday-info" class="text-center text-xs text-gray-500 bg-gray-50 py-1 rounded italic"></div>
         <div class="flex flex-col gap-3">
@@ -171,6 +171,18 @@
         
         <div id="daily-status" class="text-center text-sm font-medium mt-2"></div>
 
+        <!-- Also Try Section -->
+        <div style="margin-top:16px;padding-top:12px;border-top:1px solid #f3f4f6;display:flex;flex-direction:column;align-items:center;gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;">
+                <span class="also-try-label">Also try →</span>
+                <a href="https://www.umaguessr.com/uma.html" target="_blank" rel="noopener noreferrer" class="also-try-pill also-try-pill-pink">Umaguessr</a>
+                <span class="also-try-divider">·</span>
+                <a href="https://guesser.umamusu.moe/" target="_blank" rel="noopener noreferrer" class="also-try-pill also-try-pill-gray">Guesser</a>
+                <span class="also-try-divider">·</span>
+                <a href="https://heardle.umamusu.moe/" target="_blank" rel="noopener noreferrer" class="also-try-pill also-try-pill-purple">Heardle</a>
+            </div>
+        </div>
+
         <footer class="mt-6 pt-4 border-t border-gray-100 flex flex-col items-center gap-3 text-gray-400">
             <div id="made-by-footer" class="text-xs font-medium flex items-center gap-2">
                 <span>Made by</span>
@@ -216,51 +228,6 @@
             <div id="remaining-guesses" class="flex items-center gap-1.5"></div>
         </div>
 
-        <div id="voicedle-panel" class="hidden voicedle-panel w-full max-w-md mb-4">
-            <div id="voicedle-player-card" class="voicedle-player-card">
-                <div class="voicedle-player-top">
-                    <span class="voicedle-player-badge">Voice Clip</span>
-                    <span id="voicedle-time-display" class="voicedle-time-display">0.0 / 0.5s</span>
-                </div>
-                <div class="voicedle-player-stage">
-                    <div id="voicedle-wave" class="voicedle-wave" aria-hidden="true"></div>
-                    <button type="button" id="voicedle-play-btn" onclick="playVoicedleClip()" class="voicedle-play-btn" aria-label="Play voice clip">
-                        <svg class="voicedle-play-icon voicedle-play-icon--play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-                        <svg class="voicedle-play-icon voicedle-play-icon--pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6V5zm8 0h4v14h-4V5z"/></svg>
-                    </button>
-                </div>
-                <div class="voicedle-timeline">
-                    <div class="voicedle-progress-wrap">
-                        <div id="voicedle-progress-unlock" class="voicedle-progress-unlock"></div>
-                        <div id="voicedle-progress-bar" class="voicedle-progress-bar"></div>
-                        <div class="voicedle-segment-markers" aria-hidden="true">
-                            <span class="voicedle-segment-mark" style="left: 25%"></span>
-                            <span class="voicedle-segment-mark" style="left: 50%"></span>
-                            <span class="voicedle-segment-mark" style="left: 75%"></span>
-                            <span class="voicedle-segment-mark" style="left: 87.5%"></span>
-                            <span class="voicedle-segment-mark" style="left: 100%"></span>
-                        </div>
-                    </div>
-                    <div class="voicedle-unlock-steps" id="voicedle-unlock-steps">
-                        <span class="voicedle-step" data-tier="0">0.5s</span>
-                        <span class="voicedle-step" data-tier="1">1.0s</span>
-                        <span class="voicedle-step" data-tier="2">1.5s</span>
-                        <span class="voicedle-step" data-tier="3">1.8s</span>
-                        <span class="voicedle-step" data-tier="4">2.0s</span>
-                    </div>
-                </div>
-                <div class="voicedle-volume-row">
-                    <label for="voicedle-volume" class="voicedle-volume-label" aria-hidden="true">
-                        <svg id="voicedle-volume-icon" class="voicedle-volume-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-                    </label>
-                    <input type="range" id="voicedle-volume" class="voicedle-volume-slider" min="0" max="100" value="100" aria-label="Volume" aria-valuemin="0" aria-valuemax="100">
-                </div>
-                <p id="voicedle-unlock-hint" class="voicedle-unlock-hint">Tap play to hear the voice line</p>
-                <button type="button" id="voicedle-skip-btn" onclick="skipVoicedleGuess()" class="voicedle-skip-btn">Skip</button>
-            </div>
-            <div id="voicedle-guess-history" class="voicedle-guess-history"></div>
-        </div>
-        
         <div class="table-wrapper w-full">
             <table id="guesses" class="w-full text-center border-separate border-spacing-1">
                 <thead id="guess-head"></thead>
@@ -311,7 +278,7 @@
 
                 <div id="share-card-wrap" class="flex justify-center mb-3">
                     <div id="share-card" class="bg-[#111827] p-3 rounded-xl shadow-2xl inline-block text-center border border-gray-800">
-                        <h4 id="share-title-text" class="text-green-500 font-black text-[10px] tracking-[0.2em] mb-0.5">UMAWORDLE</h4>
+                        <h4 id="share-title-text" class="text-green-500 font-black text-[10px] tracking-[0.2em] mb-0.5">IDVLE</h4>
                         <div id="share-info-text" class="text-[9px] text-gray-500 mb-2 uppercase font-bold tracking-widest"></div>
                         <div id="share-block-preview" class="share-emoji-block text-sm leading-tight"></div>
                     </div>
@@ -323,26 +290,11 @@
                     <div id="result-target-header" class="flex items-center gap-3 mb-3">
                         <div id="target-img-wrap"></div>
                         <div>
-                            <span id="target-label" class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block">Winning Umamusume</span>
+                            <span id="target-label" class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block">Winning Survivor</span>
                             <h3 id="target-name" class="text-lg font-black text-green-700 leading-tight"></h3>
                         </div>
                     </div>
                     <div id="target-stats-grid"></div>
-                    <div id="voicedle-result-panel" class="voicedle-result-panel hidden">
-                        <button type="button" id="voicedle-result-play-btn" class="voicedle-result-play-btn" aria-label="Play answer voice line">
-                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-                            <span>Play answer voice line</span>
-                        </button>
-                        <div class="voicedle-result-section">
-                            <span class="voicedle-result-label">Clip unlocks</span>
-                            <div id="voicedle-result-steps" class="voicedle-result-steps"></div>
-                        </div>
-                        <div class="voicedle-result-section">
-                            <span class="voicedle-result-label">Your guesses</span>
-                            <div id="voicedle-result-guesses" class="voicedle-result-guesses"></div>
-                        </div>
-                        <p id="voicedle-result-summary" class="voicedle-result-summary"></p>
-                    </div>
                 </div>
                 
                 <div class="flex gap-2 items-center">
@@ -452,7 +404,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/config.js"></script>
     <script src="js/storage.js"></script>
-    <script src="js/voicedle.js"></script>
     <script src="js/game.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/leaderboard.js"></script>
@@ -517,9 +468,8 @@
       </div>
 
       <div class="flex bg-gray-100 p-1 rounded-xl">
-        <button id="lb-tab-uma" onclick="switchLeaderboardTab('uma')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700">Umamusume</button>
-        <button id="lb-tab-course" onclick="switchLeaderboardTab('course')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">G1 Race</button>
-        <button id="lb-tab-voicedle" onclick="switchLeaderboardTab('voicedle')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">Voicedle</button>
+        <button id="lb-tab-uma" onclick="switchLeaderboardTab('uma')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700">Survivor</button>
+        <button id="lb-tab-course" onclick="switchLeaderboardTab('course')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">Hunter</button>
       </div>
 
    
@@ -562,9 +512,8 @@
       </div>
 
       <div class="flex bg-gray-100 p-1 rounded-xl">
-        <button id="stats-tab-uma" onclick="switchStatsTab('uma')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700">Umamusume</button>
-        <button id="stats-tab-course" onclick="switchStatsTab('course')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">G1 Race</button>
-        <button id="stats-tab-voicedle" onclick="switchStatsTab('voicedle')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">Voicedle</button>
+        <button id="stats-tab-uma" onclick="switchStatsTab('uma')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700">Survivor</button>
+        <button id="stats-tab-course" onclick="switchStatsTab('course')" class="flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700">Hunter</button>
       </div>
 
       <div id="stats-content" class="flex flex-col gap-3"></div>
@@ -608,6 +557,12 @@
                 <ul class="list-disc list-inside text-sm space-y-2 ml-1">
                     <strong>Changelog: </strong>
 
+                    <br><strong>V1.3.1 (5/27/2026)</strong>
+                    <li><strong>Voicedle Adjustment:</strong> The Voice are adjusted from 2 to 3 seconds</li>
+                    <li><strong>Voice Cut</strong></li>Since the audio is longer, the unlock steps are now 0.6s, 1.2s, 1.8s, 2.4s, and 3.0s</li>
+                    <li><strong>Voice Fix:</strong> Removed the dead silence audio on start of voice clip</li>
+                    <li><strong>Added Some G1 Races:</strong> Added G1 Races: Takamatsunomiya Kinen, Hanshin Juvenile Fillies, and Asahi Hai Futurity Stakes</li>
+                    <li><strong>Small bug fixes:</strong> Fixed TM Opera O, based attributes</li>
                     <br><strong>V1.3 (5/25/2026)</strong>
                     <li><strong>Voicedle Mode:</strong> New game type: guess the Umamusume from a 2-second voice line with progressive audio unlocks!</li>
                     <li><strong>Global Trainer Leaderboard:</strong> Track top trainers worldwide with All Time, Weekly, and Monthly leaderboards.</li>
@@ -638,6 +593,7 @@
 
 <!-- Peeking character -->
 <img id="peeking-character" src="images/chibi uma/Haru_Urara_Chibi.webp" alt="Peeking Uma chibi" class="peeking-character-img">
+
 
 </body>
 </html>

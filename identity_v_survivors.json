@@ -1,0 +1,488 @@
+[
+    {
+        "Name": "Doctor",
+        "Roles": [
+            "Contain",
+            "Assist"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.0,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Lawyer",
+        "Roles": [
+            "Decode"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.0,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Thief",
+        "Roles": [
+            "Contain"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Gardener",
+        "Roles": [
+            "Contain",
+            "Assist"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.0,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Magician",
+        "Roles": [
+            "Contain"
+        ],
+        "Gender": "Male",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Explorer",
+        "Roles": [
+            "Decode"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Mercenary",
+        "Roles": [
+            "Rescue"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Coordinator",
+        "Roles": [
+            "Rescue"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.0,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Priestess",
+        "Roles": [
+            "Assist",
+            "Contain"
+        ],
+        "Gender": "Female",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Mechanic",
+        "Roles": [
+            "Decode"
+        ],
+        "Gender": "Female",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Forward",
+        "Roles": [
+            "Assist",
+            "Rescue"
+        ],
+        "Gender": "Male",
+        "Difficulty": 3.0,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Mind's Eye",
+        "Roles": [
+            "Decode"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Perfumer",
+        "Roles": [
+            "Contain"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Cowboy",
+        "Roles": [
+            "Assist",
+            "Contain"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Female Dancer",
+        "Roles": [
+            "Contain",
+            "Assist"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Seer",
+        "Roles": [
+            "Assist"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Embalmer",
+        "Roles": [
+            "Assist"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Prospector",
+        "Roles": [
+            "Contain",
+            "Assist"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2019
+    },
+    {
+        "Name": "Enchantress",
+        "Roles": [
+            "Contain",
+            "Assist"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2019
+    },
+    {
+        "Name": "Wildling",
+        "Roles": [
+            "Assist",
+            "Rescue"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2019
+    },
+    {
+        "Name": "Acrobat",
+        "Roles": [
+            "Contain"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2019
+    },
+    {
+        "Name": "First Officer",
+        "Roles": [
+            "Rescue"
+        ],
+        "Gender": "Male",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2019
+    },
+    {
+        "Name": "Barmaid",
+        "Roles": [
+            "Assist",
+            "Contain"
+        ],
+        "Gender": "Female",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2019
+    },
+    {
+        "Name": "Postman",
+        "Roles": [
+            "Assist"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.0,
+        "ReleaseYear": 2019
+    },
+    {
+        "Name": "Grave Keeper",
+        "Roles": [
+            "Rescue"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.0,
+        "ReleaseYear": 2020
+    },
+    {
+        "Name": "Prisoner",
+        "Roles": [
+            "Decode",
+            "Assist"
+        ],
+        "Gender": "Male",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2020
+    },
+    {
+        "Name": "Entomologist",
+        "Roles": [
+            "Contain",
+            "Assist"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2020
+    },
+    {
+        "Name": "Painter",
+        "Roles": [
+            "Contain",
+            "Assist"
+        ],
+        "Gender": "Male",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2020
+    },
+    {
+        "Name": "Batter",
+        "Roles": [
+            "Assist",
+            "Rescue"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2020
+    },
+    {
+        "Name": "Toy Merchant",
+        "Roles": [
+            "Contain",
+            "Assist"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2021
+    },
+    {
+        "Name": "Patient",
+        "Roles": [
+            "Contain",
+            "Rescue"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2021
+    },
+    {
+        "Name": "Psychologist",
+        "Roles": [
+            "Assist"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2021
+    },
+    {
+        "Name": "Novelist",
+        "Roles": [
+            "Contain",
+            "Assist"
+        ],
+        "Gender": "Male",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2021
+    },
+    {
+        "Name": "Little Girl",
+        "Roles": [
+            "Assist"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.0,
+        "ReleaseYear": 2021
+    },
+    {
+        "Name": "Weeping Clown",
+        "Roles": [
+            "Rescue",
+            "Assist"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2022
+    },
+    {
+        "Name": "Professor",
+        "Roles": [
+            "Contain",
+            "Assist"
+        ],
+        "Gender": "Male",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2022
+    },
+    {
+        "Name": "Antiquarian",
+        "Roles": [
+            "Contain"
+        ],
+        "Gender": "Female",
+        "Difficulty": 3.0,
+        "ReleaseYear": 2022
+    },
+    {
+        "Name": "Composer",
+        "Roles": [
+            "Decode"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2022
+    },
+    {
+        "Name": "Journalist",
+        "Roles": [
+            "Rescue"
+        ],
+        "Gender": "Female",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2023
+    },
+    {
+        "Name": "Aeroplanist",
+        "Roles": [
+            "Contain",
+            "Rescue"
+        ],
+        "Gender": "Male",
+        "Difficulty": 3.0,
+        "ReleaseYear": 2023
+    },
+    {
+        "Name": "Cheerleader",
+        "Roles": [
+            "Assist",
+            "Contain"
+        ],
+        "Gender": "Female",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2023
+    },
+    {
+        "Name": "Puppeteer",
+        "Roles": [
+            "Contain",
+            "Rescue"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.0,
+        "ReleaseYear": 2024
+    },
+    {
+        "Name": "Fire Investigator",
+        "Roles": [
+            "Contain",
+            "Assist"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2024
+    },
+    {
+        "Name": "Faro Lady",
+        "Roles": [
+            "Decode"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2024
+    },
+    {
+        "Name": "Knight",
+        "Roles": [
+            "Rescue"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2024
+    },
+    {
+        "Name": "Meteorologist",
+        "Roles": [
+            "Contain",
+            "Rescue"
+        ],
+        "Gender": "Female",
+        "Difficulty": 3.0,
+        "ReleaseYear": 2025
+    },
+    {
+        "Name": "Archer",
+        "Roles": [
+            "Contain"
+        ],
+        "Gender": "Female",
+        "Difficulty": 1.5,
+        "ReleaseYear": 2025
+    },
+    {
+        "Name": "Escapologist",
+        "Roles": [
+            "Assist",
+            "Rescue"
+        ],
+        "Gender": "Male",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2025
+    },
+    {
+        "Name": "Lanternist",
+        "Roles": [
+            "Assist",
+            "Contain"
+        ],
+        "Gender": "Female",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2025
+    },
+    {
+        "Name": "Matador",
+        "Roles": [
+            "Contain",
+            "Assist"
+        ],
+        "Gender": "Male",
+        "Difficulty": 2.0,
+        "ReleaseYear": 2026
+    },
+    {
+        "Name": "Lucky Guy",
+        "Roles": [
+            "Contain"
+        ],
+        "Gender": "Male",
+        "Difficulty": 1.0,
+        "ReleaseYear": 2018
+    }
+]
