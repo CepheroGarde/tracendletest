@@ -1,1 +1,642 @@
-const a0_0x29e9ea=a0_0x59bc;(function(_0x3bc195,_0x5573ae){const _0x208fba=a0_0x59bc,_0x1c7411=_0x3bc195();while(!![]){try{const _0x341b4c=parseInt(_0x208fba(0x126))/0x1+parseInt(_0x208fba(0x117))/0x2*(-parseInt(_0x208fba(0x13b))/0x3)+parseInt(_0x208fba(0x13d))/0x4+-parseInt(_0x208fba(0x153))/0x5+-parseInt(_0x208fba(0xf0))/0x6*(-parseInt(_0x208fba(0xf4))/0x7)+-parseInt(_0x208fba(0x19c))/0x8*(-parseInt(_0x208fba(0x188))/0x9)+parseInt(_0x208fba(0x18e))/0xa*(-parseInt(_0x208fba(0x194))/0xb);if(_0x341b4c===_0x5573ae)break;else _0x1c7411['push'](_0x1c7411['shift']());}catch(_0x531545){_0x1c7411['push'](_0x1c7411['shift']());}}}(a0_0x4946,0xa3b0e));function getOrCreateUserId(){const _0x4ad149=a0_0x59bc;let _0x26f43d=localStorage[_0x4ad149(0x169)](_0x4ad149(0x145));return!_0x26f43d&&(_0x26f43d=_0x4ad149(0x18c)+Math[_0x4ad149(0x135)]()[_0x4ad149(0x139)](0x24)['substr'](0x2,0x9)+'_'+Date[_0x4ad149(0x159)](),localStorage[_0x4ad149(0x144)]('tracendle_user_id',_0x26f43d)),_0x26f43d;}function getShortUserSuffix(_0x42f8f0){const _0x411200=a0_0x59bc;if(!_0x42f8f0)_0x42f8f0=localStorage[_0x411200(0x169)]('tracendle_user_id');if(!_0x42f8f0)_0x42f8f0=getOrCreateUserId();let _0x2d4451=0x0;for(let _0x11bfbf=0x0;_0x11bfbf<_0x42f8f0[_0x411200(0x160)];_0x11bfbf++){_0x2d4451=(_0x2d4451<<0x5)-_0x2d4451+_0x42f8f0['charCodeAt'](_0x11bfbf),_0x2d4451|=0x0;}return String(Math['abs'](_0x2d4451)%0x2710)[_0x411200(0xef)](0x4,'0');}function formatUsernameWithSuffix(_0x438752,_0x59d362){const _0x3c51c3=a0_0x59bc,_0xfc4591=(_0x438752||_0x3c51c3(0x113))[_0x3c51c3(0x182)]()||_0x3c51c3(0x113),_0x3aba48=getShortUserSuffix(_0x59d362);return _0xfc4591+'<span\x20class=\x22username-suffix\x22>#'+_0x3aba48+_0x3c51c3(0x190);}function formatUsernameWithSuffixText(_0x53b2f3,_0x224ee1){const _0x5bc74f=a0_0x59bc,_0x480130=(_0x53b2f3||'Anonymous')[_0x5bc74f(0x182)]()||_0x5bc74f(0x113);return _0x480130+'#'+getShortUserSuffix(_0x224ee1);}function generateChecksum(_0x4864a8){const _0x4424a4=a0_0x59bc,_0x2d0673='Satono\x20Diamond',_0x201866=JSON[_0x4424a4(0x11d)](_0x4864a8)+_0x2d0673;let _0x31bedd=0x0;for(let _0x3a7008=0x0;_0x3a7008<_0x201866[_0x4424a4(0x160)];_0x3a7008++){const _0x25cefb=_0x201866[_0x4424a4(0x175)](_0x3a7008);_0x31bedd=(_0x31bedd<<0x5)-_0x31bedd+_0x25cefb,_0x31bedd|=0x0;}return _0x31bedd[_0x4424a4(0x139)](0x10);}function a0_0x4946(){const _0x177daa=['clipboard','payload,\x20expires_at','Failed\x20to\x20parse\x20ranked\x20stats','st-tab--active','734198wKvRpw','tracendle_wallpaper_data','Please\x20enter\x20the\x20full\x208-character\x20code.','max','ABCDEFGHJKLMNPQRSTUVWXYZ23456789','uma_wordle_v2_stats','none','Code\x20not\x20found.','✅\x20Import\x20Save','code','then','addEventListener','justify-content:center','insert','pointer-events:none','random','toUpperCase','voicedle_volume','cssText','toString','finally','9TdmRqE','floor','1601196BIFjCD','Importing…','voicedle_ranked_stats','target','warn','bestHardStreak','st-tab-send','setItem','tracendle_user_id','st-generate-btn','st-panel-send','hard','innerHTML','lossStreak','Failed\x20to\x20parse\x20persistent\x20data:','0.4','font-size:14px','click','inline-flex','payload','appendChild','message','1041535QIhHqG','opacity','Invalid\x20code.\x20Double-check\x20and\x20try\x20again.','padding:16px','voicedle','background:rgba(0,0,0,.65)','now','Your\x20streaks,\x20progress,\x20and\x20settings\x20will\x20be\x20overwritten.\x0a\x0aContinue?','rankProtection','_ranked_stats','hardStreak','value','heardle_volume','length','uma','points','unlimitedStreak','bestEasyStreak','normal','VOICEDLE','st-code-input','Migration\x20failed,\x20will\x20retry\x20next\x20load:','getItem','from','\x20ranked\x20stats!\x20Goldship\x20is\x20watching\x20you...','Save\x20data\x20in\x20this\x20code\x20is\x20invalid.','removeItem','This\x20code\x20has\x20expired.\x20Ask\x20for\x20a\x20new\x20one.','block','_timer','Tracendle:\x20legacy\x20streak\x20migration\x20complete.','parse','st-redeem-btn','entries','charCodeAt','getSelection','theme','is_ranked_session','font-weight:600','❌\x20Failed\x20to\x20generate\x20code.\x20Check\x20your\x20connection.','border-radius:999px','st-tab-receive','Expires\x20in\x20','save-transfer-modal','\x0a\x20\x20\x20\x20<div\x20id=\x22save-transfer-inner\x22>\x0a\x0a\x20\x20\x20\x20\x20\x20<!--\x20Header\x20-->\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22st-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:flex;align-items:center;gap:10px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20style=\x22font-size:22px;\x22>📲</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2\x20class=\x22st-title\x22>Save\x20Transfer</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22closeSaveTransferModal()\x22\x20class=\x22st-close-btn\x22>&times;</button>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20<!--\x20Tabs\x20-->\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22st-tabs\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22st-tab-send\x22\x20onclick=\x22_stSwitchTab(\x27send\x27)\x22\x20class=\x22st-tab\x20st-tab--active\x22>📤\x20Send\x20Save</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22st-tab-receive\x22\x20onclick=\x22_stSwitchTab(\x27receive\x27)\x22\x20class=\x22st-tab\x22>📥\x20Receive\x20Save</button>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20<!--\x20SEND\x20panel\x20-->\x0a\x20\x20\x20\x20\x20\x20<div\x20id=\x22st-panel-send\x22\x20class=\x22st-panel\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22st-desc\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Generate\x20a\x20one-time\x20code\x20on\x20<strong>this\x20device</strong>,\x20then\x20enter\x20it\x20on\x20your\x20other\x20device\x20within\x20<strong>15\x20minutes</strong>.\x0a\x20\x20\x20\x20\x20\x20\x20\x20</p>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22st-generate-btn\x22\x20onclick=\x22generateTransferCode()\x22\x20class=\x22st-btn-primary\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Generate\x20Transfer\x20Code\x0a\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<!--\x20Code\x20display\x20(hidden\x20until\x20generated)\x20-->\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22st-code-box\x22\x20class=\x22st-code-box\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22st-code-label\x22>Your\x20Transfer\x20Code</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22st-code-pill\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20id=\x22st-code-display\x22>----</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22st-copy-btn\x22\x20onclick=\x22copyTransferCode()\x22\x20class=\x22st-copy-btn\x22>📋\x20Copy</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22st-countdown\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22st-code-note\x22>Code\x20is\x20single-use\x20and\x20expires\x20automatically.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20<!--\x20RECEIVE\x20panel\x20(hidden)\x20-->\x0a\x20\x20\x20\x20\x20\x20<div\x20id=\x22st-panel-receive\x22\x20class=\x22st-panel\x22\x20style=\x22display:none;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22st-desc\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Enter\x20the\x20code\x20generated\x20on\x20your\x20<strong>other\x20device</strong>.\x20This\x20will\x20replace\x20the\x20save\x20on\x20this\x20device.\x0a\x20\x20\x20\x20\x20\x20\x20\x20</p>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22st-code-input\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20class=\x22st-code-input\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20type=\x22text\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20maxlength=\x229\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20placeholder=\x22XXXX-XXXX\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20oninput=\x22_stFormatCodeInput(this)\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20onkeydown=\x22if(event.key===\x27Enter\x27)\x20redeemTransferCode()\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20/>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22st-redeem-btn\x22\x20onclick=\x22redeemTransferCode()\x22\x20class=\x22st-btn-secondary\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20✅\x20Import\x20Save\x0a\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22st-import-error\x22\x20class=\x22st-error\x22></div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22st-warn\x22>⚠️\x20Importing\x20will\x20overwrite\x20your\x20current\x20save\x20on\x20this\x20device.</p>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20</div>\x0a\x20\x20','save_transfers','toISOString','trim','⚠️\x20Code\x20expired.\x20Generate\x20a\x20new\x20one.','⚠️\x20Import\x20Save?\x0a\x0aThis\x20will\x20REPLACE\x20your\x20current\x20save\x20on\x20this\x20device.\x0a','style','log','winStreak','1163817LCbAaQ',',\x20using\x20fallback:','forEach','st-code-box','user_','remove','14960DSgYxW','st-code-display','</span>','reload','textContent','st-copy-btn','11187JKdIvG','st-import-error','z-index:99999','tracendle_nickname','true','data','min','save-transfer-toast','64agptVd','createRange','padStart','22428aTljqE','toggle','delete','disabled','630OZfuEo','error','guesses','uma_ranked_stats','position:fixed','Something\x20went\x20wrong.\x20Please\x20try\x20again.','div','createElement','Tampering\x20detected\x20in\x20','removeAllRanges','st-countdown','easySession','selectNode','left:50%','not\x20found','One\x20or\x20more\x20migration\x20entries\x20failed','slice','placements','Code\x20has\x20expired.','Generating…','replace','display','addRange','heardle','startsWith','getElementById','Generate\x20code\x20failed:','includes','object','checksum','catch','Anonymous','background:var(--toast-bg,#1e293b)','tracendle_wallpaper_type','dailyStreak','70136NhNmVK','single','bottom:24px','🎲\x20Generate\x20Transfer\x20Code','classList','z-index:9999','stringify','join','tracendle_lb_migrated','expired','course'];a0_0x4946=function(){return _0x177daa;};return a0_0x4946();}function migrateHeardleToVoicedle(){const _0x201573=a0_0x59bc,_0x38b59b=allPersistentData[_0x201573(0x10b)]||allPersistentData[_0x201573(0x166)];_0x38b59b&&!allPersistentData['voicedle']&&(allPersistentData['voicedle']=_0x38b59b);(allPersistentData['heardle']||allPersistentData[_0x201573(0x166)])&&(delete allPersistentData['heardle'],delete allPersistentData[_0x201573(0x166)],savePersistentData());const _0x52bd9b=localStorage[_0x201573(0x169)]('heardle_volume');_0x52bd9b!==null&&localStorage[_0x201573(0x169)](_0x201573(0x137))===null&&(localStorage['setItem'](_0x201573(0x137),_0x52bd9b),localStorage[_0x201573(0x16d)](_0x201573(0x15f)));}function savePersistentData(){const _0x497690=a0_0x59bc,_0x2a1645={'data':allPersistentData,'checksum':generateChecksum(allPersistentData)};localStorage[_0x497690(0x144)](_0x497690(0x12b),JSON[_0x497690(0x11d)](_0x2a1645));}function loadPersistentData(){const _0x2da638=a0_0x59bc,_0x1c45a7=localStorage['getItem'](_0x2da638(0x12b));if(_0x1c45a7)try{const _0x472c4c=JSON[_0x2da638(0x172)](_0x1c45a7);if(_0x472c4c['data']&&_0x472c4c[_0x2da638(0x111)]){const _0x3e4e93=generateChecksum(_0x472c4c[_0x2da638(0x199)]);_0x3e4e93===_0x472c4c[_0x2da638(0x111)]?allPersistentData=_0x472c4c[_0x2da638(0x199)]:console[_0x2da638(0x141)]('Stats\x20tampering\x20detected.\x20Resetting\x20to\x20default.\x20Three\x20Goddesses\x20will\x20curse\x20you.');}else allPersistentData=_0x472c4c,savePersistentData();}catch(_0x3e4854){console[_0x2da638(0xf5)](_0x2da638(0x14b),_0x3e4854);}migrateHeardleToVoicedle(),!allPersistentData[_0x2da638(0x157)]&&(allPersistentData[_0x2da638(0x157)]={'dailyStreak':0x0,'easyStreak':0x0,'unlimitedStreak':0x0,'hardStreak':0x0,'lastPlayedDate':null,'dailyGuesses':[],'dailyStatus':'playing','rankedGuesses':[],'rankedStatus':'playing','rankedTargetName':null,'unlimitedSession':null,'hardSession':null,'easySession':null,'lbSubmittedKey':null},savePersistentData()),[_0x2da638(0x161),_0x2da638(0x121),_0x2da638(0x157)][_0x2da638(0x18a)](_0x1b035f=>{const _0x239d2c=_0x2da638;allPersistentData[_0x1b035f]&&allPersistentData[_0x1b035f][_0x239d2c(0xff)]===undefined&&(allPersistentData[_0x1b035f]['easySession']=null);}),maybeScheduleLegacyLeaderboardMigration();}let _legacyLbMigrationPromise=null;function isUsernamePendingForMigration(){const _0xd35af9=a0_0x59bc,_0x4fc4bb=localStorage['getItem'](_0xd35af9(0x197));return!_0x4fc4bb||_0x4fc4bb['trim']()===''||_0x4fc4bb[_0xd35af9(0x10c)](_0xd35af9(0x113));}function getLegacyMigrationStreaks(_0x281c54){const _0x5c03c8=a0_0x59bc,_0x20cac5=Math[_0x5c03c8(0x129)](_0x281c54[_0x5c03c8(0x116)]||0x0,_0x281c54['easyStreak']||0x0,_0x281c54[_0x5c03c8(0x163)]||0x0),_0x1c89da=Math[_0x5c03c8(0x129)](_0x281c54['bestDailyStreak']||0x0,_0x281c54[_0x5c03c8(0x164)]||0x0,_0x281c54['bestUnlimitedStreak']||0x0,_0x20cac5),_0x171904=_0x281c54[_0x5c03c8(0x15d)]||0x0,_0x583c95=Math[_0x5c03c8(0x129)](_0x281c54[_0x5c03c8(0x142)]||0x0,_0x171904);return[{'category':_0x5c03c8(0x165),'value':_0x1c89da},{'category':_0x5c03c8(0x148),'value':_0x583c95}];}async function migrateLegacyStreakEntry(_0x548624,_0x16d81a,_0x30f80f,_0x1da186,_0x560fd1){const _0x4a7183=a0_0x59bc,{error:_0x3f2ef6}=await supabaseClient['rpc']('record_game_result',{'p_user_id':_0x548624,'p_username':_0x16d81a,'p_game_type':_0x30f80f,'p_category':_0x1da186,'p_streak_value':_0x560fd1});if(!_0x3f2ef6)return await fixWindowStartForUser(_0x548624,_0x16d81a,_0x30f80f,_0x1da186,_0x560fd1),!![];return console[_0x4a7183(0x141)]('Migration\x20RPC\x20failed\x20for\x20'+_0x30f80f+'/'+_0x1da186+_0x4a7183(0x189),_0x3f2ef6[_0x4a7183(0x152)]),fallbackLeaderboardSync(_0x548624,_0x16d81a,_0x30f80f,_0x1da186,_0x560fd1);}function scheduleLegacyLeaderboardMigration(){const _0x187837=a0_0x59bc;if(localStorage['getItem'](_0x187837(0x11f)))return _legacyLbMigrationPromise;if(_legacyLbMigrationPromise)return _legacyLbMigrationPromise;return _legacyLbMigrationPromise=migrateLegacyStreaks()[_0x187837(0x130)](()=>{const _0x1ec575=_0x187837;localStorage[_0x1ec575(0x144)](_0x1ec575(0x11f),'1'),console[_0x1ec575(0x186)](_0x1ec575(0x171));})[_0x187837(0x112)](_0x3f22c4=>{const _0x4ac350=_0x187837;console['warn'](_0x4ac350(0x168),_0x3f22c4);})[_0x187837(0x13a)](()=>{_legacyLbMigrationPromise=null;}),_legacyLbMigrationPromise;}function maybeScheduleLegacyLeaderboardMigration(){const _0x480553=a0_0x59bc;if(localStorage[_0x480553(0x169)](_0x480553(0x11f)))return;if(isUsernamePendingForMigration())return;scheduleLegacyLeaderboardMigration();}async function migrateLegacyStreaks(){const _0x2cf06d=a0_0x59bc,_0x57baa7=getOrCreateUserId(),_0xf26603=localStorage[_0x2cf06d(0x169)](_0x2cf06d(0x197))||_0x2cf06d(0x113);let _0x5b9b51=![];for(const _0x1e54c7 of['uma',_0x2cf06d(0x121),_0x2cf06d(0x157)]){const _0x209e60=allPersistentData[_0x1e54c7];if(!_0x209e60)continue;for(const {category:_0x4f296c,value:_0x308277}of getLegacyMigrationStreaks(_0x209e60)){if(_0x308277<=0x0)continue;try{const _0x4952c0=await migrateLegacyStreakEntry(_0x57baa7,_0xf26603,_0x1e54c7,_0x4f296c,_0x308277);if(!_0x4952c0)_0x5b9b51=!![];}catch(_0x312448){console[_0x2cf06d(0xf5)]('Migration\x20failed\x20for\x20'+_0x1e54c7+'/'+_0x4f296c+':',_0x312448),_0x5b9b51=!![];}}}if(_0x5b9b51)throw new Error(_0x2cf06d(0x103));}function getTier(_0x38904a){const _0x552630=a0_0x59bc;if(_0x38904a>=0x5dc)return'SS';const _0x21c63c=Math[_0x552630(0x13c)](_0x38904a/POINTS_PER_TIER),_0x2e8f2a=GRADES[_0x21c63c]||'G',_0x473730=_0x38904a%POINTS_PER_TIER>=DIV_THRESHOLD?'+':'';return''+_0x2e8f2a+_0x473730;}function getVerifiedRankedStats(_0x329c5d){const _0x4583cb=a0_0x59bc,_0x14aab0=_0x329c5d+_0x4583cb(0x15c),_0x5e4fae=localStorage['getItem'](_0x14aab0),_0x38a603={'points':0x0,'winStreak':0x0,'lossStreak':0x0,'placements':0x0,'rankProtection':0x0};if(!_0x5e4fae)return _0x38a603;try{const _0x133d20=JSON[_0x4583cb(0x172)](_0x5e4fae);if(_0x133d20[_0x4583cb(0x199)]&&_0x133d20[_0x4583cb(0x111)]===generateChecksum(_0x133d20[_0x4583cb(0x199)]))return _0x133d20[_0x4583cb(0x199)];console[_0x4583cb(0x141)](_0x4583cb(0xfc)+_0x329c5d+_0x4583cb(0x16b));}catch(_0x52d266){console['error'](_0x4583cb(0x124),_0x52d266);}return _0x38a603;}function updateRankedStats(_0x512905,_0x4c1472){const _0x46091d=a0_0x59bc,_0x1b0e9a=_0x4c1472+_0x46091d(0x15c),_0x3d9a55=localStorage[_0x46091d(0x169)](_0x1b0e9a),_0x14a190={'points':0x0,'winStreak':0x0,'lossStreak':0x0,'placements':0x0,'rankProtection':0x0};let _0x288224;if(_0x3d9a55)try{const _0x5e658c=JSON[_0x46091d(0x172)](_0x3d9a55);_0x288224=_0x5e658c[_0x46091d(0x199)]&&_0x5e658c['checksum']===generateChecksum(_0x5e658c[_0x46091d(0x199)])?_0x5e658c['data']:{..._0x14a190};}catch(_0x23d236){_0x288224={..._0x14a190};}else _0x288224={..._0x14a190};const _0x191b37=localStorage['getItem'](_0x46091d(0x178))===_0x46091d(0x198);if(!_0x191b37)return _0x288224;if(_0x512905){const _0x16e7d2=sessionState[_0x46091d(0xf6)][_0x46091d(0x160)];if(_0x288224[_0x46091d(0x105)]<0x5){let _0xbfa345=_0x16e7d2<=0x2?0xc8:_0x16e7d2===0x3?0x82:_0x16e7d2===0x4?0x50:0x28;_0x288224[_0x46091d(0x162)]+=_0xbfa345;}else{_0x288224[_0x46091d(0x187)]++,_0x288224[_0x46091d(0x14a)]=0x0;const _0x3a31ae=Math[_0x46091d(0x13c)](_0x288224['points']/0xc8),_0x3e0e7a=0x14+(_0x16e7d2<=0x2?0xf:0x0)+Math[_0x46091d(0x19a)](_0x288224[_0x46091d(0x187)]*0x5,0x1e);_0x288224[_0x46091d(0x162)]+=_0x3e0e7a;if(Math[_0x46091d(0x13c)](_0x288224[_0x46091d(0x162)]/0xc8)>_0x3a31ae)_0x288224['rankProtection']=0x2;}}else{_0x288224[_0x46091d(0x187)]=0x0,_0x288224[_0x46091d(0x14a)]++;if(_0x288224[_0x46091d(0x105)]>=0x5){if(_0x288224[_0x46091d(0x15b)]>0x0)_0x288224[_0x46091d(0x15b)]--;else{let _0x3ef9d4=0x0;if(_0x288224[_0x46091d(0x162)]>=0x320)_0x3ef9d4=0xf+Math[_0x46091d(0x19a)]((_0x288224['lossStreak']-0x1)*0x5,0x5);else{if(_0x288224[_0x46091d(0x162)]>=0x190)_0x3ef9d4=0x5+Math['min']((_0x288224[_0x46091d(0x14a)]-0x1)*0x5,0x5);}_0x288224[_0x46091d(0x162)]=Math[_0x46091d(0x129)](0x0,_0x288224[_0x46091d(0x162)]-_0x3ef9d4);}}}if(_0x288224[_0x46091d(0x105)]<0x5)_0x288224[_0x46091d(0x105)]++;return localStorage[_0x46091d(0x144)](_0x1b0e9a,JSON[_0x46091d(0x11d)]({'data':_0x288224,'checksum':generateChecksum(_0x288224)})),_0x288224;}const SAVE_EXPORT_KEYS=[a0_0x29e9ea(0x145),a0_0x29e9ea(0x197),'tracendle_lb_migrated',a0_0x29e9ea(0x12b),a0_0x29e9ea(0xf7),'course_ranked_stats',a0_0x29e9ea(0x13f),a0_0x29e9ea(0x177),a0_0x29e9ea(0x115),a0_0x29e9ea(0x127),a0_0x29e9ea(0x137),a0_0x29e9ea(0x178)],TRANSFER_CODE_TTL_SECONDS=0xf*0x3c;function _buildSavePayload(){const _0x3771c9=a0_0x29e9ea,_0x25adcf={'version':CURRENT_VERSION,'exportedAt':new Date()[_0x3771c9(0x181)](),'data':{}};for(const _0x1af6a8 of SAVE_EXPORT_KEYS){const _0x3ca7a6=localStorage[_0x3771c9(0x169)](_0x1af6a8);if(_0x3ca7a6!==null)_0x25adcf[_0x3771c9(0x199)][_0x1af6a8]=_0x3ca7a6;}return _0x25adcf;}function _applySavePayload(_0x2ddf5e){const _0x5a7df3=a0_0x29e9ea;for(const [_0xf45fde,_0x5406f7]of Object[_0x5a7df3(0x174)](_0x2ddf5e[_0x5a7df3(0x199)])){SAVE_EXPORT_KEYS[_0x5a7df3(0x10f)](_0xf45fde)&&localStorage[_0x5a7df3(0x144)](_0xf45fde,_0x5406f7);}}function a0_0x59bc(_0x2031ea,_0x58cb49){_0x2031ea=_0x2031ea-0xee;const _0x494615=a0_0x4946();let _0x59bc9e=_0x494615[_0x2031ea];return _0x59bc9e;}function _generateCode(){const _0x361bae=a0_0x29e9ea,_0x3989f9=_0x361bae(0x12a);let _0x19cf55='';for(let _0x3daac8=0x0;_0x3daac8<0x8;_0x3daac8++){if(_0x3daac8===0x4)_0x19cf55+='-';_0x19cf55+=_0x3989f9[Math[_0x361bae(0x13c)](Math[_0x361bae(0x135)]()*_0x3989f9['length'])];}return _0x19cf55;}async function _storeCodeInSupabase(_0x19b120,_0x28b7a0){const _0x38b0f4=a0_0x29e9ea,_0x811c3f=new Date(Date[_0x38b0f4(0x159)]()+TRANSFER_CODE_TTL_SECONDS*0x3e8)[_0x38b0f4(0x181)](),{error:_0x23139d}=await supabaseClient[_0x38b0f4(0x16a)](_0x38b0f4(0x180))[_0x38b0f4(0x133)]({'code':_0x19b120,'payload':_0x28b7a0,'expires_at':_0x811c3f});if(_0x23139d)throw new Error(_0x23139d[_0x38b0f4(0x152)]);}async function _fetchCodeFromSupabase(_0x2f7c07){const _0x55e7f9=a0_0x29e9ea,{data:_0x231231,error:_0x3c33ae}=await supabaseClient[_0x55e7f9(0x16a)](_0x55e7f9(0x180))['select'](_0x55e7f9(0x123))['eq'](_0x55e7f9(0x12f),_0x2f7c07)[_0x55e7f9(0x118)]();if(_0x3c33ae)throw new Error(_0x3c33ae[_0x55e7f9(0x152)]);if(!_0x231231)throw new Error(_0x55e7f9(0x12d));if(new Date(_0x231231['expires_at'])<new Date())throw new Error(_0x55e7f9(0x106));return _0x231231[_0x55e7f9(0x150)];}async function _deleteCodeFromSupabase(_0x9579cc){const _0x13c069=a0_0x29e9ea;await supabaseClient[_0x13c069(0x16a)](_0x13c069(0x180))[_0x13c069(0xf2)]()['eq'](_0x13c069(0x12f),_0x9579cc);}function showSaveTransferToast(_0x55a7f4,_0x2711c0=0xbb8){const _0x32502c=a0_0x29e9ea;let _0x112d42=document['getElementById'](_0x32502c(0x19b));!_0x112d42&&(_0x112d42=document[_0x32502c(0xfb)](_0x32502c(0xfa)),_0x112d42['id']=_0x32502c(0x19b),_0x112d42[_0x32502c(0x185)][_0x32502c(0x138)]=[_0x32502c(0xf8),_0x32502c(0x119),_0x32502c(0x101),'transform:translateX(-50%)',_0x32502c(0x114),'color:#f8fafc','padding:10px\x2020px',_0x32502c(0x17b),_0x32502c(0x14d),_0x32502c(0x179),'box-shadow:0\x204px\x2020px\x20rgba(0,0,0,.35)',_0x32502c(0x196),'transition:opacity\x20.3s','white-space:nowrap',_0x32502c(0x134)][_0x32502c(0x11e)](';'),document['body'][_0x32502c(0x151)](_0x112d42)),_0x112d42[_0x32502c(0x192)]=_0x55a7f4,_0x112d42[_0x32502c(0x185)][_0x32502c(0x154)]='1',clearTimeout(_0x112d42['_timer']),_0x112d42[_0x32502c(0x170)]=setTimeout(()=>{const _0xf821db=_0x32502c;_0x112d42['style'][_0xf821db(0x154)]='0';},_0x2711c0);}async function generateTransferCode(){const _0x3f7724=a0_0x29e9ea,_0x2e7047=document[_0x3f7724(0x10d)](_0x3f7724(0x146)),_0x6fd490=document[_0x3f7724(0x10d)](_0x3f7724(0x18b)),_0x304cc0=document['getElementById'](_0x3f7724(0x18f)),_0x4fbd7a=document[_0x3f7724(0x10d)](_0x3f7724(0xfe)),_0x52276b=document[_0x3f7724(0x10d)](_0x3f7724(0x193));_0x2e7047&&(_0x2e7047[_0x3f7724(0xf3)]=!![],_0x2e7047[_0x3f7724(0x192)]=_0x3f7724(0x107));try{const _0x399943=_buildSavePayload(),_0x483910=_generateCode();await _storeCodeInSupabase(_0x483910,_0x399943);if(_0x304cc0)_0x304cc0[_0x3f7724(0x192)]=_0x483910;if(_0x6fd490)_0x6fd490[_0x3f7724(0x185)][_0x3f7724(0x109)]=_0x3f7724(0x16f);if(_0x2e7047)_0x2e7047[_0x3f7724(0x185)][_0x3f7724(0x109)]=_0x3f7724(0x12c);_0x52276b&&(_0x52276b[_0x3f7724(0x185)][_0x3f7724(0x109)]=_0x3f7724(0x14f),_0x52276b[_0x3f7724(0xf3)]=![]);let _0x5a6a60=TRANSFER_CODE_TTL_SECONDS;if(_0x4fbd7a){const _0x133652=()=>{const _0x3e4bb0=_0x3f7724,_0x45d0b7=String(Math[_0x3e4bb0(0x13c)](_0x5a6a60/0x3c))[_0x3e4bb0(0xef)](0x2,'0'),_0x2f0094=String(_0x5a6a60%0x3c)[_0x3e4bb0(0xef)](0x2,'0');_0x4fbd7a[_0x3e4bb0(0x192)]=_0x3e4bb0(0x17d)+_0x45d0b7+':'+_0x2f0094;if(_0x5a6a60<=0x0){_0x4fbd7a['textContent']=_0x3e4bb0(0x183);if(_0x304cc0)_0x304cc0[_0x3e4bb0(0x185)]['opacity']=_0x3e4bb0(0x14c);if(_0x52276b)_0x52276b[_0x3e4bb0(0xf3)]=!![];return;}_0x5a6a60--,setTimeout(_0x133652,0x3e8);};_0x133652();}}catch(_0x5d35d8){console['error'](_0x3f7724(0x10e),_0x5d35d8),showSaveTransferToast(_0x3f7724(0x17a)),_0x2e7047&&(_0x2e7047[_0x3f7724(0xf3)]=![],_0x2e7047['textContent']=_0x3f7724(0x11a));}}function copyTransferCode(){const _0x1469b2=a0_0x29e9ea,_0x5b4f84=document[_0x1469b2(0x10d)](_0x1469b2(0x18f));if(!_0x5b4f84)return;const _0x24d30d=_0x5b4f84[_0x1469b2(0x192)]['trim']();navigator[_0x1469b2(0x122)]['writeText'](_0x24d30d)[_0x1469b2(0x130)](()=>{showSaveTransferToast('📋\x20Code\x20copied!');})[_0x1469b2(0x112)](()=>{const _0x542494=_0x1469b2,_0x4e37cf=document[_0x542494(0xee)]();_0x4e37cf[_0x542494(0x100)](_0x5b4f84),window[_0x542494(0x176)]()[_0x542494(0xfd)](),window[_0x542494(0x176)]()[_0x542494(0x10a)](_0x4e37cf);});}async function redeemTransferCode(){const _0x3c048f=a0_0x29e9ea,_0x239344=document[_0x3c048f(0x10d)](_0x3c048f(0x167)),_0x40741d=document[_0x3c048f(0x10d)](_0x3c048f(0x173)),_0x4a14f0=document['getElementById'](_0x3c048f(0x195));if(!_0x239344)return;const _0x3ddab1=_0x239344[_0x3c048f(0x15e)][_0x3c048f(0x108)](/[\s-]/g,'')[_0x3c048f(0x136)](),_0x2f16ef=_0x3ddab1[_0x3c048f(0x160)]>=0x4?_0x3ddab1['slice'](0x0,0x4)+'-'+_0x3ddab1[_0x3c048f(0x104)](0x4):_0x3ddab1;if(_0x3ddab1[_0x3c048f(0x160)]!==0x8){_0x4a14f0&&(_0x4a14f0[_0x3c048f(0x192)]=_0x3c048f(0x128),_0x4a14f0[_0x3c048f(0x185)][_0x3c048f(0x109)]=_0x3c048f(0x16f));return;}_0x40741d&&(_0x40741d[_0x3c048f(0xf3)]=!![],_0x40741d[_0x3c048f(0x192)]=_0x3c048f(0x13e));if(_0x4a14f0)_0x4a14f0[_0x3c048f(0x185)][_0x3c048f(0x109)]=_0x3c048f(0x12c);try{const _0x11c5b4=await _fetchCodeFromSupabase(_0x2f16ef);if(!_0x11c5b4||typeof _0x11c5b4[_0x3c048f(0x199)]!==_0x3c048f(0x110))throw new Error(_0x3c048f(0x16c));const _0x19c878=confirm(_0x3c048f(0x184)+_0x3c048f(0x15a));if(!_0x19c878){_0x40741d&&(_0x40741d[_0x3c048f(0xf3)]=![],_0x40741d[_0x3c048f(0x192)]=_0x3c048f(0x12e));return;}_applySavePayload(_0x11c5b4),await _deleteCodeFromSupabase(_0x2f16ef)[_0x3c048f(0x112)](()=>{}),closeSaveTransferModal(),showSaveTransferToast('✅\x20Save\x20imported!\x20Reloading…',0x7d0),setTimeout(()=>location[_0x3c048f(0x191)](),0x7d0);}catch(_0x4024dd){console[_0x3c048f(0xf5)]('Redeem\x20code\x20failed:',_0x4024dd);const _0x5254db=_0x4024dd['message'][_0x3c048f(0x10f)](_0x3c048f(0x102))||_0x4024dd[_0x3c048f(0x152)][_0x3c048f(0x10f)]('0\x20rows')?_0x3c048f(0x155):_0x4024dd['message'][_0x3c048f(0x10f)](_0x3c048f(0x120))?_0x3c048f(0x16e):_0x3c048f(0xf9);_0x4a14f0&&(_0x4a14f0[_0x3c048f(0x192)]='❌\x20'+_0x5254db,_0x4a14f0[_0x3c048f(0x185)]['display']='block'),_0x40741d&&(_0x40741d[_0x3c048f(0xf3)]=![],_0x40741d[_0x3c048f(0x192)]=_0x3c048f(0x12e));}}function openSaveTransferModal(){const _0x197437=a0_0x29e9ea;closeOverflowMenu();const _0x2e2a05=document[_0x197437(0x10d)](_0x197437(0x17e));if(_0x2e2a05)_0x2e2a05[_0x197437(0x18d)]();const _0x17f26b=document['createElement'](_0x197437(0xfa));_0x17f26b['id']=_0x197437(0x17e),_0x17f26b[_0x197437(0x185)][_0x197437(0x138)]=[_0x197437(0xf8),'inset:0',_0x197437(0x158),'display:flex','align-items:center',_0x197437(0x132),_0x197437(0x11c),_0x197437(0x156)]['join'](';'),_0x17f26b[_0x197437(0x149)]=_0x197437(0x17f),_0x17f26b[_0x197437(0x131)](_0x197437(0x14e),_0x741f19=>{const _0x3f9dca=_0x197437;if(_0x741f19[_0x3f9dca(0x140)]===_0x17f26b)closeSaveTransferModal();}),document['body']['appendChild'](_0x17f26b);}function closeSaveTransferModal(){const _0x13e4da=a0_0x29e9ea,_0x1feceb=document[_0x13e4da(0x10d)](_0x13e4da(0x17e));if(_0x1feceb)_0x1feceb[_0x13e4da(0x18d)]();}function _stSwitchTab(_0x359ab7){const _0x470aba=a0_0x29e9ea,_0x178f22=document[_0x470aba(0x10d)](_0x470aba(0x147)),_0x221784=document[_0x470aba(0x10d)]('st-panel-receive'),_0x3b1b0c=document['getElementById'](_0x470aba(0x143)),_0x4fe600=document[_0x470aba(0x10d)](_0x470aba(0x17c));if(!_0x178f22||!_0x221784)return;const _0x42bb6a=_0x359ab7==='send';_0x178f22[_0x470aba(0x185)][_0x470aba(0x109)]=_0x42bb6a?_0x470aba(0x16f):_0x470aba(0x12c),_0x221784[_0x470aba(0x185)][_0x470aba(0x109)]=_0x42bb6a?_0x470aba(0x12c):_0x470aba(0x16f),_0x3b1b0c['classList'][_0x470aba(0xf1)](_0x470aba(0x125),_0x42bb6a),_0x4fe600[_0x470aba(0x11b)][_0x470aba(0xf1)](_0x470aba(0x125),!_0x42bb6a);}function _stFormatCodeInput(_0x18c68b){const _0x35922b=a0_0x29e9ea;let _0xc28eee=_0x18c68b[_0x35922b(0x15e)][_0x35922b(0x108)](/[\s-]/g,'')[_0x35922b(0x136)]()['slice'](0x0,0x8);if(_0xc28eee[_0x35922b(0x160)]>0x4)_0xc28eee=_0xc28eee[_0x35922b(0x104)](0x0,0x4)+'-'+_0xc28eee[_0x35922b(0x104)](0x4);_0x18c68b[_0x35922b(0x15e)]=_0xc28eee;}
+// ============================================================
+//  storage.js — Persistence, checksums, ranked stats, migration
+// ============================================================
+
+// --------------- User identity ---------------
+function getOrCreateUserId() {
+  let userId = localStorage.getItem('tracendle_user_id');
+  if (!userId) {
+    userId = 'user_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+    localStorage.setItem('tracendle_user_id', userId);
+  }
+  return userId;
+}
+
+function getShortUserSuffix(userId) {
+  if (!userId) userId = localStorage.getItem('tracendle_user_id');
+  if (!userId) userId = getOrCreateUserId();
+  let hash = 0;
+  for (let i = 0; i < userId.length; i++) {
+    hash = ((hash << 5) - hash) + userId.charCodeAt(i);
+    hash |= 0;
+  }
+  return String(Math.abs(hash) % 10000).padStart(4, '0');
+}
+
+function formatUsernameWithSuffix(username, userId) {
+  const name = (username || 'Anonymous').trim() || 'Anonymous';
+  const suffix = getShortUserSuffix(userId);
+  return `${name}<span class="username-suffix">#${suffix}</span>`;
+}
+
+function formatUsernameWithSuffixText(username, userId) {
+  const name = (username || 'Anonymous').trim() || 'Anonymous';
+  return `${name}#${getShortUserSuffix(userId)}`;
+}
+
+// --------------- Checksum (anti-tamper) ---------------
+function generateChecksum(obj) {
+  const salt = "Satono Diamond";
+  const str = JSON.stringify(obj) + salt;
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash |= 0;
+  }
+  return hash.toString(16);
+}
+
+// --------------- Heardle ? Voicedle migration ---------------
+function migrateHeardleToVoicedle() {
+  const legacy = allPersistentData.heardle || allPersistentData.VOICEDLE;
+  if (legacy && !allPersistentData.voicedle) {
+    allPersistentData.voicedle = legacy;
+  }
+  if (allPersistentData.heardle || allPersistentData.VOICEDLE) {
+    delete allPersistentData.heardle;
+    delete allPersistentData.VOICEDLE;
+    savePersistentData();
+  }
+  const oldVol = localStorage.getItem('heardle_volume');
+  if (oldVol !== null && localStorage.getItem('voicedle_volume') === null) {
+    localStorage.setItem('voicedle_volume', oldVol);
+    localStorage.removeItem('heardle_volume');
+  }
+}
+
+// --------------- Save / load allPersistentData ---------------
+function savePersistentData() {
+  const wrapper = {
+    data: allPersistentData,
+    checksum: generateChecksum(allPersistentData)
+  };
+  localStorage.setItem('uma_wordle_v2_stats', JSON.stringify(wrapper));
+}
+
+function loadPersistentData() {
+  const saved = localStorage.getItem('uma_wordle_v2_stats');
+  if (saved) {
+    try {
+      const parsed = JSON.parse(saved);
+      if (parsed.data && parsed.checksum) {
+        const actualChecksum = generateChecksum(parsed.data);
+        if (actualChecksum === parsed.checksum) {
+          allPersistentData = parsed.data;
+        } else {
+          console.warn("Stats tampering detected. Resetting to default. Three Goddesses will curse you.");
+        }
+      } else {
+        allPersistentData = parsed;
+        savePersistentData();
+      }
+    } catch (e) {
+      console.error("Failed to parse persistent data:", e);
+    }
+  }
+
+  migrateHeardleToVoicedle();
+
+  if (!allPersistentData.voicedle) {
+    allPersistentData.voicedle = {
+      dailyStreak: 0, easyStreak: 0, unlimitedStreak: 0, hardStreak: 0,
+      lastPlayedDate: null,
+      dailyGuesses: [], dailyStatus: 'playing',
+      rankedGuesses: [], rankedStatus: 'playing', rankedTargetName: null,
+      unlimitedSession: null, hardSession: null, easySession: null, lbSubmittedKey: null
+    };
+    savePersistentData();
+  }
+
+  ['uma', 'course', 'voicedle'].forEach(type => {
+    if (allPersistentData[type] && allPersistentData[type].easySession === undefined) {
+      allPersistentData[type].easySession = null;
+    }
+  });
+
+  maybeScheduleLegacyLeaderboardMigration();
+}
+
+// --------------- Legacy streak migration ---------------
+let _legacyLbMigrationPromise = null;
+
+function isUsernamePendingForMigration() {
+  const nickname = localStorage.getItem('tracendle_nickname');
+  return !nickname || nickname.trim() === '' || nickname.startsWith('Anonymous');
+}
+
+function getLegacyMigrationStreaks(pData) {
+  const normalCurrent = Math.max(
+    pData.dailyStreak || 0,
+    pData.easyStreak || 0,
+    pData.unlimitedStreak || 0
+  );
+  const normalBest = Math.max(
+    pData.bestDailyStreak || 0,
+    pData.bestEasyStreak || 0,
+    pData.bestUnlimitedStreak || 0,
+    normalCurrent
+  );
+  const hardCurrent = pData.hardStreak || 0;
+  const hardBest = Math.max(pData.bestHardStreak || 0, hardCurrent);
+  return [
+    { category: 'normal', value: normalBest },
+    { category: 'hard',   value: hardBest }
+  ];
+}
+
+async function migrateLegacyStreakEntry(userId, username, gameType, category, value) {
+  const { error } = await supabaseClient.rpc('record_game_result', {
+    p_user_id:      userId,
+    p_username:     username,
+    p_game_type:    gameType,
+    p_category:     category,
+    p_streak_value: value
+  });
+
+  if (!error) {
+    await fixWindowStartForUser(userId, username, gameType, category, value);
+    return true;
+  }
+
+  console.warn(`Migration RPC failed for ${gameType}/${category}, using fallback:`, error.message);
+  return fallbackLeaderboardSync(userId, username, gameType, category, value);
+}
+
+function scheduleLegacyLeaderboardMigration() {
+  if (localStorage.getItem('tracendle_lb_migrated')) return _legacyLbMigrationPromise;
+  if (_legacyLbMigrationPromise) return _legacyLbMigrationPromise;
+
+  _legacyLbMigrationPromise = migrateLegacyStreaks()
+    .then(() => {
+      localStorage.setItem('tracendle_lb_migrated', '1');
+      console.log('Tracendle: legacy streak migration complete.');
+    })
+    .catch(err => {
+      console.warn('Migration failed, will retry next load:', err);
+    })
+    .finally(() => {
+      _legacyLbMigrationPromise = null;
+    });
+
+  return _legacyLbMigrationPromise;
+}
+
+function maybeScheduleLegacyLeaderboardMigration() {
+  if (localStorage.getItem('tracendle_lb_migrated')) return;
+  if (isUsernamePendingForMigration()) return;
+  scheduleLegacyLeaderboardMigration();
+}
+
+async function migrateLegacyStreaks() {
+  const userId   = getOrCreateUserId();
+  const username = localStorage.getItem('tracendle_nickname') || 'Anonymous';
+  let anyFailed = false;
+
+  for (const gameType of ['uma', 'course', 'voicedle']) {
+    const pData = allPersistentData[gameType];
+    if (!pData) continue;
+
+    for (const { category, value } of getLegacyMigrationStreaks(pData)) {
+      if (value <= 0) continue;
+      try {
+        const ok = await migrateLegacyStreakEntry(userId, username, gameType, category, value);
+        if (!ok) anyFailed = true;
+      } catch (err) {
+        console.error(`Migration failed for ${gameType}/${category}:`, err);
+        anyFailed = true;
+      }
+    }
+  }
+
+  if (anyFailed) throw new Error('One or more migration entries failed');
+}
+
+// --------------- Ranked stats ---------------
+function getTier(points) {
+  if (points >= 1500) return "SS";
+  const gradeIndex = Math.floor(points / POINTS_PER_TIER);
+  const baseGrade  = GRADES[gradeIndex] || "G";
+  const suffix     = (points % POINTS_PER_TIER) >= DIV_THRESHOLD ? "+" : "";
+  return `${baseGrade}${suffix}`;
+}
+
+function getVerifiedRankedStats(mode) {
+  const storageKey = `${mode}_ranked_stats`;
+  const saved = localStorage.getItem(storageKey);
+  const blank = { points: 0, winStreak: 0, lossStreak: 0, placements: 0, rankProtection: 0 };
+
+  if (!saved) return blank;
+  try {
+    const parsed = JSON.parse(saved);
+    if (parsed.data && parsed.checksum === generateChecksum(parsed.data)) return parsed.data;
+    console.warn(`Tampering detected in ${mode} ranked stats! Goldship is watching you...`);
+  } catch (e) {
+    console.error("Failed to parse ranked stats", e);
+  }
+  return blank;
+}
+
+function updateRankedStats(isWin, mode) {
+  const storageKey = `${mode}_ranked_stats`;
+  const saved = localStorage.getItem(storageKey);
+  const blank = { points: 0, winStreak: 0, lossStreak: 0, placements: 0, rankProtection: 0 };
+  let stats;
+
+  if (saved) {
+    try {
+      const parsed = JSON.parse(saved);
+      stats = (parsed.data && parsed.checksum === generateChecksum(parsed.data)) ? parsed.data : { ...blank };
+    } catch (e) {
+      stats = { ...blank };
+    }
+  } else {
+    stats = { ...blank };
+  }
+
+  const isRanked = localStorage.getItem('is_ranked_session') === 'true';
+  if (!isRanked) return stats;
+
+  if (isWin) {
+    const guessCount = sessionState.guesses.length;
+
+    if (stats.placements < 5) {
+      let placementGain = guessCount <= 2 ? 200 : guessCount === 3 ? 130 : guessCount === 4 ? 80 : 40;
+      stats.points += placementGain;
+    } else {
+      stats.winStreak++;
+      stats.lossStreak = 0;
+      const oldTierIndex = Math.floor(stats.points / 200);
+      const gain = 20 + (guessCount <= 2 ? 15 : 0) + Math.min(stats.winStreak * 5, 30);
+      stats.points += gain;
+      if (Math.floor(stats.points / 200) > oldTierIndex) stats.rankProtection = 2;
+    }
+  } else {
+    stats.winStreak = 0;
+    stats.lossStreak++;
+
+    if (stats.placements >= 5) {
+      if (stats.rankProtection > 0) {
+        stats.rankProtection--;
+      } else {
+        let lossPenalty = 0;
+        if (stats.points >= 800)      lossPenalty = 15 + Math.min((stats.lossStreak - 1) * 5, 5);
+        else if (stats.points >= 400) lossPenalty = 5  + Math.min((stats.lossStreak - 1) * 5, 5);
+        stats.points = Math.max(0, stats.points - lossPenalty);
+      }
+    }
+  }
+
+  if (stats.placements < 5) stats.placements++;
+
+  localStorage.setItem(storageKey, JSON.stringify({
+    data: stats,
+    checksum: generateChecksum(stats)
+  }));
+
+  return stats;
+}
+
+// ============================================================
+//  Save Transfer  (cross-device via transfer code)
+// ============================================================
+
+const SAVE_EXPORT_KEYS = [
+  'tracendle_user_id',
+  'tracendle_nickname',
+  'tracendle_lb_migrated',
+  'uma_wordle_v2_stats',
+  'uma_ranked_stats',
+  'course_ranked_stats',
+  'voicedle_ranked_stats',
+  'theme',
+  'tracendle_wallpaper_type',
+  'tracendle_wallpaper_data',
+  'voicedle_volume',
+  'is_ranked_session'
+];
+
+// Code lifetime: 15 minutes (in seconds)
+const TRANSFER_CODE_TTL_SECONDS = 15 * 60;
+
+// --------------- Helpers ---------------
+
+function _buildSavePayload() {
+  const payload = { version: CURRENT_VERSION, exportedAt: new Date().toISOString(), data: {} };
+  for (const key of SAVE_EXPORT_KEYS) {
+    const val = localStorage.getItem(key);
+    if (val !== null) payload.data[key] = val;
+  }
+  return payload;
+}
+
+function _applySavePayload(payload) {
+  for (const [key, val] of Object.entries(payload.data)) {
+    if (SAVE_EXPORT_KEYS.includes(key)) {
+      localStorage.setItem(key, val);
+    }
+  }
+}
+
+/** Generate a human-friendly 8-char uppercase code, e.g. "XKCD-7J2M" */
+function _generateCode() {
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // no I/O/0/1 to avoid confusion
+  let code = '';
+  for (let i = 0; i < 8; i++) {
+    if (i === 4) code += '-';
+    code += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return code;
+}
+
+// --------------- Supabase helpers ---------------
+// We reuse the existing supabaseClient from config.js.
+// Table needed (run once in Supabase SQL editor):
+//
+//   create table if not exists save_transfers (
+//     code        text primary key,
+//     payload     jsonb not null,
+//     expires_at  timestamptz not null
+//   );
+//   -- Auto-delete expired rows (optional but tidy):
+//   create index if not exists save_transfers_expires_idx on save_transfers (expires_at);
+//
+// Row-Level Security: allow anonymous insert + select by code (no user check needed,
+// data is ephemeral and code acts as the secret).
+
+async function _storeCodeInSupabase(code, payload) {
+  const expiresAt = new Date(Date.now() + TRANSFER_CODE_TTL_SECONDS * 1000).toISOString();
+  const { error } = await supabaseClient
+    .from('save_transfers')
+    .insert({ code, payload, expires_at: expiresAt });
+  if (error) throw new Error(error.message);
+}
+
+async function _fetchCodeFromSupabase(code) {
+  const { data, error } = await supabaseClient
+    .from('save_transfers')
+    .select('payload, expires_at')
+    .eq('code', code)
+    .single();
+  if (error) throw new Error(error.message);
+  if (!data) throw new Error('Code not found.');
+  if (new Date(data.expires_at) < new Date()) throw new Error('Code has expired.');
+  return data.payload;
+}
+
+async function _deleteCodeFromSupabase(code) {
+  await supabaseClient.from('save_transfers').delete().eq('code', code);
+}
+
+// --------------- Toast ---------------
+function showSaveTransferToast(msg, duration = 3000) {
+  let toast = document.getElementById('save-transfer-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'save-transfer-toast';
+    toast.style.cssText = [
+      'position:fixed', 'bottom:24px', 'left:50%', 'transform:translateX(-50%)',
+      'background:var(--toast-bg,#1e293b)', 'color:#f8fafc', 'padding:10px 20px',
+      'border-radius:999px', 'font-size:14px', 'font-weight:600',
+      'box-shadow:0 4px 20px rgba(0,0,0,.35)', 'z-index:99999',
+      'transition:opacity .3s', 'white-space:nowrap', 'pointer-events:none'
+    ].join(';');
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.style.opacity = '1';
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => { toast.style.opacity = '0'; }, duration);
+}
+
+// --------------- Generate transfer code (sender side) ---------------
+async function generateTransferCode() {
+  const btn = document.getElementById('st-generate-btn');
+  const codeBox = document.getElementById('st-code-box');
+  const codeDisplay = document.getElementById('st-code-display');
+  const countdown = document.getElementById('st-countdown');
+  const copyBtn = document.getElementById('st-copy-btn');
+
+  if (btn) { btn.disabled = true; btn.textContent = 'Generating…'; }
+
+  try {
+    const payload = _buildSavePayload();
+    const code = _generateCode();
+    await _storeCodeInSupabase(code, payload);
+
+    // Show code
+    if (codeDisplay) codeDisplay.textContent = code;
+    if (codeBox) codeBox.style.display = 'block';
+    if (btn) btn.style.display = 'none';
+    if (copyBtn) { copyBtn.style.display = 'inline-flex'; copyBtn.disabled = false; }
+
+    // Countdown timer
+    let remaining = TRANSFER_CODE_TTL_SECONDS;
+    if (countdown) {
+      const tick = () => {
+        const m = String(Math.floor(remaining / 60)).padStart(2, '0');
+        const s = String(remaining % 60).padStart(2, '0');
+        countdown.textContent = `Expires in ${m}:${s}`;
+        if (remaining <= 0) {
+          countdown.textContent = '⚠️ Code expired. Generate a new one.';
+          if (codeDisplay) codeDisplay.style.opacity = '0.4';
+          if (copyBtn) copyBtn.disabled = true;
+          return;
+        }
+        remaining--;
+        setTimeout(tick, 1000);
+      };
+      tick();
+    }
+
+  } catch (err) {
+    console.error('Generate code failed:', err);
+    showSaveTransferToast('❌ Failed to generate code. Check your connection.');
+    if (btn) { btn.disabled = false; btn.textContent = '🎲 Generate Transfer Code'; }
+  }
+}
+
+function copyTransferCode() {
+  const codeDisplay = document.getElementById('st-code-display');
+  if (!codeDisplay) return;
+  const code = codeDisplay.textContent.trim();
+  navigator.clipboard.writeText(code).then(() => {
+    showSaveTransferToast('📋 Code copied!');
+  }).catch(() => {
+    // fallback: select the text
+    const range = document.createRange();
+    range.selectNode(codeDisplay);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+  });
+}
+
+// --------------- Redeem transfer code (receiver side) ---------------
+async function redeemTransferCode() {
+  const input = document.getElementById('st-code-input');
+  const btn   = document.getElementById('st-redeem-btn');
+  const errEl = document.getElementById('st-import-error');
+
+  if (!input) return;
+  // Normalise: strip spaces/dashes, uppercase, then re-insert dash
+  const raw  = input.value.replace(/[\s-]/g, '').toUpperCase();
+  const code = raw.length >= 4 ? raw.slice(0, 4) + '-' + raw.slice(4) : raw;
+
+  if (raw.length !== 8) {
+    if (errEl) { errEl.textContent = 'Please enter the full 8-character code.'; errEl.style.display = 'block'; }
+    return;
+  }
+
+  if (btn) { btn.disabled = true; btn.textContent = 'Importing…'; }
+  if (errEl) errEl.style.display = 'none';
+
+  try {
+    const payload = await _fetchCodeFromSupabase(code);
+
+    if (!payload || typeof payload.data !== 'object') {
+      throw new Error('Save data in this code is invalid.');
+    }
+
+    const confirmed = confirm(
+      '⚠️ Import Save?\n\nThis will REPLACE your current save on this device.\n' +
+      'Your streaks, progress, and settings will be overwritten.\n\nContinue?'
+    );
+    if (!confirmed) {
+      if (btn) { btn.disabled = false; btn.textContent = '✅ Import Save'; }
+      return;
+    }
+
+    _applySavePayload(payload);
+
+    // Delete code after one-time use
+    await _deleteCodeFromSupabase(code).catch(() => {});
+
+    closeSaveTransferModal();
+    showSaveTransferToast('✅ Save imported! Reloading…', 2000);
+    setTimeout(() => location.reload(), 2000);
+
+  } catch (err) {
+    console.error('Redeem code failed:', err);
+    const msg = err.message.includes('not found') || err.message.includes('0 rows')
+      ? 'Invalid code. Double-check and try again.'
+      : err.message.includes('expired')
+      ? 'This code has expired. Ask for a new one.'
+      : 'Something went wrong. Please try again.';
+    if (errEl) { errEl.textContent = '❌ ' + msg; errEl.style.display = 'block'; }
+    if (btn) { btn.disabled = false; btn.textContent = '✅ Import Save'; }
+  }
+}
+
+// --------------- Modal ---------------
+function openSaveTransferModal() {
+  closeOverflowMenu();
+
+  // Remove stale modal so state resets each open
+  const old = document.getElementById('save-transfer-modal');
+  if (old) old.remove();
+
+  const modal = document.createElement('div');
+  modal.id = 'save-transfer-modal';
+  modal.style.cssText = [
+    'position:fixed','inset:0','background:rgba(0,0,0,.65)',
+    'display:flex','align-items:center','justify-content:center',
+    'z-index:9999','padding:16px'
+  ].join(';');
+
+  modal.innerHTML = `
+    <div id="save-transfer-inner">
+
+      <!-- Header -->
+      <div class="st-header">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <span style="font-size:22px;">📲</span>
+          <h2 class="st-title">Save Transfer</h2>
+        </div>
+        <button onclick="closeSaveTransferModal()" class="st-close-btn">&times;</button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="st-tabs">
+        <button id="st-tab-send" onclick="_stSwitchTab('send')" class="st-tab st-tab--active">📤 Send Save</button>
+        <button id="st-tab-receive" onclick="_stSwitchTab('receive')" class="st-tab">📥 Receive Save</button>
+      </div>
+
+      <!-- SEND panel -->
+      <div id="st-panel-send" class="st-panel">
+        <p class="st-desc">
+          Generate a one-time code on <strong>this device</strong>, then enter it on your other device within <strong>15 minutes</strong>.
+        </p>
+
+        <button id="st-generate-btn" onclick="generateTransferCode()" class="st-btn-primary">
+          Generate Transfer Code
+        </button>
+
+        <!-- Code display (hidden until generated) -->
+        <div id="st-code-box" class="st-code-box">
+          <div class="st-code-label">Your Transfer Code</div>
+          <div class="st-code-pill">
+            <span id="st-code-display">----</span>
+            <button id="st-copy-btn" onclick="copyTransferCode()" class="st-copy-btn">📋 Copy</button>
+          </div>
+          <div id="st-countdown"></div>
+          <p class="st-code-note">Code is single-use and expires automatically.</p>
+        </div>
+      </div>
+
+      <!-- RECEIVE panel (hidden) -->
+      <div id="st-panel-receive" class="st-panel" style="display:none;">
+        <p class="st-desc">
+          Enter the code generated on your <strong>other device</strong>. This will replace the save on this device.
+        </p>
+
+        <input id="st-code-input"
+          class="st-code-input"
+          type="text"
+          maxlength="9"
+          placeholder="XXXX-XXXX"
+          oninput="_stFormatCodeInput(this)"
+          onkeydown="if(event.key==='Enter') redeemTransferCode()"
+        />
+
+        <button id="st-redeem-btn" onclick="redeemTransferCode()" class="st-btn-secondary">
+          ✅ Import Save
+        </button>
+
+        <div id="st-import-error" class="st-error"></div>
+
+        <p class="st-warn">⚠️ Importing will overwrite your current save on this device.</p>
+      </div>
+
+    </div>
+  `;
+
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeSaveTransferModal(); });
+  document.body.appendChild(modal);
+}
+
+function closeSaveTransferModal() {
+  const modal = document.getElementById('save-transfer-modal');
+  if (modal) modal.remove();
+}
+
+function _stSwitchTab(tab) {
+  const sendPanel    = document.getElementById('st-panel-send');
+  const receivePanel = document.getElementById('st-panel-receive');
+  const sendTab      = document.getElementById('st-tab-send');
+  const receiveTab   = document.getElementById('st-tab-receive');
+  if (!sendPanel || !receivePanel) return;
+
+  const isSend = tab === 'send';
+  sendPanel.style.display    = isSend ? 'block' : 'none';
+  receivePanel.style.display = isSend ? 'none'  : 'block';
+
+  sendTab.classList.toggle('st-tab--active', isSend);
+  receiveTab.classList.toggle('st-tab--active', !isSend);
+}
+
+/** Auto-insert dash after 4 chars in the input */
+function _stFormatCodeInput(el) {
+  let v = el.value.replace(/[\s-]/g, '').toUpperCase().slice(0, 8);
+  if (v.length > 4) v = v.slice(0, 4) + '-' + v.slice(4);
+  el.value = v;
+}

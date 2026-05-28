@@ -1,1 +1,441 @@
-const a0_0x5c0348=a0_0x2aa5;(function(_0x12cf92,_0x184da5){const _0x341aac=a0_0x2aa5,_0x137942=_0x12cf92();while(!![]){try{const _0x1894f7=-parseInt(_0x341aac(0xd2))/0x1+-parseInt(_0x341aac(0xe7))/0x2*(parseInt(_0x341aac(0x109))/0x3)+parseInt(_0x341aac(0xeb))/0x4+parseInt(_0x341aac(0xde))/0x5+-parseInt(_0x341aac(0x12c))/0x6*(-parseInt(_0x341aac(0x123))/0x7)+parseInt(_0x341aac(0x136))/0x8+-parseInt(_0x341aac(0xda))/0x9*(parseInt(_0x341aac(0xe3))/0xa);if(_0x1894f7===_0x184da5)break;else _0x137942['push'](_0x137942['shift']());}catch(_0x5f28ee){_0x137942['push'](_0x137942['shift']());}}}(a0_0x2ba3,0x39ad6));function a0_0x2ba3(){const _0x2a5153=['archive','lastPlayedDate','!\x0a\x0aThis\x20result\x20does\x20not\x20affect\x20your\x20official\x20stats.','LOST...','4057353wmKWds','won','getUTCDate','find','1280935snjtPf','sessionKey','silencesuzuka','Goal\x20In!','getUTCFullYear','10pxWwhT','bestDailyStreak','false','lbSubmittedKey','228026HarxUk','hardPlayed','max','Goal\x20In!\x20📅','1627016SkrYZj','Archive\x20Mode:\x20You\x20identified\x20','UTC','RETIRED...\x20📅','easyWins','hardSession','true','bestEasyStreak','dailyWins','name','T00:00:00Z','You\x20cannot\x20play\x20Today\x27s\x20puzzle\x20in\x20Archive\x20Mode.','value','ranked','dailyStreak','knownStats','includes','push','pendingStreakReset','sort','toString','hardWins','.\x20Try\x20again\x20tomorrow!','bestUnlimitedStreak','rankedStatus','Archive\x20Unavailable','archiveDate','Archive\x20Mode:\x20The\x20correct\x20answer\x20was\x20','getTime','some','3zsNZRQ','easy','classList','dailyPlayed','.\x0a\x0aThis\x20result\x20does\x20not\x20affect\x20your\x20official\x20stats.','forEach','isGameOver','Streak','map','bestHardStreak','\x20from\x20','The\x20correct\x20answer\x20was\x20','mode','setItem','maxGuesses','uma','hard','unlimitedPlayed','now','streakAtLoss','getElementById','charCodeAt','getUTCMonth','active','filter','hidden','609OZZMQj','is_ranked_session','keys','voicedle','unlimitedWins','floor','unlimitedSession','easyStreak','Retired...','12192DLDbVJ','rankedGuesses','target','archive:','unlimited','easyPlayed','targetName','uma-input','length','hardStreak','1957768WEDZMD','lost','unlimitedStreak','Yesterday\x27s\x20puzzle\x20is\x20not\x20yet\x20available\x20in\x20Archive\x20Mode.','playing','dailyStatus','add','clues','daily','guesses','_leaderboardSynced','data','setUTCDate','Excellent\x20work!\x20You\x27ve\x20identified\x20','substr','focus','rankedTargetName','dailyGuesses','283370BIbFPq','input-container','random','get'];a0_0x2ba3=function(){return _0x2a5153;};return a0_0x2ba3();}function a0_0x2aa5(_0x19937d,_0x5ad4d5){_0x19937d=_0x19937d-0xcd;const _0x2ba393=a0_0x2ba3();let _0x2aa5bb=_0x2ba393[_0x19937d];return _0x2aa5bb;}function getUTC8Time(){const _0x8e93a=a0_0x2aa5;return new Date(Date[_0x8e93a(0x11b)]()+0x1b77400);}function getDailyString(_0x251cbf=0x0){const _0x1a18ec=a0_0x2aa5,_0x1cd771=getUTC8Time();if(_0x251cbf!==0x0)_0x1cd771['setDate'](_0x1cd771['getDate']()+_0x251cbf);return _0x1cd771[_0x1a18ec(0xe2)]()+'-'+_0x1cd771['getUTCMonth']()+'-'+_0x1cd771[_0x1a18ec(0xdc)]();}function getTargetForDate(_0x57cd54,_0x5071a8,_0x57ea3b=a0_0x5c0348(0x118)){const _0x1abc50=a0_0x5c0348;if(!_0x5071a8||_0x5071a8[_0x1abc50(0x134)]===0x0)return null;let _0x79a39a=_0x5071a8[0x0],_0x4e0e93=-Infinity;for(const _0x376119 of _0x5071a8){const _0x146f7b=_0x57ea3b===_0x1abc50(0x118)?_0x57cd54+_0x376119['name']:_0x57cd54+'|'+_0x57ea3b+'|'+_0x376119[_0x1abc50(0xf4)];let _0x34103f=0x0;for(let _0x528714=0x0;_0x528714<_0x146f7b[_0x1abc50(0x134)];_0x528714++){_0x34103f=(_0x34103f<<0x5)-_0x34103f+_0x146f7b[_0x1abc50(0x11e)](_0x528714),_0x34103f|=0x0;}_0x34103f>_0x4e0e93&&(_0x4e0e93=_0x34103f,_0x79a39a=_0x376119);}return _0x79a39a;}function startArchiveGame(_0x1129cb){const _0xa072c5=a0_0x5c0348,_0x11c911=GAME_CONFIG[currentGameType],_0x2c3a28=_0x11c911['data'](),_0x3169b3=getUTC8Time(),_0x47d2db=new Date(Date[_0xa072c5(0xed)](_0x3169b3[_0xa072c5(0xe2)](),_0x3169b3[_0xa072c5(0x11f)](),_0x3169b3['getUTCDate']())),_0x1e9fcf=new Date(_0x47d2db);_0x1e9fcf[_0xa072c5(0x142)](_0x1e9fcf['getUTCDate']()-0x1);const _0x34ee92=new Date(_0x1129cb+_0xa072c5(0xf5));if(_0x34ee92>=_0x47d2db){showModal(_0xa072c5(0x104),_0xa072c5(0xf6),!![]);return;}if(_0x34ee92[_0xa072c5(0x107)]()===_0x1e9fcf[_0xa072c5(0x107)]()){showModal(_0xa072c5(0x104),_0xa072c5(0x139),!![]);return;}const _0x1b6bfc=_0x1129cb['split']('-'),_0xb6e1ad=_0x1b6bfc[0x0]+'-'+(parseInt(_0x1b6bfc[0x1])-0x1)+'-'+parseInt(_0x1b6bfc[0x2]);localStorage[_0xa072c5(0x116)](_0xa072c5(0x124),_0xa072c5(0xe5)),sessionState[_0xa072c5(0x120)]=!![],sessionState[_0xa072c5(0x115)]=_0xa072c5(0xd6),sessionState[_0xa072c5(0x105)]=_0xb6e1ad,sessionState[_0xa072c5(0x13f)]=[],sessionState[_0xa072c5(0x13d)]=[],sessionState[_0xa072c5(0x10f)]=![],sessionState[_0xa072c5(0xfa)]={},sessionState[_0xa072c5(0xdf)]=_0xa072c5(0x12f)+_0xb6e1ad,sessionState[_0xa072c5(0x140)]=![],sessionState[_0xa072c5(0x117)]=currentGameType===_0xa072c5(0x126)?getVoicedleMaxGuesses():0x5,sessionState[_0xa072c5(0x12e)]=getTargetForDate(_0xb6e1ad,_0x2c3a28,currentGameType),renderGameLayout();}function startGame(_0xb985a5){const _0x24b903=a0_0x5c0348;if(_0xb985a5===_0x24b903(0xf8)){const _0x38c62c=new URLSearchParams(window['location']['search']);if(_0x38c62c[_0x24b903(0xd5)](_0x24b903(0xe0))!=='true')return;}const _0x7caaf6=GAME_CONFIG[currentGameType],_0x178bcc=_0x7caaf6[_0x24b903(0x141)](),_0x2b2bec=getDailyString();localStorage['setItem'](_0x24b903(0x124),_0xb985a5===_0x24b903(0xf8)?_0x24b903(0xf1):_0x24b903(0xe5)),sessionState[_0x24b903(0x120)]=!![],sessionState['mode']=_0xb985a5,sessionState[_0x24b903(0x13f)]=[],sessionState[_0x24b903(0x13d)]=[],sessionState[_0x24b903(0x10f)]=![],sessionState['knownStats']={},sessionState[_0x24b903(0xdf)]=_0xb985a5===_0x24b903(0x13e)?getDailyString():_0xb985a5+':'+Math['random']()[_0x24b903(0xff)](0x24)[_0x24b903(0xce)](0x2,0x9)+'_'+Date[_0x24b903(0x11b)](),sessionState[_0x24b903(0x140)]=![];if(_0xb985a5!=='daily'){const _0x5edd78=allPersistentData[currentGameType];_0x5edd78[_0x24b903(0xe6)]=null,savePersistentData();}currentGameType===_0x24b903(0x126)?sessionState[_0x24b903(0x117)]=getVoicedleMaxGuesses():sessionState[_0x24b903(0x117)]=_0xb985a5==='daily'?0x5:_0xb985a5===_0x24b903(0x119)?0x2:_0xb985a5===_0x24b903(0x10a)?Infinity:0x5;if(_0xb985a5==='daily'){sessionState['target']=getTargetForDate(_0x2b2bec,_0x178bcc,currentGameType);const _0x58630c=allPersistentData[currentGameType];if(_0x58630c[_0x24b903(0xd7)]===_0x2b2bec){sessionState['guesses']=[..._0x58630c['dailyGuesses']];if(_0x58630c[_0x24b903(0x13b)]!==_0x24b903(0x13a))sessionState[_0x24b903(0x10f)]=!![];}else _0x58630c['lastPlayedDate']=_0x2b2bec,_0x58630c[_0x24b903(0xd1)]=[],_0x58630c['dailyStatus']=_0x24b903(0x13a),savePersistentData();}else{if(_0xb985a5===_0x24b903(0xf8)){const _0x3462c5=allPersistentData[currentGameType];if(_0x3462c5[_0x24b903(0x103)]===_0x24b903(0x13a)&&_0x3462c5['rankedTargetName']&&_0x3462c5[_0x24b903(0x12d)]?.[_0x24b903(0x134)]>0x0){const _0x54529e=_0x178bcc['find'](_0x3ba6f7=>_0x3ba6f7[_0x24b903(0xf4)]===_0x3462c5[_0x24b903(0xd0)]);_0x54529e?(sessionState[_0x24b903(0x12e)]=_0x54529e,sessionState['guesses']=[..._0x3462c5[_0x24b903(0x12d)]]):_initFreshRankedSession(_0x178bcc,_0x3462c5);}else _initFreshRankedSession(_0x178bcc,_0x3462c5);}else(_0xb985a5===_0x24b903(0x10a)||_0xb985a5==='unlimited'||_0xb985a5===_0x24b903(0x119))&&restoreOrCreateModeSession(_0xb985a5,_0x178bcc,allPersistentData[currentGameType]);}if(currentGameType!==_0x24b903(0x126)&&_0xb985a5==='hard'&&sessionState[_0x24b903(0x13d)][_0x24b903(0x134)]===0x0){const _0x58203f=allPersistentData[currentGameType],_0x6317ab=_0x178bcc[_0x24b903(0x121)](_0x54ed0b=>_0x54ed0b['name']!==sessionState['target'][_0x24b903(0xf4)]);sessionState[_0x24b903(0x13d)]=_0x6317ab[_0x24b903(0xfe)](()=>0.5-Math[_0x24b903(0xd4)]())['slice'](0x0,0x3),_0x58203f[_0x24b903(0xf0)]&&(_0x58203f[_0x24b903(0xf0)]['clues']=sessionState['clues'][_0x24b903(0x111)](_0x3f373d=>({'name':_0x3f373d[_0x24b903(0xf4)]})),savePersistentData());}renderGameLayout();const _0x2bd7b5=[_0x24b903(0x13e),'ranked',_0x24b903(0x10a),_0x24b903(0x130),_0x24b903(0x119)];if(_0x2bd7b5[_0x24b903(0xfb)](_0xb985a5)&&sessionState[_0x24b903(0x13f)][_0x24b903(0x134)]>0x0){currentGameType===_0x24b903(0x126)?replayVoicedleGuesses():sessionState[_0x24b903(0x13f)][_0x24b903(0x10e)](_0x596d88=>{updateKnownStats(_0x596d88),addGuessRow(_0x596d88,![]);});updateGuessCountUI();if(_0xb985a5==='daily'&&sessionState[_0x24b903(0x10f)]){document[_0x24b903(0x11d)]('input-container')['classList'][_0x24b903(0x13c)](_0x24b903(0x122));const _0x33bb15=allPersistentData[currentGameType],_0x4a9c7b=_0x33bb15[_0x24b903(0x13b)]==='won'?showModal(_0x24b903(0xe1),'You\x20found\x20the\x20answer!',![]):showModal(_0x24b903(0x12b),'The\x20correct\x20answer\x20was\x20'+sessionState['target'][_0x24b903(0xf4)]+_0x24b903(0x101),![]);}}_0xb985a5===_0x24b903(0x119)&&currentGameType!==_0x24b903(0x126)&&(sessionState['clues'][_0x24b903(0x10e)](_0x2c6a77=>addGuessRow(_0x2c6a77,!![])),setTimeout(()=>{const _0x147775=_0x24b903,_0x18755d=document[_0x147775(0x11d)]('uma-input');if(_0x18755d)_0x18755d[_0x147775(0xcf)]();renderSuggestions('');},0xc8)),currentGameType===_0x24b903(0x126)&&!sessionState[_0x24b903(0x10f)]&&setTimeout(()=>playVoicedleClip(),0x12c);}function getModeSessionKey(_0x5705c1){const _0x405099=a0_0x5c0348;if(_0x5705c1===_0x405099(0x119))return _0x405099(0xf0);if(_0x5705c1===_0x405099(0x130))return _0x405099(0x129);if(_0x5705c1===_0x405099(0x10a))return'easySession';return null;}function persistActiveSession(){const _0x1965d2=a0_0x5c0348;if(!sessionState[_0x1965d2(0x120)]||sessionState['isGameOver']||!sessionState[_0x1965d2(0x12e)])return;const _0x1e4328=sessionState['mode'],_0x4e9cf9=allPersistentData[currentGameType];if(!_0x4e9cf9)return;if(_0x1e4328===_0x1965d2(0x13e))_0x4e9cf9['dailyGuesses']=[...sessionState['guesses']],_0x4e9cf9[_0x1965d2(0x13b)]=_0x1965d2(0x13a);else{if(_0x1e4328===_0x1965d2(0xf8))_0x4e9cf9[_0x1965d2(0x12d)]=[...sessionState[_0x1965d2(0x13f)]],_0x4e9cf9['rankedTargetName']=sessionState[_0x1965d2(0x12e)]['name'],_0x4e9cf9['rankedStatus']='playing';else{const _0x3a12ba=getModeSessionKey(_0x1e4328);if(!_0x3a12ba)return;_0x4e9cf9[_0x3a12ba]={'targetName':sessionState[_0x1965d2(0x12e)][_0x1965d2(0xf4)],'guesses':[...sessionState[_0x1965d2(0x13f)]],'clues':_0x1e4328===_0x1965d2(0x119)?sessionState['clues'][_0x1965d2(0x111)](_0x15e708=>({'name':_0x15e708[_0x1965d2(0xf4)]})):[],'isGameOver':![]};}}savePersistentData();}function restoreOrCreateModeSession(_0x4225b7,_0x1cf0c9,_0x3358bf){const _0x303d2f=a0_0x5c0348,_0x81bb68=getModeSessionKey(_0x4225b7);if(!_0x81bb68)return;const _0x4418e9=_0x3358bf[_0x81bb68];if(_0x4418e9&&_0x4418e9[_0x303d2f(0x132)]&&!_0x4418e9[_0x303d2f(0x10f)]){const _0x3228fe=_0x1cf0c9['find'](_0x1b0956=>_0x1b0956[_0x303d2f(0xf4)]===_0x4418e9[_0x303d2f(0x132)]);if(_0x3228fe){sessionState['target']=_0x3228fe,sessionState[_0x303d2f(0x13f)]=[..._0x4418e9[_0x303d2f(0x13f)]||[]];_0x4225b7==='hard'&&_0x4418e9[_0x303d2f(0x13d)]?.[_0x303d2f(0x134)]&&(sessionState[_0x303d2f(0x13d)]=_0x4418e9[_0x303d2f(0x13d)][_0x303d2f(0x111)](_0x4998e3=>_0x1cf0c9[_0x303d2f(0xdd)](_0x106041=>_0x106041['name']===_0x4998e3[_0x303d2f(0xf4)]))[_0x303d2f(0x121)](Boolean));return;}}_initFreshSession(_0x4225b7,_0x1cf0c9,_0x3358bf,_0x81bb68);}function _initFreshRankedSession(_0x28698d,_0x21909a){const _0x3b52e3=a0_0x5c0348;sessionState[_0x3b52e3(0x12e)]=_0x28698d[Math['floor'](Math[_0x3b52e3(0xd4)]()*_0x28698d[_0x3b52e3(0x134)])],_0x21909a['rankedGuesses']=[],_0x21909a[_0x3b52e3(0x103)]=_0x3b52e3(0x13a),_0x21909a[_0x3b52e3(0xd0)]=sessionState[_0x3b52e3(0x12e)]['name'],savePersistentData();}function _initFreshSession(_0x19945f,_0xe042e0,_0x1288da,_0x434d75){const _0x1058dc=a0_0x5c0348;sessionState[_0x1058dc(0x12e)]=_0xe042e0[Math[_0x1058dc(0x128)](Math[_0x1058dc(0xd4)]()*_0xe042e0[_0x1058dc(0x134)])],_0x1288da[_0x434d75]={'targetName':sessionState[_0x1058dc(0x12e)]['name'],'guesses':[],'clues':[],'isGameOver':![]},savePersistentData();}function updateKnownStats(_0x2e148f){const _0xe5900e=a0_0x5c0348,_0x2f58bb=GAME_CONFIG[currentGameType];_0x2f58bb[_0xe5900e(0x125)][_0xe5900e(0x10e)](_0x164f81=>{const _0x4e9e61=_0xe5900e;if(_0x2e148f[_0x164f81]===sessionState[_0x4e9e61(0x12e)][_0x164f81])sessionState['knownStats'][_0x164f81]=_0x2e148f[_0x164f81];});}function submitGuess(_0x16758d){const _0x4e6398=a0_0x5c0348;if(sessionState[_0x4e6398(0x10f)])return;if(sessionState[_0x4e6398(0x13f)][_0x4e6398(0x108)](_0xa7ef4a=>_0xa7ef4a[_0x4e6398(0xf4)]===_0x16758d[_0x4e6398(0xf4)]))return;if(currentGameType===_0x4e6398(0x126)){submitVoicedleGuess(_0x16758d);return;}const _0x138e87=allPersistentData[currentGameType];sessionState[_0x4e6398(0x13f)][_0x4e6398(0xfc)](_0x16758d),updateKnownStats(_0x16758d);sessionState['mode']===_0x4e6398(0x13e)&&(_0x138e87[_0x4e6398(0xd1)]=[...sessionState['guesses']],savePersistentData());sessionState['mode']===_0x4e6398(0xf8)&&(_0x138e87['rankedGuesses']=[...sessionState['guesses']],savePersistentData());const _0x131b4f=getModeSessionKey(sessionState['mode']);_0x131b4f&&_0x138e87[_0x131b4f]&&(_0x138e87[_0x131b4f][_0x4e6398(0x13f)]=[...sessionState[_0x4e6398(0x13f)]],savePersistentData());const _0x31a39c=addGuessRow(_0x16758d,![],!![]);updateGuessCountUI();if(sessionState[_0x4e6398(0x115)]===_0x4e6398(0x119)&&_0x16758d[_0x4e6398(0xf4)]!==sessionState['target']['name']){const _0x14ffdf=GAME_CONFIG[currentGameType][_0x4e6398(0x125)][_0x4e6398(0x134)],_0x1b3a40=(_0x14ffdf-0x1)*0x12c+0x1f4+0xc8;setTimeout(()=>{const _0x1deff5=_0x4e6398,_0x398da6=document[_0x1deff5(0x11d)](_0x1deff5(0x133));_0x398da6&&!sessionState[_0x1deff5(0x10f)]&&(_0x398da6[_0x1deff5(0xf7)]='',_0x398da6[_0x1deff5(0xcf)](),renderSuggestions(''));},_0x1b3a40);}if(_0x16758d[_0x4e6398(0xf4)]===sessionState[_0x4e6398(0x12e)][_0x4e6398(0xf4)])handleWin(_0x31a39c);else sessionState[_0x4e6398(0x13f)]['length']>=sessionState[_0x4e6398(0x117)]&&handleLoss(_0x31a39c);}function handleWin(_0x197878=0x0){const _0x172897=a0_0x5c0348;sessionState[_0x172897(0x10f)]=!![];currentGameType===_0x172897(0x126)&&(stopVoicedleAudio(),updateVoicedlePlayButton());const _0x13f2cb=allPersistentData[currentGameType],_0x593f0f=sessionState[_0x172897(0x115)];if(_0x593f0f===_0x172897(0xd6)){setTimeout(launchConfetti,_0x197878+0x64),document['getElementById']('input-container')['classList']['add'](_0x172897(0x122)),setTimeout(()=>{const _0xfbd123=_0x172897;showModal(_0xfbd123(0xea),_0xfbd123(0xec)+sessionState[_0xfbd123(0x12e)]['name']+'\x20from\x20'+sessionState['archiveDate']+_0xfbd123(0xd8),!![]);},_0x197878+0x258);return;}if(_0x593f0f===_0x172897(0x13e))_0x13f2cb[_0x172897(0x10c)]=(_0x13f2cb[_0x172897(0x10c)]||0x0)+0x1,_0x13f2cb[_0x172897(0xf3)]=(_0x13f2cb[_0x172897(0xf3)]||0x0)+0x1,_0x13f2cb[_0x172897(0x13b)]=_0x172897(0xdb),_0x13f2cb[_0x172897(0xf9)]++,_0x13f2cb[_0x172897(0xe4)]=Math[_0x172897(0xe9)](_0x13f2cb[_0x172897(0xe4)]||0x0,_0x13f2cb[_0x172897(0xf9)]),recordDailySolve(currentGameType,sessionState[_0x172897(0x13f)]['length'],!![]);else{if(_0x593f0f===_0x172897(0x10a))_0x13f2cb[_0x172897(0x131)]=(_0x13f2cb[_0x172897(0x131)]||0x0)+0x1,_0x13f2cb[_0x172897(0xef)]=(_0x13f2cb[_0x172897(0xef)]||0x0)+0x1,_0x13f2cb[_0x172897(0x12a)]=(_0x13f2cb['easyStreak']||0x0)+0x1,_0x13f2cb[_0x172897(0xf2)]=Math['max'](_0x13f2cb[_0x172897(0xf2)]||0x0,_0x13f2cb['easyStreak']),_0x13f2cb['easySession']=null;else{if(_0x593f0f==='unlimited')_0x13f2cb[_0x172897(0x11a)]=(_0x13f2cb[_0x172897(0x11a)]||0x0)+0x1,_0x13f2cb[_0x172897(0x127)]=(_0x13f2cb['unlimitedWins']||0x0)+0x1,_0x13f2cb[_0x172897(0x138)]=(_0x13f2cb[_0x172897(0x138)]||0x0)+0x1,_0x13f2cb[_0x172897(0x102)]=Math[_0x172897(0xe9)](_0x13f2cb['bestUnlimitedStreak']||0x0,_0x13f2cb['unlimitedStreak']),_0x13f2cb[_0x172897(0x129)]=null;else{if(_0x593f0f===_0x172897(0x119))_0x13f2cb[_0x172897(0xe8)]=(_0x13f2cb[_0x172897(0xe8)]||0x0)+0x1,_0x13f2cb[_0x172897(0x100)]=(_0x13f2cb['hardWins']||0x0)+0x1,_0x13f2cb[_0x172897(0x135)]=(_0x13f2cb[_0x172897(0x135)]||0x0)+0x1,_0x13f2cb[_0x172897(0x112)]=Math[_0x172897(0xe9)](_0x13f2cb['bestHardStreak']||0x0,_0x13f2cb[_0x172897(0x135)]),_0x13f2cb[_0x172897(0xf0)]=null;else _0x593f0f===_0x172897(0xf8)&&(_0x13f2cb[_0x172897(0x103)]=_0x172897(0xdb),_0x13f2cb[_0x172897(0x12d)]=[...sessionState['guesses']]);}}}updateRankedStats(!![],currentGameType),updateStatsUI(),savePersistentData(),syncScoresToLeaderboard(currentGameType,!![],sessionState[_0x172897(0x13f)]['length']),setTimeout(launchConfetti,_0x197878+0x64),document[_0x172897(0x11d)]('input-container')[_0x172897(0x10b)]['add'](_0x172897(0x122)),setTimeout(()=>{const _0x3b9a9f=_0x172897;showModal(_0x3b9a9f(0xe1),_0x3b9a9f(0xcd)+sessionState[_0x3b9a9f(0x12e)][_0x3b9a9f(0xf4)]+'!',!![]),updateScoreUI(),updateStatsUI();},_0x197878+0x258);}function handleLoss(_0x2cb626=0x0){const _0x4f0333=a0_0x5c0348;sessionState[_0x4f0333(0x10f)]=!![];currentGameType===_0x4f0333(0x126)&&(stopVoicedleAudio(),updateVoicedlePlayButton());const _0x96d26f=allPersistentData[currentGameType],_0xd18dd4=sessionState[_0x4f0333(0x115)];if(_0xd18dd4==='archive'){document[_0x4f0333(0x11d)](_0x4f0333(0xd3))[_0x4f0333(0x10b)][_0x4f0333(0x13c)](_0x4f0333(0x122)),setTimeout(()=>{const _0x14b05b=_0x4f0333;showModal(_0x14b05b(0xee),_0x14b05b(0x106)+sessionState[_0x14b05b(0x12e)][_0x14b05b(0xf4)]+_0x14b05b(0x113)+sessionState[_0x14b05b(0x105)]+_0x14b05b(0x10d),!![]);},_0x2cb626+0x258);return;}if(_0xd18dd4==='daily')_0x96d26f[_0x4f0333(0x10c)]=(_0x96d26f[_0x4f0333(0x10c)]||0x0)+0x1,_0x96d26f[_0x4f0333(0x13b)]=_0x4f0333(0x137),_0x96d26f['dailyStreak']=0x0,_0x96d26f['dailyGuesses']=[...sessionState['guesses']],_0x96d26f[_0x4f0333(0xd7)]=getDailyString(),sessionState[_0x4f0333(0xfd)]=![],sessionState[_0x4f0333(0x11c)]=0x0,recordDailySolve(currentGameType,sessionState[_0x4f0333(0x13f)][_0x4f0333(0x134)],![]);else{if(_0xd18dd4===_0x4f0333(0xf8))_0x96d26f[_0x4f0333(0x103)]='lost',_0x96d26f[_0x4f0333(0x12d)]=[...sessionState[_0x4f0333(0x13f)]],sessionState[_0x4f0333(0xfd)]=![],sessionState[_0x4f0333(0x11c)]=0x0;else{if(_0xd18dd4===_0x4f0333(0x10a))_0x96d26f['easyPlayed']=(_0x96d26f['easyPlayed']||0x0)+0x1;else{if(_0xd18dd4===_0x4f0333(0x130))_0x96d26f[_0x4f0333(0x11a)]=(_0x96d26f[_0x4f0333(0x11a)]||0x0)+0x1;else{if(_0xd18dd4==='hard')_0x96d26f[_0x4f0333(0xe8)]=(_0x96d26f['hardPlayed']||0x0)+0x1;}}const _0x2255e2=_0xd18dd4+_0x4f0333(0x110);sessionState[_0x4f0333(0x11c)]=_0x96d26f[_0x2255e2]||0x0,sessionState[_0x4f0333(0xfd)]=!![];const _0x101b2c=getModeSessionKey(_0xd18dd4);if(_0x101b2c)_0x96d26f[_0x101b2c]=null;}}updateRankedStats(![],currentGameType),updateStatsUI(),savePersistentData(),syncScoresToLeaderboard(currentGameType,![],sessionState[_0x4f0333(0x13f)][_0x4f0333(0x134)]),document[_0x4f0333(0x11d)](_0x4f0333(0xd3))[_0x4f0333(0x10b)][_0x4f0333(0x13c)](_0x4f0333(0x122)),setTimeout(()=>{const _0x3e9015=_0x4f0333;showModal(_0x3e9015(0xd9),_0x3e9015(0x114)+sessionState[_0x3e9015(0x12e)][_0x3e9015(0xf4)]+'.',!![]),updateScoreUI(),updateStatsUI();},_0x2cb626+0x258);}
+// ============================================================
+//  game.js — Core game logic: start, guess, win/loss
+// ============================================================
+
+// --------------- Date helpers ---------------
+function getUTC8Time() {
+  return new Date(Date.now() + 28800000);
+}
+
+function getDailyString(offsetDays = 0) {
+  const date8 = getUTC8Time();
+  if (offsetDays !== 0) date8.setDate(date8.getDate() + offsetDays);
+  return `${date8.getUTCFullYear()}-${date8.getUTCMonth()}-${date8.getUTCDate()}`;
+}
+
+function getTargetForDate(dateStr, dataList, gameType = 'uma') {
+  if (!dataList || dataList.length === 0) return null;
+  let bestItem = dataList[0];
+  let maxScore = -Infinity;
+  for (const item of dataList) {
+    const combinedStr = gameType === 'uma'
+      ? dateStr + item.name
+      : `${dateStr}|${gameType}|${item.name}`;
+    let score = 0;
+    for (let i = 0; i < combinedStr.length; i++) {
+      score = ((score << 5) - score) + combinedStr.charCodeAt(i);
+      score |= 0;
+    }
+    if (score > maxScore) { maxScore = score; bestItem = item; }
+  }
+  return bestItem;
+}
+
+// --------------- Archive mode game starter ---------------
+function startArchiveGame(dateString) {
+  const config   = GAME_CONFIG[currentGameType];
+  const dataList = config.data();
+
+  // Build UTC midnight dates for today and yesterday (UTC+8 calendar day)
+  const now8      = getUTC8Time();
+  const todayUTC  = new Date(Date.UTC(now8.getUTCFullYear(), now8.getUTCMonth(), now8.getUTCDate()));
+  const yesterdayUTC = new Date(todayUTC);
+  yesterdayUTC.setUTCDate(yesterdayUTC.getUTCDate() - 1);
+
+  // Parse the input date (YYYY-MM-DD) as UTC midnight
+  const selectedUTC = new Date(dateString + 'T00:00:00Z');
+
+  // Block Today and Yesterday
+  if (selectedUTC >= todayUTC) {
+    showModal("Archive Unavailable", "You cannot play Today's puzzle in Archive Mode.", true);
+    return;
+  }
+  if (selectedUTC.getTime() === yesterdayUTC.getTime()) {
+    showModal("Archive Unavailable", "Yesterday's puzzle is not yet available in Archive Mode.", true);
+    return;
+  }
+
+  // Convert to the internal date-key format used by getDailyString / getTargetForDate
+  // getDailyString returns "YYYY-M-D" with 0-indexed month
+  const parts = dateString.split('-');
+  const archiveDate = `${parts[0]}-${parseInt(parts[1]) - 1}-${parseInt(parts[2])}`;
+
+  localStorage.setItem('is_ranked_session', 'false');
+
+  sessionState.active   = true;
+  sessionState.mode     = 'archive';
+  sessionState.archiveDate = archiveDate;
+  sessionState.guesses  = [];
+  sessionState.clues    = [];
+  sessionState.isGameOver = false;
+  sessionState.knownStats = {};
+  sessionState.sessionKey = `archive:${archiveDate}`;
+  sessionState._leaderboardSynced = false;
+  sessionState.maxGuesses = currentGameType === 'voicedle' ? getVoicedleMaxGuesses() : 5;
+
+  sessionState.target = getTargetForDate(archiveDate, dataList, currentGameType);
+
+  renderGameLayout();
+}
+
+// --------------- Start a game ---------------
+function startGame(mode) {
+  if (mode === 'ranked') {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('silencesuzuka') !== 'true') return;
+  }
+
+  const config   = GAME_CONFIG[currentGameType];
+  const dataList = config.data();
+  const today    = getDailyString();
+
+  localStorage.setItem('is_ranked_session', mode === 'ranked' ? 'true' : 'false');
+
+  sessionState.active   = true;
+  sessionState.mode     = mode;
+  sessionState.guesses  = [];
+  sessionState.clues    = [];
+  sessionState.isGameOver = false;
+  sessionState.knownStats = {};
+  sessionState.sessionKey = mode === 'daily'
+    ? getDailyString()
+    : `${mode}:${Math.random().toString(36).substr(2, 9)}_${Date.now()}`;
+  sessionState._leaderboardSynced = false;
+
+  if (mode !== 'daily') {
+    const pData = allPersistentData[currentGameType];
+    pData.lbSubmittedKey = null;
+    savePersistentData();
+  }
+
+  if (currentGameType === 'voicedle') {
+    sessionState.maxGuesses = getVoicedleMaxGuesses();
+  } else {
+    sessionState.maxGuesses = mode === 'daily' ? 5 : mode === 'hard' ? 2 : mode === 'easy' ? Infinity : 5;
+  }
+
+  // ---- Restore or create session target ----
+  if (mode === 'daily') {
+    sessionState.target = getTargetForDate(today, dataList, currentGameType);
+    const pData = allPersistentData[currentGameType];
+    if (pData.lastPlayedDate === today) {
+      sessionState.guesses = [...pData.dailyGuesses];
+      if (pData.dailyStatus !== 'playing') sessionState.isGameOver = true;
+    } else {
+      pData.lastPlayedDate = today;
+      pData.dailyGuesses   = [];
+      pData.dailyStatus    = 'playing';
+      savePersistentData();
+    }
+
+  } else if (mode === 'ranked') {
+    const pData = allPersistentData[currentGameType];
+    if (pData.rankedStatus === 'playing' && pData.rankedTargetName && pData.rankedGuesses?.length > 0) {
+      const savedTarget = dataList.find(item => item.name === pData.rankedTargetName);
+      if (savedTarget) {
+        sessionState.target  = savedTarget;
+        sessionState.guesses = [...pData.rankedGuesses];
+      } else {
+        _initFreshRankedSession(dataList, pData);
+      }
+    } else {
+      _initFreshRankedSession(dataList, pData);
+    }
+
+  } else if (mode === 'easy' || mode === 'unlimited' || mode === 'hard') {
+    restoreOrCreateModeSession(mode, dataList, allPersistentData[currentGameType]);
+  }
+
+  // ---- Hard-mode: generate clues if needed (Umamusume / G1 only) ----
+  if (currentGameType !== 'voicedle' && mode === 'hard' && sessionState.clues.length === 0) {
+    const pData      = allPersistentData[currentGameType];
+    const otherItems = dataList.filter(item => item.name !== sessionState.target.name);
+    sessionState.clues = otherItems.sort(() => 0.5 - Math.random()).slice(0, 3);
+    if (pData.hardSession) {
+      pData.hardSession.clues = sessionState.clues.map(c => ({ name: c.name }));
+      savePersistentData();
+    }
+  }
+
+  renderGameLayout();
+
+  // ---- Replay saved guesses ----
+  const modesWithHistory = ['daily', 'ranked', 'easy', 'unlimited', 'hard'];
+  if (modesWithHistory.includes(mode) && sessionState.guesses.length > 0) {
+    if (currentGameType === 'voicedle') {
+      replayVoicedleGuesses();
+    } else {
+      sessionState.guesses.forEach(g => { updateKnownStats(g); addGuessRow(g, false); });
+    }
+    updateGuessCountUI();
+
+    if (mode === 'daily' && sessionState.isGameOver) {
+      document.getElementById('input-container').classList.add('hidden');
+      const pData = allPersistentData[currentGameType];
+      const msg = pData.dailyStatus === 'won'
+        ? showModal("Goal In!", `You found the answer!`, false)
+        : showModal("Retired...", `The correct answer was ${sessionState.target.name}. Try again tomorrow!`, false);
+    }
+  }
+
+  if (mode === 'hard' && currentGameType !== 'voicedle') {
+    sessionState.clues.forEach(c => addGuessRow(c, true));
+    setTimeout(() => {
+      const inp = document.getElementById('uma-input');
+      if (inp) inp.focus();
+      renderSuggestions('');
+    }, 200);
+  }
+
+  if (currentGameType === 'voicedle' && !sessionState.isGameOver) {
+    setTimeout(() => playVoicedleClip(), 300);
+  }
+}
+
+function getModeSessionKey(mode) {
+  if (mode === 'hard') return 'hardSession';
+  if (mode === 'unlimited') return 'unlimitedSession';
+  if (mode === 'easy') return 'easySession';
+  return null;
+}
+
+function persistActiveSession() {
+  if (!sessionState.active || sessionState.isGameOver || !sessionState.target) return;
+  const mode  = sessionState.mode;
+  const pData = allPersistentData[currentGameType];
+  if (!pData) return;
+
+  if (mode === 'daily') {
+    pData.dailyGuesses = [...sessionState.guesses];
+    pData.dailyStatus  = 'playing';
+  } else if (mode === 'ranked') {
+    pData.rankedGuesses    = [...sessionState.guesses];
+    pData.rankedTargetName = sessionState.target.name;
+    pData.rankedStatus     = 'playing';
+  } else {
+    const sessionKey = getModeSessionKey(mode);
+    if (!sessionKey) return;
+    pData[sessionKey] = {
+      targetName: sessionState.target.name,
+      guesses:    [...sessionState.guesses],
+      clues:      mode === 'hard'
+        ? sessionState.clues.map(c => ({ name: c.name }))
+        : [],
+      isGameOver: false
+    };
+  }
+  savePersistentData();
+}
+
+function restoreOrCreateModeSession(mode, dataList, pData) {
+  const sessionKey = getModeSessionKey(mode);
+  if (!sessionKey) return;
+
+  const saved = pData[sessionKey];
+  if (saved && saved.targetName && !saved.isGameOver) {
+    const savedTarget = dataList.find(item => item.name === saved.targetName);
+    if (savedTarget) {
+      sessionState.target  = savedTarget;
+      sessionState.guesses = [...(saved.guesses || [])];
+      if (mode === 'hard' && saved.clues?.length) {
+        sessionState.clues = saved.clues
+          .map(c => dataList.find(item => item.name === c.name))
+          .filter(Boolean);
+      }
+      return;
+    }
+  }
+  _initFreshSession(mode, dataList, pData, sessionKey);
+}
+
+function _initFreshRankedSession(dataList, pData) {
+  sessionState.target = dataList[Math.floor(Math.random() * dataList.length)];
+  pData.rankedGuesses    = [];
+  pData.rankedStatus     = 'playing';
+  pData.rankedTargetName = sessionState.target.name;
+  savePersistentData();
+}
+
+function _initFreshSession(mode, dataList, pData, sessionKey) {
+  sessionState.target = dataList[Math.floor(Math.random() * dataList.length)];
+  pData[sessionKey]   = { targetName: sessionState.target.name, guesses: [], clues: [], isGameOver: false };
+  savePersistentData();
+}
+
+// --------------- Guess submission ---------------
+function updateKnownStats(item) {
+  const config = GAME_CONFIG[currentGameType];
+  config.keys.forEach(key => {
+    if (item[key] === sessionState.target[key]) sessionState.knownStats[key] = item[key];
+  });
+}
+
+function submitGuess(guessItem) {
+  if (sessionState.isGameOver) return;
+  if (sessionState.guesses.some(g => g.name === guessItem.name)) return;
+
+  if (currentGameType === 'voicedle') {
+    submitVoicedleGuess(guessItem);
+    return;
+  }
+
+  const pData = allPersistentData[currentGameType];
+  sessionState.guesses.push(guessItem);
+  updateKnownStats(guessItem);
+
+  // Persist guess
+  if (sessionState.mode === 'daily') {
+    pData.dailyGuesses = [...sessionState.guesses];
+    savePersistentData();
+  }
+  if (sessionState.mode === 'ranked') {
+    pData.rankedGuesses = [...sessionState.guesses];
+    savePersistentData();
+  }
+  const sessionKey = getModeSessionKey(sessionState.mode);
+  if (sessionKey && pData[sessionKey]) {
+    pData[sessionKey].guesses = [...sessionState.guesses];
+    savePersistentData();
+  }
+
+  const animDuration = addGuessRow(guessItem, false, true);
+  updateGuessCountUI();
+
+  if (sessionState.mode === 'hard' && guessItem.name !== sessionState.target.name) {
+    const totalCells  = GAME_CONFIG[currentGameType].keys.length;
+    const reopenDelay = (totalCells - 1) * 300 + 500 + 200;
+    setTimeout(() => {
+      const inp = document.getElementById('uma-input');
+      if (inp && !sessionState.isGameOver) { inp.value = ''; inp.focus(); renderSuggestions(''); }
+    }, reopenDelay);
+  }
+
+  if (guessItem.name === sessionState.target.name) {
+    handleWin(animDuration);
+  } else if (sessionState.guesses.length >= sessionState.maxGuesses) {
+    handleLoss(animDuration);
+  }
+}
+
+// --------------- Win ---------------
+function handleWin(animDuration = 0) {
+  sessionState.isGameOver = true;
+  if (currentGameType === 'voicedle') {
+    stopVoicedleAudio();
+    updateVoicedlePlayButton();
+  }
+  const pData = allPersistentData[currentGameType];
+  const mode  = sessionState.mode;
+
+  // Archive mode: don't update official stats
+  if (mode === 'archive') {
+    setTimeout(launchConfetti, animDuration + 100);
+    document.getElementById('input-container').classList.add('hidden');
+    setTimeout(() => {
+      showModal("Goal In! 📅", `Archive Mode: You identified ${sessionState.target.name} from ${sessionState.archiveDate}!\n\nThis result does not affect your official stats.`, true);
+    }, animDuration + 600);
+    return;
+  }
+
+  if (mode === 'daily') {
+    pData.dailyPlayed = (pData.dailyPlayed || 0) + 1;
+    pData.dailyWins   = (pData.dailyWins   || 0) + 1;
+    pData.dailyStatus = 'won';
+    pData.dailyStreak++;
+    pData.bestDailyStreak = Math.max(pData.bestDailyStreak || 0, pData.dailyStreak);
+    recordDailySolve(currentGameType, sessionState.guesses.length, true); //  isWin = true
+  } else if (mode === 'easy') {
+    pData.easyPlayed    = (pData.easyPlayed  || 0) + 1;
+    pData.easyWins      = (pData.easyWins    || 0) + 1;
+    pData.easyStreak    = (pData.easyStreak  || 0) + 1;
+    pData.bestEasyStreak = Math.max(pData.bestEasyStreak || 0, pData.easyStreak);
+    pData.easySession    = null;
+  } else if (mode === 'unlimited') {
+    pData.unlimitedPlayed  = (pData.unlimitedPlayed  || 0) + 1;
+    pData.unlimitedWins    = (pData.unlimitedWins    || 0) + 1;
+    pData.unlimitedStreak  = (pData.unlimitedStreak  || 0) + 1;
+    pData.bestUnlimitedStreak = Math.max(pData.bestUnlimitedStreak || 0, pData.unlimitedStreak);
+    pData.unlimitedSession = null;
+  } else if (mode === 'hard') {
+    pData.hardPlayed    = (pData.hardPlayed  || 0) + 1;
+    pData.hardWins      = (pData.hardWins    || 0) + 1;
+    pData.hardStreak    = (pData.hardStreak  || 0) + 1;
+    pData.bestHardStreak = Math.max(pData.bestHardStreak || 0, pData.hardStreak);
+    pData.hardSession   = null;
+  } else if (mode === 'ranked') {
+    pData.rankedStatus  = 'won';
+    pData.rankedGuesses = [...sessionState.guesses];
+  }
+
+  updateRankedStats(true, currentGameType);
+  updateStatsUI();
+  savePersistentData();
+  syncScoresToLeaderboard(currentGameType, true, sessionState.guesses.length);
+
+  setTimeout(launchConfetti, animDuration + 100);
+  document.getElementById('input-container').classList.add('hidden');
+  setTimeout(() => {
+    showModal("Goal In!", `Excellent work! You've identified ${sessionState.target.name}!`, true);
+    updateScoreUI();
+    updateStatsUI();
+  }, animDuration + 600);
+}
+
+// --------------- Loss ---------------
+function handleLoss(animDuration = 0) {
+  sessionState.isGameOver = true;
+  if (currentGameType === 'voicedle') {
+    stopVoicedleAudio();
+    updateVoicedlePlayButton();
+  }
+  const pData = allPersistentData[currentGameType];
+  const mode  = sessionState.mode;
+
+  // Archive mode: don't update official stats
+  if (mode === 'archive') {
+    document.getElementById('input-container').classList.add('hidden');
+    setTimeout(() => {
+      showModal("RETIRED... 📅", `Archive Mode: The correct answer was ${sessionState.target.name} from ${sessionState.archiveDate}.\n\nThis result does not affect your official stats.`, true);
+    }, animDuration + 600);
+    return;
+  }
+
+  if (mode === 'daily') {
+    pData.dailyPlayed  = (pData.dailyPlayed || 0) + 1;
+    pData.dailyStatus  = 'lost';
+    pData.dailyStreak  = 0;
+    pData.dailyGuesses = [...sessionState.guesses];
+    pData.lastPlayedDate = getDailyString();
+    sessionState.pendingStreakReset = false;
+    sessionState.streakAtLoss = 0;
+    recordDailySolve(currentGameType, sessionState.guesses.length, false);
+  }else if (mode === 'ranked') {
+    pData.rankedStatus  = 'lost';
+    pData.rankedGuesses = [...sessionState.guesses];
+    sessionState.pendingStreakReset = false;
+    sessionState.streakAtLoss = 0;
+  } else {
+    if (mode === 'easy')      pData.easyPlayed      = (pData.easyPlayed      || 0) + 1;
+    else if (mode === 'unlimited') pData.unlimitedPlayed = (pData.unlimitedPlayed || 0) + 1;
+    else if (mode === 'hard') pData.hardPlayed       = (pData.hardPlayed      || 0) + 1;
+
+    const modeKey = `${mode}Streak`;
+    sessionState.streakAtLoss      = pData[modeKey] || 0;
+    sessionState.pendingStreakReset = true;
+
+    const sessionKey = getModeSessionKey(mode);
+    if (sessionKey) pData[sessionKey] = null;
+  }
+
+  updateRankedStats(false, currentGameType);
+  updateStatsUI();
+  savePersistentData();
+  syncScoresToLeaderboard(currentGameType, false, sessionState.guesses.length);
+
+  document.getElementById('input-container').classList.add('hidden');
+  setTimeout(() => {
+    showModal("LOST...", `The correct answer was ${sessionState.target.name}.`, true);
+    updateScoreUI();
+    updateStatsUI();
+  }, animDuration + 600);
+}

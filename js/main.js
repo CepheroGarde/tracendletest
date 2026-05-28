@@ -1,1 +1,267 @@
-function a0_0x12de(_0x187b7f,_0x4da068){_0x187b7f=_0x187b7f-0x18b;const _0x567df9=a0_0x567d();let _0x12dec6=_0x567df9[_0x187b7f];return _0x12dec6;}const a0_0x18377c=a0_0x12de;function a0_0x567d(){const _0x5bb741=['left','slice','head','6180522LidPoY','Failed\x20to\x20load\x20data:','header\x20h2','#header-logo','alt','split','key','22zTVPVC','8GZiYCi','length','addEventListener','header','readyState','chibi-list.json','5081270VvmuUy','images/goodman.jpg','loading','449406bhleOF','className','all','remove','bottom','Better\x20call\x20Saul!','style','chibi-run-style','.webp','daily-chibi-left','value','click','appendChild','peeking-character','22JfOzFH','2359616BsfPHF','replace','daily-chibi-right','toLowerCase','floor','goodman','978969QaEyoe','target','peeking','3346905gPiWxW','getElementById','warn','min','INPUT','src','textContent','function','32zBqQNR','touchstart','pop','error','querySelector','animation','tagName','s\x20linear\x20forwards','.app-title','keydown','data.json','body','img','input','93103CVGPlV','\x0a\x20\x20\x20\x20\x20\x20\x20\x20@keyframes\x20chibiRun\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x200%\x20\x20\x20{\x20transform:\x20translateX(0)\x20\x20\x20\x20\x20\x20translateY(0px);\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2010%\x20\x20{\x20transform:\x20translateX(10vw)\x20\x20\x20translateY(-8px);\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2020%\x20\x20{\x20transform:\x20translateX(20vw)\x20\x20\x20translateY(0px);\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2030%\x20\x20{\x20transform:\x20translateX(30vw)\x20\x20\x20translateY(-8px);\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2040%\x20\x20{\x20transform:\x20translateX(40vw)\x20\x20\x20translateY(0px);\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2050%\x20\x20{\x20transform:\x20translateX(50vw)\x20\x20\x20translateY(-8px);\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2060%\x20\x20{\x20transform:\x20translateX(60vw)\x20\x20\x20translateY(0px);\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2070%\x20\x20{\x20transform:\x20translateX(70vw)\x20\x20\x20translateY(-8px);\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2080%\x20\x20{\x20transform:\x20translateX(80vw)\x20\x20\x20translateY(0px);\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2090%\x20\x20{\x20transform:\x20translateX(90vw)\x20\x20\x20translateY(-8px);\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20100%\x20{\x20transform:\x20translateX(110vw)\x20\x20translateY(0px);\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.chibi-runner\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bottom:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x20-80px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2072px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x209999;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pointer-events:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform-origin:\x20center\x20bottom;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20','sort','json','toFixed','.logo','Failed\x20to\x20load\x20daily\x20chibi\x20images:','random','Peeking\x20','Failed\x20to\x20load\x20peeking\x20chibi\x20images:','#app-title','.header\x20h1','createElement'];a0_0x567d=function(){return _0x5bb741;};return a0_0x567d();}(function(_0x182cd2,_0x1bf0f4){const _0x31cc24=a0_0x12de,_0x5b13de=_0x182cd2();while(!![]){try{const _0x1ce34a=parseInt(_0x31cc24(0x1be))/0x1*(parseInt(_0x31cc24(0x1d5))/0x2)+-parseInt(_0x31cc24(0x1a5))/0x3*(-parseInt(_0x31cc24(0x1d6))/0x4)+-parseInt(_0x31cc24(0x1a8))/0x5+parseInt(_0x31cc24(0x1ce))/0x6+-parseInt(_0x31cc24(0x19f))/0x7+-parseInt(_0x31cc24(0x1b0))/0x8*(-parseInt(_0x31cc24(0x190))/0x9)+parseInt(_0x31cc24(0x18d))/0xa*(-parseInt(_0x31cc24(0x19e))/0xb);if(_0x1ce34a===_0x1bf0f4)break;else _0x5b13de['push'](_0x5b13de['shift']());}catch(_0x196304){_0x5b13de['push'](_0x5b13de['shift']());}}}(a0_0x567d,0xd7ca7));async function loadGameData(){const _0x230084=a0_0x12de;try{const [_0x21b475,_0x5f12a9,_0x33f0fa]=await Promise[_0x230084(0x192)]([fetch(_0x230084(0x1ba)),fetch('courses.json'),fetch('voicedle.json')]);UMAS=await _0x21b475[_0x230084(0x1c1)](),COURSES=await _0x5f12a9['json'](),VOICEDLE=await _0x33f0fa[_0x230084(0x1c1)](),init();}catch(_0x54e8a7){console[_0x230084(0x1b3)](_0x230084(0x1cf),_0x54e8a7);}}function init(){const _0x3074ba=a0_0x12de;checkOrCreateUsername(),checkDevMode(),loadPersistentData(),switchGameType('uma'),startClock(),loadTheme(),loadAndSetRandomPeekingUma(),loadAndSetRandomDailyChibis(),maybeRunChibis();if(typeof playIntroAnimation===_0x3074ba(0x1af))playIntroAnimation();}async function loadAndSetRandomPeekingUma(){const _0x3750de=a0_0x12de;try{const _0x6935b6=await fetch(_0x3750de(0x18c)),_0x5a3c06=await _0x6935b6[_0x3750de(0x1c1)](),_0x1e0164=_0x5a3c06[_0x3750de(0x1a7)]||[];if(_0x1e0164[_0x3750de(0x1d7)]===0x0){console[_0x3750de(0x1aa)]('No\x20peeking\x20chibi\x20images\x20configured');return;}const _0x2e963d=document[_0x3750de(0x1a9)](_0x3750de(0x19d));if(!_0x2e963d)return;const _0x1f030b=Math['floor'](Math[_0x3750de(0x1c5)]()*_0x1e0164[_0x3750de(0x1d7)]);_0x2e963d['src']=_0x1e0164[_0x1f030b],_0x2e963d[_0x3750de(0x1d2)]=_0x3750de(0x1c6)+_0x1e0164[_0x1f030b][_0x3750de(0x1d3)]('/')['pop']()[_0x3750de(0x1a0)](/_/g,'\x20')[_0x3750de(0x1a0)](_0x3750de(0x198),'');}catch(_0x4d7dde){console[_0x3750de(0x1b3)](_0x3750de(0x1c7),_0x4d7dde);}}async function loadAndSetRandomDailyChibis(){const _0xb35db9=a0_0x12de;try{const _0x1604d5=await fetch('chibi-list.json'),_0x443b10=await _0x1604d5[_0xb35db9(0x1c1)](),_0x7131e4=_0x443b10[_0xb35db9(0x1cb)]||[],_0x4dad51=_0x443b10['peeking']||[];if(_0x7131e4['length']===0x0&&_0x4dad51[_0xb35db9(0x1d7)]===0x0){console[_0xb35db9(0x1aa)]('No\x20chibi\x20images\x20configured\x20for\x20daily\x20button');return;}const _0x555495=document[_0xb35db9(0x1a9)](_0xb35db9(0x199)),_0x107dc0=document[_0xb35db9(0x1a9)](_0xb35db9(0x1a1));if(!_0x555495||!_0x107dc0)return;const _0x431c2c=_0x7131e4[_0xb35db9(0x1d7)]>0x0?_0x7131e4:_0x4dad51,_0x30de1b=Math[_0xb35db9(0x1a3)](Math[_0xb35db9(0x1c5)]()*_0x431c2c['length']),_0x34eb4c=_0x4dad51[_0xb35db9(0x1d7)]>0x0?_0x4dad51:_0x7131e4,_0x14a411=Math[_0xb35db9(0x1a3)](Math[_0xb35db9(0x1c5)]()*_0x34eb4c['length']);_0x555495[_0xb35db9(0x1ad)]=_0x431c2c[_0x30de1b],_0x555495[_0xb35db9(0x1d2)]='Daily\x20'+_0x431c2c[_0x30de1b][_0xb35db9(0x1d3)]('/')[_0xb35db9(0x1b2)]()[_0xb35db9(0x1a0)](/_/g,'\x20')[_0xb35db9(0x1a0)](_0xb35db9(0x198),''),_0x107dc0['src']=_0x34eb4c[_0x14a411],_0x107dc0[_0xb35db9(0x1d2)]='Daily\x20'+_0x34eb4c[_0x14a411][_0xb35db9(0x1d3)]('/')['pop']()['replace'](/_/g,'\x20')[_0xb35db9(0x1a0)](_0xb35db9(0x198),'');}catch(_0x5272f5){console[_0xb35db9(0x1b3)](_0xb35db9(0x1c4),_0x5272f5);}}async function maybeRunChibis(){const _0x53f059=a0_0x12de;if(Math[_0x53f059(0x1c5)]()>0.1)return;try{const _0x158829=await fetch(_0x53f059(0x18c)),_0x5f2626=await _0x158829[_0x53f059(0x1c1)](),_0x3fe44c=_0x5f2626[_0x53f059(0x1cb)]||[];if(_0x3fe44c[_0x53f059(0x1d7)]===0x0)return;const _0x46ddef=Math[_0x53f059(0x1a3)](Math['random']()*0x6)+0x5,_0xe59c7=[..._0x3fe44c][_0x53f059(0x1c0)](()=>0.5-Math[_0x53f059(0x1c5)]()),_0x166300=_0xe59c7['slice'](0x0,Math[_0x53f059(0x1ab)](_0x46ddef,_0xe59c7['length']));if(!document['getElementById'](_0x53f059(0x197))){const _0x4ff174=document['createElement'](_0x53f059(0x196));_0x4ff174['id']=_0x53f059(0x197),_0x4ff174[_0x53f059(0x1ae)]=_0x53f059(0x1bf),document[_0x53f059(0x1cd)][_0x53f059(0x19c)](_0x4ff174);}_0x166300['forEach']((_0x28d170,_0xa499b8)=>{const _0x8eeae=_0x53f059,_0x30abec=_0xa499b8*(0x12c+Math[_0x8eeae(0x1c5)]()*0x190),_0x334dd2=0x3+Math['random']()*0x4,_0x4c8cfa=Math[_0x8eeae(0x1a3)](Math[_0x8eeae(0x1c5)]()*0x18);setTimeout(()=>{const _0x5b96f4=_0x8eeae,_0x2052d2=document[_0x5b96f4(0x1ca)](_0x5b96f4(0x1bc));_0x2052d2[_0x5b96f4(0x1ad)]=_0x28d170,_0x2052d2[_0x5b96f4(0x191)]='chibi-runner',_0x2052d2[_0x5b96f4(0x196)][_0x5b96f4(0x194)]=_0x4c8cfa+'px',_0x2052d2[_0x5b96f4(0x196)][_0x5b96f4(0x1b5)]='chibiRun\x20'+_0x334dd2[_0x5b96f4(0x1c2)](0x2)+_0x5b96f4(0x1b7),document[_0x5b96f4(0x1bb)][_0x5b96f4(0x19c)](_0x2052d2),_0x2052d2['addEventListener']('animationend',()=>_0x2052d2[_0x5b96f4(0x193)]());},_0x30abec);});}catch(_0x4cfd21){console[_0x53f059(0x1aa)]('Running\x20chibi\x20easter\x20egg\x20failed:',_0x4cfd21);}}let goodmanBuffer='';function triggerGoodman(){const _0xabcb27=a0_0x12de;typeof applyWallpaper===_0xabcb27(0x1af)&&(applyWallpaper(_0xabcb27(0x18e)),console['log'](_0xabcb27(0x195)),goodmanBuffer='');}function checkGoodman(_0x227cb6){const _0x166453=a0_0x12de;goodmanBuffer+=_0x227cb6['toLowerCase']();if(goodmanBuffer[_0x166453(0x1d7)]>0x7)goodmanBuffer=goodmanBuffer[_0x166453(0x1cc)](-0x7);if(goodmanBuffer===_0x166453(0x1a4))triggerGoodman();}document[a0_0x18377c(0x1d8)](a0_0x18377c(0x1b9),_0x963030=>{const _0x35d637=a0_0x18377c;if(_0x963030[_0x35d637(0x1a6)][_0x35d637(0x1b6)]===_0x35d637(0x1ac)||_0x963030['target'][_0x35d637(0x1b6)]==='TEXTAREA')return;checkGoodman(_0x963030[_0x35d637(0x1d4)]);}),document[a0_0x18377c(0x1d8)](a0_0x18377c(0x1bd),_0x4c2754=>{const _0x2dce83=a0_0x18377c,_0x445b4e=_0x4c2754[_0x2dce83(0x1a6)];if(_0x445b4e[_0x2dce83(0x1b6)]!==_0x2dce83(0x1ac)&&_0x445b4e[_0x2dce83(0x1b6)]!=='TEXTAREA')return;const _0x2aa334=_0x445b4e[_0x2dce83(0x19a)]||'';_0x2aa334[_0x2dce83(0x1d7)]>=0x7&&_0x2aa334[_0x2dce83(0x1cc)](-0x7)[_0x2dce83(0x1a2)]()===_0x2dce83(0x1a4)&&triggerGoodman();}),function initGoodmanTapEgg(){const _0x611c12=a0_0x18377c;let _0x2c8275=0x0,_0x271db2=null;const _0x42c56d=0x7,_0x323a71=0xbb8;function _0x11a95b(){_0x2c8275++,clearTimeout(_0x271db2);if(_0x2c8275>=_0x42c56d){_0x2c8275=0x0,triggerGoodman();return;}_0x271db2=setTimeout(()=>{_0x2c8275=0x0;},_0x323a71);}function _0x2cd0d1(){const _0x5db8e6=a0_0x12de,_0x513d49=['#logo','#game-title',_0x5db8e6(0x1c8),_0x5db8e6(0x1d1),_0x5db8e6(0x1b8),'.site-logo','.game-logo',_0x5db8e6(0x1c3),'header\x20h1',_0x5db8e6(0x1d0),_0x5db8e6(0x1c9)];let _0xb7348e=![];for(const _0x339d51 of _0x513d49){const _0x29cb2e=document[_0x5db8e6(0x1b4)](_0x339d51);_0x29cb2e&&(_0x29cb2e[_0x5db8e6(0x1d8)]('click',_0x11a95b,{'passive':!![]}),_0x29cb2e[_0x5db8e6(0x1d8)]('touchstart',_0x11a95b,{'passive':!![]}),_0xb7348e=!![]);}if(!_0xb7348e){const _0x4fd742=document[_0x5db8e6(0x1b4)](_0x5db8e6(0x1d9));_0x4fd742&&(_0x4fd742[_0x5db8e6(0x1d8)](_0x5db8e6(0x19b),_0x11a95b,{'passive':!![]}),_0x4fd742['addEventListener'](_0x5db8e6(0x1b1),_0x11a95b,{'passive':!![]}));}}document[_0x611c12(0x18b)]===_0x611c12(0x18f)?document[_0x611c12(0x1d8)]('DOMContentLoaded',_0x2cd0d1):_0x2cd0d1();}(),loadGameData();
+// ============================================================
+//  main.js — Entry point: load data, initialise the app
+// ============================================================
+
+async function loadGameData() {
+  try {
+    const [umaRes, courseRes, voicedleRes] = await Promise.all([
+      fetch('identity_v_survivors.json'),
+      fetch('courses.json'),
+      fetch('voicedle.json')
+    ]);
+    const survivors = await umaRes.json();
+    UMAS = survivors.map(item => ({
+      name: item.Name || item.name || 'Unknown',
+      role1: item.Roles?.[0] || 'N/A',
+      role2: item.Roles?.[1] || 'N/A',
+      gender: item.Gender || 'N/A',
+      difficulty: Number(item.Difficulty) || 0,
+      year: item.ReleaseYear || item.year || 'N/A',
+      image: item.image || item.Image || 'images/placeholder.svg'
+    }));
+    COURSES = await courseRes.json();
+    VOICEDLE = await voicedleRes.json();
+    init();
+  } catch (error) {
+    console.error("Failed to load data:", error);
+  }
+}
+
+function init() {
+  checkOrCreateUsername();
+  checkDevMode();
+  loadPersistentData();
+  switchGameType('uma');
+  startClock();
+  loadTheme();
+  loadAndSetRandomPeekingUma();
+  loadAndSetRandomDailyChibis();
+  maybeRunChibis();
+  if (typeof playIntroAnimation === 'function') playIntroAnimation();
+}
+
+async function loadAndSetRandomPeekingUma() {
+  try {
+    const response = await fetch('chibi-list.json');
+    const data = await response.json();
+    const umaChibiImages = data.peeking || [];
+    
+    if (umaChibiImages.length === 0) {
+      console.warn("No peeking chibi images configured");
+      return;
+    }
+
+    const img = document.getElementById('peeking-character');
+    if (!img) return;
+
+    const randomIndex = Math.floor(Math.random() * umaChibiImages.length);
+    img.src = umaChibiImages[randomIndex];
+    img.alt = `Peeking ${umaChibiImages[randomIndex].split('/').pop().replace(/_/g, ' ').replace('.webp', '')}`;
+  } catch (error) {
+    console.error("Failed to load peeking chibi images:", error);
+  }
+}
+
+async function loadAndSetRandomDailyChibis() {
+  try {
+    const response = await fetch('chibi-list.json');
+    const data = await response.json();
+    const leftList = data.left || [];
+    const rightList = data.peeking || [];
+
+    if (leftList.length === 0 && rightList.length === 0) {
+      console.warn("No chibi images configured for daily button");
+      return;
+    }
+
+    const leftImg = document.getElementById('daily-chibi-left');
+    const rightImg = document.getElementById('daily-chibi-right');
+    if (!leftImg || !rightImg) return;
+
+    // Pick random from left list (fallback to right list if left empty)
+    const leftSource = leftList.length > 0 ? leftList : rightList;
+    const leftIndex = Math.floor(Math.random() * leftSource.length);
+
+    // Pick random from right list (fallback to left list if right empty)
+    const rightSource = rightList.length > 0 ? rightList : leftList;
+    const rightIndex = Math.floor(Math.random() * rightSource.length);
+
+    leftImg.src = leftSource[leftIndex];
+    leftImg.alt = `Daily ${leftSource[leftIndex].split('/').pop().replace(/_/g, ' ').replace('.webp', '')}`;
+
+    rightImg.src = rightSource[rightIndex];
+    rightImg.alt = `Daily ${rightSource[rightIndex].split('/').pop().replace(/_/g, ' ').replace('.webp', '')}`;
+  } catch (error) {
+    console.error("Failed to load daily chibi images:", error);
+  }
+}
+
+// --- Running Chibi Easter Egg ---
+// 10% chance on load: 5—10 random left-folder chibis sprint across the screen L—R
+async function maybeRunChibis() {
+  if (Math.random() > 0.10) return; // 10% chance
+
+  try {
+    const response = await fetch('chibi-list.json');
+    const data = await response.json();
+    const leftList = data.left || [];
+    if (leftList.length === 0) return;
+
+    // Pick 5—10 unique random images
+    const count = Math.floor(Math.random() * 6) + 5; // 5..10
+    const shuffled = [...leftList].sort(() => 0.5 - Math.random());
+    const chosen = shuffled.slice(0, Math.min(count, shuffled.length));
+
+    // Inject keyframes once
+    if (!document.getElementById('chibi-run-style')) {
+      const style = document.createElement('style');
+      style.id = 'chibi-run-style';
+      style.textContent = `
+        @keyframes chibiRun {
+          0%   { transform: translateX(0)      translateY(0px);   }
+          10%  { transform: translateX(10vw)   translateY(-8px);  }
+          20%  { transform: translateX(20vw)   translateY(0px);   }
+          30%  { transform: translateX(30vw)   translateY(-8px);  }
+          40%  { transform: translateX(40vw)   translateY(0px);   }
+          50%  { transform: translateX(50vw)   translateY(-8px);  }
+          60%  { transform: translateX(60vw)   translateY(0px);   }
+          70%  { transform: translateX(70vw)   translateY(-8px);  }
+          80%  { transform: translateX(80vw)   translateY(0px);   }
+          90%  { transform: translateX(90vw)   translateY(-8px);  }
+          100% { transform: translateX(110vw)  translateY(0px);   }
+        }
+        .chibi-runner {
+          position: fixed;
+          bottom: 0;
+          left: -80px;
+          width: 72px;
+          height: auto;
+          z-index: 9999;
+          pointer-events: none;
+          transform-origin: center bottom;
+        }
+      `;
+      document.head.appendChild(style);
+    }
+
+    chosen.forEach((src, i) => {
+      // Stagger start times so they don't all appear at once
+      const startDelay = i * (300 + Math.random() * 400); // 300—700 ms between each
+      // Each chibi gets a different speed: 3s—7s
+      const duration = 3 + Math.random() * 4;
+      // Slight vertical offset so they don't all run on the exact same baseline
+      const bottomOffset = Math.floor(Math.random() * 24); // 0—24 px
+
+      setTimeout(() => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.className = 'chibi-runner';
+        img.style.bottom = `${bottomOffset}px`;
+        img.style.animation = `chibiRun ${duration.toFixed(2)}s linear forwards`;
+        document.body.appendChild(img);
+
+        // Clean up after animation finishes
+        img.addEventListener('animationend', () => img.remove());
+      }, startDelay);
+    });
+
+  } catch (err) {
+    console.warn('Running chibi easter egg failed:', err);
+  }
+}
+
+// --- Goodman Easter Egg (Desktop & Mobile) ---
+let goodmanBuffer = "";
+
+function triggerGoodman() {
+  if (typeof applyWallpaper === 'function') {
+    applyWallpaper('images/goodman.jpg');
+    console.log("Better call Saul!");
+    goodmanBuffer = "";
+  }
+}
+
+function checkGoodman(inputString) {
+  goodmanBuffer += inputString.toLowerCase();
+  if (goodmanBuffer.length > 7) goodmanBuffer = goodmanBuffer.slice(-7);
+  if (goodmanBuffer === 'goodman') triggerGoodman();
+}
+
+// 1. Desktop: Listen to physical keys (outside input fields)
+document.addEventListener('keydown', (e) => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  checkGoodman(e.key);
+});
+
+// 2. Any text input/textarea: watch for "goodman" typed anywhere
+document.addEventListener('input', (e) => {
+  const el = e.target;
+  if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') return;
+  const val = el.value || '';
+  if (val.length >= 7 && val.slice(-7).toLowerCase() === 'goodman') {
+    triggerGoodman();
+  }
+});
+
+// 3. Mobile tap sequence: tap the logo/title 7 times within 3 seconds
+//    Works on any element with id="logo", id="game-title", or class "app-title" / "site-logo"
+(function initGoodmanTapEgg() {
+  let tapCount = 0;
+  let tapTimer  = null;
+  const TAP_TARGET = 7;
+  const TAP_WINDOW = 3000; // ms
+
+  function onTap() {
+    tapCount++;
+    clearTimeout(tapTimer);
+
+    if (tapCount >= TAP_TARGET) {
+      tapCount = 0;
+      triggerGoodman();
+      return;
+    }
+
+    // Reset counter if the player stops tapping for 3 s
+    tapTimer = setTimeout(() => { tapCount = 0; }, TAP_WINDOW);
+  }
+
+  // Attach once the DOM is ready; try several likely selectors for the logo/header
+  function attachTapListeners() {
+    const selectors = [
+      '#logo', '#game-title', '#app-title', '#header-logo',
+      '.app-title', '.site-logo', '.game-logo', '.logo',
+      'header h1', 'header h2', '.header h1'
+    ];
+    let attached = false;
+    for (const sel of selectors) {
+      const el = document.querySelector(sel);
+      if (el) {
+        el.addEventListener('click',      onTap, { passive: true });
+        el.addEventListener('touchstart', onTap, { passive: true });
+        attached = true;
+        // Don't break — attach to all matches so any logo area works
+      }
+    }
+    if (!attached) {
+      // Fallback: attach to <header> itself so mobile players always have a target
+      const header = document.querySelector('header');
+      if (header) {
+        header.addEventListener('click',      onTap, { passive: true });
+        header.addEventListener('touchstart', onTap, { passive: true });
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attachTapListeners);
+  } else {
+    attachTapListeners();
+  }
+}());
+
+
+
+
+
+// Kick everything off
+loadGameData();

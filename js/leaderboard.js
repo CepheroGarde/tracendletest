@@ -1,1 +1,760 @@
-(function(_0x534206,_0x563fae){const _0x306fa6=a0_0x24be,_0x1068c5=_0x534206();while(!![]){try{const _0x44e215=parseInt(_0x306fa6(0x200))/0x1+parseInt(_0x306fa6(0x24c))/0x2+parseInt(_0x306fa6(0x246))/0x3*(parseInt(_0x306fa6(0x1fa))/0x4)+-parseInt(_0x306fa6(0x228))/0x5+parseInt(_0x306fa6(0x237))/0x6+-parseInt(_0x306fa6(0x24f))/0x7*(-parseInt(_0x306fa6(0x205))/0x8)+-parseInt(_0x306fa6(0x249))/0x9;if(_0x44e215===_0x563fae)break;else _0x1068c5['push'](_0x1068c5['shift']());}catch(_0x5bdb98){_0x1068c5['push'](_0x1068c5['shift']());}}}(a0_0x3fcb,0xb8a17));async function syncScoresToLeaderboard(_0x2d3096,_0x477744,_0x10f950){const _0x1fd086=a0_0x24be,_0x397255=allPersistentData[_0x2d3096],_0x52216f=sessionState['sessionKey'];if(sessionState['_leaderboardSynced'])return;if(_0x397255[_0x1fd086(0x1b9)]===_0x52216f){console['log'](_0x1fd086(0x224));return;}sessionState[_0x1fd086(0x233)]=!![];const _0x5399f1=getOrCreateUserId(),_0x5227f2=localStorage[_0x1fd086(0x1fb)](_0x1fd086(0x234))||_0x1fd086(0x22f),_0x3f74ee=sessionState[_0x1fd086(0x23e)]===_0x1fd086(0x24b)||sessionState['mode']===_0x1fd086(0x1d0)||sessionState[_0x1fd086(0x23e)]===_0x1fd086(0x209)?'normal':_0x1fd086(0x201);let _0x391fce=_0x1fd086(0x21e);if(sessionState[_0x1fd086(0x23e)]===_0x1fd086(0x1d0))_0x391fce=_0x1fd086(0x1b6);else{if(sessionState[_0x1fd086(0x23e)]===_0x1fd086(0x24b))_0x391fce=_0x1fd086(0x239);else{if(_0x3f74ee==='hard')_0x391fce='hardStreak';}}const _0x30a57e=_0x397255[_0x391fce]??0x0;try{console[_0x1fd086(0x245)](_0x1fd086(0x210),{'userId':_0x5399f1,'gameType':_0x2d3096,'category':_0x3f74ee,'streak':_0x30a57e});const {error:_0x39a0e8}=await supabaseClient['rpc'](_0x1fd086(0x22e),{'p_user_id':_0x5399f1,'p_username':_0x5227f2,'p_game_type':_0x2d3096,'p_category':_0x3f74ee,'p_streak_value':_0x30a57e});if(_0x39a0e8){console[_0x1fd086(0x236)](_0x1fd086(0x1c6),_0x39a0e8['message']);const _0x334fc1=await fallbackLeaderboardSync(_0x5399f1,_0x5227f2,_0x2d3096,_0x3f74ee,_0x30a57e);_0x334fc1&&(_0x397255['lbSubmittedKey']=_0x52216f,savePersistentData());}else console[_0x1fd086(0x245)](_0x1fd086(0x229)),await fixWindowStartForUser(_0x5399f1,_0x5227f2,_0x2d3096,_0x3f74ee,_0x30a57e),_0x397255[_0x1fd086(0x1b9)]=_0x52216f,savePersistentData();}catch(_0x239381){console[_0x1fd086(0x236)]('Failed\x20to\x20sync\x20score\x20to\x20leaderboard:',_0x239381);const _0x5c9540=await fallbackLeaderboardSync(_0x5399f1,_0x5227f2,_0x2d3096,_0x3f74ee,_0x30a57e);_0x5c9540&&(_0x397255[_0x1fd086(0x1b9)]=_0x52216f,savePersistentData());}}async function fixWindowStartForUser(_0xc5eb79,_0x4aa47b,_0x486107,_0x293a0c,_0x2cb7f7){const _0x48f03e=a0_0x24be,_0x12d007=[{'windowType':_0x48f03e(0x232),'windowStart':getLeaderboardWindowStart('weekly')},{'windowType':'monthly','windowStart':getLeaderboardWindowStart(_0x48f03e(0x1d5))}];for(const {windowType:_0x39b15a,windowStart:_0x15145d}of _0x12d007){try{const {data:_0x36965d}=await supabaseClient['from']('leaderboard')[_0x48f03e(0x1c4)](_0x48f03e(0x1ea))['eq'](_0x48f03e(0x20d),_0xc5eb79)['eq'](_0x48f03e(0x230),_0x486107)['eq'](_0x48f03e(0x247),_0x293a0c)['eq'](_0x48f03e(0x1e1),_0x39b15a)['eq'](_0x48f03e(0x1f6),_0x15145d)[_0x48f03e(0x1de)]();if(_0x36965d){(_0x36965d[_0x48f03e(0x21f)]??0x0)<_0x2cb7f7&&await supabaseClient[_0x48f03e(0x202)](_0x48f03e(0x1e4))['update']({'score_value':_0x2cb7f7,'username':_0x4aa47b,'updated_at':new Date()['toISOString']()})['eq'](_0x48f03e(0x20d),_0xc5eb79)['eq'](_0x48f03e(0x230),_0x486107)['eq']('category',_0x293a0c)['eq'](_0x48f03e(0x1e1),_0x39b15a)['eq'](_0x48f03e(0x1f6),_0x15145d);continue;}const {data:_0x17a5a9}=await supabaseClient[_0x48f03e(0x202)]('leaderboard')['select'](_0x48f03e(0x1ea))['eq'](_0x48f03e(0x20d),_0xc5eb79)['eq'](_0x48f03e(0x230),_0x486107)['eq'](_0x48f03e(0x247),_0x293a0c)['eq'](_0x48f03e(0x1e1),_0x39b15a)['is'](_0x48f03e(0x1f6),null)[_0x48f03e(0x1de)]();_0x17a5a9?(console[_0x48f03e(0x245)](_0x48f03e(0x222)+_0x39b15a),await supabaseClient[_0x48f03e(0x202)]('leaderboard')[_0x48f03e(0x22b)]({'window_start':_0x15145d,'score_value':Math[_0x48f03e(0x1f8)](_0x17a5a9['score_value']??0x0,_0x2cb7f7),'username':_0x4aa47b,'updated_at':new Date()['toISOString']()})['eq']('id',_0x17a5a9['id'])):(console['log'](_0x48f03e(0x1b5)+_0x39b15a+_0x48f03e(0x21b)),await supabaseClient['from'](_0x48f03e(0x1e4))[_0x48f03e(0x1e9)]({'user_id':_0xc5eb79,'username':_0x4aa47b,'game_type':_0x486107,'category':_0x293a0c,'window_type':_0x39b15a,'window_start':_0x15145d,'score_value':_0x2cb7f7,'updated_at':new Date()[_0x48f03e(0x1c9)]()}));}catch(_0x16dba4){console[_0x48f03e(0x236)](_0x48f03e(0x206)+_0x39b15a+':',_0x16dba4);}}}async function ensureLeaderboardWindows(_0x4356f7,_0x19b5c8,_0x33caa2,_0x165503,_0x549e77){const _0x3ea2ac=a0_0x24be,_0x3bd190=[{'windowType':_0x3ea2ac(0x240),'windowStart':null},{'windowType':_0x3ea2ac(0x232),'windowStart':getLeaderboardWindowStart(_0x3ea2ac(0x232))},{'windowType':'monthly','windowStart':getLeaderboardWindowStart(_0x3ea2ac(0x1d5))}];let _0x72d5c3=!![];for(const _0x5e5844 of _0x3bd190){try{const _0x4c98e4=normalizeWindowStart(_0x5e5844['windowStart']),_0x3284ca=supabaseClient[_0x3ea2ac(0x202)](_0x3ea2ac(0x1e4))[_0x3ea2ac(0x1c4)](_0x3ea2ac(0x21f))['eq'](_0x3ea2ac(0x20d),_0x4356f7)['eq'](_0x3ea2ac(0x230),_0x33caa2)['eq'](_0x3ea2ac(0x247),_0x165503)['eq'](_0x3ea2ac(0x1e1),_0x5e5844[_0x3ea2ac(0x20b)]);_0x4c98e4===null?_0x3284ca['is'](_0x3ea2ac(0x1f6),null):_0x3284ca['eq'](_0x3ea2ac(0x1f6),_0x4c98e4);const {data:_0xb0a244,error:_0x25be28}=await _0x3284ca['maybeSingle']();if(_0x25be28){console[_0x3ea2ac(0x236)](_0x3ea2ac(0x1c0)+_0x5e5844[_0x3ea2ac(0x20b)]+'\x20('+_0x5e5844['windowStart']+'):',_0x25be28),_0x72d5c3=![];continue;}if(!_0xb0a244){console[_0x3ea2ac(0x245)](_0x3ea2ac(0x20f)+_0x5e5844[_0x3ea2ac(0x20b)],_0x5e5844[_0x3ea2ac(0x1ec)]);const {error:_0x489db6}=await supabaseClient[_0x3ea2ac(0x202)](_0x3ea2ac(0x1e4))['upsert']([{'user_id':_0x4356f7,'username':_0x19b5c8,'game_type':_0x33caa2,'category':_0x165503,'window_type':_0x5e5844['windowType'],'window_start':normalizeWindowStart(_0x5e5844[_0x3ea2ac(0x1ec)]),'score_value':_0x549e77,'updated_at':new Date()[_0x3ea2ac(0x1c9)]()}],{'onConflict':_0x3ea2ac(0x1f5),'returning':_0x3ea2ac(0x243)});_0x489db6&&(console[_0x3ea2ac(0x236)](_0x3ea2ac(0x1f3)+_0x5e5844['windowType']+':',_0x489db6),_0x72d5c3=![]);}}catch(_0x757c1d){console[_0x3ea2ac(0x236)]('Verify\x20leaderboard\x20row\x20exception\x20for\x20'+_0x5e5844[_0x3ea2ac(0x20b)]+':',_0x757c1d),_0x72d5c3=![];}}return _0x72d5c3;}async function fallbackLeaderboardSync(_0x561ab6,_0x338f0d,_0xbf971b,_0x2dbd44,_0x54edc5){const _0x5d94b7=a0_0x24be;let _0xcaaed4=!![];const _0x258287=[{'windowType':'all_time','windowStart':null},{'windowType':'weekly','windowStart':getLeaderboardWindowStart(_0x5d94b7(0x232))},{'windowType':_0x5d94b7(0x1d5),'windowStart':getLeaderboardWindowStart(_0x5d94b7(0x1d5))}];for(const _0x4b95dc of _0x258287){try{const _0xf7fcfa=normalizeWindowStart(_0x4b95dc['windowStart']),_0x4ddb76=supabaseClient[_0x5d94b7(0x202)](_0x5d94b7(0x1e4))[_0x5d94b7(0x1c4)](_0x5d94b7(0x1ea))['eq'](_0x5d94b7(0x20d),_0x561ab6)['eq']('game_type',_0xbf971b)['eq'](_0x5d94b7(0x247),_0x2dbd44)['eq']('window_type',_0x4b95dc[_0x5d94b7(0x20b)]);_0xf7fcfa===null?_0x4ddb76['is'](_0x5d94b7(0x1f6),null):_0x4ddb76['eq']('window_start',_0xf7fcfa);const {data:_0x1d3e59,error:_0x4288ad}=await _0x4ddb76[_0x5d94b7(0x1de)]();if(_0x4288ad){console['error'](_0x5d94b7(0x207)+_0x4b95dc['windowType']+':',_0x4288ad);continue;}if(!_0x1d3e59){const {error:_0x377308}=await supabaseClient['from'](_0x5d94b7(0x1e4))['insert']({'user_id':_0x561ab6,'username':_0x338f0d,'game_type':_0xbf971b,'category':_0x2dbd44,'window_type':_0x4b95dc[_0x5d94b7(0x20b)],'window_start':_0xf7fcfa,'score_value':_0x54edc5,'updated_at':new Date()[_0x5d94b7(0x1c9)]()});if(_0x377308){if(_0x377308['code']===_0x5d94b7(0x1f4)){const _0x58f7de=supabaseClient['from'](_0x5d94b7(0x1e4))[_0x5d94b7(0x1c4)]('score_value')['eq'](_0x5d94b7(0x20d),_0x561ab6)['eq'](_0x5d94b7(0x230),_0xbf971b)['eq'](_0x5d94b7(0x247),_0x2dbd44)['eq']('window_type',_0x4b95dc[_0x5d94b7(0x20b)]);_0xf7fcfa===null?_0x58f7de['is'](_0x5d94b7(0x1f6),null):_0x58f7de['eq'](_0x5d94b7(0x1f6),_0xf7fcfa);const {data:_0x117dcc,error:_0x35440d}=await _0x58f7de['maybeSingle']();if(_0x35440d)console[_0x5d94b7(0x236)](_0x5d94b7(0x213)+_0x4b95dc[_0x5d94b7(0x20b)]+':',_0x35440d),_0xcaaed4=![];else{if(_0x117dcc&&(_0x117dcc['score_value']??0x0)<_0x54edc5){const _0x1460af=supabaseClient[_0x5d94b7(0x202)](_0x5d94b7(0x1e4))['update']({'username':_0x338f0d,'score_value':_0x54edc5,'updated_at':new Date()['toISOString']()})['eq']('user_id',_0x561ab6)['eq'](_0x5d94b7(0x230),_0xbf971b)['eq']('category',_0x2dbd44)['eq'](_0x5d94b7(0x1e1),_0x4b95dc[_0x5d94b7(0x20b)]);_0xf7fcfa===null?_0x1460af['is'](_0x5d94b7(0x1f6),null):_0x1460af['eq'](_0x5d94b7(0x1f6),_0xf7fcfa);const {error:_0x37dfc9}=await _0x1460af;_0x37dfc9&&(console[_0x5d94b7(0x236)](_0x5d94b7(0x21d)+_0x4b95dc[_0x5d94b7(0x20b)]+':',_0x37dfc9),_0xcaaed4=![]);}}}else console[_0x5d94b7(0x236)](_0x5d94b7(0x217)+_0x4b95dc['windowType']+':',_0x377308),_0xcaaed4=![];}}else{if((_0x1d3e59[_0x5d94b7(0x21f)]??0x0)<_0x54edc5){const _0x1dc131=supabaseClient[_0x5d94b7(0x202)](_0x5d94b7(0x1e4))[_0x5d94b7(0x22b)]({'username':_0x338f0d,'score_value':_0x54edc5,'updated_at':new Date()[_0x5d94b7(0x1c9)]()})['eq'](_0x5d94b7(0x20d),_0x561ab6)['eq'](_0x5d94b7(0x230),_0xbf971b)['eq'](_0x5d94b7(0x247),_0x2dbd44)['eq'](_0x5d94b7(0x1e1),_0x4b95dc[_0x5d94b7(0x20b)]);_0xf7fcfa===null?_0x1dc131['is'](_0x5d94b7(0x1f6),null):_0x1dc131['eq'](_0x5d94b7(0x1f6),_0xf7fcfa);const {error:_0x35479c}=await _0x1dc131;_0x35479c&&(console[_0x5d94b7(0x236)](_0x5d94b7(0x242)+_0x4b95dc['windowType']+':',_0x35479c),_0xcaaed4=![]);}}}catch(_0x294423){console[_0x5d94b7(0x236)](_0x5d94b7(0x22a)+_0x4b95dc[_0x5d94b7(0x20b)]+':',_0x294423),_0xcaaed4=![];}}return _0xcaaed4;}async function submitGlobalScore(_0x4d37d2,_0x3881cc,_0x4938d4,_0x4faf56){const _0x199404=a0_0x24be,_0x3cc8ff=getOrCreateUserId(),{error:_0x468626}=await supabaseClient[_0x199404(0x202)](_0x199404(0x1e4))['upsert']({'user_id':_0x3cc8ff,'username':_0x4d37d2||_0x199404(0x22f),'mode':_0x3881cc,'score_type':_0x4938d4,'score_value':_0x4faf56},{'onConflict':_0x199404(0x238)});if(_0x468626)console[_0x199404(0x236)]('Error\x20syncing\x20score\x20to\x20global\x20leaderboard:',_0x468626);}function getLeaderboardWindowStart(_0x1edaf7){const _0x350233=a0_0x24be;if(_0x1edaf7===_0x350233(0x1bd))return null;const _0x4b8920=getUTC8Time();if(_0x1edaf7===_0x350233(0x232)){const _0x55c4d4=new Date(_0x4b8920),_0x1513b5=_0x55c4d4[_0x350233(0x1e5)](),_0x581e45=(_0x1513b5+0x6)%0x7;return _0x55c4d4[_0x350233(0x1fe)](_0x55c4d4[_0x350233(0x23c)]()-_0x581e45),_0x55c4d4[_0x350233(0x214)](0x0,0x0,0x0,0x0),_0x55c4d4['getUTCFullYear']()+'-'+String(_0x55c4d4[_0x350233(0x1ff)]()+0x1)['padStart'](0x2,'0')+'-'+String(_0x55c4d4[_0x350233(0x23c)]())[_0x350233(0x1bb)](0x2,'0');}const _0x2005b7=new Date(Date[_0x350233(0x24e)](_0x4b8920['getUTCFullYear'](),_0x4b8920[_0x350233(0x1ff)](),0x1));return _0x2005b7[_0x350233(0x20e)]()+'-'+String(_0x2005b7['getUTCMonth']()+0x1)[_0x350233(0x1bb)](0x2,'0')+'-'+String(_0x2005b7[_0x350233(0x23c)]())['padStart'](0x2,'0');}function getLeaderboardWindowBounds(_0x3cbf99){const _0x2cbd2a=a0_0x24be;if(_0x3cbf99==='alltime')return null;const _0x24f448=getUTC8Time();if(_0x3cbf99===_0x2cbd2a(0x232)){const _0x31c3c3=new Date(_0x24f448),_0x3e7fd2=_0x31c3c3[_0x2cbd2a(0x1e5)](),_0x5ad095=(_0x3e7fd2+0x6)%0x7;_0x31c3c3[_0x2cbd2a(0x1fe)](_0x31c3c3[_0x2cbd2a(0x23c)]()-_0x5ad095),_0x31c3c3['setUTCHours'](0x0,0x0,0x0,0x0);const _0x25473c=new Date(_0x31c3c3);return _0x25473c[_0x2cbd2a(0x1fe)](_0x25473c['getUTCDate']()+0x7),{'start':_0x31c3c3[_0x2cbd2a(0x20e)]()+'-'+String(_0x31c3c3[_0x2cbd2a(0x1ff)]()+0x1)[_0x2cbd2a(0x1bb)](0x2,'0')+'-'+String(_0x31c3c3[_0x2cbd2a(0x23c)]())[_0x2cbd2a(0x1bb)](0x2,'0')+_0x2cbd2a(0x1ba),'end':_0x25473c['getUTCFullYear']()+'-'+String(_0x25473c['getUTCMonth']()+0x1)['padStart'](0x2,'0')+'-'+String(_0x25473c['getUTCDate']())[_0x2cbd2a(0x1bb)](0x2,'0')+_0x2cbd2a(0x1ba)};}const _0x909f41=new Date(Date[_0x2cbd2a(0x24e)](_0x24f448[_0x2cbd2a(0x20e)](),_0x24f448['getUTCMonth'](),0x1)),_0x4474ce=new Date(Date[_0x2cbd2a(0x24e)](_0x24f448[_0x2cbd2a(0x20e)](),_0x24f448[_0x2cbd2a(0x1ff)]()+0x1,0x1));return{'start':_0x909f41[_0x2cbd2a(0x20e)]()+'-'+String(_0x909f41[_0x2cbd2a(0x1ff)]()+0x1)[_0x2cbd2a(0x1bb)](0x2,'0')+'-'+String(_0x909f41[_0x2cbd2a(0x23c)]())['padStart'](0x2,'0')+_0x2cbd2a(0x1ba),'end':_0x4474ce[_0x2cbd2a(0x20e)]()+'-'+String(_0x4474ce[_0x2cbd2a(0x1ff)]()+0x1)['padStart'](0x2,'0')+'-'+String(_0x4474ce[_0x2cbd2a(0x23c)]())['padStart'](0x2,'0')+_0x2cbd2a(0x1ba)};}function normalizeWindowStart(_0x5383aa){if(_0x5383aa===null)return null;return _0x5383aa;}function toDbWindowType(_0x173c0e){const _0x3ba24e=a0_0x24be;return _0x173c0e===_0x3ba24e(0x1bd)?'all_time':_0x173c0e;}function formatLeaderboardCountdown(_0x1a1553){const _0x4dff87=a0_0x24be,_0x3526c8=getUTC8Time();let _0x49bd6c;if(_0x1a1553==='weekly'){_0x49bd6c=new Date(_0x3526c8);const _0x599679=_0x49bd6c[_0x4dff87(0x1e5)](),_0x54f0fd=(_0x599679+0x6)%0x7;_0x49bd6c[_0x4dff87(0x1fe)](_0x49bd6c['getUTCDate']()-_0x54f0fd+0x7),_0x49bd6c[_0x4dff87(0x214)](0x0,0x0,0x0,0x0);}else{if(_0x1a1553===_0x4dff87(0x1d5))_0x49bd6c=new Date(Date[_0x4dff87(0x24e)](_0x3526c8[_0x4dff87(0x20e)](),_0x3526c8[_0x4dff87(0x1ff)]()+0x1,0x1));else return _0x4dff87(0x1da);}const _0xa1c848=_0x49bd6c-_0x3526c8;if(_0xa1c848<=0x0)return'Resetting\x20soon...';const _0x43a0d4=String(Math[_0x4dff87(0x1ed)](_0xa1c848/0x36ee80))[_0x4dff87(0x1bb)](0x2,'0'),_0x5d78d0=String(Math['floor'](_0xa1c848/0xea60)%0x3c)['padStart'](0x2,'0'),_0x30a3dc=String(Math['floor'](_0xa1c848/0x3e8)%0x3c)[_0x4dff87(0x1bb)](0x2,'0');return(_0x1a1553===_0x4dff87(0x232)?_0x4dff87(0x1b8):_0x4dff87(0x1c3))+_0x4dff87(0x216)+_0x43a0d4+':'+_0x5d78d0+':'+_0x30a3dc;}let leaderboardTimerInterval=null;function startLeaderboardTimer(){stopLeaderboardTimer(),updateLeaderboardTimer(),leaderboardTimerInterval=setInterval(updateLeaderboardTimer,0x3e8);}function stopLeaderboardTimer(){leaderboardTimerInterval&&(clearInterval(leaderboardTimerInterval),leaderboardTimerInterval=null);}function updateLeaderboardTimer(){const _0x1083a6=a0_0x24be,_0x4cd6b0=document['getElementById'](_0x1083a6(0x203));if(!_0x4cd6b0)return;_0x4cd6b0[_0x1083a6(0x20c)]=formatLeaderboardCountdown(activeLbTimeWindow);}async function fetchGlobalLeaderboard(_0x4818d1,_0x39ea38,_0x5b2895){const _0x6e146c=a0_0x24be,_0x34fb5c=_0x6e146c(0x21f),_0x4c3f74=getLeaderboardWindowStart(_0x5b2895),_0x3d9782=normalizeWindowStart(_0x4c3f74);try{const _0x2e908e=toDbWindowType(_0x5b2895);let _0x224320=supabaseClient['from'](_0x6e146c(0x1e4))[_0x6e146c(0x1c4)](_0x6e146c(0x23a)+_0x34fb5c+_0x6e146c(0x1c2))['eq']('game_type',_0x4818d1)['eq'](_0x6e146c(0x247),_0x39ea38)['eq'](_0x6e146c(0x1e1),_0x2e908e);_0x5b2895===_0x6e146c(0x1bd)?_0x224320=_0x224320['is'](_0x6e146c(0x1f6),null):_0x224320=_0x224320['eq']('window_start',_0x3d9782);const {data:_0x3bae,error:_0x1fc8bd}=await _0x224320[_0x6e146c(0x215)](_0x34fb5c,{'ascending':![]})['limit'](0x64);if(_0x1fc8bd)throw _0x1fc8bd;const _0x11950f=(_0x3bae||[])[_0x6e146c(0x1d8)](_0x210716=>({..._0x210716,'score_value':_0x210716[_0x34fb5c]!=null?_0x210716[_0x34fb5c]:0x0})),_0x2d1048=getOrCreateUserId();let _0x29ec55=supabaseClient[_0x6e146c(0x202)](_0x6e146c(0x1e4))[_0x6e146c(0x1c4)]('username,\x20'+_0x34fb5c+_0x6e146c(0x23b))['eq'](_0x6e146c(0x230),_0x4818d1)['eq']('category',_0x39ea38)['eq'](_0x6e146c(0x20d),_0x2d1048)['eq'](_0x6e146c(0x1e1),_0x2e908e);_0x5b2895===_0x6e146c(0x1bd)?_0x29ec55=_0x29ec55['is'](_0x6e146c(0x1f6),null):_0x29ec55=_0x29ec55['eq'](_0x6e146c(0x1f6),_0x3d9782);const {data:_0x49af32,error:_0x3dc0fc}=await _0x29ec55[_0x6e146c(0x1de)]();if(_0x3dc0fc)throw _0x3dc0fc;const _0x44e600=_0x49af32?{..._0x49af32,'score_value':_0x49af32[_0x34fb5c]!=null?_0x49af32[_0x34fb5c]:0x0}:null;let _0x4f440a=null,_0x4a4701=null;if(_0x44e600){let _0xf4d008=supabaseClient[_0x6e146c(0x202)]('leaderboard')['select']('*',{'count':'exact','head':!![]})['eq'](_0x6e146c(0x230),_0x4818d1)['eq'](_0x6e146c(0x247),_0x39ea38)['eq']('window_type',_0x2e908e)['gt'](_0x34fb5c,_0x44e600[_0x6e146c(0x21f)]),_0x5ae54b=supabaseClient[_0x6e146c(0x202)](_0x6e146c(0x1e4))[_0x6e146c(0x1c4)]('*',{'count':_0x6e146c(0x1e0),'head':!![]})['eq'](_0x6e146c(0x230),_0x4818d1)['eq']('category',_0x39ea38)['eq'](_0x6e146c(0x1e1),_0x2e908e);_0x5b2895==='alltime'?(_0xf4d008=_0xf4d008['is']('window_start',null),_0x5ae54b=_0x5ae54b['is'](_0x6e146c(0x1f6),null)):(_0xf4d008=_0xf4d008['eq'](_0x6e146c(0x1f6),_0x3d9782),_0x5ae54b=_0x5ae54b['eq']('window_start',_0x3d9782));const {count:_0x52f608}=await _0xf4d008,{count:_0x3db0ca}=await _0x5ae54b;_0x4f440a=(_0x52f608??0x0)+0x1,_0x4a4701=_0x3db0ca??0x1;}return{'topList':_0x11950f,'myRow':_0x44e600,'playerRank':_0x4f440a,'totalPlayers':_0x4a4701};}catch(_0x10374e){return console[_0x6e146c(0x236)](_0x6e146c(0x1dd),_0x10374e),{'topList':[],'myRow':null,'playerRank':null,'totalPlayers':null};}}function getPercentileLabel(_0xbfdf4c,_0x4d30af){const _0x12cbb3=a0_0x24be;if(!_0xbfdf4c||!_0x4d30af||_0x4d30af<0x2)return null;if(_0xbfdf4c<=0x64)return null;const _0x44a267=Math['floor']((_0x4d30af-_0xbfdf4c)/_0x4d30af*0x64);return _0x12cbb3(0x244)+(0x64-_0x44a267)+'%';}function openLeaderboard(){const _0x56b80f=a0_0x24be;currentLbTab=currentGameType,activeLbTimeWindow=_0x56b80f(0x232);const _0x379097=document[_0x56b80f(0x1fc)](_0x56b80f(0x211));if(_0x379097)_0x379097[_0x56b80f(0x231)][_0x56b80f(0x24a)](_0x56b80f(0x1c1));const _0x4f8ce6=document['getElementById'](_0x56b80f(0x204));if(_0x4f8ce6)_0x4f8ce6[_0x56b80f(0x1f0)]=formatUsernameWithSuffix(localStorage[_0x56b80f(0x1fb)](_0x56b80f(0x234))||_0x56b80f(0x22f),getOrCreateUserId());[_0x56b80f(0x1bd),_0x56b80f(0x232),'monthly'][_0x56b80f(0x1e3)](_0x36c207=>{const _0x284a25=_0x56b80f,_0x39ae2f=document[_0x284a25(0x1fc)](_0x284a25(0x1e7)+_0x36c207);if(!_0x39ae2f)return;_0x39ae2f['className']=_0x36c207===_0x284a25(0x232)?'flex-1\x20py-2\x20rounded-lg\x20bg-white\x20shadow-sm\x20transition-all\x20text-gray-800':_0x284a25(0x1fd);}),startLeaderboardTimer(),switchLeaderboardTab(currentLbTab);}function closeLeaderboard(){const _0x54c45e=a0_0x24be,_0x162441=document['getElementById'](_0x54c45e(0x211));if(_0x162441)_0x162441[_0x54c45e(0x231)]['add'](_0x54c45e(0x1c1));stopLeaderboardTimer();}function switchLeaderboardTab(_0x8e59d1){const _0x30114d=a0_0x24be;currentLbTab=_0x8e59d1;const _0x1cfe18=document[_0x30114d(0x1fc)](_0x30114d(0x221)),_0x3e3f01=document['getElementById'](_0x30114d(0x1b4)),_0x17f9ba=document['getElementById']('lb-tab-voicedle'),_0x39fdbb='flex-1\x20py-1.5\x20rounded-lg\x20font-bold\x20text-sm\x20transition-all\x20bg-white\x20shadow-sm\x20text-green-700',_0x2dcf7c=_0x30114d(0x1be);if(_0x1cfe18)_0x1cfe18[_0x30114d(0x226)]=_0x8e59d1===_0x30114d(0x220)?_0x39fdbb:_0x2dcf7c;if(_0x3e3f01)_0x3e3f01['className']=_0x8e59d1===_0x30114d(0x22c)?_0x39fdbb:_0x2dcf7c;if(_0x17f9ba)_0x17f9ba[_0x30114d(0x226)]=_0x8e59d1===_0x30114d(0x1e6)?_0x39fdbb:_0x2dcf7c;updateLeaderboardUI();}function switchLeaderboardType(_0x4588b3){}function changeLbCategory(_0x4f5c46){const _0x159eea=a0_0x24be;activeLbCategory=_0x4f5c46,document['getElementById']('lbl-cat-normal')[_0x159eea(0x226)]=_0x4f5c46===_0x159eea(0x1df)?_0x159eea(0x1ca):'flex-1\x20py-2\x20rounded-lg\x20text-gray-500',document[_0x159eea(0x1fc)](_0x159eea(0x1e2))['className']=_0x4f5c46===_0x159eea(0x201)?_0x159eea(0x1ca):'flex-1\x20py-2\x20rounded-lg\x20text-gray-500',updateLeaderboardUI();}function changeLbTime(_0x146ebe){const _0x1ad81d=a0_0x24be;activeLbTimeWindow=_0x146ebe,['alltime',_0x1ad81d(0x232),_0x1ad81d(0x1d5)][_0x1ad81d(0x1e3)](_0x4c3208=>{const _0x333429=_0x1ad81d,_0x571336=document[_0x333429(0x1fc)]('lbl-window-'+_0x4c3208);if(!_0x571336)return;_0x571336[_0x333429(0x226)]=_0x4c3208===_0x146ebe?'flex-1\x20py-2\x20rounded-lg\x20bg-white\x20shadow-sm\x20transition-all\x20text-gray-800':_0x333429(0x1fd);}),updateLeaderboardUI();}async function updateLeaderboardUI(){const _0x1032d5=a0_0x24be,_0x5b47d7=document[_0x1032d5(0x1fc)]('leaderboard-entries'),_0x47d2ec=document['getElementById'](_0x1032d5(0x218));if(!_0x5b47d7)return;_0x5b47d7['innerHTML']=_0x1032d5(0x1d2);if(_0x47d2ec)_0x47d2ec[_0x1032d5(0x1f0)]='';const {topList:_0x5678b5,myRow:_0x1b0e98,playerRank:_0x1b0931,totalPlayers:_0x2667c1}=await fetchGlobalLeaderboard(currentLbTab,activeLbCategory,activeLbTimeWindow);updateLeaderboardTimer();if(!_0x5678b5||_0x5678b5[_0x1032d5(0x1db)]===0x0){_0x5b47d7[_0x1032d5(0x1f0)]=_0x1032d5(0x21a);return;}const _0x276b07=getOrCreateUserId(),_0x1fa2aa=['🥇','🥈','🥉'];_0x5b47d7[_0x1032d5(0x1f0)]=_0x5678b5['map']((_0x2cd320,_0x14a060)=>{const _0x4a7015=_0x1032d5,_0x3b1817=_0x1fa2aa[_0x14a060]||'#'+(_0x14a060+0x1),_0x1e70c3=_0x2cd320[_0x4a7015(0x20d)]===_0x276b07,_0x528649=_0x1e70c3?_0x4a7015(0x1d4):_0x4a7015(0x1f1);return'\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex\x20items-center\x20gap-3\x20px-3\x20py-2\x20rounded-xl\x20border\x20'+_0x528649+_0x4a7015(0x1d3)+_0x3b1817+_0x4a7015(0x1d1)+formatUsernameWithSuffix(_0x2cd320['username']||_0x4a7015(0x22f),_0x2cd320['user_id'])+(_0x1e70c3?_0x4a7015(0x241):'')+_0x4a7015(0x208)+_0x2cd320['score_value']+_0x4a7015(0x20a);})[_0x1032d5(0x1ef)]('');if(!_0x47d2ec)return;if(_0x1b0e98){const _0x7b0875=getPercentileLabel(_0x1b0931,_0x2667c1),_0x59f254=_0x1b0e98['username']||localStorage['getItem'](_0x1032d5(0x234))||_0x1032d5(0x22f),_0x56975a=_0x7b0875?'<span\x20class=\x22text-[10px]\x20font-bold\x20text-purple-500\x20bg-purple-100\x20dark:bg-purple-900/40\x20dark:text-purple-300\x20px-1.5\x20py-0.5\x20rounded-full\x22>'+_0x7b0875+_0x1032d5(0x1cd):'';_0x47d2ec[_0x1032d5(0x1f0)]='\x0a\x20\x20\x20\x20\x20\x20<p\x20class=\x22text-[9px]\x20text-gray-400\x20text-center\x20mb-1\x20uppercase\x20tracking-widest\x22>Your\x20Score</p>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex\x20items-center\x20gap-3\x20px-3\x20py-2\x20rounded-xl\x20border\x20bg-green-50\x20dark:bg-green-900/30\x20border-green-300\x20dark:border-green-700\x20transition-all\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22text-sm\x20font-black\x20text-gray-500\x20w-6\x20text-center\x22>#'+(_0x1b0931??'?')+_0x1032d5(0x219)+formatUsernameWithSuffix(_0x59f254,_0x276b07)+_0x1032d5(0x24d)+_0x56975a+_0x1032d5(0x1eb)+_0x1b0e98[_0x1032d5(0x21f)]+_0x1032d5(0x1bc);}else{const _0x3aefac=localStorage[_0x1032d5(0x1fb)]('tracendle_nickname')||_0x1032d5(0x22f),_0x3deb1c=activeLbCategory==='hard'?_0x1032d5(0x235):'dailyStreak',_0x1625da=allPersistentData[currentLbTab]?.[_0x3deb1c]||0x0;_0x47d2ec[_0x1032d5(0x1f0)]=_0x1032d5(0x1ce)+formatUsernameWithSuffix(_0x3aefac,getOrCreateUserId())+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22text-sm\x20font-black\x20text-gray-400\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x1625da+_0x1032d5(0x1cb);}}function applyLeaderboardDarkMode(){const _0x116368=a0_0x24be,_0x20adb6=document[_0x116368(0x1fc)]('leaderboard-modal');if(!_0x20adb6)return;const _0x87de8f=_0x20adb6[_0x116368(0x1d9)](_0x116368(0x23f));if(!_0x87de8f)return;document['body'][_0x116368(0x231)][_0x116368(0x1bf)](_0x116368(0x1cc))?(_0x87de8f['style'][_0x116368(0x1d6)]='#1e293b',_0x87de8f[_0x116368(0x248)][_0x116368(0x1f2)]='#e2e8f0'):(_0x87de8f[_0x116368(0x248)][_0x116368(0x1d6)]='',_0x87de8f[_0x116368(0x248)][_0x116368(0x1f2)]='');}async function recordDailySolve(_0x1446c4,_0x5a2ce4,_0xee29d6){const _0x1b7ad0=a0_0x24be,_0x595e3=getOrCreateUserId(),_0x125bf8=getDailyString();try{await supabaseClient[_0x1b7ad0(0x202)](_0x1b7ad0(0x21c))[_0x1b7ad0(0x1c8)]({'user_id':_0x595e3,'game_type':_0x1446c4,'daily_key':_0x125bf8,'guess_count':_0x5a2ce4,'result':_0xee29d6?_0x1b7ad0(0x1b7):_0x1b7ad0(0x223),'solved_at':new Date()['toISOString']()},{'onConflict':_0x1b7ad0(0x1f7)});}catch(_0x1cca3d){console['error'](_0x1b7ad0(0x1f9),_0x1cca3d);}}function a0_0x24be(_0x16d1c2,_0x266cef){_0x16d1c2=_0x16d1c2-0x1b4;const _0x3fcbe0=a0_0x3fcb();let _0x24bea3=_0x3fcbe0[_0x16d1c2];return _0x24bea3;}function a0_0x3fcb(){const _0x59b17f=['padStart','\x20<span\x20class=\x22text-[10px]\x20font-normal\x20text-gray-400\x22>streak</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20</div>','alltime','flex-1\x20py-1.5\x20rounded-lg\x20font-bold\x20text-sm\x20transition-all\x20text-gray-500\x20hover:text-gray-700','contains','Verify\x20leaderboard\x20row\x20failed\x20for\x20','hidden',',\x20user_id','Monthly','select','<strong>1\x20Total\x20Player\x20Answered</strong>\x20\x20<span\x20class=\x22text-green-600\x20font-medium\x22>','Leaderboard\x20RPC\x20error:','%\x20Total\x20Player\x20got\x20it\x20right</span>','upsert','toISOString','flex-1\x20py-2\x20rounded-lg\x20bg-white\x20dark:bg-gray-700\x20shadow-sm\x20text-gray-800\x20dark:text-white','\x20<span\x20class=\x22text-[10px]\x20font-normal\x20text-gray-400\x22>streak</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20<p\x20class=\x22text-[9px]\x20text-gray-400\x20text-center\x20mt-1\x20italic\x22>Not\x20yet\x20ranked\x20in\x20this\x20window</p>','dark','</span>','\x0a\x20\x20\x20\x20\x20\x20<p\x20class=\x22text-[9px]\x20text-gray-400\x20text-center\x20mb-1\x20uppercase\x20tracking-widest\x22>Your\x20Score</p>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22flex\x20items-center\x20gap-3\x20px-3\x20py-2\x20rounded-xl\x20border\x20bg-gray-100\x20dark:bg-gray-800\x20border-gray-200\x20dark:border-gray-700\x20transition-all\x20opacity-70\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22text-md\x20w-6\x20text-center\x20text-gray-400\x22>—</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22flex-1\x20text-sm\x20text-gray-500\x20dark:text-gray-400\x20truncate\x20font-medium\x22>','<strong>0\x20Total\x20Player\x20Answered</strong>','unlimited','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22flex-1\x20text-sm\x20text-gray-800\x20dark:text-gray-200\x20truncate\x20font-medium\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','<div\x20class=\x22text-center\x20py-6\x20text-gray-400\x20text-sm\x20animate-pulse\x22>Fetching\x20high\x20scores...</div>','\x20transition-all\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22text-md\x20w-6\x20text-center\x22>','bg-green-50\x20dark:bg-green-900/30\x20border-green-300\x20dark:border-green-700','monthly','backgroundColor','daily-solver-count','map','querySelector','All\x20Time\x20leaderboard\x20does\x20not\x20reset.','length','%\x20Total\x20Players\x20got\x20it\x20right</span>','Error\x20building\x20dashboard\x20slice:','maybeSingle','normal','exact','window_type','lbl-cat-hard','forEach','leaderboard','getUTCDay','voicedle','lbl-window-','daily-solver-count\x20element\x20not\x20found','insert','id,\x20score_value','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22text-sm\x20font-black\x20text-yellow-600\x20dark:text-yellow-400\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','windowStart','floor','warn','join','innerHTML','bg-gray-50\x20dark:bg-gray-800\x20border-gray-100\x20dark:border-gray-700','color','Verify\x20leaderboard\x20upsert\x20failed\x20for\x20','23505','user_id,game_type,category,window_type,window_start','window_start','user_id,game_type,daily_key','max','Failed\x20to\x20record\x20daily\x20solve:','4kSxfuO','getItem','getElementById','flex-1\x20py-2\x20rounded-lg\x20text-gray-500\x20transition-all','setUTCDate','getUTCMonth','413235qvAHyx','hard','from','leaderboard-reset-timer','lb-current-username','4327696kCpMFI','fixWindowStartForUser\x20failed\x20for\x20','Failed\x20to\x20load\x20existing\x20leaderboard\x20row\x20for\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22text-sm\x20font-black\x20text-yellow-600\x20dark:text-yellow-400\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','daily','\x20<span\x20class=\x22text-[10px]\x20font-normal\x20text-gray-400\x22>streak</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20</div>','windowType','textContent','user_id','getUTCFullYear','Verify\x20leaderboard\x20insert\x20for\x20','Leaderboard\x20sync:\x20calling\x20record_game_result','leaderboard-modal','\x20Total\x20Players\x20Answered</strong>\x20\x20<span\x20class=\x22text-green-600\x20font-medium\x22>','Conflict\x20recovery\x20check\x20failed\x20for\x20','setUTCHours','order','\x20reset\x20in\x20','Fallback\x20insert\x20failed\x20for\x20','leaderboard-my-score','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22flex-1\x20text-sm\x20text-gray-800\x20dark:text-gray-200\x20truncate\x20font-medium\x22>','<div\x20class=\x22text-center\x20py-8\x20text-gray-400\x20text-sm\x22>No\x20entries\x20yet\x20for\x20this\x20category!</div>','\x20row','daily_solvers','Conflict\x20recovery\x20update\x20failed\x20for\x20','dailyStreak','score_value','uma','lb-tab-uma','Fixing\x20NULL\x20window_start\x20for\x20','loss','Leaderboard:\x20result\x20already\x20submitted\x20for\x20this\x20session\x20key,\x20skipping.','round','className','<strong>—</strong>','6521720VPfSSj','Leaderboard\x20RPC\x20succeeded','Fallback\x20leaderboard\x20sync\x20failed\x20for\x20','update','course','filter','record_game_result','Anonymous','game_type','classList','weekly','_leaderboardSynced','tracendle_nickname','hardStreak','error','2144976nrqFpx','user_id,mode,score_type','easyStreak','username,\x20',',\x20updated_at','getUTCDate','result','mode','div','all_time','\x20<span\x20class=\x22text-[10px]\x20text-green-500\x20font-bold\x22>(You)</span>','Fallback\x20update\x20failed\x20for\x20','minimal','Top\x20','log','2331573spUtCs','category','style','14757984SastRp','remove','easy','2141042JTRdBm','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22flex\x20items-center\x20gap-1.5\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','UTC','14VfxUqi','lb-tab-course','Inserting\x20missing\x20','unlimitedStreak','win','Weekly','lbSubmittedKey','T00:00:00Z'];a0_0x3fcb=function(){return _0x59b17f;};return a0_0x3fcb();}async function recordDailySolve(_0x2ff9fe,_0x51836b,_0x20429d){const _0x4c7063=a0_0x24be,_0x94ed4c=getOrCreateUserId(),_0xe2e27=getDailyString();try{await supabaseClient[_0x4c7063(0x202)](_0x4c7063(0x21c))[_0x4c7063(0x1c8)]({'user_id':_0x94ed4c,'game_type':_0x2ff9fe,'daily_key':_0xe2e27,'guess_count':_0x51836b,'result':_0x20429d?_0x4c7063(0x1b7):_0x4c7063(0x223),'solved_at':new Date()[_0x4c7063(0x1c9)]()},{'onConflict':'user_id,game_type,daily_key'});}catch(_0x54bd4b){console[_0x4c7063(0x236)](_0x4c7063(0x1f9),_0x54bd4b);}}async function recordDailySolve(_0x5c09eb,_0x416959,_0x15d1b3){const _0x36d7f6=a0_0x24be,_0x19d5b6=getOrCreateUserId(),_0x8af7d8=getDailyString();try{await supabaseClient[_0x36d7f6(0x202)](_0x36d7f6(0x21c))['upsert']({'user_id':_0x19d5b6,'game_type':_0x5c09eb,'daily_key':_0x8af7d8,'guess_count':_0x416959,'result':_0x15d1b3?_0x36d7f6(0x1b7):_0x36d7f6(0x223),'solved_at':new Date()[_0x36d7f6(0x1c9)]()},{'onConflict':_0x36d7f6(0x1f7)});}catch(_0x3221fe){console[_0x36d7f6(0x236)](_0x36d7f6(0x1f9),_0x3221fe);}}async function updateDailySolverBadge(){const _0x5ae515=a0_0x24be,_0x13face=document[_0x5ae515(0x1fc)](_0x5ae515(0x1d7));if(!_0x13face){console[_0x5ae515(0x1ee)](_0x5ae515(0x1e8));return;}_0x13face[_0x5ae515(0x20c)]='⏳\x20Loading...';const _0xa574a=currentGameType,_0x4bb5f8=getDailyString();try{const {data:_0x31d5b2,error:_0x1f54db}=await supabaseClient[_0x5ae515(0x202)]('daily_solvers')[_0x5ae515(0x1c4)](_0x5ae515(0x23d))['eq']('game_type',_0xa574a)['eq']('daily_key',_0x4bb5f8);if(_0x1f54db)throw _0x1f54db;const _0x5a9f53=_0x31d5b2?.['length']||0x0,_0x542ae3=_0x31d5b2?.[_0x5ae515(0x22d)](_0x4c83c0=>_0x4c83c0[_0x5ae515(0x23d)]==='win')[_0x5ae515(0x1db)]||0x0,_0x3b6366=_0x5a9f53>0x0?Math[_0x5ae515(0x225)](_0x542ae3/_0x5a9f53*0x64):0x0;let _0xfb8359='';if(_0x5a9f53===0x0)_0xfb8359=_0x5ae515(0x1cf);else _0x5a9f53===0x1?_0xfb8359=_0x5ae515(0x1c5)+_0x3b6366+_0x5ae515(0x1c7):_0xfb8359='<strong>'+_0x5a9f53+_0x5ae515(0x212)+_0x3b6366+_0x5ae515(0x1dc);_0x13face[_0x5ae515(0x1f0)]=_0xfb8359;}catch(_0x56e390){console[_0x5ae515(0x236)]('Failed\x20to\x20fetch\x20daily\x20solver\x20count:',_0x56e390),_0x13face[_0x5ae515(0x1f0)]=_0x5ae515(0x227);}}
+// ============================================================
+//  leaderboard.js — Supabase sync and leaderboard UI
+// ============================================================
+
+// --------------- Sync result to leaderboard ---------------
+async function syncScoresToLeaderboard(gameType, isWin, guessCount) {
+  const pData     = allPersistentData[gameType];
+  const submitKey = sessionState.sessionKey;
+
+  // Guard 1: in-memory flag — prevents double-call within a single page load.
+  if (sessionState._leaderboardSynced) return;
+
+  // Guard 2: persistent flag — prevents re-submission after a page refresh.
+  if (pData.lbSubmittedKey === submitKey) {
+    console.log('Leaderboard: result already submitted for this session key, skipping.');
+    return;
+  }
+
+  sessionState._leaderboardSynced = true;
+
+  const userId   = getOrCreateUserId();
+  const username = localStorage.getItem('tracendle_nickname') || 'Anonymous';
+  const category = (sessionState.mode === 'easy' || sessionState.mode === 'unlimited' || sessionState.mode === 'daily')
+    ? 'normal' : 'hard';
+
+  let streakKey = 'dailyStreak';
+  if (sessionState.mode === 'unlimited')   streakKey = 'unlimitedStreak';
+  else if (sessionState.mode === 'easy')   streakKey = 'easyStreak';
+  else if (category === 'hard')            streakKey = 'hardStreak';
+  const currentStreak = pData[streakKey] ?? 0;
+
+  try {
+    console.log('Leaderboard sync: calling record_game_result', { userId, gameType, category, streak: currentStreak });
+    const { error } = await supabaseClient.rpc('record_game_result', {
+      p_user_id:      userId,
+      p_username:     username,
+      p_game_type:    gameType,
+      p_category:     category,
+      p_streak_value: currentStreak
+    });
+
+    if (error) {
+      console.error('Leaderboard RPC error:', error.message);
+      const fallbackSuccess = await fallbackLeaderboardSync(userId, username, gameType, category, currentStreak);
+      if (fallbackSuccess) {
+        pData.lbSubmittedKey = submitKey;
+        savePersistentData();
+      }
+    } else {
+      console.log('Leaderboard RPC succeeded');
+      // The RPC may have inserted weekly/monthly rows with window_start = NULL.
+      // Patch them now so they appear in the correct time-window queries.
+      await fixWindowStartForUser(userId, username, gameType, category, currentStreak);
+      pData.lbSubmittedKey = submitKey;
+      savePersistentData();
+    }
+  } catch (err) {
+    console.error('Failed to sync score to leaderboard:', err);
+    const fallbackSuccess = await fallbackLeaderboardSync(userId, username, gameType, category, currentStreak);
+    if (fallbackSuccess) {
+      pData.lbSubmittedKey = submitKey;
+      savePersistentData();
+    }
+  }
+}
+
+// --------------- Fix NULL window_start rows created by the RPC ---------------
+async function fixWindowStartForUser(userId, username, gameType, category, scoreValue) {
+  const windows = [
+    { windowType: 'weekly',  windowStart: getLeaderboardWindowStart('weekly') },
+    { windowType: 'monthly', windowStart: getLeaderboardWindowStart('monthly') }
+  ];
+
+  for (const { windowType, windowStart } of windows) {
+    try {
+      const { data: good } = await supabaseClient
+        .from('leaderboard_Idv')
+        .select('id, score_value')
+        .eq('user_id', userId)
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .eq('window_type', windowType)
+        .eq('window_start', windowStart)
+        .maybeSingle();
+
+      if (good) {
+        if ((good.score_value ?? 0) < scoreValue) {
+          await supabaseClient.from('leaderboard_Idv').update({ score_value: scoreValue, username, updated_at: new Date().toISOString() })
+            .eq('user_id', userId).eq('game_type', gameType).eq('category', category)
+            .eq('window_type', windowType).eq('window_start', windowStart);
+        }
+        continue;
+      }
+
+      const { data: broken } = await supabaseClient
+        .from('leaderboard_Idv')
+        .select('id, score_value')
+        .eq('user_id', userId)
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .eq('window_type', windowType)
+        .is('window_start', null)
+        .maybeSingle();
+
+      if (broken) {
+        console.log(`Fixing NULL window_start for ${windowType}`);
+        await supabaseClient.from('leaderboard_Idv').update({
+          window_start: windowStart,
+          score_value:  Math.max(broken.score_value ?? 0, scoreValue),
+          username,
+          updated_at:   new Date().toISOString()
+        }).eq('id', broken.id);
+      } else {
+        console.log(`Inserting missing ${windowType} row`);
+        await supabaseClient.from('leaderboard_Idv').insert({
+          user_id: userId, username, game_type: gameType, category,
+          window_type: windowType, window_start: windowStart,
+          score_value: scoreValue, updated_at: new Date().toISOString()
+        });
+      }
+    } catch (err) {
+      console.error(`fixWindowStartForUser failed for ${windowType}:`, err);
+    }
+  }
+}
+
+async function ensureLeaderboardWindows(userId, username, gameType, category, scoreValue) {
+  const windows = [
+    { windowType: 'all_time', windowStart: null },
+    { windowType: 'weekly', windowStart: getLeaderboardWindowStart('weekly') },
+    { windowType: 'monthly', windowStart: getLeaderboardWindowStart('monthly') }
+  ];
+  let success = true;
+
+  for (const window of windows) {
+    try {
+      const dbWindowStart = normalizeWindowStart(window.windowStart);
+      const query = supabaseClient.from('leaderboard_Idv').select('score_value').eq('user_id', userId)
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .eq('window_type', window.windowType);
+
+      if (dbWindowStart === null) {
+        query.is('window_start', null);
+      } else {
+        query.eq('window_start', dbWindowStart);
+      }
+
+      const { data: existing, error: fetchError } = await query.maybeSingle();
+      if (fetchError) {
+        console.error(`Verify leaderboard row failed for ${window.windowType} (${window.windowStart}):`, fetchError);
+        success = false;
+        continue;
+      }
+
+      if (!existing) {
+        console.log(`Verify leaderboard insert for ${window.windowType}`, window.windowStart);
+        const { error: upsertError } = await supabaseClient.from('leaderboard_Idv').upsert([{
+          user_id:      userId,
+          username,
+          game_type:    gameType,
+          category,
+          window_type:  window.windowType,
+          window_start: normalizeWindowStart(window.windowStart),
+          score_value:  scoreValue,
+          updated_at:   new Date().toISOString()
+        }], {
+          onConflict: 'user_id,game_type,category,window_type,window_start',
+          returning: 'minimal'
+        });
+        if (upsertError) {
+          console.error(`Verify leaderboard upsert failed for ${window.windowType}:`, upsertError);
+          success = false;
+        }
+      }
+    } catch (err) {
+      console.error(`Verify leaderboard row exception for ${window.windowType}:`, err);
+      success = false;
+    }
+  }
+
+  return success;
+}
+
+async function fallbackLeaderboardSync(userId, username, gameType, category, scoreValue) {
+  let success = true;
+  const windows = [
+    { windowType: 'all_time', windowStart: null },
+    { windowType: 'weekly', windowStart: getLeaderboardWindowStart('weekly') },
+    { windowType: 'monthly', windowStart: getLeaderboardWindowStart('monthly') }
+  ];
+
+  for (const window of windows) {
+    try {
+      const dbWindowStart = normalizeWindowStart(window.windowStart);
+      
+      // Check if row exists first
+      const query = supabaseClient.from('leaderboard_Idv').select('id, score_value').eq('user_id', userId)
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .eq('window_type', window.windowType);
+
+      if (dbWindowStart === null) {
+        query.is('window_start', null);
+      } else {
+        query.eq('window_start', dbWindowStart);
+      }
+
+      const { data: existing, error: fetchError } = await query.maybeSingle();
+      if (fetchError) {
+        console.error(`Failed to load existing leaderboard row for ${window.windowType}:`, fetchError);
+        continue;
+      }
+
+      if (!existing) {
+        // Row doesn't exist, insert it
+        const { error: insertError } = await supabaseClient.from('leaderboard_Idv').insert({
+          user_id:     userId,
+          username,
+          game_type:   gameType,
+          category,
+          window_type: window.windowType,
+          window_start: dbWindowStart,
+          score_value: scoreValue,
+          updated_at:  new Date().toISOString()
+        });
+        
+        if (insertError) {
+          // If 23505 conflict, the row was created by RPC or concurrent request
+          // Check if we need to update the score
+          if (insertError.code === '23505') {
+            const retryQuery = supabaseClient.from('leaderboard_Idv').select('score_value').eq('user_id', userId)
+              .eq('game_type', gameType)
+              .eq('category', category)
+              .eq('window_type', window.windowType);
+            
+            if (dbWindowStart === null) {
+              retryQuery.is('window_start', null);
+            } else {
+              retryQuery.eq('window_start', dbWindowStart);
+            }
+            
+            const { data: retryExisting, error: retryError } = await retryQuery.maybeSingle();
+            if (retryError) {
+              console.error(`Conflict recovery check failed for ${window.windowType}:`, retryError);
+              success = false;
+            } else if (retryExisting && (retryExisting.score_value ?? 0) < scoreValue) {
+              // Score was inserted by concurrent request but is lower than ours - update it
+              const updateQuery = supabaseClient.from('leaderboard_Idv').update({
+                username,
+                score_value: scoreValue,
+                updated_at:  new Date().toISOString()
+              }).eq('user_id', userId)
+                .eq('game_type', gameType)
+                .eq('category', category)
+                .eq('window_type', window.windowType);
+
+              if (dbWindowStart === null) {
+                updateQuery.is('window_start', null);
+              } else {
+                updateQuery.eq('window_start', dbWindowStart);
+              }
+
+              const { error: updateError } = await updateQuery;
+              if (updateError) {
+                console.error(`Conflict recovery update failed for ${window.windowType}:`, updateError);
+                success = false;
+              }
+            }
+          } else {
+            console.error(`Fallback insert failed for ${window.windowType}:`, insertError);
+            success = false;
+          }
+        }
+      } else if ((existing.score_value ?? 0) < scoreValue) {
+        // Row exists but score is lower, update it
+        const updateQuery = supabaseClient.from('leaderboard_Idv').update({
+          username,
+          score_value: scoreValue,
+          updated_at:  new Date().toISOString()
+        }).eq('user_id', userId)
+          .eq('game_type', gameType)
+          .eq('category', category)
+          .eq('window_type', window.windowType);
+
+        if (dbWindowStart === null) {
+          updateQuery.is('window_start', null);
+        } else {
+          updateQuery.eq('window_start', dbWindowStart);
+        }
+
+        const { error: updateError } = await updateQuery;
+        if (updateError) {
+          console.error(`Fallback update failed for ${window.windowType}:`, updateError);
+          success = false;
+        }
+      }
+    } catch (err) {
+      console.error(`Fallback leaderboard sync failed for ${window.windowType}:`, err);
+      success = false;
+    }
+  }
+  return success;
+}
+
+// --------------- (Legacy) direct upsert — kept for backwards compat ---------------
+async function submitGlobalScore(username, mode, scoreType, scoreValue) {
+  const userId = getOrCreateUserId();
+  const { error } = await supabaseClient
+    .from('leaderboard_Idv')
+    .upsert({
+      user_id: userId, username: username || 'Anonymous',
+      mode: mode, score_type: scoreType, score_value: scoreValue
+    }, { onConflict: 'user_id,mode,score_type' });
+  if (error) console.error('Error syncing score to global leaderboard:', error);
+}
+
+// --------------- Fetch leaderboard data ---------------
+function getLeaderboardWindowStart(windowType) {
+  if (windowType === 'alltime') return null;
+  const now8 = getUTC8Time();
+  if (windowType === 'weekly') {
+    const weekStart = new Date(now8);
+    const day = weekStart.getUTCDay();
+    const diff = (day + 6) % 7; // Monday start
+    weekStart.setUTCDate(weekStart.getUTCDate() - diff);
+    weekStart.setUTCHours(0, 0, 0, 0);
+    return `${weekStart.getUTCFullYear()}-${String(weekStart.getUTCMonth() + 1).padStart(2, '0')}-${String(weekStart.getUTCDate()).padStart(2, '0')}`;
+  }
+  const monthStart = new Date(Date.UTC(now8.getUTCFullYear(), now8.getUTCMonth(), 1));
+  return `${monthStart.getUTCFullYear()}-${String(monthStart.getUTCMonth() + 1).padStart(2, '0')}-${String(monthStart.getUTCDate()).padStart(2, '0')}`;
+}
+
+function getLeaderboardWindowBounds(windowType) {
+  if (windowType === 'alltime') return null;
+  const now8 = getUTC8Time();
+  if (windowType === 'weekly') {
+    const weekStart = new Date(now8);
+    const day = weekStart.getUTCDay();
+    const diff = (day + 6) % 7;
+    weekStart.setUTCDate(weekStart.getUTCDate() - diff);
+    weekStart.setUTCHours(0, 0, 0, 0);
+
+    const nextWeekStart = new Date(weekStart);
+    nextWeekStart.setUTCDate(nextWeekStart.getUTCDate() + 7);
+    return {
+      start: `${weekStart.getUTCFullYear()}-${String(weekStart.getUTCMonth() + 1).padStart(2, '0')}-${String(weekStart.getUTCDate()).padStart(2, '0')}T00:00:00Z`,
+      end: `${nextWeekStart.getUTCFullYear()}-${String(nextWeekStart.getUTCMonth() + 1).padStart(2, '0')}-${String(nextWeekStart.getUTCDate()).padStart(2, '0')}T00:00:00Z`
+    };
+  }
+
+  const monthStart = new Date(Date.UTC(now8.getUTCFullYear(), now8.getUTCMonth(), 1));
+  const nextMonthStart = new Date(Date.UTC(now8.getUTCFullYear(), now8.getUTCMonth() + 1, 1));
+  return {
+    start: `${monthStart.getUTCFullYear()}-${String(monthStart.getUTCMonth() + 1).padStart(2, '0')}-${String(monthStart.getUTCDate()).padStart(2, '0')}T00:00:00Z`,
+    end: `${nextMonthStart.getUTCFullYear()}-${String(nextMonthStart.getUTCMonth() + 1).padStart(2, '0')}-${String(nextMonthStart.getUTCDate()).padStart(2, '0')}T00:00:00Z`
+  };
+}
+
+function normalizeWindowStart(windowStart) {
+  if (windowStart === null) return null;
+  return windowStart;
+}
+
+function toDbWindowType(windowType) {
+  return windowType === 'alltime' ? 'all_time' : windowType;
+}
+
+function formatLeaderboardCountdown(windowType) {
+  const now8 = getUTC8Time();
+  let nextReset;
+
+  if (windowType === 'weekly') {
+    nextReset = new Date(now8);
+    const day = nextReset.getUTCDay();
+    const diff = (day + 6) % 7;
+    nextReset.setUTCDate(nextReset.getUTCDate() - diff + 7);
+    nextReset.setUTCHours(0, 0, 0, 0);
+  } else if (windowType === 'monthly') {
+    nextReset = new Date(Date.UTC(now8.getUTCFullYear(), now8.getUTCMonth() + 1, 1));
+  } else {
+    return 'All Time leaderboard does not reset.';
+  }
+
+  const diff = nextReset - now8;
+  if (diff <= 0) return 'Resetting soon...';
+
+  const hours = String(Math.floor(diff / 3600000)).padStart(2, '0');
+  const minutes = String(Math.floor(diff / 60000) % 60).padStart(2, '0');
+  const seconds = String(Math.floor(diff / 1000) % 60).padStart(2, '0');
+  return `${windowType === 'weekly' ? 'Weekly' : 'Monthly'} reset in ${hours}:${minutes}:${seconds}`;
+}
+
+let leaderboardTimerInterval = null;
+function startLeaderboardTimer() {
+  stopLeaderboardTimer();
+  updateLeaderboardTimer();
+  leaderboardTimerInterval = setInterval(updateLeaderboardTimer, 1000);
+}
+
+function stopLeaderboardTimer() {
+  if (leaderboardTimerInterval) {
+    clearInterval(leaderboardTimerInterval);
+    leaderboardTimerInterval = null;
+  }
+}
+
+function updateLeaderboardTimer() {
+  const timerEl = document.getElementById('leaderboard-reset-timer');
+  if (!timerEl) return;
+  timerEl.textContent = formatLeaderboardCountdown(activeLbTimeWindow);
+}
+
+async function fetchGlobalLeaderboard(gameType, category, timeWindow) {
+  const scoreCol = 'score_value';
+  const windowStart = getLeaderboardWindowStart(timeWindow);
+  const dbWindowStart = normalizeWindowStart(windowStart);
+
+  try {
+    const dbWindowType = toDbWindowType(timeWindow);
+    let topQuery = supabaseClient
+      .from('leaderboard_Idv')
+      .select(`username, ${scoreCol}, user_id`)
+      .eq('game_type', gameType)
+      .eq('category', category)
+      .eq('window_type', dbWindowType);
+
+    if (timeWindow === 'alltime') {
+      topQuery = topQuery.is('window_start', null);
+    } else {
+      topQuery = topQuery.eq('window_start', dbWindowStart);
+    }
+
+    const { data, error } = await topQuery.order(scoreCol, { ascending: false }).limit(100);
+    if (error) throw error;
+
+    const topList = (data || []).map(e => ({
+      ...e,
+      score_value: e[scoreCol] != null ? e[scoreCol] : 0
+    }));
+
+    const userId = getOrCreateUserId();
+    let myRowQuery = supabaseClient
+      .from('leaderboard_Idv')
+      .select(`username, ${scoreCol}, updated_at`)
+      .eq('game_type', gameType)
+      .eq('category', category)
+      .eq('user_id', userId)
+      .eq('window_type', dbWindowType);
+
+    if (timeWindow === 'alltime') {
+      myRowQuery = myRowQuery.is('window_start', null);
+    } else {
+      myRowQuery = myRowQuery.eq('window_start', dbWindowStart);
+    }
+
+    const { data: myRaw, error: myError } = await myRowQuery.maybeSingle();
+    if (myError) throw myError;
+    const myRow = myRaw ? { ...myRaw, score_value: myRaw[scoreCol] != null ? myRaw[scoreCol] : 0 } : null;
+
+    let playerRank = null, totalPlayers = null;
+    if (myRow) {
+      let aboveQuery = supabaseClient
+        .from('leaderboard_Idv')
+        .select('*', { count: 'exact', head: true })
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .eq('window_type', dbWindowType)
+        .gt(scoreCol, myRow.score_value);
+
+      let totalQuery = supabaseClient
+        .from('leaderboard_Idv')
+        .select('*', { count: 'exact', head: true })
+        .eq('game_type', gameType)
+        .eq('category', category)
+        .eq('window_type', dbWindowType);
+
+      if (timeWindow === 'alltime') {
+        aboveQuery = aboveQuery.is('window_start', null);
+        totalQuery = totalQuery.is('window_start', null);
+      } else {
+        aboveQuery = aboveQuery.eq('window_start', dbWindowStart);
+        totalQuery = totalQuery.eq('window_start', dbWindowStart);
+      }
+
+      const { count: above } = await aboveQuery;
+      const { count: total } = await totalQuery;
+      playerRank = (above ?? 0) + 1;
+      totalPlayers = total ?? 1;
+    }
+
+    return { topList, myRow, playerRank, totalPlayers };
+  } catch (err) {
+    console.error('Error building dashboard slice:', err);
+    return { topList: [], myRow: null, playerRank: null, totalPlayers: null };
+  }
+}
+
+// --------------- Leaderboard modal UI ---------------
+function getPercentileLabel(playerRank, totalPlayers) {
+  if (!playerRank || !totalPlayers || totalPlayers < 2) return null;
+  if (playerRank <= 100) return null;
+  const pct = Math.floor(((totalPlayers - playerRank) / totalPlayers) * 100);
+  return `Top ${100 - pct}%`;
+}
+
+function openLeaderboard() {
+  currentLbTab = currentGameType;
+  activeLbTimeWindow = 'weekly';   // ← reset to weekly on every open
+
+  const modal = document.getElementById('leaderboard-modal');
+  if (modal) modal.classList.remove('hidden');
+
+  const lbUsername = document.getElementById('lb-current-username');
+  if (lbUsername) lbUsername.innerHTML = formatUsernameWithSuffix(
+    localStorage.getItem('tracendle_nickname') || 'Anonymous',
+    getOrCreateUserId()
+  );
+
+  // Sync the time-window button highlights to match 'weekly'
+  ['alltime', 'weekly', 'monthly'].forEach(type => {
+    const btn = document.getElementById(`lbl-window-${type}`);
+    if (!btn) return;
+    btn.className = type === 'weekly'
+      ? 'flex-1 py-2 rounded-lg bg-white shadow-sm transition-all text-gray-800'
+      : 'flex-1 py-2 rounded-lg text-gray-500 transition-all';
+  });
+
+  startLeaderboardTimer();
+  switchLeaderboardTab(currentLbTab);
+}
+
+function closeLeaderboard() {
+  const modal = document.getElementById('leaderboard-modal');
+  if (modal) modal.classList.add('hidden');
+  stopLeaderboardTimer();
+}
+
+function switchLeaderboardTab(tab) {
+  currentLbTab = tab;
+  const tabUma     = document.getElementById('lb-tab-uma');
+  const tabCourse  = document.getElementById('lb-tab-course');
+  const tabVoicedle = document.getElementById('lb-tab-voicedle');
+  const activeCls  = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all bg-white shadow-sm text-green-700';
+  const idleCls    = 'flex-1 py-1.5 rounded-lg font-bold text-sm transition-all text-gray-500 hover:text-gray-700';
+  if (tabUma) tabUma.className = tab === 'uma' ? activeCls : idleCls;
+  if (tabCourse) tabCourse.className = tab === 'course' ? activeCls : idleCls;
+  if (tabVoicedle) tabVoicedle.className = tab === 'voicedle' ? activeCls : idleCls;
+  updateLeaderboardUI();
+}
+
+function switchLeaderboardType(type) {}  // reserved
+
+function changeLbCategory(cat) {
+  activeLbCategory = cat;
+  document.getElementById('lbl-cat-normal').className = cat === 'normal'
+    ? 'flex-1 py-2 rounded-lg bg-white dark:bg-gray-700 shadow-sm text-gray-800 dark:text-white'
+    : 'flex-1 py-2 rounded-lg text-gray-500';
+  document.getElementById('lbl-cat-hard').className = cat === 'hard'
+    ? 'flex-1 py-2 rounded-lg bg-white dark:bg-gray-700 shadow-sm text-gray-800 dark:text-white'
+    : 'flex-1 py-2 rounded-lg text-gray-500';
+  updateLeaderboardUI();
+}
+
+function changeLbTime(windowType) {
+  activeLbTimeWindow = windowType;
+  ['alltime', 'weekly', 'monthly'].forEach(type => {
+    const btn = document.getElementById(`lbl-window-${type}`);
+    if (!btn) return;
+    btn.className = type === windowType
+      ? 'flex-1 py-2 rounded-lg bg-white shadow-sm transition-all text-gray-800'
+      : 'flex-1 py-2 rounded-lg text-gray-500 transition-all';
+  });
+  updateLeaderboardUI();
+}
+
+async function updateLeaderboardUI() {
+  const container     = document.getElementById('leaderboard-entries');
+  const myScoreFooter = document.getElementById('leaderboard-my-score');
+  if (!container) return;
+
+  container.innerHTML = '<div class="text-center py-6 text-gray-400 text-sm animate-pulse">Fetching high scores...</div>';
+  if (myScoreFooter) myScoreFooter.innerHTML = '';
+
+  const { topList, myRow, playerRank, totalPlayers } =
+    await fetchGlobalLeaderboard(currentLbTab, activeLbCategory, activeLbTimeWindow);
+
+  updateLeaderboardTimer();
+
+  if (!topList || topList.length === 0) {
+    container.innerHTML = '<div class="text-center py-8 text-gray-400 text-sm">No entries yet for this category!</div>';
+    return;
+  }
+
+  const userId = getOrCreateUserId();
+  const medals = ['🥇', '🥈', '🥉'];
+
+  container.innerHTML = topList.map((entry, i) => {
+    const rankLabel = medals[i] || `#${i + 1}`;
+    const isMe      = entry.user_id === userId;
+    const highlight = isMe
+      ? 'bg-green-50 dark:bg-green-900/30 border-green-300 dark:border-green-700'
+      : 'bg-gray-50 dark:bg-gray-800 border-gray-100 dark:border-gray-700';
+    return `
+      <div class="flex items-center gap-3 px-3 py-2 rounded-xl border ${highlight} transition-all">
+        <span class="text-md w-6 text-center">${rankLabel}</span>
+        <span class="flex-1 text-sm text-gray-800 dark:text-gray-200 truncate font-medium">
+          ${formatUsernameWithSuffix(entry.username || 'Anonymous', entry.user_id)}${isMe ? ' <span class="text-[10px] text-green-500 font-bold">(You)</span>' : ''}
+        </span>
+        <span class="text-sm font-black text-yellow-600 dark:text-yellow-400">
+          ${entry.score_value} <span class="text-[10px] font-normal text-gray-400">streak</span>
+        </span>
+      </div>`;
+  }).join('');
+
+  if (!myScoreFooter) return;
+
+  if (myRow) {
+    const percentileLabel = getPercentileLabel(playerRank, totalPlayers);
+    const myUsername      = myRow.username || localStorage.getItem('tracendle_nickname') || 'Anonymous';
+    const percentileBadge = percentileLabel
+      ? `<span class="text-[10px] font-bold text-purple-500 bg-purple-100 dark:bg-purple-900/40 dark:text-purple-300 px-1.5 py-0.5 rounded-full">${percentileLabel}</span>`
+      : '';
+    myScoreFooter.innerHTML = `
+      <p class="text-[9px] text-gray-400 text-center mb-1 uppercase tracking-widest">Your Score</p>
+      <div class="flex items-center gap-3 px-3 py-2 rounded-xl border bg-green-50 dark:bg-green-900/30 border-green-300 dark:border-green-700 transition-all">
+        <span class="text-sm font-black text-gray-500 w-6 text-center">#${playerRank ?? '?'}</span>
+        <span class="flex-1 text-sm text-gray-800 dark:text-gray-200 truncate font-medium">${formatUsernameWithSuffix(myUsername, userId)}</span>
+        <span class="flex items-center gap-1.5">
+          ${percentileBadge}
+          <span class="text-sm font-black text-yellow-600 dark:text-yellow-400">
+            ${myRow.score_value} <span class="text-[10px] font-normal text-gray-400">streak</span>
+          </span>
+        </span>
+      </div>`;
+  } else {
+    const myUsername  = localStorage.getItem('tracendle_nickname') || 'Anonymous';
+    const modeKey     = activeLbCategory === 'hard' ? 'hardStreak' : 'dailyStreak';
+    const localStreak = allPersistentData[currentLbTab]?.[modeKey] || 0;
+    myScoreFooter.innerHTML = `
+      <p class="text-[9px] text-gray-400 text-center mb-1 uppercase tracking-widest">Your Score</p>
+      <div class="flex items-center gap-3 px-3 py-2 rounded-xl border bg-gray-100 dark:bg-gray-800 border-gray-200 dark:border-gray-700 transition-all opacity-70">
+        <span class="text-md w-6 text-center text-gray-400">—</span>
+        <span class="flex-1 text-sm text-gray-500 dark:text-gray-400 truncate font-medium">${formatUsernameWithSuffix(myUsername, getOrCreateUserId())}</span>
+        <span class="text-sm font-black text-gray-400">
+          ${localStreak} <span class="text-[10px] font-normal text-gray-400">streak</span>
+        </span>
+      </div>
+      <p class="text-[9px] text-gray-400 text-center mt-1 italic">Not yet ranked in this window</p>`;
+  }
+}
+
+function applyLeaderboardDarkMode() {
+  const modal = document.getElementById('leaderboard-modal');
+  if (!modal) return;
+  const inner = modal.querySelector('div');
+  if (!inner) return;
+  if (document.body.classList.contains('dark')) {
+    inner.style.backgroundColor = '#1e293b';
+    inner.style.color = '#e2e8f0';
+  } else {
+    inner.style.backgroundColor = '';
+    inner.style.color = '';
+  }
+}
+
+// --------------- Daily solver count ---------------
+// leaderboard.js
+async function recordDailySolve(gameType, guessCount, isWin) {
+  const userId   = getOrCreateUserId();
+  const dailyKey = getDailyString();
+  try {
+    await supabaseClient.from('daily_solvers').upsert({
+      user_id:     userId,
+      game_type:   gameType,
+      daily_key:   dailyKey,
+      guess_count: guessCount,
+      result:      isWin ? 'win' : 'loss',     //  NEW
+      solved_at:   new Date().toISOString()
+    }, { onConflict: 'user_id,game_type,daily_key' });
+  } catch (err) {
+    console.error('Failed to record daily solve:', err);
+  }
+}
+
+async function recordDailySolve(gameType, guessCount, isWin) {
+  const userId   = getOrCreateUserId();
+  const dailyKey = getDailyString();
+  try {
+    await supabaseClient.from('daily_solvers').upsert({
+      user_id:     userId,
+      game_type:   gameType,
+      daily_key:   dailyKey,
+      guess_count: guessCount,
+      result:      isWin ? 'win' : 'loss',
+      solved_at:   new Date().toISOString()
+    }, { onConflict: 'user_id,game_type,daily_key' });
+  } catch (err) {
+    console.error('Failed to record daily solve:', err);
+  }
+}
+
+// --------------- Daily solver count ---------------
+async function recordDailySolve(gameType, guessCount, isWin) {
+  const userId   = getOrCreateUserId();
+  const dailyKey = getDailyString();
+  try {
+    await supabaseClient.from('daily_solvers').upsert({
+      user_id:     userId,
+      game_type:   gameType,
+      daily_key:   dailyKey,
+      guess_count: guessCount,
+      result:      isWin ? 'win' : 'loss',
+      solved_at:   new Date().toISOString()
+    }, { onConflict: 'user_id,game_type,daily_key' });
+  } catch (err) {
+    console.error('Failed to record daily solve:', err);
+  }
+}
+
+async function updateDailySolverBadge() {
+  const badge = document.getElementById('daily-solver-count');
+  if (!badge) {
+    console.warn("daily-solver-count element not found");
+    return;
+  }
+
+  badge.textContent = '⏳ Loading...';
+
+  const gameType = currentGameType;
+  const dailyKey = getDailyString();
+
+  try {
+    const { data, error } = await supabaseClient
+      .from('daily_solvers')
+      .select('result')
+      .eq('game_type', gameType)
+      .eq('daily_key', dailyKey);
+
+    if (error) throw error;
+
+    const total = data?.length || 0;
+    const wins  = data?.filter(r => r.result === 'win').length || 0;
+    const winRate = total > 0 ? Math.round((wins / total) * 100) : 0;
+
+    let html = '';
+    if (total === 0) {
+      
+    } else if (total === 1) {
+      html = `<span class="text-green-600 font-medium">${winRate}% Total Player got it right</span>`;
+    } else {
+      html = `<span class="text-green-600 font-medium">${winRate}% Total Players got it right</span>`;
+    }
+
+    badge.innerHTML = html;
+  } catch (err) {
+    console.error('Failed to fetch daily solver count:', err);
+    badge.innerHTML = `<strong>—</strong>`;
+  }
+}

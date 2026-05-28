@@ -1,1 +1,485 @@
-const a0_0x40ac18=a0_0x4b65;(function(_0x5c4f94,_0x3f1602){const _0x54e880=a0_0x4b65,_0x249c1d=_0x5c4f94();while(!![]){try{const _0x53cc57=-parseInt(_0x54e880(0x1be))/0x1*(parseInt(_0x54e880(0x1c6))/0x2)+-parseInt(_0x54e880(0x1a9))/0x3*(parseInt(_0x54e880(0x1d1))/0x4)+-parseInt(_0x54e880(0x187))/0x5*(-parseInt(_0x54e880(0x1ec))/0x6)+-parseInt(_0x54e880(0x1f5))/0x7+parseInt(_0x54e880(0x1fc))/0x8*(-parseInt(_0x54e880(0x1cb))/0x9)+parseInt(_0x54e880(0x1eb))/0xa+parseInt(_0x54e880(0x1fb))/0xb;if(_0x53cc57===_0x3f1602)break;else _0x249c1d['push'](_0x249c1d['shift']());}catch(_0xe2aa3c){_0x249c1d['push'](_0x249c1d['shift']());}}}(a0_0x180b,0x1eb6d));const VOICEDLE_CLIP_MAX=0x2,VOICEDLE_UNLOCK=[0.5,0x1,1.5,1.75,0x2],VOICEDLE_HARD_UNLOCK=[0.5,0x1],VOICEDLE_VOLUME_KEY=a0_0x40ac18(0x1d4);let voicedleAudio=null,voicedlePlayTimer=null,voicedleProgressRaf=null,voicedleVolumeBound=![];function nameToVoicePath(_0x48015b){const _0x91834=a0_0x40ac18;return _0x91834(0x1a2)+_0x48015b[_0x91834(0x1ea)](/\s+/g,'_')+'.mp3';}function getVoicedleMaxGuesses(){const _0x146935=a0_0x40ac18,_0x3b8930=sessionState[_0x146935(0x1d6)];if(_0x3b8930===_0x146935(0x19c))return Infinity;if(_0x3b8930===_0x146935(0x192))return 0x2;return 0x5;}function getVoicedleClipDuration(){const _0x480c30=a0_0x40ac18;if(sessionState[_0x480c30(0x1d6)]===_0x480c30(0x19c))return VOICEDLE_CLIP_MAX;const _0x222070=sessionState[_0x480c30(0x1c4)]['length'],_0x4980d4=sessionState[_0x480c30(0x1d6)]===_0x480c30(0x192)?VOICEDLE_HARD_UNLOCK:VOICEDLE_UNLOCK;return _0x4980d4[Math[_0x480c30(0x1f8)](_0x222070,_0x4980d4['length']-0x1)];}function formatVoicedleDuration(_0x4a20f1){const _0x2cbb11=a0_0x40ac18;return _0x4a20f1%0x1===0x0?_0x4a20f1[_0x2cbb11(0x1ca)](0x0)+'s':_0x4a20f1[_0x2cbb11(0x1ca)](0x1)+'s';}function getVoicedleVolume(){const _0x445494=a0_0x40ac18,_0x4e4a30=localStorage[_0x445494(0x1f0)](VOICEDLE_VOLUME_KEY);if(_0x4e4a30!==null){const _0x3d71a4=parseFloat(_0x4e4a30);if(!Number[_0x445494(0x1f1)](_0x3d71a4))return Math['min'](0x1,Math[_0x445494(0x1bf)](0x0,_0x3d71a4));}return 0x1;}function setVoicedleVolume(_0x5490d2){const _0x5ab74d=a0_0x40ac18,_0x16f637=Math[_0x5ab74d(0x1f8)](0x1,Math['max'](0x0,_0x5490d2));localStorage[_0x5ab74d(0x1a6)](VOICEDLE_VOLUME_KEY,String(_0x16f637));if(voicedleAudio)voicedleAudio['volume']=_0x16f637;const _0x42dc89=document[_0x5ab74d(0x199)](_0x5ab74d(0x193));if(_0x42dc89)_0x42dc89[_0x5ab74d(0x1ee)]=String(Math['round'](_0x16f637*0x64));updateVoicedleVolumeIcon(_0x16f637);}function updateVoicedleVolumeIcon(_0x172229){const _0x12556a=a0_0x40ac18,_0x487bbd=document[_0x12556a(0x199)](_0x12556a(0x18a));if(!_0x487bbd)return;if(_0x172229<=0x0)_0x487bbd[_0x12556a(0x1e8)]=_0x12556a(0x18f);else _0x172229<0.5?_0x487bbd[_0x12556a(0x1e8)]=_0x12556a(0x183):_0x487bbd[_0x12556a(0x1e8)]=_0x12556a(0x1dc);}function initVoicedleVolumeControl(){const _0x5d897f=a0_0x40ac18,_0x521aa0=document[_0x5d897f(0x199)](_0x5d897f(0x193));if(!_0x521aa0)return;const _0x4b57cd=getVoicedleVolume();_0x521aa0[_0x5d897f(0x1ee)]=String(Math[_0x5d897f(0x17f)](_0x4b57cd*0x64)),updateVoicedleVolumeIcon(_0x4b57cd);if(voicedleVolumeBound)return;voicedleVolumeBound=!![],_0x521aa0['addEventListener'](_0x5d897f(0x18e),()=>{const _0x465282=_0x5d897f;setVoicedleVolume(Number(_0x521aa0[_0x465282(0x1ee)])/0x64);});}function initVoicedleAudio(){const _0x2d45a3=a0_0x40ac18;stopVoicedleAudio();if(!sessionState[_0x2d45a3(0x1bb)])return;const _0x5a797a=sessionState[_0x2d45a3(0x1bb)][_0x2d45a3(0x1b9)]||nameToVoicePath(sessionState[_0x2d45a3(0x1bb)][_0x2d45a3(0x18b)]);voicedleAudio=new Audio(_0x5a797a),voicedleAudio['preload']=_0x2d45a3(0x1e9),voicedleAudio[_0x2d45a3(0x1c2)]=getVoicedleVolume();}function stopVoicedleAudio(){const _0x5f2af0=a0_0x40ac18;voicedlePlayTimer&&(clearTimeout(voicedlePlayTimer),voicedlePlayTimer=null),voicedleProgressRaf&&(cancelAnimationFrame(voicedleProgressRaf),voicedleProgressRaf=null),voicedleAudio&&(voicedleAudio[_0x5f2af0(0x198)](),voicedleAudio[_0x5f2af0(0x196)]=0x0,voicedleAudio=null),setVoicedleProgressBar(0x0),setVoicedlePlayingState(![]);}function buildVoicedleWaveform(){const _0x2a597e=a0_0x40ac18,_0xc21c7f=document[_0x2a597e(0x199)](_0x2a597e(0x1fa));if(!_0xc21c7f||_0xc21c7f['childElementCount']>0x0)return;for(let _0x3058d8=0x0;_0x3058d8<0x10;_0x3058d8++){const _0x20cf8e=document[_0x2a597e(0x1e6)](_0x2a597e(0x197));_0x20cf8e[_0x2a597e(0x200)]=_0x2a597e(0x1d0),_0x20cf8e[_0x2a597e(0x1b2)]['animationDelay']=(_0x3058d8*0.04)[_0x2a597e(0x1ca)](0x2)+'s',_0xc21c7f['appendChild'](_0x20cf8e);}}function setVoicedlePlayingState(_0x2652d2){const _0x6afb3c=a0_0x40ac18,_0x8c14ab=document['getElementById']('voicedle-player-card');if(_0x8c14ab)_0x8c14ab['classList'][_0x6afb3c(0x194)](_0x6afb3c(0x1aa),_0x2652d2);}function updateVoicedleUnlockUI(){const _0x514d19=a0_0x40ac18,_0x3d420d=getVoicedleClipDuration(),_0x21f1df=_0x3d420d/VOICEDLE_CLIP_MAX*0x64,_0x46a5e7=document['getElementById'](_0x514d19(0x1a1));if(_0x46a5e7)_0x46a5e7[_0x514d19(0x1b2)][_0x514d19(0x1a8)]=_0x21f1df+'%';const _0x5c1a35=document[_0x514d19(0x1f9)](_0x514d19(0x180)),_0x13d01b=sessionState[_0x514d19(0x1d6)]==='hard'?VOICEDLE_HARD_UNLOCK:VOICEDLE_UNLOCK,_0x16f9f2=sessionState[_0x514d19(0x1c4)]['length'];_0x5c1a35[_0x514d19(0x1ab)]((_0xba27a5,_0x495b64)=>{const _0x538dab=_0x514d19;_0xba27a5[_0x538dab(0x1d9)][_0x538dab(0x1f3)]('voicedle-step--active',_0x538dab(0x191),_0x538dab(0x1e4),'voicedle-step--wrong');if(sessionState[_0x538dab(0x1d6)]===_0x538dab(0x192)&&_0x495b64>=_0x13d01b[_0x538dab(0x1d7)]){_0xba27a5[_0x538dab(0x1b2)][_0x538dab(0x19a)]='0.35';return;}_0xba27a5[_0x538dab(0x1b2)][_0x538dab(0x19a)]='1';const _0xafb53c=sessionState[_0x538dab(0x1c4)][_0x495b64];if(_0xafb53c&&sessionState[_0x538dab(0x1bb)]){if(_0xafb53c[_0x538dab(0x1cd)])_0xba27a5[_0x538dab(0x1d9)][_0x538dab(0x1e1)](_0x538dab(0x1dd));else{const _0x3409a8=_0xafb53c[_0x538dab(0x18b)]===sessionState[_0x538dab(0x1bb)][_0x538dab(0x18b)];_0xba27a5[_0x538dab(0x1d9)][_0x538dab(0x1e1)](_0x3409a8?_0x538dab(0x1e4):_0x538dab(0x184));}}else{if(!sessionState['isGameOver']&&_0x495b64===_0x16f9f2)_0xba27a5['classList']['add'](_0x538dab(0x191));else sessionState[_0x538dab(0x1d6)]===_0x538dab(0x19c)&&_0x495b64>_0x16f9f2&&_0xba27a5[_0x538dab(0x1d9)][_0x538dab(0x1e1)](_0x538dab(0x1e0));}}),setVoicedleProgressBar(0x0,0x0);}function setVoicedleProgressBar(_0x2fea89,_0x14672a=null){const _0x2d6c48=a0_0x40ac18,_0x2bcbad=getVoicedleClipDuration(),_0x59616f=_0x2bcbad/VOICEDLE_CLIP_MAX,_0x28b2bd=document[_0x2d6c48(0x199)](_0x2d6c48(0x1ae));_0x28b2bd&&(_0x28b2bd[_0x2d6c48(0x1b2)][_0x2d6c48(0x1a8)]=Math['min'](0x64,Math['max'](0x0,_0x2fea89*_0x59616f*0x64))+'%');const _0x212ad4=document[_0x2d6c48(0x199)](_0x2d6c48(0x1d2));if(_0x212ad4){const _0x20b948=_0x14672a!=null?_0x14672a:0x0;_0x212ad4['textContent']=_0x20b948[_0x2d6c48(0x1ca)](0x1)+_0x2d6c48(0x1f2)+formatVoicedleDuration(_0x2bcbad);}}function updateVoicedleUnlockHint(){const _0x1c5581=a0_0x40ac18,_0x69d42c=document['getElementById']('voicedle-unlock-hint');if(!_0x69d42c)return;const _0x2dacfb=getVoicedleClipDuration(),_0x10d893=sessionState['guesses'][_0x1c5581(0x1d7)]+0x1;if(sessionState['mode']===_0x1c5581(0x19c))_0x69d42c[_0x1c5581(0x1b6)]=_0x1c5581(0x1af)+formatVoicedleDuration(VOICEDLE_CLIP_MAX)+_0x1c5581(0x181);else sessionState['isGameOver']?_0x69d42c[_0x1c5581(0x1b6)]=_0x1c5581(0x1da):_0x69d42c[_0x1c5581(0x1b6)]=_0x1c5581(0x1e3)+_0x10d893+':\x20hear\x20up\x20to\x20'+formatVoicedleDuration(_0x2dacfb)+_0x1c5581(0x1c0);}function updateVoicedlePlayButton(){const _0x3ddf88=a0_0x40ac18,_0xb8b482=sessionState[_0x3ddf88(0x1ba)],_0x172cd3=document['getElementById']('voicedle-play-btn');_0x172cd3&&(_0x172cd3[_0x3ddf88(0x1c5)]=_0xb8b482,_0x172cd3[_0x3ddf88(0x1d9)][_0x3ddf88(0x194)](_0x3ddf88(0x1db),_0xb8b482));const _0xfb8139=document['getElementById'](_0x3ddf88(0x1f6));_0xfb8139&&(_0xfb8139[_0x3ddf88(0x1c5)]=_0xb8b482,_0xfb8139['classList']['toggle']('voicedle-skip-btn--disabled',_0xb8b482));if(_0xb8b482)setVoicedlePlayingState(![]);}function a0_0x4b65(_0x346294,_0x50aef7){_0x346294=_0x346294-0x17e;const _0x180bd1=a0_0x180b();let _0x4b6519=_0x180bd1[_0x346294];return _0x4b6519;}function createVoicedleSkipGuess(){const _0x3709ca=a0_0x40ac18;return{'name':_0x3709ca(0x1de),'image':'','skipped':!![]};}function skipVoicedleGuess(){const _0x5f0965=a0_0x40ac18;if(currentGameType!==_0x5f0965(0x1c8)||sessionState[_0x5f0965(0x1ba)]||!sessionState[_0x5f0965(0x1bb)])return;submitVoicedleGuess(createVoicedleSkipGuess());}function playVoicedleClipForDuration(_0x498041){const _0x13fea3=a0_0x40ac18;if(!sessionState[_0x13fea3(0x1bb)])return;stopVoicedleAudio(),initVoicedleAudio();if(!voicedleAudio)return;const _0x476eff=Math[_0x13fea3(0x1f8)](Math[_0x13fea3(0x1bf)](_0x498041,0.1),VOICEDLE_CLIP_MAX);setVoicedlePlayingState(!![]),voicedleAudio[_0x13fea3(0x196)]=0x0;const _0x312bec=performance[_0x13fea3(0x1bc)]();function _0x3c34bf(){const _0x53400e=_0x13fea3;if(!voicedleAudio)return;const _0x31ad07=(performance[_0x53400e(0x1bc)]()-_0x312bec)/0x3e8,_0x15c4db=_0x31ad07/_0x476eff;setVoicedleProgressBar(Math[_0x53400e(0x1f8)](0x1,_0x15c4db),Math[_0x53400e(0x1f8)](_0x31ad07,_0x476eff));if(_0x15c4db<0x1)voicedleProgressRaf=requestAnimationFrame(_0x3c34bf);}voicedleAudio['play']()[_0x13fea3(0x1e2)](()=>setVoicedlePlayingState(![])),voicedleProgressRaf=requestAnimationFrame(_0x3c34bf),voicedlePlayTimer=setTimeout(()=>{const _0x4a39af=_0x13fea3;voicedleAudio&&(voicedleAudio[_0x4a39af(0x198)](),voicedleAudio['currentTime']=0x0),setVoicedleProgressBar(0x0,0x0),setVoicedlePlayingState(![]),voicedlePlayTimer=null;},_0x476eff*0x3e8);}function playVoicedleClip(){const _0x1661ee=a0_0x40ac18;if(currentGameType!==_0x1661ee(0x1c8)||sessionState[_0x1661ee(0x1ba)]||!sessionState[_0x1661ee(0x1bb)])return;playVoicedleClipForDuration(getVoicedleClipDuration());}function showVoicedlePanel(_0x3fcac4){const _0x52ad43=a0_0x40ac18,_0x59987f=document[_0x52ad43(0x199)](_0x52ad43(0x201)),_0x20fb5f=document[_0x52ad43(0x1b0)](_0x52ad43(0x18d)),_0x114024=document[_0x52ad43(0x199)](_0x52ad43(0x1bd));if(_0x59987f)_0x59987f['classList'][_0x52ad43(0x194)](_0x52ad43(0x1ed),!_0x3fcac4);if(_0x20fb5f)_0x20fb5f[_0x52ad43(0x1d9)]['toggle'](_0x52ad43(0x1ed),_0x3fcac4);if(_0x114024&&_0x3fcac4)_0x114024[_0x52ad43(0x1e8)]='';}function renderVoicedleLayout(){const _0x34f160=a0_0x40ac18;showVoicedlePanel(!![]),buildVoicedleWaveform(),initVoicedleVolumeControl(),document[_0x34f160(0x199)](_0x34f160(0x1ac))[_0x34f160(0x1e8)]='',updateVoicedleUnlockUI(),updateVoicedleUnlockHint(),updateVoicedlePlayButton(),initVoicedleAudio(),setVoicedlePlayingState(![]);}function hideVoicedlePanel(){showVoicedlePanel(![]),stopVoicedleAudio();}function addVoicedleGuessRow(_0x49a3de,_0x10ff64=!![]){const _0xb5f33f=a0_0x40ac18,_0x3c5da0=document[_0xb5f33f(0x199)]('voicedle-guess-history');if(!_0x3c5da0)return 0x0;const _0x328175=document[_0xb5f33f(0x1e6)]('div');if(_0x49a3de[_0xb5f33f(0x1cd)]){_0x328175['className']=_0xb5f33f(0x1d8);if(_0x10ff64)_0x328175['classList'][_0xb5f33f(0x1e1)](_0xb5f33f(0x1b4));_0x328175[_0xb5f33f(0x1e8)]='\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22voicedle-guess-skip-icon\x22\x20aria-hidden=\x22true\x22>⏭</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22voicedle-guess-name\x22>Skipped</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22voicedle-guess-badge\x22>—</span>\x0a\x20\x20\x20\x20';}else{const _0x6d4526=_0x49a3de[_0xb5f33f(0x18b)]===sessionState[_0xb5f33f(0x1bb)]['name'];_0x328175['className']=_0xb5f33f(0x190)+(_0x6d4526?'✓':'✗');if(_0x10ff64)_0x328175[_0xb5f33f(0x1d9)][_0xb5f33f(0x1e1)]('voicedle-guess-row--animate');_0x328175[_0xb5f33f(0x1e8)]=_0xb5f33f(0x1fe)+_0x49a3de[_0xb5f33f(0x1ad)]+_0xb5f33f(0x1f7)+_0x49a3de[_0xb5f33f(0x18b)]+_0xb5f33f(0x1b5)+_0x49a3de['name']+'</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22voicedle-guess-badge\x22>'+(_0x6d4526?'✓':'✗')+_0xb5f33f(0x1ff);}return _0x3c5da0[_0xb5f33f(0x189)](_0x328175),updateVoicedleUnlockHint(),updateVoicedleUnlockUI(),_0x10ff64?0x190:0x0;}function replayVoicedleGuesses(){const _0x231ea6=a0_0x40ac18,_0xe07da8=document[_0x231ea6(0x199)](_0x231ea6(0x1ac));if(_0xe07da8)_0xe07da8[_0x231ea6(0x1e8)]='';sessionState['guesses'][_0x231ea6(0x1ab)](_0x129b0f=>addVoicedleGuessRow(_0x129b0f,![])),updateVoicedleUnlockHint(),updateVoicedleUnlockUI(),updateVoicedlePlayButton();}function a0_0x180b(){const _0x572323=['setItem','modal-header-band','width','519825vWLCHE','voicedle-player-card--playing','forEach','voicedle-guess-history','image','voicedle-progress-bar','Easy\x20Mode\x20—\x20full\x20','querySelector','repeat','style','onclick','voicedle-guess-row--animate','\x22\x20class=\x22voicedle-guess-img\x22>\x0a\x20\x20\x20\x20\x20\x20<span\x20class=\x22voicedle-guess-name\x22>','textContent','Voice\x20answer','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','voice','isGameOver','target','now','guess-head','182879FKGnfg','max','\x20of\x20the\x20voice\x20line','trim','volume','voicedle-result-guesses','guesses','disabled','2OexzJc','\x22\x20alt=\x22\x22\x20class=\x22voicedle-result-guess-img\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22voicedle-result-guess-name\x22>','voicedle','target-stats-grid','toFixed','1755neimKw','voicedle-result-summary--loss','skipped','voicedle-result-step--correct','voicedle-result-band\x20voicedle-result-band--win','voicedle-wave-bar','4YMEAcf','voicedle-time-display','share-card-wrap','voicedle_volume','dailyGuesses','mode','length','voicedle-guess-row\x20voicedle-guess-row--skip','classList','Game\x20over','voicedle-play-btn--disabled','<path\x20d=\x22M3\x209v6h4l5\x205V4L7\x209H3zm13.5\x203c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73\x202.5-2.25\x202.5-4.02zM14\x203.23v2.06c2.89.86\x205\x203.54\x205\x206.71s-2.11\x205.85-5\x206.71v2.06c4.01-.91\x207-4.49\x207-8.77s-2.99-7.86-7-8.77z\x22/>','voicedle-step--skipped','Skipped','Solved\x20in\x20','voicedle-step--active','add','catch','Guess\x20','voicedle-step--correct','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','createElement','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22voicedle-result-guess-mark\x22\x20aria-hidden=\x22true\x22>','innerHTML','auto','replace','1966370FEhFMB','3432FeeAdl','hidden','value','\x20·\x20','getItem','isNaN','\x20/\x20','remove','Out\x20of\x20guesses\x20(','1309441LoFrZg','voicedle-skip-btn','\x22\x20alt=\x22','min','querySelectorAll','voicedle-wave','5746928bJrCUe','7944oZtzyt','<span\x20class=\x22voicedle-result-guess-icon\x22\x20aria-hidden=\x22true\x22>⏭</span><span>Skipped</span>','\x0a\x20\x20\x20\x20\x20\x20<img\x20src=\x22','</span>\x0a\x20\x20\x20\x20','className','voicedle-panel','\x20guess','round','.voicedle-step','\x20clip\x20available','filter','<path\x20d=\x22M7\x209v6h4l5\x205V4l-5\x205H7zm-4\x200h2.83L12\x204.83V19.17L5.83\x2015H3V9z\x22/>','voicedle-step--wrong','voicedle-result-guess\x20','\x20skipped','1255ITraEX','voicedle-result-play-btn','appendChild','voicedle-volume-icon','name','push','.table-wrapper','input','<path\x20d=\x22M16.5\x2012c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45\x202.45h.05zm-4.5\x204.5v2.06L9.12\x2015H6v-2h3.12l2.37-2.37V7.41\x204.41\x202.86\x203.27\x201.73\x202\x204\x203.73l1.27\x201.27L7.41\x207.41\x209.12\x209.12\x2012\x2012.01v4.49zM4.27\x203L3\x204.27\x207.73\x209H3v6h4l5\x205v-6.73l4.25\x204.25\x201.27-1.27L4.27\x203z\x22/>','voicedle-guess-row\x20','voicedle-step--current','hard','voicedle-volume','toggle','ranked','currentTime','span','pause','getElementById','opacity','div','easy','voicedle-result-guess\x20voicedle-result-guess--skip','maxGuesses','h-2\x20w-full\x20bg-green-600','rankedGuesses','voicedle-progress-unlock','audio/voices/','some','voicedle-result-panel','innerText'];a0_0x180b=function(){return _0x572323;};return a0_0x180b();}function submitVoicedleGuess(_0x3e9b6b){const _0xae016=a0_0x40ac18;if(sessionState[_0xae016(0x1ba)])return;if(!_0x3e9b6b['skipped']&&sessionState['guesses'][_0xae016(0x1a3)](_0x51bb60=>!_0x51bb60[_0xae016(0x1cd)]&&_0x51bb60['name']===_0x3e9b6b['name']))return;const _0x3a0d2b=allPersistentData[_0xae016(0x1c8)];sessionState['guesses'][_0xae016(0x18c)](_0x3e9b6b);sessionState[_0xae016(0x1d6)]==='daily'&&(_0x3a0d2b[_0xae016(0x1d5)]=[...sessionState[_0xae016(0x1c4)]],savePersistentData());sessionState[_0xae016(0x1d6)]===_0xae016(0x195)&&(_0x3a0d2b[_0xae016(0x1a0)]=[...sessionState[_0xae016(0x1c4)]],savePersistentData());const _0x4c331e=typeof getModeSessionKey==='function'?getModeSessionKey(sessionState[_0xae016(0x1d6)]):null;_0x4c331e&&_0x3a0d2b[_0x4c331e]&&(_0x3a0d2b[_0x4c331e][_0xae016(0x1c4)]=[...sessionState[_0xae016(0x1c4)]],savePersistentData());const _0x568a9a=addVoicedleGuessRow(_0x3e9b6b,!![]);updateGuessCountUI(),stopVoicedleAudio();if(!_0x3e9b6b[_0xae016(0x1cd)]&&_0x3e9b6b['name']===sessionState[_0xae016(0x1bb)][_0xae016(0x18b)])handleWin(_0x568a9a);else sessionState['guesses'][_0xae016(0x1d7)]>=sessionState['maxGuesses']?handleLoss(_0x568a9a):(updateVoicedleUnlockHint(),setTimeout(()=>playVoicedleClip(),_0x568a9a+0x96));}function voicedleGuessWasCorrect(_0x3c02b2){const _0x3b68b6=a0_0x40ac18;return!_0x3c02b2[_0x3b68b6(0x1cd)]&&sessionState[_0x3b68b6(0x1bb)]&&_0x3c02b2[_0x3b68b6(0x18b)]===sessionState[_0x3b68b6(0x1bb)][_0x3b68b6(0x18b)];}function getVoicedleUnlockList(){const _0x167b03=a0_0x40ac18;return sessionState['mode']===_0x167b03(0x192)?VOICEDLE_HARD_UNLOCK:VOICEDLE_UNLOCK;}function resetVoicedleResultPanel(){const _0x2d3c96=a0_0x40ac18,_0x4b6df5=document[_0x2d3c96(0x199)](_0x2d3c96(0x1a4)),_0x3928f7=document[_0x2d3c96(0x199)](_0x2d3c96(0x1c9)),_0x321ab5=document[_0x2d3c96(0x199)]('result-target-card'),_0x59c16a=document['getElementById'](_0x2d3c96(0x1a7)),_0x5ba3d2=document['getElementById'](_0x2d3c96(0x1d3));if(_0x4b6df5)_0x4b6df5['classList']['add'](_0x2d3c96(0x1ed));if(_0x3928f7)_0x3928f7[_0x2d3c96(0x1d9)]['remove']('hidden');if(_0x321ab5)_0x321ab5[_0x2d3c96(0x1d9)][_0x2d3c96(0x1f3)]('voicedle-result-card');if(_0x59c16a)_0x59c16a[_0x2d3c96(0x200)]=_0x2d3c96(0x19f);if(_0x5ba3d2)_0x5ba3d2[_0x2d3c96(0x1d9)]['remove'](_0x2d3c96(0x1ed));}function playVoicedleResultReveal(){const _0x32ed7f=a0_0x40ac18;if(!sessionState[_0x32ed7f(0x1bb)])return;playVoicedleClipForDuration(VOICEDLE_CLIP_MAX);}function renderVoicedleResultContent(_0x295edd){const _0x3ce08a=a0_0x40ac18,_0x396fac=document[_0x3ce08a(0x199)](_0x3ce08a(0x1a4)),_0x308f90=document[_0x3ce08a(0x199)](_0x3ce08a(0x1c9)),_0x407680=document[_0x3ce08a(0x199)]('result-target-card'),_0x8b43ba=document['getElementById'](_0x3ce08a(0x1a7)),_0x8e048b=document[_0x3ce08a(0x199)](_0x3ce08a(0x1d3));if(!_0x396fac)return;if(_0x308f90)_0x308f90[_0x3ce08a(0x1d9)][_0x3ce08a(0x1e1)](_0x3ce08a(0x1ed));_0x396fac[_0x3ce08a(0x1d9)][_0x3ce08a(0x1f3)](_0x3ce08a(0x1ed));if(_0x407680)_0x407680['classList'][_0x3ce08a(0x1e1)]('voicedle-result-card');if(_0x8b43ba)_0x8b43ba[_0x3ce08a(0x200)]='h-2\x20w-full\x20'+(_0x295edd?_0x3ce08a(0x1cf):'voicedle-result-band\x20voicedle-result-band--loss');if(_0x8e048b)_0x8e048b[_0x3ce08a(0x1d9)][_0x3ce08a(0x1e1)](_0x3ce08a(0x1ed));const _0x186694=document[_0x3ce08a(0x199)]('target-label');if(_0x186694)_0x186694[_0x3ce08a(0x1b6)]=_0x3ce08a(0x1b7);const _0x411778=getVoicedleUnlockList(),_0x57065a=document[_0x3ce08a(0x199)]('voicedle-result-steps');_0x57065a&&(_0x57065a['innerHTML']='',sessionState[_0x3ce08a(0x1c4)]['forEach']((_0x34752e,_0x4c9654)=>{const _0x5131c0=_0x3ce08a,_0x27e8a4=_0x411778[Math[_0x5131c0(0x1f8)](_0x4c9654,_0x411778[_0x5131c0(0x1d7)]-0x1)],_0x17fa1f=document[_0x5131c0(0x1e6)](_0x5131c0(0x197));_0x17fa1f[_0x5131c0(0x200)]='voicedle-result-step';if(_0x34752e['skipped'])_0x17fa1f[_0x5131c0(0x1d9)][_0x5131c0(0x1e1)]('voicedle-result-step--skip');else{if(voicedleGuessWasCorrect(_0x34752e))_0x17fa1f['classList']['add'](_0x5131c0(0x1ce));else _0x17fa1f[_0x5131c0(0x1d9)]['add']('voicedle-result-step--wrong');}_0x17fa1f['textContent']=formatVoicedleDuration(_0x27e8a4),_0x57065a['appendChild'](_0x17fa1f);}));const _0x69473b=document[_0x3ce08a(0x199)](_0x3ce08a(0x1c3));_0x69473b&&(_0x69473b[_0x3ce08a(0x1e8)]='',sessionState[_0x3ce08a(0x1c4)][_0x3ce08a(0x1ab)](_0x545a25=>{const _0xd04198=_0x3ce08a,_0x4f7850=document[_0xd04198(0x1e6)](_0xd04198(0x19b));if(_0x545a25[_0xd04198(0x1cd)])_0x4f7850[_0xd04198(0x200)]=_0xd04198(0x19d),_0x4f7850[_0xd04198(0x1e8)]=_0xd04198(0x1fd);else{const _0x4c3ff7=voicedleGuessWasCorrect(_0x545a25);_0x4f7850[_0xd04198(0x200)]=_0xd04198(0x185)+(_0x4c3ff7?'✓':'✗'),_0x4f7850[_0xd04198(0x1e8)]=_0xd04198(0x1e5)+_0x545a25[_0xd04198(0x1ad)]+_0xd04198(0x1c7)+_0x545a25[_0xd04198(0x18b)]+_0xd04198(0x1e7)+(_0x4c3ff7?'✓':'✗')+_0xd04198(0x1b8);}_0x69473b['appendChild'](_0x4f7850);}));const _0x3140b2=document['getElementById']('voicedle-result-summary');if(_0x3140b2){const _0x213490=sessionState['guesses'][_0x3ce08a(0x1d7)],_0x18f06e=sessionState['guesses'][_0x3ce08a(0x182)](_0x2e454b=>_0x2e454b['skipped'])[_0x3ce08a(0x1d7)],_0x208e5a=sessionState['maxGuesses']===Infinity?null:sessionState[_0x3ce08a(0x19e)],_0x229c39=_0x18f06e?_0x3ce08a(0x1ef)+_0x18f06e+_0x3ce08a(0x186):'';_0x295edd?(_0x3140b2[_0x3ce08a(0x1b6)]=_0x3ce08a(0x1df)+_0x213490+_0x3ce08a(0x17e)+(_0x213490===0x1?'':'es')+_0x229c39,_0x3140b2[_0x3ce08a(0x1d9)][_0x3ce08a(0x1f3)](_0x3ce08a(0x1cc)),_0x3140b2['classList'][_0x3ce08a(0x1e1)]('voicedle-result-summary--win')):(_0x3140b2[_0x3ce08a(0x1b6)]=_0x208e5a!=null?_0x3ce08a(0x1f4)+_0x213490+_0x3ce08a(0x1f2)+_0x208e5a+')'+_0x229c39:'No\x20correct\x20guess'+_0x229c39,_0x3140b2[_0x3ce08a(0x1d9)]['remove']('voicedle-result-summary--win'),_0x3140b2[_0x3ce08a(0x1d9)][_0x3ce08a(0x1e1)](_0x3ce08a(0x1cc)));}const _0x273079=document['getElementById'](_0x3ce08a(0x188));if(_0x273079)_0x273079[_0x3ce08a(0x1b3)]=playVoicedleResultReveal;}function renderVoicedleShareEmojis(_0x4ae584){const _0x13ac64=a0_0x40ac18;_0x4ae584[_0x13ac64(0x1e8)]='',sessionState[_0x13ac64(0x1c4)]['forEach'](_0x525326=>{const _0x4f2548=_0x13ac64,_0x2f02d9=document[_0x4f2548(0x1e6)](_0x4f2548(0x19b));_0x525326['skipped']?_0x2f02d9[_0x4f2548(0x1a5)]='⬜'[_0x4f2548(0x1b1)](0x5):_0x2f02d9['innerText']=_0x525326[_0x4f2548(0x18b)]===sessionState[_0x4f2548(0x1bb)][_0x4f2548(0x18b)]?'🟩'[_0x4f2548(0x1b1)](0x5):'⬛'[_0x4f2548(0x1b1)](0x5),_0x4ae584[_0x4f2548(0x189)](_0x2f02d9);});}function renderVoicedleShareEmojisText(){const _0x9c2d5c=a0_0x40ac18;let _0x2d3d43='';return sessionState[_0x9c2d5c(0x1c4)]['forEach'](_0x1d9eb6=>{const _0x5ee6ee=_0x9c2d5c;_0x1d9eb6[_0x5ee6ee(0x1cd)]?_0x2d3d43+='⬜'[_0x5ee6ee(0x1b1)](0x5)+'\x0a':_0x2d3d43+=(_0x1d9eb6['name']===sessionState[_0x5ee6ee(0x1bb)][_0x5ee6ee(0x18b)]?'🟩'[_0x5ee6ee(0x1b1)](0x5):'⬛'['repeat'](0x5))+'\x0a';}),_0x2d3d43[_0x9c2d5c(0x1c1)]();}
+// ============================================================
+//  voicedle.js — Voice-line audio player and Voicedle UI
+// ============================================================
+
+const VOICEDLE_CLIP_MAX = 3.0;
+const VOICEDLE_UNLOCK = [0.6, 1.2, 1.8, 2.4, 3.0];
+const VOICEDLE_HARD_UNLOCK = [0.6, 1.8];
+const VOICEDLE_VOLUME_KEY = 'voicedle_volume';
+
+let voicedleAudio = null;
+let voicedlePlayTimer = null;
+let voicedleProgressRaf = null;
+let voicedleVolumeBound = false;
+
+function nameToVoicePath(name) {
+  return `audio/voices/${name.replace(/\s+/g, '_')}.mp3`;
+}
+
+function getVoicedleMaxGuesses() {
+  const mode = sessionState.mode;
+  if (mode === 'easy') return Infinity;
+  if (mode === 'hard') return 2;
+  return 5;
+}
+
+function getVoicedleClipDuration() {
+  if (sessionState.mode === 'easy') return VOICEDLE_CLIP_MAX;
+  const idx = sessionState.guesses.length;
+  const unlock = sessionState.mode === 'hard' ? VOICEDLE_HARD_UNLOCK : VOICEDLE_UNLOCK;
+  return unlock[Math.min(idx, unlock.length - 1)];
+}
+
+function formatVoicedleDuration(seconds) {
+  return seconds % 1 === 0 ? `${seconds.toFixed(0)}s` : `${seconds.toFixed(1)}s`;
+}
+
+function getVoicedleVolume() {
+  const stored = localStorage.getItem(VOICEDLE_VOLUME_KEY);
+  if (stored !== null) {
+    const v = parseFloat(stored);
+    if (!Number.isNaN(v)) return Math.min(1, Math.max(0, v));
+  }
+  return 1;
+}
+
+function setVoicedleVolume(level) {
+  const v = Math.min(1, Math.max(0, level));
+  localStorage.setItem(VOICEDLE_VOLUME_KEY, String(v));
+  if (voicedleAudio) voicedleAudio.volume = v;
+  const slider = document.getElementById('voicedle-volume');
+  if (slider) slider.value = String(Math.round(v * 100));
+  updateVoicedleVolumeIcon(v);
+}
+
+function updateVoicedleVolumeIcon(level) {
+  const icon = document.getElementById('voicedle-volume-icon');
+  if (!icon) return;
+  if (level <= 0) {
+    icon.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45h.05zm-4.5 4.5v2.06L9.12 15H6v-2h3.12l2.37-2.37V7.41 4.41 2.86 3.27 1.73 2 4 3.73l1.27 1.27L7.41 7.41 9.12 9.12 12 12.01v4.49zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25 1.27-1.27L4.27 3z"/>';
+  } else if (level < 0.5) {
+    icon.innerHTML = '<path d="M7 9v6h4l5 5V4l-5 5H7zm-4 0h2.83L12 4.83V19.17L5.83 15H3V9z"/>';
+  } else {
+    icon.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
+  }
+}
+
+function initVoicedleVolumeControl() {
+  const slider = document.getElementById('voicedle-volume');
+  if (!slider) return;
+  const vol = getVoicedleVolume();
+  slider.value = String(Math.round(vol * 100));
+  updateVoicedleVolumeIcon(vol);
+  if (voicedleVolumeBound) return;
+  voicedleVolumeBound = true;
+  slider.addEventListener('input', () => {
+    setVoicedleVolume(Number(slider.value) / 100);
+  });
+}
+
+function initVoicedleAudio() {
+  stopVoicedleAudio();
+  if (!sessionState.target) return;
+  const src = sessionState.target.voice || nameToVoicePath(sessionState.target.name);
+  voicedleAudio = new Audio(src);
+  voicedleAudio.preload = 'auto';
+  voicedleAudio.volume = getVoicedleVolume();
+}
+
+function stopVoicedleAudio() {
+  if (voicedlePlayTimer) {
+    clearTimeout(voicedlePlayTimer);
+    voicedlePlayTimer = null;
+  }
+  if (voicedleProgressRaf) {
+    cancelAnimationFrame(voicedleProgressRaf);
+    voicedleProgressRaf = null;
+  }
+  if (voicedleAudio) {
+    voicedleAudio.pause();
+    voicedleAudio.currentTime = 0;
+    voicedleAudio = null;
+  }
+  setVoicedleProgressBar(0);
+  setVoicedlePlayingState(false);
+}
+
+function buildVoicedleWaveform() {
+  const wave = document.getElementById('voicedle-wave');
+  if (!wave || wave.childElementCount > 0) return;
+  for (let i = 0; i < 16; i++) {
+    const bar = document.createElement('span');
+    bar.className = 'voicedle-wave-bar';
+    bar.style.animationDelay = `${(i * 0.04).toFixed(2)}s`;
+    wave.appendChild(bar);
+  }
+}
+
+function setVoicedlePlayingState(isPlaying) {
+  const card = document.getElementById('voicedle-player-card');
+  if (card) card.classList.toggle('voicedle-player-card--playing', isPlaying);
+}
+
+function updateVoicedleUnlockUI() {
+  const duration = getVoicedleClipDuration();
+  const unlockPct = (duration / VOICEDLE_CLIP_MAX) * 100;
+  const unlockEl = document.getElementById('voicedle-progress-unlock');
+  if (unlockEl) unlockEl.style.width = `${unlockPct}%`;
+
+  const steps = document.querySelectorAll('.voicedle-step');
+  const unlockList = sessionState.mode === 'hard' ? VOICEDLE_HARD_UNLOCK : VOICEDLE_UNLOCK;
+  const guessCount = sessionState.guesses.length;
+
+  steps.forEach((step, i) => {
+    step.classList.remove(
+      'voicedle-step--active',
+      'voicedle-step--current',
+      'voicedle-step--correct',
+      'voicedle-step--wrong'
+    );
+
+    if (sessionState.mode === 'hard' && i >= unlockList.length) {
+      step.style.opacity = '0.35';
+      return;
+    }
+    step.style.opacity = '1';
+
+    const guess = sessionState.guesses[i];
+    if (guess && sessionState.target) {
+      if (guess.skipped) {
+        step.classList.add('voicedle-step--skipped');
+      } else {
+        const isCorrect = guess.name === sessionState.target.name;
+        step.classList.add(isCorrect ? 'voicedle-step--correct' : 'voicedle-step--wrong');
+      }
+    } else if (!sessionState.isGameOver && i === guessCount) {
+      step.classList.add('voicedle-step--current');
+    } else if (sessionState.mode === 'easy' && i > guessCount) {
+      step.classList.add('voicedle-step--active');
+    }
+  });
+
+  setVoicedleProgressBar(0, 0);
+}
+
+function setVoicedleProgressBar(ratio, elapsedSec = null) {
+  const duration = getVoicedleClipDuration();
+  const unlockPct = duration / VOICEDLE_CLIP_MAX;
+  const bar = document.getElementById('voicedle-progress-bar');
+  if (bar) {
+    bar.style.width = `${Math.min(100, Math.max(0, ratio * unlockPct * 100))}%`;
+  }
+  const timeEl = document.getElementById('voicedle-time-display');
+  if (timeEl) {
+    const shown = elapsedSec != null ? elapsedSec : 0;
+    timeEl.textContent = `${shown.toFixed(1)} / ${formatVoicedleDuration(duration)}`;
+  }
+}
+
+function updateVoicedleUnlockHint() {
+  const hint = document.getElementById('voicedle-unlock-hint');
+  if (!hint) return;
+  const duration = getVoicedleClipDuration();
+  const guessNum = sessionState.guesses.length + 1;
+  if (sessionState.mode === 'easy') {
+    hint.textContent = `Easy Mode — full ${formatVoicedleDuration(VOICEDLE_CLIP_MAX)} clip available`;
+  } else if (sessionState.isGameOver) {
+    hint.textContent = 'Game over';
+  } else {
+    hint.textContent = `Guess ${guessNum}: hear up to ${formatVoicedleDuration(duration)} of the voice line`;
+  }
+}
+
+function updateVoicedlePlayButton() {
+  const disabled = sessionState.isGameOver;
+  const playBtn = document.getElementById('voicedle-play-btn');
+  if (playBtn) {
+    playBtn.disabled = disabled;
+    playBtn.classList.toggle('voicedle-play-btn--disabled', disabled);
+  }
+  const skipBtn = document.getElementById('voicedle-skip-btn');
+  if (skipBtn) {
+    skipBtn.disabled = disabled;
+    skipBtn.classList.toggle('voicedle-skip-btn--disabled', disabled);
+  }
+  if (disabled) setVoicedlePlayingState(false);
+}
+
+function createVoicedleSkipGuess() {
+  return { name: 'Skipped', image: '', skipped: true };
+}
+
+function skipVoicedleGuess() {
+  if (currentGameType !== 'voicedle' || sessionState.isGameOver || !sessionState.target) return;
+  submitVoicedleGuess(createVoicedleSkipGuess());
+}
+
+function playVoicedleClipForDuration(seconds) {
+  if (!sessionState.target) return;
+  stopVoicedleAudio();
+  initVoicedleAudio();
+  if (!voicedleAudio) return;
+
+  const duration = Math.min(Math.max(seconds, 0.1), VOICEDLE_CLIP_MAX);
+  setVoicedlePlayingState(true);
+
+  voicedleAudio.currentTime = 0;
+  const startTime = performance.now();
+
+  function tickProgress() {
+  if (!voicedleAudio) return;
+  const elapsed = (performance.now() - startTime) / 1000;
+  const ratio = elapsed / duration;
+  setVoicedleProgressBar(Math.min(1, ratio), Math.min(elapsed, duration));
+  if (ratio < 1) voicedleProgressRaf = requestAnimationFrame(tickProgress);
+  }
+
+  voicedleAudio.play().catch(() => setVoicedlePlayingState(false));
+
+  voicedleProgressRaf = requestAnimationFrame(tickProgress);
+  voicedlePlayTimer = setTimeout(() => {
+    if (voicedleAudio) {
+      voicedleAudio.pause();
+      voicedleAudio.currentTime = 0;
+    }
+    setVoicedleProgressBar(0, 0);
+    setVoicedlePlayingState(false);
+    voicedlePlayTimer = null;
+  }, duration * 1000);
+}
+
+function playVoicedleClip() {
+  if (currentGameType !== 'voicedle' || sessionState.isGameOver || !sessionState.target) return;
+
+  playVoicedleClipForDuration(getVoicedleClipDuration());
+}
+
+function showVoicedlePanel(show) {
+  const panel = document.getElementById('voicedle-panel');
+  const tableWrap = document.querySelector('.table-wrapper');
+  const guessHead = document.getElementById('guess-head');
+  if (panel) panel.classList.toggle('hidden', !show);
+  if (tableWrap) tableWrap.classList.toggle('hidden', show);
+  if (guessHead && show) guessHead.innerHTML = '';
+}
+
+function renderVoicedleLayout() {
+  showVoicedlePanel(true);
+  buildVoicedleWaveform();
+  initVoicedleVolumeControl();
+  document.getElementById('voicedle-guess-history').innerHTML = '';
+  updateVoicedleUnlockUI();
+  updateVoicedleUnlockHint();
+  updateVoicedlePlayButton();
+  initVoicedleAudio();
+  setVoicedlePlayingState(false);
+}
+
+function hideVoicedlePanel() {
+  showVoicedlePanel(false);
+  stopVoicedleAudio();
+}
+
+function addVoicedleGuessRow(guessItem, animate = true) {
+  const history = document.getElementById('voicedle-guess-history');
+  if (!history) return 0;
+
+  const row = document.createElement('div');
+  if (guessItem.skipped) {
+    row.className = 'voicedle-guess-row voicedle-guess-row--skip';
+    if (animate) row.classList.add('voicedle-guess-row--animate');
+    row.innerHTML = `
+      <span class="voicedle-guess-skip-icon" aria-hidden="true">⏭</span>
+      <span class="voicedle-guess-name">Skipped</span>
+      <span class="voicedle-guess-badge">—</span>
+    `;
+  } else {
+    const isCorrect = guessItem.name === sessionState.target.name;
+    row.className = `voicedle-guess-row ${isCorrect ? '✓' : '✗'}`;
+    if (animate) row.classList.add('voicedle-guess-row--animate');
+    row.innerHTML = `
+      <img src="${guessItem.image}" alt="${guessItem.name}" class="voicedle-guess-img">
+      <span class="voicedle-guess-name">${guessItem.name}</span>
+      <span class="voicedle-guess-badge">${isCorrect ? '✓' : '✗'}</span>
+    `;
+  }
+  history.appendChild(row);
+
+  updateVoicedleUnlockHint();
+  updateVoicedleUnlockUI();
+  return animate ? 400 : 0;
+}
+
+function replayVoicedleGuesses() {
+  const history = document.getElementById('voicedle-guess-history');
+  if (history) history.innerHTML = '';
+  sessionState.guesses.forEach(g => addVoicedleGuessRow(g, false));
+  updateVoicedleUnlockHint();
+  updateVoicedleUnlockUI();
+  updateVoicedlePlayButton();
+}
+
+function submitVoicedleGuess(guessItem) {
+  if (sessionState.isGameOver) return;
+  if (!guessItem.skipped && sessionState.guesses.some(g => !g.skipped && g.name === guessItem.name)) return;
+
+  const pData = allPersistentData.voicedle;
+  sessionState.guesses.push(guessItem);
+
+  if (sessionState.mode === 'daily') {
+    pData.dailyGuesses = [...sessionState.guesses];
+    savePersistentData();
+  }
+  if (sessionState.mode === 'ranked') {
+    pData.rankedGuesses = [...sessionState.guesses];
+    savePersistentData();
+  }
+  const sessionKey = typeof getModeSessionKey === 'function'
+    ? getModeSessionKey(sessionState.mode)
+    : null;
+  if (sessionKey && pData[sessionKey]) {
+    pData[sessionKey].guesses = [...sessionState.guesses];
+    savePersistentData();
+  }
+
+  const animDuration = addVoicedleGuessRow(guessItem, true);
+  updateGuessCountUI();
+  stopVoicedleAudio();
+
+  if (!guessItem.skipped && guessItem.name === sessionState.target.name) {
+    handleWin(animDuration);
+  } else if (sessionState.guesses.length >= sessionState.maxGuesses) {
+    handleLoss(animDuration);
+  } else {
+    updateVoicedleUnlockHint();
+    setTimeout(() => playVoicedleClip(), animDuration + 150);
+  }
+}
+
+function voicedleGuessWasCorrect(guess) {
+  return !guess.skipped && sessionState.target && guess.name === sessionState.target.name;
+}
+
+function getVoicedleUnlockList() {
+  return sessionState.mode === 'hard' ? VOICEDLE_HARD_UNLOCK : VOICEDLE_UNLOCK;
+}
+
+function resetVoicedleResultPanel() {
+  const panel = document.getElementById('voicedle-result-panel');
+  const genericGrid = document.getElementById('target-stats-grid');
+  const targetCard = document.getElementById('result-target-card');
+  const band = document.getElementById('modal-header-band');
+  const shareCardWrap = document.getElementById('share-card-wrap');
+  if (panel) panel.classList.add('hidden');
+  if (genericGrid) genericGrid.classList.remove('hidden');
+  if (targetCard) targetCard.classList.remove('voicedle-result-card');
+  if (band) band.className = 'h-2 w-full bg-green-600';
+  if (shareCardWrap) shareCardWrap.classList.remove('hidden');
+}
+
+function playVoicedleResultReveal() {
+  if (!sessionState.target) return;
+  playVoicedleClipForDuration(VOICEDLE_CLIP_MAX);
+}
+
+function renderVoicedleResultContent(isWin) {
+  const panel = document.getElementById('voicedle-result-panel');
+  const genericGrid = document.getElementById('target-stats-grid');
+  const targetCard = document.getElementById('result-target-card');
+  const band = document.getElementById('modal-header-band');
+  const shareCardWrap = document.getElementById('share-card-wrap');
+  if (!panel) return;
+
+  if (genericGrid) genericGrid.classList.add('hidden');
+  panel.classList.remove('hidden');
+  if (targetCard) targetCard.classList.add('voicedle-result-card');
+  if (band) band.className = `h-2 w-full ${isWin ? 'voicedle-result-band voicedle-result-band--win' : 'voicedle-result-band voicedle-result-band--loss'}`;
+  if (shareCardWrap) shareCardWrap.classList.add('hidden');
+
+  const targetLabel = document.getElementById('target-label');
+  if (targetLabel) targetLabel.textContent = 'Voice answer';
+
+  const unlockList = getVoicedleUnlockList();
+  const stepsEl = document.getElementById('voicedle-result-steps');
+  if (stepsEl) {
+    stepsEl.innerHTML = '';
+    sessionState.guesses.forEach((guess, i) => {
+      const tier = unlockList[Math.min(i, unlockList.length - 1)];
+      const pill = document.createElement('span');
+      pill.className = 'voicedle-result-step';
+      if (guess.skipped) pill.classList.add('voicedle-result-step--skip');
+      else if (voicedleGuessWasCorrect(guess)) pill.classList.add('voicedle-result-step--correct');
+      else pill.classList.add('voicedle-result-step--wrong');
+      pill.textContent = formatVoicedleDuration(tier);
+      stepsEl.appendChild(pill);
+    });
+  }
+
+  const historyEl = document.getElementById('voicedle-result-guesses');
+  if (historyEl) {
+    historyEl.innerHTML = '';
+    sessionState.guesses.forEach((guess) => {
+      const row = document.createElement('div');
+      if (guess.skipped) {
+        row.className = 'voicedle-result-guess voicedle-result-guess--skip';
+        row.innerHTML = '<span class="voicedle-result-guess-icon" aria-hidden="true">⏭</span><span>Skipped</span>';
+      } else {
+        const correct = voicedleGuessWasCorrect(guess);
+        row.className = `voicedle-result-guess ${correct ? '✓' : '✗'}`;
+        row.innerHTML = `
+          <img src="${guess.image}" alt="" class="voicedle-result-guess-img">
+          <span class="voicedle-result-guess-name">${guess.name}</span>
+          <span class="voicedle-result-guess-mark" aria-hidden="true">${correct ? '✓' : '✗'}</span>
+        `;
+      }
+      historyEl.appendChild(row);
+    });
+  }
+
+  const summaryEl = document.getElementById('voicedle-result-summary');
+  if (summaryEl) {
+    const used = sessionState.guesses.length;
+    const skips = sessionState.guesses.filter(g => g.skipped).length;
+    const maxG = sessionState.maxGuesses === Infinity ? null : sessionState.maxGuesses;
+    const skipNote = skips ? ` · ${skips} skipped` : '';
+    if (isWin) {
+      summaryEl.textContent = `Solved in ${used} guess${used === 1 ? '' : 'es'}${skipNote}`;
+      summaryEl.classList.remove('voicedle-result-summary--loss');
+      summaryEl.classList.add('voicedle-result-summary--win');
+    } else {
+      summaryEl.textContent = maxG != null
+        ? `Out of guesses (${used} / ${maxG})${skipNote}`
+        : `No correct guess${skipNote}`;
+      summaryEl.classList.remove('voicedle-result-summary--win');
+      summaryEl.classList.add('voicedle-result-summary--loss');
+    }
+  }
+
+  const playBtn = document.getElementById('voicedle-result-play-btn');
+  if (playBtn) playBtn.onclick = playVoicedleResultReveal;
+}
+
+function renderVoicedleShareEmojis(preview) {
+  preview.innerHTML = '';
+  sessionState.guesses.forEach(guess => {
+    const div = document.createElement('div');
+    if (guess.skipped) {
+      div.innerText = '⬜'.repeat(5);
+    } else {
+      div.innerText = guess.name === sessionState.target.name ? '🟩'.repeat(5) : '⬛'.repeat(5);
+    }
+    preview.appendChild(div);
+  });
+}
+
+function renderVoicedleShareEmojisText() {
+  let result = '';
+  sessionState.guesses.forEach(guess => {
+    if (guess.skipped) {
+      result += '⬜'.repeat(5) + '\n';
+    } else {
+      result += (guess.name === sessionState.target.name ? '🟩'.repeat(5) : '⬛'.repeat(5)) + '\n';
+    }
+  });
+  return result.trim();
+}

@@ -1,1 +1,118 @@
-function a0_0x3dfd(_0x11c0b2,_0x434fcc){_0x11c0b2=_0x11c0b2-0x1cf;const _0x20666b=a0_0x2066();let _0x3dfdc2=_0x20666b[_0x11c0b2];return _0x3dfdc2;}const a0_0x3c2d4b=a0_0x3dfd;function a0_0x2066(){const _0x2e717a=['surface','Strategy','Trf','Turn','End','25aJnmFn','pace','Location','Fro','long','playing','schedule','20308CXdQSI','1033476jmsEiF','course_wordle_stats','purple','mile','orange','Pac','113663GWJJpv','Guess\x20the\x20G1\x20Race\x20based\x20on\x20its\x20course\x20features!','Winning\x20G1\x20Race','Drt','Schedule','3214jsrGAE','4464036eUaFKS','Lon','normal','length','uma_wordle_stats','uma','Track','Enter\x20G1\x20Race\x20name...','sprint','Spr','2460MmhWUm','TRACENDLE','TRACENDLE\x20VOICEDLE','45240otqbJv','turf','Winning\x20Umamusume','Guess\x20the\x20Umamusume\x20based\x20on\x20their\x20base\x20Aptitudes!','1947864lbOGZb','1.3','254ChEUUn','Mil','819kmosNN','Guess\x20the\x20Umamusume\x20from\x20their\x20voice\x20line!\x20Each\x20wrong\x20guess\x20unlocks\x20more\x20audio.','location','front','turn','dirt','Med','Enter\x20Umamusume\x20name...','voicedle_stats','Guess\x20the\x20Umamusume\x20from\x20the\x20voice\x20line...','med'];a0_0x2066=function(){return _0x2e717a;};return a0_0x2066();}(function(_0x347c9c,_0x4525bb){const _0x3b1358=a0_0x3dfd,_0x3597d4=_0x347c9c();while(!![]){try{const _0x58d533=-parseInt(_0x3b1358(0x1e2))/0x1*(parseInt(_0x3b1358(0x1f6))/0x2)+-parseInt(_0x3b1358(0x1f4))/0x3+-parseInt(_0x3b1358(0x1d6))/0x4*(parseInt(_0x3b1358(0x1cf))/0x5)+parseInt(_0x3b1358(0x1d7))/0x6+parseInt(_0x3b1358(0x1f8))/0x7*(-parseInt(_0x3b1358(0x1f0))/0x8)+-parseInt(_0x3b1358(0x1e3))/0x9+parseInt(_0x3b1358(0x1ed))/0xa*(parseInt(_0x3b1358(0x1dd))/0xb);if(_0x58d533===_0x4525bb)break;else _0x3597d4['push'](_0x3597d4['shift']());}catch(_0x6ebbe){_0x3597d4['push'](_0x3597d4['shift']());}}}(a0_0x2066,0x73a4a));const SUPABASE_URL='https://arjlihlurgfjdrnrjefi.supabase.co',SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyamxpaGx1cmdmamRybnJqZWZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxODY2OTMsImV4cCI6MjA5NDc2MjY5M30.SJNQr8lL726tEaba83y6OaNxHZdt2lsdsDZGrXoYC48',supabaseClient=supabase['createClient'](SUPABASE_URL,SUPABASE_ANON_KEY);let UMAS=[],COURSES=[],VOICEDLE=[];const RANK_MAP={'S':0x6,'A':0x5,'B':0x4,'C':0x3,'D':0x2,'E':0x1,'F':0x0,'G':-0x1},GRADES=['G','F','E','D','C','B','A','S'],POINTS_PER_TIER=0xc8,DIV_THRESHOLD=0x64,GAME_CONFIG={'uma':{'keys':[a0_0x3c2d4b(0x1eb),a0_0x3c2d4b(0x1da),a0_0x3c2d4b(0x202),'long','front',a0_0x3c2d4b(0x1d0),'late','end',a0_0x3c2d4b(0x1f1),a0_0x3c2d4b(0x1fd)],'headers':[a0_0x3c2d4b(0x1ec),a0_0x3c2d4b(0x1f7),a0_0x3c2d4b(0x1fe),a0_0x3c2d4b(0x1e4),a0_0x3c2d4b(0x1d2),a0_0x3c2d4b(0x1dc),'Lat',a0_0x3c2d4b(0x207),a0_0x3c2d4b(0x205),a0_0x3c2d4b(0x1e0)],'data':()=>UMAS,'placeholder':a0_0x3c2d4b(0x1ff),'resultTitle':a0_0x3c2d4b(0x1f2),'storageKey':a0_0x3c2d4b(0x1e7),'helpDesc':a0_0x3c2d4b(0x1f3),'shareTitle':a0_0x3c2d4b(0x1ee),'sections':[{'title':'Distance','keys':[a0_0x3c2d4b(0x1eb),a0_0x3c2d4b(0x1da),'med',a0_0x3c2d4b(0x1d3)],'color':'blue'},{'title':a0_0x3c2d4b(0x204),'keys':[a0_0x3c2d4b(0x1fb),'pace','late','end'],'color':a0_0x3c2d4b(0x1d9)},{'title':a0_0x3c2d4b(0x1e9),'keys':[a0_0x3c2d4b(0x1f1),a0_0x3c2d4b(0x1fd)],'color':a0_0x3c2d4b(0x1db)}]},'course':{'keys':[a0_0x3c2d4b(0x1e6),a0_0x3c2d4b(0x203),a0_0x3c2d4b(0x1fc),a0_0x3c2d4b(0x1fa),a0_0x3c2d4b(0x1d5)],'headers':['Length','Surface',a0_0x3c2d4b(0x206),a0_0x3c2d4b(0x1d1),a0_0x3c2d4b(0x1e1)],'data':()=>COURSES,'placeholder':a0_0x3c2d4b(0x1ea),'resultTitle':a0_0x3c2d4b(0x1df),'storageKey':a0_0x3c2d4b(0x1d8),'helpDesc':a0_0x3c2d4b(0x1de),'shareTitle':a0_0x3c2d4b(0x1ee),'sections':[{'title':'Course\x20Info','keys':['length','surface',a0_0x3c2d4b(0x1fc),a0_0x3c2d4b(0x1fa),a0_0x3c2d4b(0x1d5)],'color':'green'}]},'voicedle':{'keys':[],'headers':[],'data':()=>VOICEDLE,'placeholder':a0_0x3c2d4b(0x201),'resultTitle':a0_0x3c2d4b(0x1f2),'storageKey':a0_0x3c2d4b(0x200),'helpDesc':a0_0x3c2d4b(0x1f9),'shareTitle':a0_0x3c2d4b(0x1ef),'sections':[]}};let currentGameType='uma',allPersistentData={'uma':{'dailyStreak':0x0,'easyStreak':0x0,'unlimitedStreak':0x0,'hardStreak':0x0,'lastPlayedDate':null,'dailyGuesses':[],'dailyStatus':a0_0x3c2d4b(0x1d4),'rankedGuesses':[],'rankedStatus':'playing','rankedTargetName':null,'unlimitedSession':null,'hardSession':null,'easySession':null,'lbSubmittedKey':null},'course':{'dailyStreak':0x0,'easyStreak':0x0,'unlimitedStreak':0x0,'hardStreak':0x0,'lastPlayedDate':null,'dailyGuesses':[],'dailyStatus':a0_0x3c2d4b(0x1d4),'rankedGuesses':[],'rankedStatus':a0_0x3c2d4b(0x1d4),'rankedTargetName':null,'unlimitedSession':null,'hardSession':null,'lbSubmittedKey':null},'voicedle':{'dailyStreak':0x0,'easyStreak':0x0,'unlimitedStreak':0x0,'hardStreak':0x0,'lastPlayedDate':null,'dailyGuesses':[],'dailyStatus':a0_0x3c2d4b(0x1d4),'rankedGuesses':[],'rankedStatus':'playing','rankedTargetName':null,'unlimitedSession':null,'hardSession':null,'easySession':null,'lbSubmittedKey':null}},sessionState={'active':![],'mode':null,'target':null,'guesses':[],'clues':[],'unlimitedScore':0x0,'isGameOver':![],'knownStats':{},'pendingStreakReset':![],'streakAtLoss':0x0,'sessionKey':null,'_leaderboardSynced':![]},currentLbTab=a0_0x3c2d4b(0x1e8),currentLbType='dailyStreak',activeLbCategory=a0_0x3c2d4b(0x1e5),activeLbTimeWindow='weekly',currentStatsTab='uma';const CURRENT_VERSION=a0_0x3c2d4b(0x1f5);
+// ============================================================
+//  config.js — Constants, game configuration, and shared state
+// ============================================================
+
+const SUPABASE_URL = 'https://arjlihlurgfjdrnrjefi.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFyamxpaGx1cmdmamRybnJqZWZpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkxODY2OTMsImV4cCI6MjA5NDc2MjY5M30.SJNQr8lL726tEaba83y6OaNxHZdt2lsdsDZGrXoYC48';
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// --------------- Data lists (populated by loadGameData) ---------------
+let UMAS = [];
+let COURSES = [];
+let VOICEDLE = [];
+
+// --------------- Rank map ---------------
+const RANK_MAP = {
+  'S': 6, 'A': 5, 'B': 4, 'C': 3, 'D': 2, 'E': 1, 'F': 0, 'G': -1
+};
+
+const GRADES = ["G", "F", "E", "D", "C", "B", "A", "S"];
+const POINTS_PER_TIER = 200;
+const DIV_THRESHOLD = 100;
+
+// --------------- Game configuration ---------------
+const GAME_CONFIG = {
+  uma: {
+    keys: ['role1', 'role2', 'gender', 'difficulty', 'year'],
+    headers: ['Role 1', 'Role 2', 'Gender', 'Difficulty', 'Year'],
+    data: () => UMAS,
+    placeholder: "Enter survivor name...",
+    resultTitle: "Survivor",
+    storageKey: 'idvle_wordle_stats',
+    helpDesc: "Guess the Identity V survivor from their roles, gender, difficulty and release year!",
+    shareTitle: "IDVLE WORDLE",
+    sections: [
+      { title: "Survivor Info", keys: ['role1', 'role2', 'gender', 'difficulty', 'year'], color: 'cyan' }
+    ]
+  },
+  course: {
+    keys: ['length', 'surface', 'turn', 'location', 'schedule'],
+    headers: ['Length', 'Surface', 'Turn', 'Location', 'Schedule'],
+    data: () => COURSES,
+    placeholder: "Enter Hunter name...",
+    resultTitle: "Winning Hunter",
+    storageKey: 'course_wordle_stats',
+    helpDesc: "Guess the Hunter based on its track features!",
+    shareTitle: "IDVLE HUNTER",
+    sections: [
+      { title: "Hunter Info", keys: ['length', 'surface', 'turn', 'location', 'schedule'], color: 'green' }
+    ]
+  },
+  voicedle: {
+    keys: [],
+    headers: [],
+    data: () => VOICEDLE,
+    placeholder: "Guess the survivor from the voice line...",
+    resultTitle: "Winning Survivor",
+    storageKey: 'voicedle_stats',
+    helpDesc: "Guess the Identity V survivor from their voice line! Each wrong guess unlocks more audio.",
+    shareTitle: "IDVLE VOICEDLE",
+    sections: []
+  }
+};
+
+// --------------- Active game type ---------------
+let currentGameType = 'uma';
+
+// --------------- Persistent player data ---------------
+let allPersistentData = {
+  uma: {
+    dailyStreak: 0, easyStreak: 0, unlimitedStreak: 0, hardStreak: 0,
+    lastPlayedDate: null,
+    dailyGuesses: [], dailyStatus: 'playing',
+    rankedGuesses: [], rankedStatus: 'playing', rankedTargetName: null,
+    unlimitedSession: null, hardSession: null, easySession: null, lbSubmittedKey: null
+  },
+  course: {
+    dailyStreak: 0, easyStreak: 0, unlimitedStreak: 0, hardStreak: 0,
+    lastPlayedDate: null,
+    dailyGuesses: [], dailyStatus: 'playing',
+    rankedGuesses: [], rankedStatus: 'playing', rankedTargetName: null,
+    unlimitedSession: null, hardSession: null, lbSubmittedKey: null
+  },
+  voicedle: {
+    dailyStreak: 0, easyStreak: 0, unlimitedStreak: 0, hardStreak: 0,
+    lastPlayedDate: null,
+    dailyGuesses: [], dailyStatus: 'playing',
+    rankedGuesses: [], rankedStatus: 'playing', rankedTargetName: null,
+    unlimitedSession: null, hardSession: null, easySession: null, lbSubmittedKey: null
+  }
+};
+
+// --------------- In-memory session state ---------------
+let sessionState = {
+  active: false,
+  mode: null,
+  target: null,
+  guesses: [],
+  clues: [],
+  unlimitedScore: 0,
+  isGameOver: false,
+  knownStats: {},
+  pendingStreakReset: false,
+  streakAtLoss: 0,
+  sessionKey: null,
+  _leaderboardSynced: false
+};
+
+// --------------- Leaderboard UI state ---------------
+let currentLbTab = 'uma';
+let currentLbType = 'dailyStreak';
+let activeLbCategory = 'normal';
+let activeLbTimeWindow = 'weekly';
+
+// --------------- Stats modal state ---------------
+let currentStatsTab = 'uma';
+
+// --------------- Versioning ---------------
+const CURRENT_VERSION = '1.3.1';
