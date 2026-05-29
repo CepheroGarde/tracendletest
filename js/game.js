@@ -10,7 +10,10 @@ function getUTC8Time() {
 function getDailyString(offsetDays = 0) {
   const date8 = getUTC8Time();
   if (offsetDays !== 0) date8.setDate(date8.getDate() + offsetDays);
-  return `${date8.getUTCFullYear()}-${date8.getUTCMonth()}-${date8.getUTCDate()}`;
+  const year = date8.getUTCFullYear();
+  const month = String(date8.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(date8.getUTCDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
 function getTargetForDate(dateStr, dataList, gameType = 'uma') {

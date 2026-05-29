@@ -1,0 +1,422 @@
+[
+    {
+        "Name": "Hell Ember",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Low",
+                "Control": "Medium",
+                "ChairGuarding": "High"
+                 },
+        "External Trait": 1,
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Smiley Face",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Low",
+                "Control": "High",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 1,
+        "Difficulty": 1,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Game Keeper",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "Low",
+                "ChairGuarding": "High"
+                 },
+        "External Trait": 1,
+        "Difficulty": 2,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "The Ripper",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "Low",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 2,
+        "Difficulty": 1,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Soul Weaver",
+        "Gender": "Female",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "Low",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 2,
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Geisha",
+        "Gender": "Female",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "Medium",
+                "ChairGuarding": "Low"
+                 },
+        "External Trait": 1,
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Wu chang",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Low",
+                "Control": "High",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 1,
+        "Difficulty": 2,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Photographer",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "High",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 2,
+        "Difficulty": 2.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Mad Eyes",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Low",
+                "Control": "High",
+                "ChairGuarding": "High"
+                 },
+        "External Trait": 3,
+        "Difficulty": 3,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "The Feaster",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "Low",
+                "ChairGuarding": "High"
+                 },
+        "External Trait": 2,
+        "Difficulty": 1.5,
+        "ReleaseYear": 2018
+    },
+    {
+        "Name": "Dream Witch",
+        "Gender": "Female",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "High",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 3,
+        "Difficulty": 3,
+        "ReleaseYear": 2019
+    },
+    {
+        "Name": "Axe Boy",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "Medium",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 2,
+        "Difficulty": 2,
+        "ReleaseYear": 2019
+    },
+    {
+        "Name": "Evil Reptilian",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "Low",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 3,
+        "Difficulty": 3,
+        "ReleaseYear": 2019
+    },
+    {
+        "Name": "Bloody Queen",
+        "Gender": "Female",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "High",
+                "ChairGuarding": "Low"
+                 },
+        "External Trait": 1,
+        "Difficulty": 2,
+        "ReleaseYear": 2019
+    },
+    {
+        "Name": "Guard 26",
+        "Gender": "Unknown",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "Low",
+                "ChairGuarding": "High"
+                 },
+        "External Trait": 1,
+        "Difficulty": 2,
+        "ReleaseYear": 2019
+    },
+    {
+        "Name": "Disciple",
+        "Gender": "Female",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "Medium",
+                "ChairGuarding": "High"
+                 },
+        "External Trait": 1,
+        "Difficulty": 2,
+        "ReleaseYear": 2020
+    },
+    {
+        "Name": "Violinist",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "Medium",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 1,
+        "Difficulty": 1.5,
+        "ReleaseYear": 2020
+    },
+    {
+        "Name": "Sculpor",
+        "Gender": "Female",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "Medium",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 1,
+        "Difficulty": 2.5,
+        "ReleaseYear": 2020
+    },
+    {
+        "Name": "Undead",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "High",
+                "ChairGuarding": "Low"
+                 },
+        "External Trait": 3,
+        "Difficulty": 1.5,
+        "ReleaseYear": 2020
+    },
+    {
+        "Name": "The Breaking Wheel",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "Medium",
+                "ChairGuarding": "Low"
+                 },
+        "External Trait": 2,
+        "Difficulty": 3,
+        "ReleaseYear": 2021
+    },
+    {
+        "Name": "Naiad",
+        "Gender": "Female",
+        "Style": {
+                "Pursuit": "Low",
+                "Control": "Medium",
+                "ChairGuarding": "Low"
+                 },
+        "External Trait": 1,
+        "Difficulty": 2,
+        "ReleaseYear": 2021
+    },
+    {
+        "Name": "Wax Artist",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "Low",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 2,
+        "Difficulty": 2,
+        "ReleaseYear": 2021
+    },
+    {
+        "Name": "Nightmare",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "Medium",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 1,
+        "Difficulty": 1,
+        "ReleaseYear": 2021
+    },
+    {
+        "Name": "Clerk",
+        "Gender": "Female",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "High",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 0,
+        "Difficulty": 3,
+        "ReleaseYear": 2022
+    },
+    {
+        "Name": "Hermit",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "High",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 2,
+        "Difficulty": 2,
+        "ReleaseYear": 2022
+    },
+    {
+        "Name": "Nightwatch",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "Medium",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 1,
+        "Difficulty": 1.5,
+        "ReleaseYear": 2023
+    },
+    {
+        "Name": "Opera Singer",
+        "Gender": "Female",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "Medium",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 1,
+        "Difficulty": 2.5,
+        "ReleaseYear": 2023
+    },
+    {
+        "Name": "Fools Gold",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Medium",
+                "Control": "Medium",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 1,
+        "Difficulty": 1.5,
+        "ReleaseYear": 2023
+    },
+    {
+        "Name": "The Shadow",
+        "Gender": "Female",
+        "Style": {
+                "Pursuit": "Low",
+                "Control": "High",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 2,
+        "Difficulty": 3,
+        "ReleaseYear": 2024
+    },
+    {
+        "Name": "Goatman",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "Medium",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 2,
+        "Difficulty": 2.5,
+        "ReleaseYear": 2024
+    },
+    {
+        "Name": "Hullabaloo",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "Medium",
+                "ChairGuarding": "Low"
+                 },
+        "External Trait": 2,
+        "Difficulty": 2,
+        "ReleaseYear": 2024
+    },
+    {
+        "Name": "Peddler",
+        "Gender": "Female",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "Medium",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 1,
+        "Difficulty": 2,
+        "ReleaseYear": 2025
+    },
+    {
+        "Name": "Cueist",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "Low",
+                "Control": "High",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 1,
+        "Difficulty": 2.5,
+        "ReleaseYear": 2025
+    },
+    {
+        "Name": "Queen Bee",
+        "Gender": "Female",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "Low",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 1,
+        "Difficulty": 2,
+        "ReleaseYear": 2025
+    },
+    {
+        "Name": "Dentist",
+        "Gender": "Male",
+        "Style": {
+                "Pursuit": "High",
+                "Control": "Medium",
+                "ChairGuarding": "Medium"
+                 },
+        "External Trait": 1,
+        "Difficulty": 2,
+        "ReleaseYear": 2026
+    }
+]

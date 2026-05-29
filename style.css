@@ -1,7 +1,20 @@
 :root {
-    --uma-green: #2d7a4d;
-    --uma-red: #d32f2f;
-    --uma-bg: #121212;
+    /* Identity V Gothic Victorian Palette */
+    --uma-green: #6b3a2a;          /* Deep sepia-brown — primary action (was green) */
+    --uma-red: #8b1a1a;            /* Dark crimson — secondary action (was red) */
+    --uma-bg: #1a1008;             /* Near-black warm sepia — dark bg */
+
+    /* IDV extended palette */
+    --idv-parchment: #f0e6d0;      /* Ivory parchment */
+    --idv-sepia: #6b3a2a;          /* Deep sepia brown */
+    --idv-dark-sepia: #3d1f13;     /* Darker sepia */
+    --idv-crimson: #8b1a1a;        /* Gothic crimson */
+    --idv-amber: #c8862a;          /* Warm amber/gold */
+    --idv-ink: #1a1008;            /* Near-black ink */
+    --idv-slate: #4a3728;          /* Muted brown-slate */
+    --idv-teal: #2e5048;           /* Desaturated teal */
+    --idv-bone: #d4c4a8;           /* Aged bone/cream */
+    --idv-border: #8b6b4a;         /* Ornate border color */
 }
 
 html.dark-pre body {
@@ -9,11 +22,11 @@ html.dark-pre body {
     color: #e2e8f0;
 }
 html.dark-pre #menu-screen {
-    background-color: rgba(15, 23, 42, 0.72);
-    backdrop-filter: blur(18px) saturate(1.4);
-    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    background-color: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(14px) saturate(1.3);
+    -webkit-backdrop-filter: blur(14px) saturate(1.3);
     color: #e2e8f0;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.06);
 }
 body {
     background-image: url('images/trace background.jpg');
@@ -21,7 +34,7 @@ body {
     background-position: center;
     background-attachment: fixed; 
     background-repeat: no-repeat;
-    background-color: #f8fafc;
+    background-color: #E6DDDD;
     color: #1e293b;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: background-color 0.35s ease, color 0.35s ease, background-image 0.35s ease, background-position 0.35s ease;
@@ -101,19 +114,23 @@ body:not(.dark) #changelog-modal {
 }
 
 body.dark .btn-primary {
-    background-color: var(--uma-green);
+    background: linear-gradient(135deg, #7d4533 0%, #5a2e1e 100%);
+    border-color: #a08060;
 }
 
 body.dark .btn-secondary {
-    background-color: var(--uma-red);
+    background: linear-gradient(135deg, #a32020 0%, #7d1414 100%);
+    border-color: #c04040;
 }
 
 body.dark .btn-easy {
-    background-color: #3b82f6;
+    background: linear-gradient(135deg, #375f55 0%, #253f37 100%);
+    border-color: #5a8878;
 }
 
 body.dark .btn-hard {
-    background-color: #374151;
+    background: linear-gradient(135deg, #24160c 0%, #341f14 100%);
+    border-color: #5a4030;
 }
 
 
@@ -139,15 +156,15 @@ body.dark .share-card {
 
 #uma-input:focus {
     background-color: #ffffff;
-    border-color: #15803d;
+    border-color: #6b3a2a;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+    box-shadow: 0 0 0 3px rgba(107, 58, 42, 0.18);
 }
 
 body.dark #uma-input {
-    background-color: #1e293b;
-    border-color: #10b981;
-    color: #e2e8f0;
+    background-color: #1e1008;
+    border-color: #8b6b4a;
+    color: #f0e6d0;
 }
 
 body.dark #uma-input::placeholder {
@@ -525,11 +542,11 @@ body:not(.dark) #mode-indicator {
 }
 
 body:not(.dark) #score-display {
-    color: #15803d;
+    color: #6b3a2a;
 }
 
 #stats-summary {
-    background-color: #f8fafc;
+    background-color: #E6DDDD;
     color: #475569;
 }
 
@@ -539,21 +556,21 @@ body.dark #stats-summary {
 }
 
 body:not(.dark) #menu-screen {
-    background-color: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(18px) saturate(1.6);
-    -webkit-backdrop-filter: blur(18px) saturate(1.6);
+    background-color: rgba(230, 221, 221, 0.45);
+    backdrop-filter: blur(14px) saturate(1.4);
+    -webkit-backdrop-filter: blur(14px) saturate(1.4);
     color: #1f2937;
-    border: 1px solid rgba(255,255,255,0.55);
-    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    border: 1px solid rgba(255,255,255,0.35);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
 }
 
 body.dark #menu-screen {
-    background-color: rgba(15, 23, 42, 0.72);
-    backdrop-filter: blur(18px) saturate(1.4);
-    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    background-color: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(14px) saturate(1.3);
+    -webkit-backdrop-filter: blur(14px) saturate(1.3);
     color: #e2e8f0;
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 8px 40px rgba(0,0,0,0.45);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.35);
 }
 
 body.dark .name-col {
@@ -601,18 +618,48 @@ body.dark .theme-toggle .moon-icon { display: block; }
 .cell-group-end { border-right: 2px solid #e5e7eb !important; }
 
 .btn-primary {
-    background-color: var(--uma-green);
+    background: linear-gradient(135deg, #6b3a2a 0%, #4d2518 100%);
+    border: 1px solid #8b6b4a;
+    box-shadow: 0 4px 14px rgba(107,58,42,0.45), inset 0 1px 0 rgba(255,220,160,0.15);
     transition: transform 0.1s;
+    color: #f0e6d0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, #7d4533 0%, #5a2e1e 100%);
+    box-shadow: 0 6px 18px rgba(107,58,42,0.55), inset 0 1px 0 rgba(255,220,160,0.2);
 }
 .btn-primary:active { transform: scale(0.95); }
 .btn-secondary {
-    background-color: var(--uma-red);
+    background: linear-gradient(135deg, #8b1a1a 0%, #6b1010 100%);
+    border: 1px solid #a83030;
+    box-shadow: 0 4px 14px rgba(139,26,26,0.4), inset 0 1px 0 rgba(255,180,160,0.12);
+    color: #f0e6d0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.btn-secondary:hover {
+    background: linear-gradient(135deg, #a32020 0%, #7d1414 100%);
 }
 .btn-easy {
-    background-color: #3b82f6;
+    background: linear-gradient(135deg, #2e5048 0%, #1e3830 100%);
+    border: 1px solid #4a7060;
+    box-shadow: 0 4px 14px rgba(46,80,72,0.4), inset 0 1px 0 rgba(160,220,200,0.12);
+    color: #d4e8e0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+.btn-easy:hover {
+    background: linear-gradient(135deg, #375f55 0%, #253f37 100%);
 }
 .btn-hard {
-    background-color: #1a1a1a;
+    background: linear-gradient(135deg, #1a1008 0%, #2a1a10 100%);
+    border: 1px solid #4a3728;
+    box-shadow: 0 4px 14px rgba(26,16,8,0.5), inset 0 1px 0 rgba(200,134,42,0.15);
+    color: #c8a878;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+.btn-hard:hover {
+    background: linear-gradient(135deg, #24160c 0%, #341f14 100%);
+    color: #d4bc98;
 }
 
 @keyframes fadeIn {
@@ -645,7 +692,7 @@ body.dark .theme-toggle .moon-icon { display: block; }
 
 
 .stat-tag {
-    background: #f8fafc;
+    background: #E6DDDD;
     border: 1px solid #e2e8f0;
     border-radius: 6px;
     padding: 4px 8px;
@@ -1064,7 +1111,7 @@ body.dark .border-t {
 #result-target-card {
     transition: all 0.3s ease;
     width: 100%;
-    background: #f8fafc;
+    background: #E6DDDD;
     box-sizing: border-box;
 }
 
@@ -1136,7 +1183,7 @@ body.dark #result-msg {
 }
 
 #loss-streak-banner {
-    background: #f8fafc;
+    background: #E6DDDD;
     border: 2px solid #e2e8f0;
     border-radius: 1rem;
     padding: 1rem 1.5rem;
@@ -1414,12 +1461,12 @@ body.dark #game-toolbar {
 }
 
 #guesses.course-mode .name-col {
-    width: 18%; 
+    width: 14%; 
 }
 
 #guesses.course-mode th:not(.name-col),
 #guesses.course-mode td:not(.name-col) {
-    width: calc(82% / 4); 
+    width: calc(86% / 6); /* 6 data columns: gender, difficulty, year, pursuit, control, chairGuarding */
 }
 
 @media (max-width: 768px) {
@@ -1445,21 +1492,29 @@ body.dark #game-toolbar {
         text-overflow: ellipsis;
     }
 
+    /* wordle cells need to show arrows and stars — don't clip them */
+    #guesses td.wordle-cell {
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    /* Scale difficulty stars to fit narrow columns */
+    #guesses .difficulty-stars {
+        gap: 1px;
+        flex-wrap: nowrap;
+    }
+    #guesses .difficulty-star {
+        width: clamp(7px, 2.4vw, 14px) !important;
+        height: clamp(7px, 2.4vw, 14px) !important;
+        flex-shrink: 0;
+    }
+
     #guesses img,
     #guess-grid img {
         width: clamp(24px, 6vw, 36px);
         height: clamp(24px, 6vw, 36px);
         max-width: clamp(24px, 6vw, 36px);
         max-height: clamp(24px, 6vw, 36px);
-    }
-
-    #guess-grid .difficulty-stars {
-        gap: 3px;
-    }
-
-    #guess-grid .difficulty-star {
-        width: 16px !important;
-        height: 16px !important;
     }
 
     .name-col {
@@ -1469,6 +1524,25 @@ body.dark #game-toolbar {
 
     #guess-head th {
         font-size: clamp(7px, 2vw, 10px);
+        white-space: normal;
+        word-break: break-word;
+        line-height: 1.1;
+        padding: 3px 2px;
+    }
+
+    /* Hunter mode headers are longer — shrink further */
+    #guesses.course-mode #guess-head th {
+        font-size: clamp(6px, 1.8vw, 9px);
+    }
+
+    /* Hunter mode: 7 data cols on narrow screens — shrink name col further */
+    #guesses.course-mode .name-col {
+        width: 11%;
+    }
+
+    #guesses.course-mode th:not(.name-col),
+    #guesses.course-mode td:not(.name-col) {
+        width: calc(89% / 6);
     }
 
     #input-container {
@@ -1498,22 +1572,6 @@ body.dark #game-toolbar {
         max-height: clamp(20px, 5.5vw, 30px);
     }
 
-    #guess-grid .difficulty-stars {
-        gap: 2px;
-    }
-
-    #guess-grid .difficulty-star {
-        width: 12px !important;
-        height: 12px !important;
-    }
-
-    #guess-grid .difficulty-stars,
-    #guess-grid .difficulty-star {
-        max-width: none !important;
-        max-height: none !important;
-        display: inline-flex !important;
-    }
-
     .name-col {
         min-width: unset;
         width: 12%;
@@ -1522,15 +1580,16 @@ body.dark #game-toolbar {
 
 @media (max-width: 600px) {
     .course-mode img {
-        width: 14vw !important;    
-        height: 14vw !important;
-        max-width: 65px !important; 
-        max-height: 65px !important;
+        width: 10vw !important;    
+        height: 10vw !important;
+        max-width: 44px !important; 
+        max-height: 44px !important;
     }
     #guesses.course-mode td {
-        padding: 4px 2px !important;
+        padding: 3px 1px !important;
     }
 
+    /* Safety net: allow horizontal scroll if 7 cols still won't fit */
     .table-wrapper {
         overflow-x: auto; 
     }
@@ -1594,7 +1653,7 @@ body.dark #picker-panel {
 .picker-card:hover,
 .picker-card:active {
     background: #dcfce7;
-    border-color: #4ade80;
+    border-color: #c8a878;
     transform: scale(1.05);
 }
 
@@ -1675,7 +1734,7 @@ body.dark .picker-card-name {
    ============================================= */
 
 .stats-section {
-    background: #f8fafc;
+    background: #E6DDDD;
     border: 1.5px solid #e2e8f0;
     border-radius: 14px;
     padding: 10px 12px 12px;
@@ -2005,11 +2064,11 @@ body.dark .wallpaper-section-label {
 .wallpaper-upload-zone {
     border-color: #cbd5e1;
     color: #64748b;
-    background-color: #f8fafc;
+    background-color: #E6DDDD;
 }
 .wallpaper-upload-zone:hover {
-    border-color: #22c55e;
-    color: #16a34a;
+    border-color: #b89060;
+    color: #8b6b4a;
     background-color: #f0fdf4;
 }
 body.dark .wallpaper-upload-zone {
@@ -2018,8 +2077,8 @@ body.dark .wallpaper-upload-zone {
     background-color: #0f172a;
 }
 body.dark .wallpaper-upload-zone:hover {
-    border-color: #22c55e;
-    color: #4ade80;
+    border-color: #b89060;
+    color: #c8a878;
     background-color: #052e16;
 }
 .wallpaper-upload-hint {
@@ -2324,7 +2383,7 @@ body:not(.dark) .voicedle-player-card {
 body:not(.dark) .voicedle-player-badge {
     background: rgba(22, 163, 74, 0.12);
     border-color: rgba(21, 128, 61, 0.35);
-    color: #15803d;
+    color: #6b3a2a;
 }
 
 .voicedle-time-display {
@@ -2335,7 +2394,7 @@ body:not(.dark) .voicedle-player-badge {
 }
 
 body:not(.dark) .voicedle-time-display {
-    color: #15803d;
+    color: #6b3a2a;
 }
 
 .voicedle-player-stage {
@@ -2378,7 +2437,7 @@ body:not(.dark) .voicedle-player-stage {
 }
 
 body:not(.dark) .voicedle-wave-bar {
-    background: linear-gradient(180deg, #4ade80, #16a34a);
+    background: linear-gradient(180deg, #c8a878, #8b6b4a);
 }
 
 .voicedle-player-card--playing .voicedle-wave-bar {
@@ -2411,7 +2470,7 @@ body:not(.dark) .voicedle-wave-bar {
     align-items: center;
     justify-content: center;
     color: #fff;
-    background: linear-gradient(145deg, #22c55e, var(--uma-green));
+    background: linear-gradient(145deg, #b89060, var(--uma-green));
     box-shadow:
         0 0 0 4px rgba(52, 211, 153, 0.25),
         0 8px 24px rgba(21, 128, 61, 0.45);
@@ -2430,7 +2489,7 @@ body:not(.dark) .voicedle-wave-bar {
 }
 
 .voicedle-player-card--playing .voicedle-play-btn {
-    background: linear-gradient(145deg, #4ade80, #15803d);
+    background: linear-gradient(145deg, #c8a878, #6b3a2a);
     box-shadow:
         0 0 0 4px rgba(74, 222, 128, 0.35),
         0 8px 24px rgba(21, 128, 61, 0.5);
@@ -2482,7 +2541,7 @@ body:not(.dark) .voicedle-wave-bar {
 }
 
 body:not(.dark) .voicedle-volume-label {
-    color: #15803d;
+    color: #6b3a2a;
 }
 
 .voicedle-volume-icon {
@@ -2512,7 +2571,7 @@ body:not(.dark) .voicedle-volume-slider {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: linear-gradient(145deg, #4ade80, #16a34a);
+    background: linear-gradient(145deg, #c8a878, #8b6b4a);
     border: 2px solid rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 8px rgba(34, 197, 94, 0.45);
 }
@@ -2521,7 +2580,7 @@ body:not(.dark) .voicedle-volume-slider {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: linear-gradient(145deg, #4ade80, #16a34a);
+    background: linear-gradient(145deg, #c8a878, #8b6b4a);
     border: 2px solid rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 8px rgba(34, 197, 94, 0.45);
     cursor: pointer;
@@ -2572,7 +2631,7 @@ body:not(.dark) .voicedle-progress-unlock {
     top: 0;
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, #4ade80, #16a34a);
+    background: linear-gradient(90deg, #c8a878, #8b6b4a);
     border-radius: 999px;
     box-shadow: 0 0 10px rgba(34, 197, 94, 0.45);
     transition: width 0.05s linear;
@@ -2638,7 +2697,7 @@ body:not(.dark) .voicedle-step {
 }
 
 body:not(.dark) .voicedle-step--active {
-    color: #15803d;
+    color: #6b3a2a;
     background: rgba(22, 163, 74, 0.12);
     border-color: rgba(21, 128, 61, 0.35);
 }
@@ -2652,8 +2711,8 @@ body:not(.dark) .voicedle-step--active {
 
 body:not(.dark) .voicedle-step--current {
     color: #fff;
-    background: #16a34a;
-    border-color: #15803d;
+    background: #8b6b4a;
+    border-color: #6b3a2a;
 }
 
 .voicedle-step--correct {
@@ -2665,8 +2724,8 @@ body:not(.dark) .voicedle-step--current {
 
 body:not(.dark) .voicedle-step--correct {
     color: #fff;
-    background: #16a34a;
-    border-color: #15803d;
+    background: #8b6b4a;
+    border-color: #6b3a2a;
     box-shadow: 0 0 8px rgba(22, 163, 74, 0.25);
 }
 
@@ -2732,7 +2791,7 @@ body.dark .voicedle-unlock-hint {
 body:not(.dark) .voicedle-skip-btn {
     background: rgba(22, 163, 74, 0.08);
     border-color: rgba(21, 128, 61, 0.35);
-    color: #15803d;
+    color: #6b3a2a;
 }
 
 body:not(.dark) .voicedle-skip-btn:hover:not(:disabled) {
@@ -2772,7 +2831,7 @@ body:not(.dark) .voicedle-step--skipped {
 }
 
 body:not(.dark) .voicedle-guess-row--correct {
-    border-color: #16a34a;
+    border-color: #8b6b4a;
     background: #f0fdf4;
 }
 
@@ -2788,7 +2847,7 @@ body.dark .voicedle-guess-row {
 }
 
 body.dark .voicedle-guess-row--correct {
-    border-color: #22c55e;
+    border-color: #b89060;
     background: rgba(22, 101, 52, 0.5);
     color: #ecfdf5;
 }
@@ -2876,10 +2935,10 @@ body:not(.dark) .voicedle-guess-row--skip .voicedle-guess-name {
     font-size: 1.1rem;
 }
 
-body:not(.dark) .voicedle-guess-row--correct .voicedle-guess-badge { color: #16a34a; }
+body:not(.dark) .voicedle-guess-row--correct .voicedle-guess-badge { color: #8b6b4a; }
 body:not(.dark) .voicedle-guess-row--wrong .voicedle-guess-badge { color: #ef4444; }
 
-body.dark .voicedle-guess-row--correct .voicedle-guess-badge { color: #4ade80; }
+body.dark .voicedle-guess-row--correct .voicedle-guess-badge { color: #c8a878; }
 body.dark .voicedle-guess-row--wrong .voicedle-guess-badge { color: #f87171; }
 
 /* —— Devtool panel —— */
@@ -2957,15 +3016,15 @@ body.dark .voicedle-guess-row--wrong .voicedle-guess-badge { color: #f87171; }
 
 /* —— Voicedle result modal —— */
 .voicedle-result-band {
-    background: linear-gradient(90deg, #15803d, #22c55e, #15803d);
+    background: linear-gradient(90deg, #6b3a2a, #b89060, #6b3a2a);
 }
 
 .voicedle-result-band--win {
-    background: linear-gradient(90deg, #16a34a, #4ade80, #15803d);
+    background: linear-gradient(90deg, #8b6b4a, #c8a878, #6b3a2a);
 }
 
 .voicedle-result-band--loss {
-    background: linear-gradient(90deg, #15803d, var(--uma-red), #475569);
+    background: linear-gradient(90deg, #6b3a2a, var(--uma-red), #475569);
 }
 
 #result-target-card.voicedle-result-card {
@@ -2982,7 +3041,7 @@ body.dark #result-target-card.voicedle-result-card {
 
 #result-target-card.voicedle-result-card #target-name,
 #result-target-card.voicedle-result-card .text-green-700 {
-    color: #15803d !important;
+    color: #6b3a2a !important;
 }
 
 body.dark #result-target-card.voicedle-result-card #target-name,
@@ -2991,7 +3050,7 @@ body.dark #result-target-card.voicedle-result-card .text-green-700 {
 }
 
 #result-target-card.voicedle-result-card #target-label {
-    color: #16a34a;
+    color: #8b6b4a;
 }
 
 body.dark #result-target-card.voicedle-result-card #target-label {
@@ -3004,7 +3063,7 @@ body.dark #result-target-card.voicedle-result-card #target-label {
 }
 
 .share-card--voicedle #share-title-text {
-    color: #4ade80 !important;
+    color: #c8a878 !important;
 }
 
 .voicedle-result-panel:not(.hidden) {
@@ -3023,7 +3082,7 @@ body.dark #result-target-card.voicedle-result-card #target-label {
     padding: 0.65rem 1rem;
     border-radius: 0.75rem;
     border: 1px solid rgba(52, 211, 153, 0.45);
-    background: linear-gradient(165deg, #15803d 0%, var(--uma-green) 100%);
+    background: linear-gradient(165deg, #6b3a2a 0%, var(--uma-green) 100%);
     color: #f0fdf4;
     font-size: 0.8rem;
     font-weight: 800;
@@ -3045,7 +3104,7 @@ body.dark #result-target-card.voicedle-result-card #target-label {
 }
 
 body:not(.dark) .voicedle-result-play-btn {
-    background: linear-gradient(165deg, #16a34a 0%, #22c55e 100%);
+    background: linear-gradient(165deg, #8b6b4a 0%, #b89060 100%);
 }
 
 .voicedle-result-section {
@@ -3059,7 +3118,7 @@ body:not(.dark) .voicedle-result-play-btn {
     font-weight: 900;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #15803d;
+    color: #6b3a2a;
 }
 
 body.dark .voicedle-result-label {
@@ -3085,8 +3144,8 @@ body.dark .voicedle-result-label {
 }
 
 .voicedle-result-step--correct {
-    background: #16a34a;
-    border-color: #15803d;
+    background: #8b6b4a;
+    border-color: #6b3a2a;
 }
 
 .voicedle-result-step--wrong {
@@ -3126,7 +3185,7 @@ body.dark .voicedle-result-guess {
 }
 
 .voicedle-result-guess--correct {
-    border-color: #22c55e;
+    border-color: #b89060;
     background: #f0fdf4;
 }
 
@@ -3196,7 +3255,7 @@ body.dark .voicedle-result-guess--skip {
 
 .voicedle-result-summary--win {
     background: rgba(22, 163, 74, 0.12);
-    color: #15803d;
+    color: #6b3a2a;
 }
 
 .voicedle-result-summary--loss {
@@ -3239,7 +3298,7 @@ body.dark .voicedle-result-summary--loss {
 /* Inner card — matches changelog: rounded-2xl, border-t-8 border-green-600, shadow-2xl */
 #about-modal-inner {
     border-radius: 16px;
-    border-top: 8px solid #16a34a; /* green-600 */
+    border-top: 8px solid #8b6b4a; /* green-600 */
     max-width: 448px; /* max-w-md like changelog */
     width: 100%;
     max-height: 92vh;
@@ -3334,12 +3393,12 @@ body.dark .about-intro-card-title {
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: #15803d; /* green-700 */
+    color: #6b3a2a; /* green-700 */
     margin-bottom: 8px;
     display: block;
 }
 body.dark .about-section-label {
-    color: #4ade80;
+    color: #c8a878;
 }
 
 /* Generic info cards */
@@ -3357,7 +3416,7 @@ body.dark .about-card {
 
 /* Legal card — slightly different tint */
 .about-legal-card {
-    background: #f8fafc;
+    background: #E6DDDD;
     border-color: #e2e8f0;
     margin-bottom: 0;
 }
@@ -3396,21 +3455,21 @@ body.dark .about-source-link {
     color: #e2e8f0;
 }
 .about-source-link:hover {
-    border-color: #16a34a;
+    border-color: #8b6b4a;
     background: #f0fdf4;
 }
 body.dark .about-source-link:hover {
-    border-color: #4ade80;
+    border-color: #c8a878;
     background: rgba(22, 163, 74, 0.08);
 }
 
 .about-link-arrow {
-    color: #16a34a;
+    color: #8b6b4a;
     font-size: 15px;
     font-weight: 700;
 }
 body.dark .about-link-arrow {
-    color: #4ade80;
+    color: #c8a878;
 }
 
 /* Footer — matches changelog footer with border-t and green button */
@@ -3424,7 +3483,7 @@ body.dark .about-footer {
 
 .about-close-btn-main {
     width: 100%;
-    background-color: #16a34a; /* green-600 */
+    background-color: #8b6b4a; /* green-600 */
     color: #ffffff;
     font-weight: 700;
     font-size: 15px;
@@ -3436,7 +3495,7 @@ body.dark .about-footer {
     box-shadow: 0 4px 14px rgba(22, 163, 74, 0.3);
 }
 .about-close-btn-main:hover {
-    background-color: #15803d; /* green-700 */
+    background-color: #6b3a2a; /* green-700 */
 }
 .about-close-btn-main:active {
     transform: scale(0.96);
@@ -3459,7 +3518,7 @@ body.dark .about-footer {
 
 #save-transfer-inner {
     border-radius: 16px;
-    border-top: 8px solid #16a34a;
+    border-top: 8px solid #8b6b4a;
     max-width: 420px;
     width: 100%;
     max-height: 92vh;
@@ -3536,10 +3595,10 @@ body.dark .st-tabs { border-bottom-color: #334155; }
 .st-tab:hover { color: #1f2937; }
 body.dark .st-tab:hover { color: #f1f5f9; }
 .st-tab--active {
-    color: #16a34a;
-    border-bottom-color: #16a34a;
+    color: #8b6b4a;
+    border-bottom-color: #8b6b4a;
 }
-body.dark .st-tab--active { color: #4ade80; border-bottom-color: #4ade80; }
+body.dark .st-tab--active { color: #c8a878; border-bottom-color: #c8a878; }
 
 /* Panel body */
 .st-panel {
@@ -3563,7 +3622,7 @@ body.dark .st-desc { color: #94a3b8; }
     justify-content: center;
     gap: 10px;
     width: 100%;
-    background: #16a34a;
+    background: #8b6b4a;
     color: #fff;
     border: none;
     border-radius: 12px;
@@ -3575,7 +3634,7 @@ body.dark .st-desc { color: #94a3b8; }
     box-shadow: 0 2px 10px rgba(22,163,74,0.3);
     transition: background-color .15s, transform .1s;
 }
-.st-btn-primary:hover { background: #15803d; }
+.st-btn-primary:hover { background: #6b3a2a; }
 .st-btn-primary:active { transform: scale(0.97); }
 .st-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
@@ -3642,7 +3701,7 @@ body.dark #st-code-display { color: #f1f5f9; }
     display: none;
     align-items: center;
     gap: 5px;
-    background: #16a34a;
+    background: #8b6b4a;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -3653,7 +3712,7 @@ body.dark #st-code-display { color: #f1f5f9; }
     font-family: inherit;
     transition: background .15s;
 }
-.st-copy-btn:hover { background: #15803d; }
+.st-copy-btn:hover { background: #6b3a2a; }
 
 #st-countdown {
     margin-top: 10px;
@@ -3680,7 +3739,7 @@ body.dark .st-code-note { color: #64748b; }
     letter-spacing: .12em;
     text-transform: uppercase;
     text-align: center;
-    background: #f8fafc;
+    background: #E6DDDD;
     color: #1e293b;
     outline: none;
     font-family: inherit;
@@ -3688,7 +3747,7 @@ body.dark .st-code-note { color: #64748b; }
     transition: border-color .15s, box-shadow .15s;
 }
 .st-code-input:focus {
-    border-color: #16a34a;
+    border-color: #8b6b4a;
     box-shadow: 0 0 0 3px rgba(22,163,74,0.15);
 }
 body.dark .st-code-input {
@@ -3697,7 +3756,7 @@ body.dark .st-code-input {
     color: #f1f5f9;
 }
 body.dark .st-code-input:focus {
-    border-color: #4ade80;
+    border-color: #c8a878;
     box-shadow: 0 0 0 3px rgba(74,222,128,0.15);
 }
 
@@ -3743,7 +3802,7 @@ body.dark .st-divider { background: #334155; }
 }
 /* Umaguessr — site green */
 .also-try-pill-pink {
-    color: #15803d;
+    color: #6b3a2a;
     border-color: #bbf7d0;
     background: #f0fdf4;
 }
@@ -3802,3 +3861,180 @@ body.dark .also-try-divider { color: #475569; }
     white-space: nowrap;
 }
 body.dark .also-try-label { color: #64748b; }
+
+/* ============================================================
+   Identity V Theme Overrides
+   Gothic Victorian / Sepia palette applied to all major UI elements
+   ============================================================ */
+
+/* Header border */
+header {
+    border-bottom-color: #6b3a2a !important;
+}
+
+/* Leaderboard button (was yellow) */
+button[aria-label="Open global leaderboard"] {
+    background: linear-gradient(135deg, #c8862a 0%, #a06020 100%) !important;
+    border-color: #e0a040 !important;
+    box-shadow: 0 2px 8px rgba(200,134,42,0.4) !important;
+}
+button[aria-label="Open global leaderboard"]:hover {
+    background: linear-gradient(135deg, #e0a040 0%, #b87030 100%) !important;
+}
+
+/* Icon buttons (stats, wallpaper, theme, overflow) — light mode */
+body:not(.dark) .icon-btn,
+body:not(.dark) .theme-toggle {
+    border-color: #8b6b4a !important;
+    color: #6b3a2a !important;
+}
+body:not(.dark) .icon-btn:hover,
+body:not(.dark) .theme-toggle:hover {
+    background-color: #f0e6d0 !important;
+}
+
+/* Dark mode icon buttons */
+body.dark .icon-btn,
+body.dark .theme-toggle {
+    border-color: #6b4a30 !important;
+    color: #c8a878 !important;
+}
+body.dark .icon-btn:hover,
+body.dark .theme-toggle:hover {
+    background-color: #2a1810 !important;
+}
+
+/* Tab switcher (Survivor / Hunter tabs) */
+body:not(.dark) #tab-uma,
+body:not(.dark) #tab-course {
+    color: #6b3a2a;
+}
+body:not(.dark) #tab-uma.bg-white,
+body:not(.dark) #tab-course.bg-white {
+    color: #4d2518 !important;
+    box-shadow: 0 1px 4px rgba(107,58,42,0.25) !important;
+}
+body:not(.dark) .flex.bg-gray-100 {
+    background-color: #e8dcc8 !important;
+}
+
+/* Archive Mode button override (indigo → IDV teal-sepia) */
+button[onclick="openArchiveMode()"] {
+    background: linear-gradient(135deg, #2e5048 0%, #1e3830 100%) !important;
+    border: 1px solid #4a7060 !important;
+    color: #d4e8e0 !important;
+}
+button[onclick="openArchiveMode()"]:hover {
+    background: linear-gradient(135deg, #375f55 0%, #253f37 100%) !important;
+}
+
+/* Menu back button (game screen) */
+button[onclick="showMenu()"] {
+    background: linear-gradient(135deg, #6b3a2a 0%, #4d2518 100%) !important;
+    border: 1px solid #8b6b4a !important;
+    color: #f0e6d0 !important;
+}
+
+/* Overflow dropdown */
+.overflow-dropdown {
+    border: 1px solid #8b6b4a !important;
+}
+.overflow-item:hover {
+    background-color: #f0e6d0 !important;
+    color: #4d2518 !important;
+}
+body.dark .overflow-dropdown {
+    border-color: #4a3020 !important;
+    background-color: #1e1008 !important;
+}
+body.dark .overflow-item:hover {
+    background-color: #2a1810 !important;
+    color: #f0e6d0 !important;
+}
+
+/* Daily solver count + server time text */
+#daily-solver-count {
+    color: #8b6b4a !important;
+}
+
+/* Result modal header band */
+#modal-header-band {
+    background: linear-gradient(90deg, #6b3a2a, #c8862a, #6b3a2a) !important;
+}
+
+/* Result modal target name */
+#target-name {
+    color: #6b3a2a !important;
+}
+body.dark #target-name {
+    color: #c8a878 !important;
+}
+
+/* Share card */
+#share-card {
+    border-color: #4a3020 !important;
+    background-color: #1a1008 !important;
+}
+#share-title-text {
+    color: #c8862a !important;
+}
+
+/* Ko-fi button — keep as-is, it's brand colored */
+
+/* Ranked mode profile panel */
+#ranked-profile-view {
+    background: linear-gradient(135deg, #f5ebe0, #e8d5c0) !important;
+    border-color: #8b6b4a !important;
+}
+body.dark #ranked-profile-view {
+    background: linear-gradient(135deg, #2a1810, #1e1008) !important;
+    border-color: #5a3a20 !important;
+}
+
+/* Streak badge */
+#streak-badge {
+    background-color: #c8862a !important;
+}
+
+/* Help/result modal headers */
+#help-title,
+#result-title {
+    color: #4d2518 !important;
+}
+body.dark #help-title,
+body.dark #result-title {
+    color: #f0e6d0 !important;
+}
+
+/* Got it / Continue button in modals (already uses btn-primary) */
+
+/* Ranked mode gradient button */
+button[onclick*="startGame('ranked')"] {
+    background: linear-gradient(135deg, #4d2518 0%, #8b1a1a 100%) !important;
+}
+
+/* Stats display */
+#result-score {
+    color: #8b6b4a !important;
+}
+body.dark #result-score {
+    color: #c8a878 !important;
+}
+
+/* Input border (game search bar) */
+.picker-search-bar input,
+#uma-input {
+    border-color: #8b6b4a !important;
+}
+
+/* Header transparency — let wallpaper bleed through */
+header {
+    background-color: rgba(230, 221, 221, 0.40) !important;
+    backdrop-filter: blur(12px) saturate(1.3) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(1.3) !important;
+}
+body.dark header {
+    background-color: rgba(15, 10, 5, 0.45) !important;
+    backdrop-filter: blur(12px) saturate(1.3) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(1.3) !important;
+}

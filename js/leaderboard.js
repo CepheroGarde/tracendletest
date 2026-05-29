@@ -665,54 +665,20 @@ function applyLeaderboardDarkMode() {
 }
 
 // --------------- Daily solver count ---------------
-// leaderboard.js
 async function recordDailySolve(gameType, guessCount, isWin) {
   const userId   = getOrCreateUserId();
-  const dailyKey = getDailyString();
+  const gameDate = getDailyString();
   try {
-    await supabaseClient.from('daily_solvers').upsert({
-      user_id:     userId,
-      game_type:   gameType,
-      daily_key:   dailyKey,
-      guess_count: guessCount,
-      result:      isWin ? 'win' : 'loss',     //  NEW
-      solved_at:   new Date().toISOString()
-    }, { onConflict: 'user_id,game_type,daily_key' });
-  } catch (err) {
-    console.error('Failed to record daily solve:', err);
-  }
-}
-
-async function recordDailySolve(gameType, guessCount, isWin) {
-  const userId   = getOrCreateUserId();
-  const dailyKey = getDailyString();
-  try {
-    await supabaseClient.from('daily_solvers').upsert({
-      user_id:     userId,
-      game_type:   gameType,
-      daily_key:   dailyKey,
-      guess_count: guessCount,
-      result:      isWin ? 'win' : 'loss',
-      solved_at:   new Date().toISOString()
-    }, { onConflict: 'user_id,game_type,daily_key' });
-  } catch (err) {
-    console.error('Failed to record daily solve:', err);
-  }
-}
-
-// --------------- Daily solver count ---------------
-async function recordDailySolve(gameType, guessCount, isWin) {
-  const userId   = getOrCreateUserId();
-  const dailyKey = getDailyString();
-  try {
-    await supabaseClient.from('daily_solvers').upsert({
-      user_id:     userId,
-      game_type:   gameType,
-      daily_key:   dailyKey,
-      guess_count: guessCount,
-      result:      isWin ? 'win' : 'loss',
-      solved_at:   new Date().toISOString()
-    }, { onConflict: 'user_id,game_type,daily_key' });
+    const { error } = await supabaseClient.from('daily_solver_idv').upsert([{
+      user_id:   userId,
+      game_type: gameType,
+      game_date: gameDate,
+      solved:    isWin,
+      guesses:   guessCount,
+      result:    isWin ? 'win' : 'loss',
+      updated_at: new Date().toISOString()
+    }], { onConflict: 'user_id,game_type,game_date', returning: 'minimal' });
+    if (error) throw error;
   } catch (err) {
     console.error('Failed to record daily solve:', err);
   }
@@ -728,14 +694,14 @@ async function updateDailySolverBadge() {
   badge.textContent = '⏳ Loading...';
 
   const gameType = currentGameType;
-  const dailyKey = getDailyString();
+  const gameDate = getDailyString();
 
   try {
     const { data, error } = await supabaseClient
-      .from('daily_solvers')
+      .from('daily_solver_idv')
       .select('result')
       .eq('game_type', gameType)
-      .eq('daily_key', dailyKey);
+      .eq('game_date', gameDate);
 
     if (error) throw error;
 

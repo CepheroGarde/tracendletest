@@ -7,7 +7,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.0,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavDoctor.webp"
     },
     {
         "Name": "Lawyer",
@@ -16,7 +17,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.0,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavLawyer.webp"
     },
     {
         "Name": "Thief",
@@ -25,7 +27,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavThief.webp"
     },
     {
         "Name": "Gardener",
@@ -35,7 +38,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.0,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavGardener.webp"
     },
     {
         "Name": "Magician",
@@ -44,7 +48,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 2.0,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavMagician.webp"
     },
     {
         "Name": "Explorer",
@@ -53,7 +58,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavExplorer.webp"
     },
     {
         "Name": "Mercenary",
@@ -62,7 +68,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavMercenary.webp"
     },
     {
         "Name": "Coordinator",
@@ -71,7 +78,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.0,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavCoordinator.webp"
     },
     {
         "Name": "Priestess",
@@ -81,7 +89,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 2.0,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavPriestess.webp"
     },
     {
         "Name": "Mechanic",
@@ -90,7 +99,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 2.0,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavMechanic.webp"
     },
     {
         "Name": "Forward",
@@ -100,7 +110,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 3.0,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavForward.webp"
     },
     {
         "Name": "Mind's Eye",
@@ -109,7 +120,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.5,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavTheMindsEye.webp"
     },
     {
         "Name": "Perfumer",
@@ -118,7 +130,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.5,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavPerfumer.webp"
     },
     {
         "Name": "Cowboy",
@@ -128,7 +141,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavCowboy.webp"
     },
     {
         "Name": "Female Dancer",
@@ -138,7 +152,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.5,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavFemaleDancer.webp"
     },
     {
         "Name": "Seer",
@@ -147,7 +162,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavSeer.webp"
     },
     {
         "Name": "Embalmer",
@@ -156,7 +172,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavEmbalmer.webp"
     },
     {
         "Name": "Prospector",
@@ -166,7 +183,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2019
+        "ReleaseYear": 2019,
+        "Image" : "images/survivor/NavProspector.webp"
     },
     {
         "Name": "Enchantress",
@@ -176,7 +194,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.5,
-        "ReleaseYear": 2019
+        "ReleaseYear": 2019,
+        "Image" : "images/survivor/NavEnchantress.webp"
     },
     {
         "Name": "Wildling",
@@ -186,7 +205,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2019
+        "ReleaseYear": 2019,
+        "Image" : "images/survivor/NavWildling.webp"
     },
     {
         "Name": "Acrobat",
@@ -195,7 +215,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2019
+        "ReleaseYear": 2019,
+        "Image" : "images/survivor/NavAcrobat.webp"
     },
     {
         "Name": "First Officer",
@@ -204,7 +225,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 2.0,
-        "ReleaseYear": 2019
+        "ReleaseYear": 2019,
+        "Image" : "images/survivor/NavFirstOfficer.webp"
     },
     {
         "Name": "Barmaid",
@@ -214,7 +236,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 2.0,
-        "ReleaseYear": 2019
+        "ReleaseYear": 2019,
+        "Image" : "images/survivor/NavBarmaid.webp"
     },
     {
         "Name": "Postman",
@@ -223,7 +246,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.0,
-        "ReleaseYear": 2019
+        "ReleaseYear": 2019,
+        "Image" : "images/survivor/NavPostman.webp"
     },
     {
         "Name": "Grave Keeper",
@@ -232,7 +256,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.0,
-        "ReleaseYear": 2020
+        "ReleaseYear": 2020,
+        "Image" : "images/survivor/NavGraveKeeper.webp"
     },
     {
         "Name": "Prisoner",
@@ -242,7 +267,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 2.0,
-        "ReleaseYear": 2020
+        "ReleaseYear": 2020,
+        "Image" : "images/survivor/NavPrisoner.webp"
     },
     {
         "Name": "Entomologist",
@@ -252,7 +278,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.5,
-        "ReleaseYear": 2020
+        "ReleaseYear": 2020,
+        "Image" : "images/survivor/NavEntomologist.webp"
     },
     {
         "Name": "Painter",
@@ -262,7 +289,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 2.0,
-        "ReleaseYear": 2020
+        "ReleaseYear": 2020,
+        "Image" : "images/survivor/NavPainter.webp"
     },
     {
         "Name": "Batter",
@@ -272,7 +300,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2020
+        "ReleaseYear": 2020,
+        "Image" : "images/survivor/NavBatter.webp"
     },
     {
         "Name": "Toy Merchant",
@@ -282,7 +311,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.5,
-        "ReleaseYear": 2021
+        "ReleaseYear": 2021,
+        "Image" : "images/survivor/NavToyMerchant.webp"
     },
     {
         "Name": "Patient",
@@ -292,7 +322,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2021
+        "ReleaseYear": 2021,
+        "Image" : "images/survivor/NavPatient.webp"
     },
     {
         "Name": "Psychologist",
@@ -301,7 +332,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.5,
-        "ReleaseYear": 2021
+        "ReleaseYear": 2021,
+        "Image" : "images/survivor/NavPsychologist.webp"
     },
     {
         "Name": "Novelist",
@@ -311,7 +343,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 2.0,
-        "ReleaseYear": 2021
+        "ReleaseYear": 2021,
+        "Image" : "images/survivor/NavNovelist.webp"
     },
     {
         "Name": "Little Girl",
@@ -320,7 +353,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.0,
-        "ReleaseYear": 2021
+        "ReleaseYear": 2021,
+        "Image" : "images/survivor/NavLittleGirl.webp"
     },
     {
         "Name": "Weeping Clown",
@@ -330,7 +364,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2022
+        "ReleaseYear": 2022,
+        "Image" : "images/survivor/NavWeepingClown.webp"
     },
     {
         "Name": "Professor",
@@ -340,7 +375,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 2.0,
-        "ReleaseYear": 2022
+        "ReleaseYear": 2022,
+        "Image" : "images/survivor/NavProfessor.webp"
     },
     {
         "Name": "Antiquarian",
@@ -349,7 +385,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 3.0,
-        "ReleaseYear": 2022
+        "ReleaseYear": 2022,
+        "Image" : "images/survivor/NavAntiquarian.webp"
     },
     {
         "Name": "Composer",
@@ -358,7 +395,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2022
+        "ReleaseYear": 2022,
+        "Image" : "images/survivor/NavComposer.webp"
     },
     {
         "Name": "Journalist",
@@ -367,7 +405,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 2.0,
-        "ReleaseYear": 2023
+        "ReleaseYear": 2023,
+        "Image" : "images/survivor/NavJournalist.webp"
     },
     {
         "Name": "Aeroplanist",
@@ -377,7 +416,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 3.0,
-        "ReleaseYear": 2023
+        "ReleaseYear": 2023,
+        "Image" : "images/survivor/NavAeroplanist.webp"
     },
     {
         "Name": "Cheerleader",
@@ -387,7 +427,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 2.0,
-        "ReleaseYear": 2023
+        "ReleaseYear": 2023,
+        "Image" : "images/survivor/NavCheerleader.webp"
     },
     {
         "Name": "Puppeteer",
@@ -397,7 +438,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.0,
-        "ReleaseYear": 2024
+        "ReleaseYear": 2024,
+        "Image" : "images/survivor/NavPuppeteer.webp"
     },
     {
         "Name": "Fire Investigator",
@@ -407,7 +449,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2024
+        "ReleaseYear": 2024,
+        "Image" : "images/survivor/NavFireInvestigator.webp"
     },
     {
         "Name": "Faro Lady",
@@ -416,7 +459,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.5,
-        "ReleaseYear": 2024
+        "ReleaseYear": 2024,
+        "Image" : "images/survivor/NavFaroLady.webp"
     },
     {
         "Name": "Knight",
@@ -425,7 +469,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.5,
-        "ReleaseYear": 2024
+        "ReleaseYear": 2024,
+        "Image" : "images/survivor/NavKnight.webp"
     },
     {
         "Name": "Meteorologist",
@@ -435,7 +480,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 3.0,
-        "ReleaseYear": 2025
+        "ReleaseYear": 2025,
+        "Image" : "images/survivor/NavMeteorologist.webp"
     },
     {
         "Name": "Archer",
@@ -444,7 +490,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 1.5,
-        "ReleaseYear": 2025
+        "ReleaseYear": 2025,
+        "Image" : "images/survivor/NavArcher.webp"
     },
     {
         "Name": "Escapologist",
@@ -454,7 +501,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 2.0,
-        "ReleaseYear": 2025
+        "ReleaseYear": 2025,
+        "Image" : "images/survivor/NavEscapologist.webp"
     },
     {
         "Name": "Lanternist",
@@ -464,7 +512,8 @@
         ],
         "Gender": "Female",
         "Difficulty": 2.0,
-        "ReleaseYear": 2025
+        "ReleaseYear": 2025,
+        "Image" : "images/survivor/NavLanternist.webp"
     },
     {
         "Name": "Matador",
@@ -474,7 +523,8 @@
         ],
         "Gender": "Male",
         "Difficulty": 2.0,
-        "ReleaseYear": 2026
+        "ReleaseYear": 2026,
+        "Image" : "images/survivor/NavMatador.webp"
     },
     {
         "Name": "Lucky Guy",
@@ -483,6 +533,7 @@
         ],
         "Gender": "Male",
         "Difficulty": 1.0,
-        "ReleaseYear": 2018
+        "ReleaseYear": 2018,
+        "Image" : "images/survivor/NavLuckyGuy.webp"
     }
 ]

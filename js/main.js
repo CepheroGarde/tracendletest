@@ -4,22 +4,36 @@
 
 async function loadGameData() {
   try {
-    const [umaRes, courseRes, voicedleRes] = await Promise.all([
+    const [umaRes, hunterRes, voicedleRes] = await Promise.all([
       fetch('identity_v_survivors.json'),
-      fetch('courses.json'),
+      fetch('identity_v_hunters.json'), 
       fetch('voicedle.json')
     ]);
+    
     const survivors = await umaRes.json();
     UMAS = survivors.map(item => ({
-      name: item.Name || item.name || 'Unknown',
+      name: item.Name || 'Unknown',
       role1: item.Roles?.[0] || 'N/A',
       role2: item.Roles?.[1] || 'N/A',
       gender: item.Gender || 'N/A',
       difficulty: Number(item.Difficulty) || 0,
-      year: item.ReleaseYear || item.year || 'N/A',
+      year: item.ReleaseYear || 'N/A',
       image: item.image || item.Image || 'images/placeholder.svg'
     }));
-    COURSES = await courseRes.json();
+
+    const hunters = await hunterRes.json();
+    HUNTERS = hunters.map(item => ({
+      name: item.Name || 'Unknown',
+      gender: item.Gender || 'N/A',
+      trait: Number(item["External Trait"]) || 0, 
+      difficulty: Number(item.Difficulty) || 0,
+      year: item.ReleaseYear || 'N/A',
+      pursuit: String(item.Style?.Pursuit || 'N/A'),
+      control: String(item.Style?.Control || 'N/A'),
+      chairGuarding: String(item.Style?.ChairGuarding || 'N/A'),
+      image: item.Image || `images/hunters/${item.Name}.png`
+    }));
+
     VOICEDLE = await voicedleRes.json();
     init();
   } catch (error) {

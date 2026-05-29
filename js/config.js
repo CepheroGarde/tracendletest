@@ -8,7 +8,7 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // --------------- Data lists (populated by loadGameData) ---------------
 let UMAS = [];
-let COURSES = [];
+let HUNTERS = [];
 let VOICEDLE = [];
 
 // --------------- Rank map ---------------
@@ -29,23 +29,23 @@ const GAME_CONFIG = {
     placeholder: "Enter survivor name...",
     resultTitle: "Survivor",
     storageKey: 'idvle_wordle_stats',
-    helpDesc: "Guess the Identity V survivor from their roles, gender, difficulty and release year!",
+    helpDesc: "Guess the Identity V survivor from their roles, gender symbol, difficulty stars, and release year!",
     shareTitle: "IDVLE WORDLE",
     sections: [
       { title: "Survivor Info", keys: ['role1', 'role2', 'gender', 'difficulty', 'year'], color: 'cyan' }
     ]
   },
-  course: {
-    keys: ['length', 'surface', 'turn', 'location', 'schedule'],
-    headers: ['Length', 'Surface', 'Turn', 'Location', 'Schedule'],
-    data: () => COURSES,
+  course: { // Hunter Mode
+    keys: ['gender', 'difficulty', 'year', 'pursuit', 'control', 'chairGuarding'],
+    headers: ['Gender', 'Difficulty', 'Year', 'Pursuit', 'Control', 'Chair Guarding'],
+    data: () => HUNTERS,
     placeholder: "Enter Hunter name...",
-    resultTitle: "Winning Hunter",
-    storageKey: 'course_wordle_stats',
-    helpDesc: "Guess the Hunter based on its track features!",
+    resultTitle: "Hunter",
+    storageKey: 'hunter_wordle_stats',
+    helpDesc: "Guess the Hunter from their gender, number of traits, difficulty, release year, and style ratings!",
     shareTitle: "IDVLE HUNTER",
     sections: [
-      { title: "Hunter Info", keys: ['length', 'surface', 'turn', 'location', 'schedule'], color: 'green' }
+      { title: "Hunter Info", keys: ['gender', 'trait', 'difficulty', 'year', 'pursuit', 'control', 'chairGuarding'], color: 'red' }
     ]
   },
   voicedle: {
@@ -115,4 +115,4 @@ let activeLbTimeWindow = 'weekly';
 let currentStatsTab = 'uma';
 
 // --------------- Versioning ---------------
-const CURRENT_VERSION = '1.3.1';
+const CURRENT_VERSION = '1.0';

@@ -291,6 +291,7 @@ function updateMenuModeHints(type) {
 }
 
 function switchGameType(type) {
+  
   currentGameType = type;
   sessionState.knownStats = {};
   const config = GAME_CONFIG[type];
@@ -327,6 +328,7 @@ function switchGameType(type) {
   updateStatsUI();
   checkDailyStatus();
   displayYesterdayAnswer();
+  
 
   // Rebuild column headers (Wordle modes only)
   if (type !== 'voicedle') {
@@ -380,9 +382,14 @@ function renderGameLayout() {
   setPeekingChibiInGame(true);
   
   // Display mode indicator with archive date if applicable
-  let modeDisplay = currentGameType + " / " + sessionState.mode;
+  const typeLabel = currentGameType === 'uma' ? 'Survivor'
+    : currentGameType === 'course' ? 'Hunter'
+    : currentGameType === 'voicedle' ? 'Voicedle'
+    : currentGameType.toUpperCase();
+
+  let modeDisplay = `${typeLabel} / ${sessionState.mode}`;
   if (sessionState.mode === 'archive' && sessionState.archiveDate) {
-    modeDisplay = `${currentGameType} / <span style="color:#7c3aed; font-weight:900;">ARCHIVE 📅 ${sessionState.archiveDate}</span>`;
+    modeDisplay = `${typeLabel} / <span style="color:#7c3aed; font-weight:900;">ARCHIVE 📅 ${sessionState.archiveDate}</span>`;
   }
   document.getElementById('mode-indicator').innerHTML = modeDisplay;   //  Changed to innerHTML
   
@@ -682,6 +689,8 @@ function addGuessRow(item, isClue = false, animate = true) {
   const isAnswer  = !isClue && item.name === sessionState.target.name;
   const FLIP_MS   = 500;
   const STAGGER_MS = 300;
+  const STYLE_ORDER = { Low: 1, Medium: 2, High: 3, low: 1, medium: 2, high: 3 };
+  const STYLE_DISPLAY = { Low: 'Low', Medium: 'Med', High: 'High', low: 'Low', medium: 'Med', high: 'High' };
 
   const cellData = config.keys.map(key => {
     const rawVal    = item[key];
@@ -690,6 +699,7 @@ function addGuessRow(item, isClue = false, animate = true) {
     let status      = 'absent';
     let arrow       = '';
 
+    // 1. Difficulty Stars Logic
     if (key === 'difficulty') {
       val = renderDifficultyStars(rawVal);
       const diff = Number(rawVal) - Number(targetVal);
@@ -700,21 +710,43 @@ function addGuessRow(item, isClue = false, animate = true) {
       }
       if (diff < 0) arrow = ' ↑';
       else if (diff > 0) arrow = ' ↓';
-    } else if (key === 'role1' || key === 'role2') {
+    } 
+    
+    // 2. Trait Number Logic (Corrected placement)
+    else if (key === 'trait') {
+      val = String(rawVal);
+      if (Number(rawVal) === Number(targetVal)) {
+        status = 'correct';
+      } else {
+        status = 'absent';
+        const diff = Number(rawVal) - Number(targetVal);
+        if (diff < 0) arrow = ' ↑';      // Target is higher than guess
+        else if (diff > 0) arrow = ' ↓'; // Target is lower than guess
+      }
+    }
+
+    // 3. Survivor Roles Logic
+    else if (key === 'role1' || key === 'role2') {
       const roleText = String(rawVal || 'N/A');
       val = renderRoleIcon(rawVal);
       if (roleText === String(targetVal)) {
         status = 'correct';
       }
-    } else if (key === 'gender') {
+    } 
+
+    // 4. Gender Logic
+    else if (key === 'gender') {
       const genderText = String(rawVal || 'N/A');
       val = renderGenderSymbol(rawVal);
       if (genderText.toLowerCase() === String(targetVal).toLowerCase()) {
         status = 'correct';
       }
-    } else if (key === 'year') {
+    } 
+
+    // 5. Release Year Logic
+    else if (key === 'year') {
       val = String(rawVal);
-      if (rawVal === targetVal) {
+      if (Number(rawVal) === Number(targetVal)) {
         status = 'correct';
       } else if (Math.abs(Number(rawVal) - Number(targetVal)) <= 1) {
         status = 'present';
@@ -722,7 +754,25 @@ function addGuessRow(item, isClue = false, animate = true) {
       const diff = Number(rawVal) - Number(targetVal);
       if (diff < 0) arrow = ' ↑';
       else if (diff > 0) arrow = ' ↓';
-    } else {
+    } 
+
+    // 6. Hunter style score logic
+    else if (key === 'pursuit' || key === 'control' || key === 'chairGuarding') {
+      const rawText = String(rawVal || 'N/A');
+      val = STYLE_DISPLAY[rawText] || rawText;
+      const guessRank = STYLE_ORDER[rawText] || 0;
+      const targetRank = STYLE_ORDER[String(targetVal)] || 0;
+      if (rawText === String(targetVal)) {
+        status = 'correct';
+      } else {
+        status = 'present';
+        if (guessRank < targetRank) arrow = ' ↑';
+        else if (guessRank > targetRank) arrow = ' ↓';
+      }
+    }
+
+    // 7. Default fallback (Exact match text)
+    else {
       val = String(rawVal || 'N/A');
       if (val === String(targetVal)) {
         status = 'correct';
@@ -1074,48 +1124,73 @@ function toggleHelp(show) {
         <p class="text-xs text-gray-500">Character choices are the same roster as Survivor mode.</p>`;
     } else if (currentGameType === 'uma') {
       helpContent.innerHTML = `
-        <p>Identify the hidden Identity V survivor by their roles, gender, difficulty and release year.</p>
+        <p>Identify the hidden Identity V survivor by their role icons, gender symbol, difficulty stars, and release year.</p>
         <div>
           <h3 class="font-bold text-gray-800 dark:text-gray-200 border-b pb-1 mb-2">Color Indicators</h3>
-          <div class="space-y-2">
-            <div class="flex items-center"><span class="help-dot bg-[#6aaa64]"></span> <strong>Green:</strong> Exact match!</div>
-            <div class="flex items-center"><span class="help-dot bg-[#c9b458]"></span> <strong>Yellow:</strong> Near match (within 1 rank, e.g., A vs B).</div>
-            <div class="flex items-center"><span class="help-dot bg-[#787c7e]"></span> <strong>Gray:</strong> Far match.</div>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center gap-2"><span class="help-dot bg-[#6aaa64] shrink-0"></span><div><strong>Green — Exact match.</strong> The attribute is correct.</div></div>
+            <div class="flex items-start gap-2"><span class="help-dot bg-[#c9b458] shrink-0 mt-0.5"></span><div><strong>Yellow — Close, but not exact.</strong><br>
+              <span class="text-gray-500">• <em>Difficulty:</em> within ½ a star of the answer.<br>
+              • <em>Year:</em> within 1 year of the answer.<br>
+              • Role 1, Role 2, Gender: no yellow — green or gray only.</span>
+            </div></div>
+            <div class="flex items-center gap-2"><span class="help-dot bg-[#787c7e] shrink-0"></span><div><strong>Gray — No match.</strong> The attribute is wrong.</div></div>
           </div>
         </div>
         <div>
-          <h3 class="font-bold text-gray-800 dark:text-gray-200 border-b pb-1 mb-2">Rank Hints (Arrows)</h3>
-          <p>↑: Target rank is higher. ↓: Target rank is lower.</p>
+          <h3 class="font-bold text-gray-800 dark:text-gray-200 border-b pb-1 mb-2">Direction Arrows</h3>
+          <p class="text-sm">Appear on <strong>Difficulty</strong> and <strong>Year</strong> when the cell is yellow or gray.<br>
+          <strong>↑</strong> The answer is <em>higher</em>. &nbsp;<strong>↓</strong> The answer is <em>lower</em>.</p>
         </div>
         <div>
           <h3 class="font-bold text-gray-800 dark:text-gray-200 border-b pb-1 mb-2">Game Modes</h3>
           <ul class="list-disc list-inside text-sm space-y-2 ml-1">
-            <li><strong>Daily Mode:</strong> A new puzzle every day at midnight JST!</li>
-            <li><strong>Unlimited Mode:</strong> Play as many puzzles as you want!</li>
-            <li><strong>Easy Mode:</strong> A more forgiving difficulty level for new players!</li>
-            <li><strong>Normal Mode:</strong> The classic experience!</li>
-            <li><strong>Hard Mode:</strong> no names, only 3 clues, and just 2 attempts! Good Luck!</li>
+            <li><strong>Daily Mode:</strong> One new puzzle per day at midnight JST.</li>
+            <li><strong>Unlimited Mode:</strong> Keep guessing as many puzzles as you want.</li>
+            <li><strong>Easy Mode:</strong> Easier clues for new players.</li>
+            <li><strong>Normal Mode:</strong> Standard gameplay and clue rules.</li>
+            <li><strong>Hard Mode:</strong> No names shown, only 3 clue rows, and just 2 attempts.</li>
           </ul>
         </div>`;
     } else {
       helpContent.innerHTML = `
-        <p>Identify the hidden G1 Race by its course features.</p>
+        <p>Identify the hidden Identity V Hunter by their gender, difficulty, release year, and playstyle ratings.</p>
+        <div>
+          <h3 class="font-bold text-gray-800 dark:text-gray-200 border-b pb-1 mb-2">Columns</h3>
+          <ul class="list-disc list-inside text-sm space-y-1 ml-1">
+            <li><strong>Gender:</strong> The Hunter's gender symbol.</li>
+            <li><strong>Difficulty:</strong> Star rating (1–5 stars).</li>
+            <li><strong>Year:</strong> Release year of the Hunter.</li>
+            <li><strong>Pursuit:</strong> Chase/kiting style rating — Low, Med, or High.</li>
+            <li><strong>Control:</strong> Map control style rating — Low, Med, or High.</li>
+            <li><strong>Chair Guarding:</strong> Chair pressure style rating — Low, Med, or High.</li>
+          </ul>
+        </div>
         <div>
           <h3 class="font-bold text-gray-800 dark:text-gray-200 border-b pb-1 mb-2">Color Indicators</h3>
-          <div class="space-y-2">
-            <div class="flex items-center"><span class="help-dot bg-[#6aaa64]"></span> <strong>Green:</strong> Exact match!</div>
-            <div class="flex items-center"><span class="help-dot bg-[#c9b458]"></span> <strong>Yellow:</strong> Close (Length within 400m).</div>
-            <div class="flex items-center"><span class="help-dot bg-[#787c7e]"></span> <strong>Gray:</strong> Incorrect.</div>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center gap-2"><span class="help-dot bg-[#6aaa64] shrink-0"></span><div><strong>Green — Exact match.</strong> The attribute is correct.</div></div>
+            <div class="flex items-start gap-2"><span class="help-dot bg-[#c9b458] shrink-0 mt-0.5"></span><div><strong>Yellow — Close, but not exact.</strong><br>
+              <span class="text-gray-500">• <em>Difficulty:</em> within ½ a star of the answer.<br>
+              • <em>Year:</em> within 1 year of the answer.<br>
+              • Gender, Pursuit, Control, Chair Guarding: green or gray only.</span>
+            </div></div>
+            <div class="flex items-center gap-2"><span class="help-dot bg-[#787c7e] shrink-0"></span><div><strong>Gray — No match.</strong> The attribute is wrong.</div></div>
           </div>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-800 dark:text-gray-200 border-b pb-1 mb-2">Direction Arrows</h3>
+          <p class="text-sm">Appear on <strong>Difficulty</strong> and <strong>Year</strong> when the cell is yellow or gray.<br>
+          <strong>↑</strong> The answer is <em>higher</em>. &nbsp;<strong>↓</strong> The answer is <em>lower</em>.</p>
         </div>
         <div>
           <h3 class="font-bold text-gray-800 dark:text-gray-200 border-b pb-1 mb-2">Game Modes</h3>
           <ul class="list-disc list-inside text-sm space-y-2 ml-1">
-            <li><strong>Daily Mode:</strong> A new puzzle every day at midnight JST!</li>
-            <li><strong>Unlimited Mode:</strong> Play as many puzzles as you want!</li>
-            <li><strong>Easy Mode:</strong> A more forgiving difficulty level for new players!</li>
-            <li><strong>Normal Mode:</strong> The classic experience!</li>
-            <li><strong>Hard Mode:</strong> no names, only 3 clues, and just 2 attempts! Good Luck!</li>
+            <li><strong>Daily Mode:</strong> A new puzzle every day at midnight JST.</li>
+            <li><strong>Unlimited Mode:</strong> Play as many puzzles as you want.</li>
+            <li><strong>Easy Mode:</strong> A more forgiving difficulty level for new players.</li>
+            <li><strong>Normal Mode:</strong> The classic experience.</li>
+            <li><strong>Hard Mode:</strong> No names shown, only 3 clue rows, and just 2 attempts.</li>
           </ul>
         </div>`;
     }
@@ -1285,13 +1360,13 @@ function hideAutocomplete() {}
 // --------------- Wallpaper Picker ---------------
 const WALLPAPER_PRESETS = [
   { label: 'Default',        value: 'images/trace background.jpg',                                                    thumb: 'images/trace background.jpg' },
-  { label: 'Outside',       value: 'https://images.steamusercontent.com/ugc/13963806649216154660/DF23A51B457215B75849D01FD85B8EC311BAFD68/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true',             thumb: 'https://images.steamusercontent.com/ugc/13963806649216154660/DF23A51B457215B75849D01FD85B8EC311BAFD68/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true' },
-  { label: 'Ogu-Cre-rden', value: 'https://preview.redd.it/the-perfect-wallpaper-umadachis-v0-v4t4j435dy2f1.png?width=1080&crop=smart&auto=webp&s=6af615cb08905c9d14c3c8e6ae923c80999ab74b',       thumb: 'https://preview.redd.it/the-perfect-wallpaper-umadachis-v0-v4t4j435dy2f1.png?width=1080&crop=smart&auto=webp&s=6af615cb08905c9d14c3c8e6ae923c80999ab74b' },
-  { label: 'Racetrack',     value: 'https://media.pocketgamer.biz/images/132587/86039/uma-musume-pretty-derby-track-field_orig.webp',       thumb: 'https://media.pocketgamer.biz/images/132587/86039/uma-musume-pretty-derby-track-field_orig.webp' },
-  { label: 'Season 1',         value: 'https://en-portal.g.kuroco-img.app/v=1749187165/files/user/media/anime/anime01.jpg',         thumb: 'https://en-portal.g.kuroco-img.app/v=1749187165/files/user/media/anime/anime01.jpg' },
-  { label: 'Race',   value: 'https://images.steamusercontent.com/ugc/13590127456284630094/1C00EF11763EEFAC06560B7D57B89A415844A9C9/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true',       thumb: 'https://images.steamusercontent.com/ugc/13590127456284630094/1C00EF11763EEFAC06560B7D57B89A415844A9C9/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true' },
-  { label: 'Party',   value: 'https://images.steamusercontent.com/ugc/17440226665388322748/374C7B41283C195C013ED0231430B439D3EF327E/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true',         thumb: 'https://images.steamusercontent.com/ugc/17440226665388322748/374C7B41283C195C013ED0231430B439D3EF327E/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true' },
-  { label: 'Nice Nature',     value: 'https://images.steamusercontent.com/ugc/17148371294565966589/C064B7EDF15B1A02F3C8586F02FAFDEB27FCFBFF/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true',       thumb: 'https://images.steamusercontent.com/ugc/17148371294565966589/C064B7EDF15B1A02F3C8586F02FAFDEB27FCFBFF/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true' },
+  { label: 'Hide n Seek',       value: 'https://static.wikia.nocookie.net/id5/images/d/d7/HideAndSeekGamemode.jpg/revision/latest/scale-to-width-down/1200?cb=20230503232759',             thumb: 'https://static.wikia.nocookie.net/id5/images/d/d7/HideAndSeekGamemode.jpg/revision/latest/scale-to-width-down/1200?cb=20230503232759' },
+  { label: 'Two vs Eight', value: 'https://wallpaperaccess.com/full/1910287.jpg',       thumb: 'https://wallpaperaccess.com/full/1910287.jpg' },
+  { label: 'Detective',     value: 'https://i.ytimg.com/vi/7ItNvooOMoA/maxresdefault.jpg',       thumb: 'https://i.ytimg.com/vi/7ItNvooOMoA/maxresdefault.jpg' },
+  { label: 'Queen Bee',         value: 'https://scontent.fcrk4-1.fna.fbcdn.net/v/t39.30808-6/594960689_1287814520046330_2098144569040490105_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fAWaUr3ZdZ0Q7kNvwHyvFWO&_nc_oc=AdpLbRt_Wn0E5w9I1yy_xL0q8revDcRpcjguYNqLvdlkkxzmAmTm_OIdNRmDlPmRMDAagxipTn_iifNe_eas-_PY&_nc_zt=23&_nc_ht=scontent.fcrk4-1.fna&_nc_gid=ao6Ung_0kxSexRjhn9k2ww&_nc_ss=7b2a8&oh=00_Af4iPJXkHWzwMccjSF_Fver3aeGg69ONXNPL3PkuNQItpQ&oe=6A1EF17D',         thumb: 'https://scontent.fcrk4-1.fna.fbcdn.net/v/t39.30808-6/594960689_1287814520046330_2098144569040490105_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fAWaUr3ZdZ0Q7kNvwHyvFWO&_nc_oc=AdpLbRt_Wn0E5w9I1yy_xL0q8revDcRpcjguYNqLvdlkkxzmAmTm_OIdNRmDlPmRMDAagxipTn_iifNe_eas-_PY&_nc_zt=23&_nc_ht=scontent.fcrk4-1.fna&_nc_gid=ao6Ung_0kxSexRjhn9k2ww&_nc_ss=7b2a8&oh=00_Af4iPJXkHWzwMccjSF_Fver3aeGg69ONXNPL3PkuNQItpQ&oe=6A1EF17D' },
+  { label: 'Fish',   value: 'https://pbs.twimg.com/media/E3QnKnLVgAI8Psd.jpg',       thumb: 'https://pbs.twimg.com/media/E3QnKnLVgAI8Psd.jpg' },
+  { label: 'Party',   value: 'https://scontent.fcrk2-1.fna.fbcdn.net/v/t39.30808-6/481295259_1047186534109131_5108588853355176072_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zgyi6ZKr8GEQ7kNvwFOpHa1&_nc_oc=AdrFeP2pQ31itQDkX59cPYI5--PwuoqdChSgRicB4iiOwrixCxfn1LfocyFdmCwKO4b6p2LZSPpwIvY4cz5SmeCq&_nc_zt=23&_nc_ht=scontent.fcrk2-1.fna&_nc_gid=Z_pni3KcMWnv7Wz8U63dZg&_nc_ss=7b2a8&oh=00_Af7syZtrI_IafdPHQfSkxsheeRzYaw7pkx7UPv4lKFpKtA&oe=6A1EF688',         thumb: 'https://scontent.fcrk2-1.fna.fbcdn.net/v/t39.30808-6/481295259_1047186534109131_5108588853355176072_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zgyi6ZKr8GEQ7kNvwFOpHa1&_nc_oc=AdrFeP2pQ31itQDkX59cPYI5--PwuoqdChSgRicB4iiOwrixCxfn1LfocyFdmCwKO4b6p2LZSPpwIvY4cz5SmeCq&_nc_zt=23&_nc_ht=scontent.fcrk2-1.fna&_nc_gid=Z_pni3KcMWnv7Wz8U63dZg&_nc_ss=7b2a8&oh=00_Af7syZtrI_IafdPHQfSkxsheeRzYaw7pkx7UPv4lKFpKtA&oe=6A1EF688' },
+  { label: 'Nice Nature',     value: 'https://scontent.fcrk4-1.fna.fbcdn.net/v/t39.30808-6/481988921_2477796172564073_692265708152915985_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JeaXN6HmcDkQ7kNvwHDZqOs&_nc_oc=Adq0n6BF3UWydWu9JawspTFH5MZi9fTSExLWSs4KDtUF-cSgJcTPkZ4eO8-ILODFwBHC-_fSCg5GDTx7CL2fKLib&_nc_zt=23&_nc_ht=scontent.fcrk4-1.fna&_nc_gid=bL9MNSqcSsgvvulVCNdDXg&_nc_ss=7b2a8&oh=00_Af49sBr4EKTzKBegABqEsgYl-GSKmsBAK6DXrO_rsdEW1w&oe=6A1EF031',       thumb: 'https://scontent.fcrk4-1.fna.fbcdn.net/v/t39.30808-6/481988921_2477796172564073_692265708152915985_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JeaXN6HmcDkQ7kNvwHDZqOs&_nc_oc=Adq0n6BF3UWydWu9JawspTFH5MZi9fTSExLWSs4KDtUF-cSgJcTPkZ4eO8-ILODFwBHC-_fSCg5GDTx7CL2fKLib&_nc_zt=23&_nc_ht=scontent.fcrk4-1.fna&_nc_gid=bL9MNSqcSsgvvulVCNdDXg&_nc_ss=7b2a8&oh=00_Af49sBr4EKTzKBegABqEsgYl-GSKmsBAK6DXrO_rsdEW1w&oe=6A1EF031' },
   { label: 'None',           value: '',                                                                                thumb: null },
 ];
 
