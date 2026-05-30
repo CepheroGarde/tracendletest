@@ -119,7 +119,7 @@
             "Decode"
         ],
         "Gender": "Female",
-        "Difficulty": 1.5,
+        "Difficulty": 2.5,
         "ReleaseYear": 2018,
         "Image" : "images/survivor/NavTheMindsEye.webp"
     },
@@ -140,7 +140,7 @@
             "Contain"
         ],
         "Gender": "Male",
-        "Difficulty": 1.5,
+        "Difficulty": 2.5,
         "ReleaseYear": 2018,
         "Image" : "images/survivor/NavCowboy.webp"
     },
@@ -182,7 +182,7 @@
             "Assist"
         ],
         "Gender": "Male",
-        "Difficulty": 1.5,
+        "Difficulty": 2.5,
         "ReleaseYear": 2019,
         "Image" : "images/survivor/NavProspector.webp"
     },
@@ -214,7 +214,7 @@
             "Contain"
         ],
         "Gender": "Male",
-        "Difficulty": 1.5,
+        "Difficulty": 2.5,
         "ReleaseYear": 2019,
         "Image" : "images/survivor/NavAcrobat.webp"
     },
@@ -299,7 +299,7 @@
             "Rescue"
         ],
         "Gender": "Male",
-        "Difficulty": 1.5,
+        "Difficulty": 2.5,
         "ReleaseYear": 2020,
         "Image" : "images/survivor/NavBatter.webp"
     },
@@ -321,7 +321,7 @@
             "Rescue"
         ],
         "Gender": "Male",
-        "Difficulty": 1.5,
+        "Difficulty": 2.5,
         "ReleaseYear": 2021,
         "Image" : "images/survivor/NavPatient.webp"
     },
@@ -394,7 +394,7 @@
             "Decode"
         ],
         "Gender": "Male",
-        "Difficulty": 1.5,
+        "Difficulty": 2.5,
         "ReleaseYear": 2022,
         "Image" : "images/survivor/NavComposer.webp"
     },
@@ -489,7 +489,7 @@
             "Contain"
         ],
         "Gender": "Female",
-        "Difficulty": 1.5,
+        "Difficulty": 2.5,
         "ReleaseYear": 2025,
         "Image" : "images/survivor/NavArcher.webp"
     },
